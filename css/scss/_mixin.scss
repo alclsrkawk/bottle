@@ -1,0 +1,38 @@
+$width : 1920px;
+
+@mixin flex($n) {
+    display: flex;
+    justify-content: $n;
+    @content
+}
+
+$mobile: 390px;
+$pad: 768px;
+$tablet: 1024px;
+$desktop: 1280px;
+
+@mixin res($n) {
+    @if($n ==$mobile) {
+        @media screen and (max-width:390px) {
+            @content;
+        }
+    }
+
+    @else if($n ==$pad) {
+        @media (min-width:391px) and (max-width:768px) {
+            @content;
+        }
+    }
+
+    @else if($n ==$tablet) {
+        @media (min-width:768px) and (max-width:1024px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width:$n) {
+            @content;
+        }
+    }
+}
