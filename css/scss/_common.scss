@@ -1,2 +1,10 @@
 @import url('./reset.css');
 @import "_mixin";
+
+// PC --시작
+
+// PC -- 끝
+
+@include res($tablet) {}
+
+@include res($mobile) {}
