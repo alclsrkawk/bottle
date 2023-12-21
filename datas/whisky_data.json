@@ -1,0 +1,88 @@
+{
+   "data": [
+    {
+      "Idx" : 1,
+      "good_name": "글렌피딕 15년산",
+      "price": "180,000원",
+      "discount": "105,000원",
+      "picture": "glenfiddich15.jpg"
+    },
+    {
+      "Idx" : 2,
+      "good_name": "글렌피딕 18년산",
+      "price": "260,000원",
+      "discount": "180,000원",
+      "picture": "glenfiddich18.jpg"
+    },
+    {
+      "Idx" : 3,
+      "good_name": "듀어스 시그니쳐",
+      "price": "450,000원",
+      "discount": "350,000원",
+      "picture": "dewarsSignature.jpg"
+    },
+    {
+      "Idx" : 4,
+      "good_name": "발렌타인 12년산",
+      "price": "85,000원",
+      "discount": "54,000원",
+      "picture": "ballantines12.jpg"
+    },
+    {
+      "Idx" : 5,
+      "good_name": "발렌타인 글렌버기 15년산",
+      "price": "200,000원",
+      "discount": "149,000원",
+      "picture": "ballantinesGlenburgie.jpg"
+    },
+    {
+      "Idx" : 6,
+      "good_name": "시바스리갈 12년산",
+      "price": "85,000원",
+      "discount": "52,000원",
+      "picture": "chivasregal12.jpg"
+    },
+    {
+      "Idx" : 7,
+      "good_name": "시바스리갈 18년산",
+      "price": "150,000원",
+      "discount": "100,000원",
+      "picture": "chivasregal18.jpg"
+    },
+    {
+      "Idx" : 8,
+      "good_name": "맥켈란 12년 트리플 캐스크",
+      "price": "190,000원",
+      "discount": "120,000원",
+      "picture": "macallan12.jpg"
+    },
+    {
+      "Idx" : 9,
+      "good_name": "맥켈란 테라",
+      "price": "430,000원",
+      "discount": "340,000원",
+      "picture": "macallanTerra.jpg"
+    },
+    {
+      "Idx" : 10,
+      "good_name": "와일드 터키 마스터스 킵 바틀드 인 본드 17년",
+      "price": "140,000원",
+      "discount": "99,000원",
+      "picture": "wildturkey17.jpg"
+    },
+    {
+      "Idx" : 11,
+      "good_name": "와일드 터키 마스터스 킵 코너스톤 라이",
+      "price": "500,000원",
+      "discount": "365,000원",
+      "picture": "wildturkeyCornerstone.jpg"
+    },
+    {
+      "Idx" : 12,
+      "good_name": "잭 다니엘 허니",
+      "price": "85,000원",
+      "discount": "55,000원",
+      "picture": "jackdanielsHoney.jpg"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+    "data": [
+        {
+            "Idx": 1,
+            "product_name": "왕지케양조장 설홍 20도 375ml 동백증류주 동백꽃 소주",
+            "price": "5,000원",
+            "discount": "4,750원",
+            "explain": "soju_1_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "3,000원 / 주문시결제(선결제)",
+            "brand": "제주왕지케",
+            "product_img": "soju_1_01.jpg,soju_1_02.jpg"
+        },
+        {
+            "Idx": 2,
+            "product_name": "해치소주세트 375mlx2병_22도1병,44도1병",
+            "price": "33,000원",
+            "discount": "33,000원",
+            "explain": "soju_2_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "0원 / 주문시결제(선결제)",
+            "brand": "해치소주",
+            "product_img": "soju_2_01.jpg,soju_2_02.jpg"
+        },
+        {
+            "Idx": 3,
+            "product_name": "김연박명인 민속주안동소주 양반탈 45도 400ml 조옥화1대명인",
+            "price": "32,000원",
+            "discount": "30,400원",
+            "explain": "soju_3_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "0원 / 주문시결제(선결제)",
+            "brand": "민속안동소주",
+            "product_img": "soju_3_01.jpg,soju_3_02.jpg"
+        },
+        {
+            "Idx": 4,
+            "product_name": "술마켓 원소주 오리지널 22도 375ml_지관통 증정",
+            "price": "14,900원",
+            "discount": "14,900원",
+            "explain": "soju_4_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "3,000원 / 주문시결제(선결제)",
+            "brand": "원스프리츠",
+            "product_img": "soju_4_01.jpg,soju_4_02.jpg"
+        },
+        {
+            "Idx": 5,
+            "product_name": "화심주조 화심군고구마 25도 300ml 고구마소주",
+            "price": "31,000원",
+            "discount": "29,450원",
+            "explain": "soju_5_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "3,000원 / 주문시결제(선결제)",
+            "brand": "화심주조",
+            "product_img": "soju_5_01.jpg,soju_5_02.jpg"
+        },
+        {
+            "Idx": 6,
+            "product_name": "오연가 오연 25도 360ml 홍시증류주",
+            "price": "12,000원",
+            "discount": "11,400원",
+            "explain": "soju_6_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "3,000원 / 주문시결제(선결제)",
+            "brand": "오연가",
+            "product_img": "soju_6_01.jpg,soju_6_02.jpg"
+        },
+        {
+            "Idx": 7,
+            "product_name": "10년숙성 (주)솔송주 리미티드에디션 솔직 25도 375ml",
+            "price": "21,000원",
+            "discount": "21,000원",
+            "explain": "soju_7_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "3,000원 / 주문시결제(선결제)",
+            "brand": "솔송주",
+            "product_img": "soju_7_01.jpg,soju_7_02.jpg"
+        },
+        {
+            "Idx": 8,
+            "product_name": "안동소주 올소 35도 360ml 오크숙성찹쌀증류주",
+            "price": "11,500원",
+            "discount": "10,920원",
+            "explain": "soju_8_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "3,000원 / 주문시결제(선결제)",
+            "brand": "안동디스틸러리",
+            "product_img": "soju_8_01.jpg,soju_8_02.jpg"
+        },
+        {
+            "Idx": 9,
+            "product_name": "술도가 제주바당 제주낭만 40도 375ml 제주산 백도라지주",
+            "price": "37,500원",
+            "discount": "35,620원",
+            "explain": "soju_9_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "0원 / 주문시결제(선결제)",
+            "brand": "술도가제주바당",
+            "product_img": "soju_9_01.jpg,soju_9_02.jpg"
+        },
+        {
+            "Idx": 10,
+            "product_name": "인산농장 월고해 42도 500ml 프리미엄 증류식소주",
+            "price": "110,000원",
+            "discount": "104,500원",
+            "explain": "soju_10_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "0원 / 주문시결제(선결제)",
+            "brand": "인산농장",
+            "product_img": "soju_10_01.jpg,soju_10_02.jpg"
+        },
+        {
+            "Idx": 11,
+            "product_name": "진도 홍주 도자기 38도 500ml 전라도 특산품",
+            "price": "67,000원",
+            "discount": "67,000원",
+            "explain": "soju_11_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "0원 / 주문시결제(선결제)",
+            "brand": "대대로영농조합",
+            "product_img": "soju_11_01.jpg,soju_11_02.jpg"
+        },
+        {
+            "Idx": 12,
+            "product_name": "토끼소주 선비보드카 40도 750ml 미국브랜힐양조",
+            "price": "61,000원",
+            "discount": "61,000원",
+            "explain": "soju_12_detail.jpg",
+            "limit": "최소구매 1개",
+            "delivery_fee": "0원 / 주문시결제(선결제)",
+            "brand": "농업회사법인 토끼소주",
+            "product_img": "soju_12_01.jpg,soju_12_02.jpg"
+        }
+    ]
+}
