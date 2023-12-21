@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "Idx": 1,
+            "good_name": "홀리워터 첫사랑 25도 375ml 맥주홉증류주",
+            "price": "14,000원",
+            "discount": "13,300원",
+            "picture": "beer1.png"
+        },
+        {
+            "Idx": 2,
+            "good_name": "술마켓 전주술로시티 도덕남 4.5도 1000ml수제맥주형전통주",
+            "price": "14,000원",
+            "discount": "13,300원",
+            "picture": "beer2.png"
+        },
+        {
+            "Idx": 3,
+            "good_name": "술마켓 전주술로시티 도도녀 4.5도 1000ml수제맥주형전통주",
+            "price": "14,000원",
+            "discount": "13,300원",
+            "picture": "beer3.png"
+        },
+        {
+            "Idx": 4,
+            "good_name": "술마켓 전주술로시티 만경강 4.5도 1000ml수제맥주형전통주",
+            "price": "14,000원",
+            "discount": "13,300원",
+            "picture": "beer4.png"
+        },
+        {
+            "Idx": 5,
+            "good_name": "술마켓 진로 하이트제로 355ml 맥주맛음료",
+            "price": "900원",
+            "discount": "900원",
+            "picture": "beer5.png"
+        },
+        {
+            "Idx": 6,
+            "good_name": "비트버거 드라이브 500ml 24캔 500ml",
+            "price": "47,520원",
+            "discount": "19,900원",
+            "picture": "beer6.png"
+        },
+        {
+            "Idx": 7,
+            "good_name": "아사히 드라이제로프리 논알콜 350ml 24캔 (흰색캔) 350ml, 24개",
+            "price": "148,100원",
+            "discount": "50,760원",
+            "picture": "beer7.png"
+        },
+        {
+            "Idx": 8,
+            "good_name": "분다버그 진저비어캔 200ml, 48개",
+            "price": "52,680원",
+            "discount": "45,680원",
+            "picture": "beer8.png"
+        },
+        {
+            "Idx": 9,
+            "good_name": "초야(CHOYA)] 논알콜 유자 탄산음료 요와나이 유즈슈 350ml (정식수입)",
+            "price": "67,770원",
+            "discount": "60,770원",
+            "picture": "beer9.png"
+        },
+        {
+            "Idx": 10,
+            "good_name": "호가든 0.0 500ml, 60개",
+            "price": "135,000원",
+            "discount": "100,800원",
+            "picture": "beer10.png"
+        },
+        {
+            "Idx": 11,
+            "good_name": "칭따오 무알콜 병맥주 330ml, 24병",
+            "price": "48,000원",
+            "discount": "27,900원",
+            "picture": "beer11.png"
+        },
+        {
+            "Idx": 12,
+            "good_name": "클라우드 클리어 제로 350ml 3개",
+            "price": "9,690원",
+            "discount": "6,930원",
+            "picture": "beer12.png"
+        }
+    ]
+}

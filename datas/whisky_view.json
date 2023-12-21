@@ -1,0 +1,136 @@
+{
+  "data": [
+   {
+      "Idx" : 1,
+      "product_name": "글렌피딕 15년산",
+      "price": "180,000원",
+      "discount": "105,000원",
+       "explain": "ex_glenfiddich15.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "글렌피딕",
+       "product_img": "glenfiddich15.jpg,glenfiddich15_2.jpg"
+    },
+    {
+      "Idx" : 2,
+      "product_name": "글렌피딕 18년산",
+      "price": "260,000원",
+      "discount": "180,000원",
+       "explain": "ex_glenfiddich18.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "글렌피딕",
+       "product_img": "glenfiddich18.jpg,glenfiddich18_2.jpg"
+    },
+    {
+      "Idx" : 3,
+      "product_name": "듀어스 시그니쳐",
+      "price": "450,000원",
+      "discount": "350,000원",
+       "explain": "ex_dewarsSignature.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "듀어스",
+       "product_img": "dewarsSignature.jpg,dewarsSignature_2.jpg"
+    },
+    {
+      "Idx" : 4,
+      "product_name": "발렌타인 12년산",
+      "price": "85,000원",
+      "discount": "54,000원",
+       "explain": "ex_ballantines12.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "발렌타인",
+       "product_img": "ballantines12.jpg,ballantines12_2.jpg"
+    },
+    {
+      "Idx" : 5,
+      "product_name": "발렌타인 글렌버기 15년산",
+      "price": "200,000원",
+      "discount": "149,000원",
+       "explain": "ex_ballantinesGlenburgie.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "발렌타인",
+       "product_img": "ballantinesGlenburgie.jpg"
+    },
+    {
+      "Idx" : 6,
+      "product_name": "시바스리갈 12년산",
+      "price": "85,000원",
+      "discount": "52,000원",
+       "explain": "ex_chivasregal12.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "시바스리갈",
+       "product_img": "chivasregal12.jpg,chivasregal12_2.jpg"
+    },
+    {
+      "Idx" : 7,
+      "product_name": "시바스리갈 18년산",
+      "price": "150,000원",
+      "discount": "100,000원",
+       "explain": "ex_chivasregal18.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "시바스리갈",
+       "product_img": "chivasregal18.jpg,chivasregal18_2.jpg"
+    },
+    {
+      "Idx" : 8,
+      "product_name": "맥켈란 12년 트리플 캐스크",
+      "price": "190,000원",
+      "discount": "120,000원",
+       "explain": "ex_macallan12.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "맥켈란",
+       "product_img": "macallan12.jpg,macallan12_2.jpg"
+    },
+    {
+      "Idx" : 9,
+      "product_name": "맥켈란 테라",
+      "price": "430,000원",
+      "discount": "340,000원",
+       "explain": "ex_macallanTerra.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "맥켈란",
+       "product_img": "macallanTerra.jpg,macallanTerra_2.jpg,macallanTerra_3.jpg"
+    },
+    {
+      "Idx" : 10,
+      "product_name": "와일드 터키 마스터스 킵 바틀드 인 본드 17년",
+      "price": "140,000원",
+      "discount": "99,000원",
+       "explain": "ex_wildturkey17.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "와일드 터키",
+       "product_img": "wildturkey17.jpg,wildturkey_2.jpg"
+    },
+    {
+      "Idx" : 11,
+      "product_name": "와일드 터키 마스터스 킵 코너스톤 라이",
+      "price": "500,000원",
+      "discount": "365,000원",
+       "explain": "ex_wildturkeyCornerstone.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "와일드 터키",
+       "product_img": "wildturkeyCornerstone.jpg,wildturkey_2.jpg"
+    },
+    {
+      "Idx" : 12,
+      "product_name": "잭 다니엘 허니",
+      "price": "85,000원",
+      "discount": "55,000원",
+       "explain": "ex_jackdanielsHoney.jpg",
+       "limit": "최소구매 1개",
+       "delivery_fee": "3,000원 / 주문시결제(선결제)",
+       "brand": "잭 다니엘",
+       "product_img": "jackdanielsHoney.jpg,jackdanielsHoney_2.jpg,jackdanielsHoney_3.jpg"
+    }
+  ]
+}

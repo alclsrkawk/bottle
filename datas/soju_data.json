@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "Idx": 1, 
+            "good_name": "왕지케양조장 설홍 20도 375ml 동백증류주 동백꽃 소주",
+            "price": "5,000원",
+            "discount": "4,750원",
+            "picture": "soju_1_01.jpg"
+        },
+        {
+            "Idx": 2,
+            "good_name": "해치소주세트 375mlx2병_22도1병,44도1병",
+            "price": "33,000원",
+            "discount": "33,000원",
+            "picture": "soju_2_01.jpg"
+        },
+        {
+            "Idx": 3,
+            "good_name": "김연박명인 민속주안동소주 양반탈 45도 400ml 조옥화1대명인",
+            "price": "32,000원",
+            "discount": "30,400원",
+            "picture": "soju_3_01.jpg"
+        },
+        {
+            "Idx": 4,
+            "good_name": "원소주 오리지널 22도 375ml_지관통 증정",
+            "price": "14,900원",
+            "discount": "14,900원",
+            "picture": "soju_4_01.jpg"
+        },
+        {
+            "Idx": 5,
+            "good_name": "화심주조 화심군고구마 25도 300ml 고구마소주",
+            "price": "31,000원",
+            "discount": "29,450원",
+            "picture": "soju_5_01.jpg"
+        },
+        {
+            "Idx": 6,
+            "good_name": "오연가 오연 25도 360ml 홍시증류주",
+            "price": "12,000원",
+            "discount": "11,400원",
+            "picture": "soju_6_01.jpg"
+        },
+        {
+            "Idx": 7,
+            "good_name": "10년숙성 (주)솔송주 리미티드에디션 솔직 25도 375ml",
+            "price": "21,000원",
+            "discount": "21,000원",
+            "picture": "soju_7_01.jpg"
+        },
+        {
+            "Idx": 8,
+            "good_name": "안동소주 올소 35도 360ml 오크숙성찹쌀증류주",
+            "price": "11,500원",
+            "discount": "10,920원",
+            "picture": "soju_8_01.jpg"
+        },
+        {
+            "Idx": 9,
+            "good_name": "술도가 제주바당 제주낭만 40도 375ml 제주산 백도라지주",
+            "price": "37,500원",
+            "discount": "35,620원",
+            "picture": "soju_9_01.jpg"
+        },
+        {
+            "Idx": 10,
+            "good_name": "인산농장 월고해 42도 500ml 프리미엄 증류식소주",
+            "price": "110,000원",
+            "discount": "104,500원",
+            "picture": "soju_10_01.jpg"
+        },
+        {
+            "Idx": 11,
+            "good_name": "진도 홍주 도자기 38도 500ml 전라도 특산품",
+            "price": "67,000원",
+            "discount": "67,000원",
+            "picture": "soju_11_01.jpg"
+        },
+        {
+            "Idx": 12,
+            "good_name": "토끼소주 선비보드카 40도 750ml 미국브랜힐양조",
+            "price": "61,000원",
+            "discount": "61,000원",
+            "picture": "soju_12_01.jpg"
+        }
+    ]
+}
