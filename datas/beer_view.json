@@ -9,7 +9,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "홀리워터",
-            "product_img": "beer1.png,beer1_sub1.png, beer1_sub2.png"
+            "product_img": "beer1.png,beer1_sub2.png"
         },
         {
             "Idx": 2,
@@ -20,7 +20,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "동문거리양조장",
-            "product_img": "beer2.png,beer1_sub2.png,beer1_sub2.png"
+            "product_img": "beer2.png,beer2_sub2.png"
         },
         {
             "Idx": 3,
@@ -31,7 +31,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "동문거리양조장",
-            "product_img": "beer3.png,beer3_sub1.png,beer3_sub2.png"
+            "product_img": "beer3.png,beer3_sub2.png"
         },
         {
             "Idx": 4,
@@ -42,7 +42,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "동문거리양조장",
-            "product_img": "beer4.png,beer4_sub1.png,beer4_sub2.png"
+            "product_img": "beer4.png,beer4_sub2.png"
         },
         {
             "Idx": 5,
@@ -53,7 +53,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "진로",
-            "product_img": "beer5.png,beer5_sub1.png,beer5_sub2.png"
+            "product_img": "beer5.png,beer5_sub2.png"
         },
         {
             "Idx": 6,
@@ -64,7 +64,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "BITBURGER",
-            "product_img": "beer6.png,beer6_sub1.png,beer6_sub2.png"
+            "product_img": "beer6.png,beer6_sub2.png"
         },
         {
             "Idx": 7,
@@ -75,7 +75,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "아사히",
-            "product_img": "beer7.png,beer7_sub1.png,beer7_sub2.png"
+            "product_img": "beer7.png,beer7_sub2.png"
         },
         {
             "Idx": 8,
@@ -86,7 +86,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "분다버그",
-            "product_img": "beer8.png,beer8_sub1.png,beer8_sub2.png"
+            "product_img": "beer8.png,beer8_sub2.png"
         },
         {
             "Idx": 9,
@@ -97,7 +97,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "초야",
-            "product_img": "beer9.png,beer9_sub1.png,beer9_sub2.png"
+            "product_img": "beer9.png,beer9_sub2.png"
         },
         {
             "Idx": 10,
@@ -108,7 +108,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "호가든",
-            "product_img": "beer10.png,beer10_sub1.png,beer10_sub2.png"
+            "product_img": "beer10.png,beer10_sub2.png"
         },
         {
             "Idx": 11,
@@ -119,7 +119,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "칭따오",
-            "product_img": "beer11.png,beer11_sub1.png,beer11_sub2.png"
+            "product_img": "beer11.png,beer11_sub2.png"
         },
         {
             "Idx": 12,
@@ -130,7 +130,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "클라우드",
-            "product_img": "beer12.png,beer12_sub1.png,beer12_sub2.png"
+            "product_img": "beer12.png,beer12_sub2.png"
         }
     ]
 }
