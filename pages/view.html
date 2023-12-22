@@ -16,10 +16,9 @@
         $(document).ready(function () {
             $('body').prepend('<header></header>');
             $('body').append('<footer></footer>');
-            $('header').load("../header.html");
-            $('#payment').load("./payment.html");
-            // $('#review').load( "./review.html");
-            $('footer').load("../footer.html");
+            $('header').load("./header.html");
+            $('#review').load("./review.html section");
+            $('footer').load("./footer.html");
 
         });
     </script>
@@ -28,8 +27,7 @@
 <body>
     <main>
         Soju Page
-       <section id="payment"></section>
-       <section id="review"></section>
+        <section id="review"></section>
     </main>
 </body>
 
