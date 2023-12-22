@@ -17,13 +17,20 @@
             $('body').prepend('<header></header>');
             $('body').append('<footer></footer>');
             $('header').load("../header.html");
+            $('#payment').load("./payment.html");
+            // $('#review').load( "./review.html");
             $('footer').load("../footer.html");
+
         });
     </script>
 </head>
 
 <body>
-    <main>Soju Page</main>
+    <main>
+        Soju Page
+       <section id="payment"></section>
+       <section id="review"></section>
+    </main>
 </body>
 
 </html>
