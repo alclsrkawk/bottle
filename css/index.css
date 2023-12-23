@@ -69,7 +69,6 @@ header article .main-menu nav a {
      object-fit: cover;
 }
 .banner figure figcaption {
-  width: 100%;
   height: 138px;
   padding: 0 370px;
   position: absolute;
@@ -105,14 +104,14 @@ header article .main-menu nav a {
   letter-spacing: -0.36px;
 }
 .banner figure figcaption :nth-child(3) {
-  width: 465px;
+  width: 428px;
   height: 10px;
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 .banner figure figcaption :nth-child(3) progress {
-  width: 430px;
+  width: 400px;
   height: 6px;
   background: rgba(217, 217, 217, 0.5);
 }
@@ -222,8 +221,4 @@ footer article .bottom div {
 }
 footer article .bottom div a {
   color: #B2B3B9;
-}
-
-main {
-  height: 100vh;
 }
