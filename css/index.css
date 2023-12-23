@@ -1,22 +1,95 @@
 @import url("./reset.css");
 header {
+  position: fixed;
   height: 132px;
   width: 100%;
-  text-align: center;
+}
+header article {
   display: flex;
   justify-content: "center";
-  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+header article :nth-child(1) {
+  margin: 16px 0 32px 0;
+  height: 54px;
   align-items: center;
+  color: #EAB838;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  font-family: Noto Serif KR;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
 }
-header :nth-child(1) {
-  display: flex;
-  justify-content: "space-between";
+header article :nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 13px;
+  margin-right: 370.48px;
 }
-header :nth-child(2) {
+header article :nth-child(2) img {
+  width: 16.52px;
+  height: 19.56px;
+}
+header nav {
   display: flex;
   justify-content: "center";
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  height: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+header nav a {
+  margin: 0 70px 20px 8px;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.9px;
 }
 
+.banner {
+  overflow: hidden;
+}
+.banner figure img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner figure figcaption {
+  position: absolute;
+  left: 370px;
+  top: 532px;
+}
+.banner figure figcaption :nth-child(1) {
+  color: #FFF;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: ABeeZee;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+  margin-bottom: 10px;
+}
+.banner figure figcaption :nth-child(2) {
+  color: #FFF;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: Noto Sans;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.36px;
+  margin-bottom: 40px;
+}
 footer {
   height: 434px;
   width: 100%;
