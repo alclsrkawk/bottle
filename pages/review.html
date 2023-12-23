@@ -10,23 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../js/common.js"></script>
+    <script defer src="../js/common.js"></script>
     <script src="../js/review.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('body').prepend('<header></header>');
-            $('body').append('<footer></footer>');
-            $('header').load("./header.html");
-            $('footer').load("./footer.html");
-        });
-    </script>
+
 </head>
 
 <body>
-
-    <section>
-
-    </section>
+    <!-- header-->
+    <header data-include-file="../include/sub/header.html" class="includeJs"></header>
+    <!-- header-->
+    <main></main>
+    <!-- footer -->
+    <footer data-include-file="../include/sub/footer.html" class="includeJs"></footer>
+    <!-- footer -->
 </body>
 
 </html>

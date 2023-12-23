@@ -28,6 +28,9 @@ header article .main-title {
   justify-content: center;
   align-items: center;
 }
+header article .main-title p a {
+  color: #EAB838;
+}
 header article .main-title p img {
   position: absolute;
   top: 0;

@@ -16,7 +16,6 @@ header article .main-title {
   height: 54px;
   margin: 16px 0 32px 0;
   align-items: center;
-  color: #EAB838;
   text-align: center;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   font-family: Noto Serif KR;
@@ -27,6 +26,9 @@ header article .main-title {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header article .main-title p a {
+  color: #EAB838;
 }
 header article .main-title p img {
   position: absolute;
