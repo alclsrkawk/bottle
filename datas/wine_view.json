@@ -9,7 +9,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "술마켓",
-            "product_img": "wine1_sub1.png,wine1_sub2.png"
+            "product_img": "wine1.png,wine1_sub2.png"
         },
         {
             "Idx": 2,
@@ -20,7 +20,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "금이산농원",
-            "product_img": "wine2_sub1.png,wine2_sub2.png"
+            "product_img": "wine2.png,wine2_sub2.png"
         },
         {
             "Idx": 3,
@@ -31,7 +31,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "제주양조장",
-            "product_img": "wine3_sub1.png,wine3_sub2.png"
+            "product_img": "wine3.png,wine3_sub2.png"
         },
         {
             "Idx": 4,
@@ -42,7 +42,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "시나브로와이너리",
-            "product_img": "wine4_sub1.png,wine4_sub2.png"
+            "product_img": "wine4.png,wine4_sub2.png"
         },
         {
             "Idx": 5,
@@ -53,7 +53,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "시나브로와이너리",
-            "product_img": "wine5_sub1.png,wine5_sub2.png"
+            "product_img": "wine5.png,wine5_sub2.png"
         },
         {
             "Idx": 6,
@@ -64,7 +64,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "금용농산",
-            "product_img": "wine6_sub1.png,wine6_sub2.png"
+            "product_img": "wine6.png,wine6_sub2.png"
         },
         {
             "Idx": 7,
@@ -75,7 +75,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "금융농산",
-            "product_img": "wine7_sub1.png,wine7_sub2.png"
+            "product_img": "wine7.png,wine7_sub2.png"
         },
         {
             "Idx": 8,
@@ -86,7 +86,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "덕유",
-            "product_img": "wine8_sub1.png,wine8_sub2.png"
+            "product_img": "wine8.png,wine8_sub2.png"
         },
         {
             "Idx": 9,
@@ -97,7 +97,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "샤또무주",
-            "product_img": "wine9_sub1.png,wine9_sub2.png,wine9_sub3.png"
+            "product_img": "wine9.png,wine9_sub2.png,wine9_sub3.png"
         },
         {
             "Idx": 10,
@@ -108,7 +108,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "선운산복분자주흥진",
-            "product_img": "wine10_sub1.png,wine10_sub2.png"
+            "product_img": "wine10.png,wine10_sub2.png"
         },
         {
             "Idx": 11,
@@ -119,7 +119,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "시나브로와이너리",
-            "product_img": "wine11_sub1.png,wine11_sub2.png"
+            "product_img": "wine11.png,wine11_sub2.png"
         },
         {
             "Idx": 12,
@@ -130,7 +130,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "청도감와인",
-            "product_img": "wine12_sub1.png,wine12_sub2.png"
+            "product_img": "wine1.png12,wine12_sub2.png"
         }
     ]
 }

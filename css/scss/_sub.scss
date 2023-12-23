@@ -1,0 +1,198 @@
+@import url('./reset.css');
+@import "_mixin";
+
+header {
+    position: fixed;
+    height: 132px;
+    width: 100%;
+
+
+    article {
+        @include flex(center) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main-title {
+            position: relative;
+            width: 100%;
+            height: 54px;
+            margin: 16px 0 32px 0;
+            align-items: center;
+            color: #EAB838;
+            text-align: center;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            font-family: Noto Serif KR;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+
+            @include flex(center) {
+                align-items: center;
+            }
+
+            p {
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 20%;
+
+                    padding: 13px;
+                    vertical-align: top;
+                }
+            }
+
+        }
+
+        .main-menu {
+            nav {
+                @include flex(center) {
+                    align-items: center;
+                }
+
+                height: 30px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                vertical-align: middle;
+                padding: 0 554px;
+                padding-bottom: 8px;
+
+                a {
+                    margin: 0 60px;
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.9px;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    height: 434px;
+    width: 100%;
+    border: 1px solid #D9D9D9;
+
+    article {
+        .top {
+            background: #FFF;
+            height: 354px;
+            padding: 0 370px;
+
+            @include flex(space-between) {
+                gap: 420px;
+            }
+
+            :nth-child(1) {
+                .company {
+                    margin: 40px 0 24px;
+                    color: #EAB838;
+                    font-family: Noto Serif KR;
+                    font-size: 1.5rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                    letter-spacing: -0.28px;
+                }
+
+                .intro {
+                    color: #000;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 32px;
+                    letter-spacing: -0.16px;
+
+                    span {
+                        font-family: Noto Sans KR;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            :nth-child(2) {
+                font-family: Noto Sans KR;
+                font-size: 1rem;
+                font-style: normal;
+                line-height: 32px;
+
+                :nth-child(1) {
+                    margin: 40px 0 10px;
+                    height: 32px;
+                    color: #000;
+                    font-weight: 700;
+                    letter-spacing: -0.16px;
+                }
+
+                :nth-child(2) {
+                    color: #EAB838;
+                    font-family: Noto Sans KR;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    letter-spacing: -0.24px;
+                }
+
+                :nth-child(3) {
+                    margin: 24px 0 32px;
+                    color: #000;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                :nth-child(4) {
+                    width: 100%;
+
+                    @include flex(space-between) {
+                        align-items: center;
+                    }
+
+                    vertical-align: top;
+
+                    img {
+                        background: #FFF;
+                        margin: auto;
+                        display: block;
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                }
+            }
+
+        }
+
+        .bottom {
+            background: #D9D9D9;
+            height: 80px;
+            padding: 24px 370px;
+
+            div {
+
+                @include flex(space-between) {
+                    align-items: center;
+                }
+
+                height: 32px;
+                color: #000;
+                font-family: Inter;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                letter-spacing: -0.16px;
+
+                a {
+                    color: #000;
+                }
+
+            }
+        }
+    }
+
+}
