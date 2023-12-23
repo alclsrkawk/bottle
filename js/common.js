@@ -1,4 +1,5 @@
-(function () {
+const pageLoad = () => {
+
     function includeHtml() {
         const includeTarget = document.querySelectorAll('.includeJs');
         includeTarget.forEach(function (el, idx) {
@@ -20,20 +21,7 @@
     };
 
     includeHtml();
-})();
 
-const pageLoad = () => {
-    const elNav = document.querySelectorAll('.main-menu nav a');
-    const num = localStorage.num || 0;
-    // elNav[num].style.cssText = 'color:red';
-
-    console.log("num :", num, "nav ", elNav)
-    elNav.forEach((element, i) => {
-        element.onclick = (e) => {
-            // e.preventDefault();
-            localStorage.num = i;
-        }
-    });
 }
 
 window.onload = pageLoad;

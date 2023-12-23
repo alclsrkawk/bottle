@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대한민국 최고 주류 쇼핑몰</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -42,56 +43,89 @@
         progress.style.cssText = "background: url('./images/main/range.png') repeat-x;  width:40%; "
     </script> -->
     <main>
-        <div class="wine">
-            <div>분위기 있는 와인</div>
-            <div>
-                <span>+</span>&nbsp;more
+        <div class="wlist">
+            <div class="wine">
+                <div class="cate-name">분위기 있는 와인</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=wine'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- <figure class="swiper-slide">
+                        </figure> -->
+                    </div>
+                </div>
             </div>
-            <div>
-                <figure>
-                    <img src="./images/wine/wine3.png" alt="">
+        </div>
+    </main>
+    <script>
+
+        const getData = (name) => {
+            let goods = [], list = '';
+            let ellist = document.querySelector(`.${name} .swiper-wrapper`);
+
+            const url = `../datas/${name}_view.json`;
+            fetch(url)
+                .then(type => type.json())
+                .then(result => {
+                    goods = result.data;
+                    console.log(goods)
+                    getList();
+
+                }).catch(error => {
+                    console.log(error);
+                });
+
+            const getList = () => {
+                goods.forEach(function (element, i) {
+                    const picture = element.product_img.split(',')[0];
+                    // console.log(picture)
+                    list += `
+                <figure class="swiper-slide">
+                    <img src="./images/${name}/${picture.trim()}" alt="">
                     <figcaption>
-                        <p class="brand">
-                            발렌타인
+                        <p>
+                            ${element.brand}
                         </p>
                         <p>
-                            발렌타인 글렌버기 15년산
+                            ${element.product_name}
                         </p>
                         <p>
-                            <span>149,000원</span>
-                            <span>200,000원</span>
+                            <span> ${element.discount}</span>
+                            <span> ${element.price}</span>
                         </p>
                     </figcaption>
                 </figure>
-            </div>
-        </div>
-        <div class="beer">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="soju">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="whisky">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="community">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+                `
+                });
+                ellist.innerHTML = list;
 
-    </main>
-
+                list = "";
+                let ellink = document.querySelectorAll('figure');
+                ellink.forEach(function (element, i) {
+                    element.onclick = function () {
+                        location.href = `./pages/view.html?idx=${goods[i].Idx}&name=${name}`;
+                    }
+                })
+            }
+        }
+        getData('wine');
+    </script>
     <!-- main   -->
     <!-- footer -->
     <footer data-include-file="./include/main/footer.html" class="includeJs"></footer>
     <!-- footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>

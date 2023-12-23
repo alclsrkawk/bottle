@@ -130,7 +130,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "청도감와인",
-            "product_img": "wine1.png12,wine12_sub2.png"
+            "product_img": "wine12.png,wine12_sub2.png"
         }
     ]
 }

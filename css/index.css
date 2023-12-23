@@ -223,42 +223,51 @@ footer article .bottom div a {
   color: #B2B3B9;
 }
 
+main .blist {
+  background: #F7F8FA;
+}
+main .ylist {
+  background: #F7F8FA;
+}
 main .wine {
-  margin: 80px 370px 0px;
-  background: #FFF;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin: 80px 370px 60px;
   color: #000;
-  text-align: center;
   font-style: normal;
 }
-main .wine :nth-child(1) {
+main .wine .cate-name {
+  text-align: center;
   font-family: Noto Sans;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: -1.4px;
 }
-main .wine :nth-child(2) {
+main .wine .more {
+  margin-bottom: 41px;
   text-align: right;
   font-family: Inter;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 }
-main .wine :nth-child(2) span {
+main .wine .more span {
   font-size: 1rem;
   color: #BF7D2C;
 }
-main .wine :nth-child(3) {
-  margin: 41px 0px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+main .wine .swiper {
+  overflow: hidden;
 }
-main .wine :nth-child(3) figure {
-  padding: 20px 20px;
+main .wine .swiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .wine .swiper .swiper-wrapper .swiper-slide {
+  flex-shrink: 0;
+  margin: 0;
+  cursor: pointer;
+  padding: 20px;
   width: 280px;
   height: 400px;
   border: 1px solid #E0E2E7;
@@ -266,34 +275,38 @@ main .wine :nth-child(3) figure {
   font-style: normal;
   line-height: normal;
 }
-main .wine :nth-child(3) figure img {
-  width: 100%;
+main .wine .swiper .swiper-wrapper .swiper-slide img {
+  width: 240px;
+  height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 16px;
 }
-main .wine :nth-child(3) figure figcaption {
-  display: flex;
-  flex-wrap: wrap;
-}
-main .wine :nth-child(3) figure figcaption :nth-child(1) {
+main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(1) {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: -0.7px;
+  margin-bottom: 8px;
 }
-main .wine :nth-child(3) figure figcaption :nth-child(2) {
+main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
   color: #000;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: -0.9px;
+  margin-bottom: 33px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-main .wine :nth-child(3) figure figcaption :nth-child(3) :nth-child(1) {
+main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(1) {
   color: #000;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -1px;
+  margin-right: 10px;
 }
-main .wine :nth-child(3) figure figcaption :nth-child(3) :nth-child(2) {
+main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-weight: 300;

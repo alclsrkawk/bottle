@@ -3,21 +3,23 @@
 
 // PC --시작
 main {
+
     // height: 100vh;
+    .blist {
+        background: #F7F8FA;
+    }
+
+    .ylist {
+        background: #F7F8FA;
+    }
 
     .wine {
-        margin: 80px 370px 0px;
-        background: #FFF;
-
-        @include flex(center) {
-            flex-direction: column;
-        }
-
+        margin: 80px 370px 60px;
         color: #000;
-        text-align: center;
         font-style: normal;
 
-        :nth-child(1) {
+        .cate-name {
+            text-align: center;
             font-family: Noto Sans;
             font-size: 1.5rem;
             font-weight: 700;
@@ -25,11 +27,13 @@ main {
             letter-spacing: -1.4px;
         }
 
-        :nth-child(2) {
+        .more {
+            margin-bottom: 41px;
             text-align: right;
             font-family: Inter;
             font-weight: 400;
             line-height: normal;
+            cursor: pointer;
 
             span {
                 font-size: 1rem;
@@ -37,87 +41,85 @@ main {
             }
         }
 
-        :nth-child(3) {
-            margin: 41px 0px 60px;
+        .swiper {
+            overflow: hidden;
 
-            @include flex(space-between) {
-                align-items: center;
-                gap: 20px;
-            }
-
-            figure {
-                padding: 20px 20px;
-                width: 280px;
-                height: 400px;
-                border: 1px solid #E0E2E7;
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
+            .swiper-wrapper {
+                @include flex(center) {
+                    align-items: center;
+                    gap: 10px;
                 }
 
-                font-family: Inter;
-                font-style: normal;
-                line-height: normal;
+                .swiper-slide {
+                    // width: 10%;
+                    flex-shrink: 0;
+                    margin: 0;
+                    cursor: pointer;
 
-                figcaption {
-                    display: flex;
-                    flex-wrap: wrap;
+                    padding: 20px;
+                    width: 280px;
+                    height: 400px;
+                    border: 1px solid #E0E2E7;
 
-                    :nth-child(1) {
-                        color: rgba(0, 0, 0, 0.50);
-                        font-size: 0.7rem;
-                        font-weight: 300;
-                        letter-spacing: -0.7px;
+                    img {
+                        width: 240px;
+                        height: 240px;
+                        object-fit: cover;
+                        margin-bottom: 16px;
                     }
 
-                    :nth-child(2) {
-                        color: #000;
-                        font-size: 1rem;
-                        font-weight: 300;
-                        letter-spacing: -0.9px;
-                    }
+                    font-family: Inter;
+                    font-style: normal;
+                    line-height: normal;
 
-                    :nth-child(3) {
-
-
+                    figcaption {
                         :nth-child(1) {
-                            color: #000;
-                            font-size: 1.1rem;
-                            font-weight: 700;
-                            letter-spacing: -1px;
-                        }
-
-                        :nth-child(2) {
                             color: rgba(0, 0, 0, 0.50);
                             font-size: 0.7rem;
                             font-weight: 300;
                             letter-spacing: -0.7px;
-                            text-decoration-line: line-through;
+                            margin-bottom: 8px;
+                        }
+
+                        :nth-child(2) {
+                            color: #000;
+                            font-size: 1rem;
+                            font-weight: 300;
+                            letter-spacing: -0.9px;
+                            margin-bottom: 33px;
+
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        :nth-child(3) {
+                            :nth-child(1) {
+                                color: #000;
+                                font-size: 1.1rem;
+                                font-weight: 700;
+                                letter-spacing: -1px;
+                                margin-right: 10px;
+                            }
+
+                            :nth-child(2) {
+                                color: rgba(0, 0, 0, 0.50);
+                                font-size: 0.7rem;
+                                font-weight: 300;
+                                letter-spacing: -0.7px;
+                                text-decoration-line: line-through;
+                            }
                         }
                     }
                 }
-
             }
 
         }
-
     }
 
-    // .beer {
-    //     margin-top: 80px;
-    //     background: #F7F8FA;
-    // }
 
-    // .soju {
-    //     margin-top: 80px;
-    //     background: #FFF;
-    // }
 
-    // .whisky {
-    //     margin-top: 80px;
-    //     background: #F7F8FA;
-    // }
+
 }
 
 // PC -- 끝
