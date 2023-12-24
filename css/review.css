@@ -63,6 +63,10 @@ header .header-pc article .main-menu nav a {
   display: none;
 }
 
+.footer-m {
+  display: none;
+}
+
 footer {
   height: 434px;
   width: 100%;
@@ -262,6 +266,40 @@ footer article .bottom div a {
   }
   .header-m .toggle nav.active {
     transform: translateX(0%);
+  }
+  .footer-pc {
+    display: none;
+  }
+  .footer-m {
+    display: block;
+    background: #FFF;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #E0E2E7;
+  }
+  .footer-m :nth-child(1) {
+    color: #EAB838;
+    font-family: Noto Serif KR;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+  }
+  .footer-m :nth-child(2) span {
+    color: #B2B3B9;
+  }
+  .footer-m :nth-child(2) a {
+    color: #B2B3B9;
+    font-family: Inter;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.12px;
   }
 }
 section {

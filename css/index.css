@@ -135,11 +135,15 @@ header .header-pc article .main-menu nav a {
   height: 10px;
 }
 
+.footer-m {
+  display: none;
+}
+
 footer {
   height: 434px;
   width: 100%;
 }
-footer article .top {
+footer .footer-pc article .top {
   background: #000;
   height: 354px;
   padding: 0 370px;
@@ -147,7 +151,7 @@ footer article .top {
   justify-content: space-between;
   gap: 420px;
 }
-footer article .top :nth-child(1) .company {
+footer .footer-pc article .top :nth-child(1) .company {
   margin: 40px 0 24px;
   color: #FFF;
   font-family: Noto Serif KR;
@@ -157,7 +161,7 @@ footer article .top :nth-child(1) .company {
   line-height: 150%;
   letter-spacing: -0.28px;
 }
-footer article .top :nth-child(1) .intro {
+footer .footer-pc article .top :nth-child(1) .intro {
   color: #B2B3B9;
   font-size: 1rem;
   font-style: normal;
@@ -165,56 +169,56 @@ footer article .top :nth-child(1) .intro {
   line-height: 32px;
   letter-spacing: -0.16px;
 }
-footer article .top :nth-child(1) .intro span {
+footer .footer-pc article .top :nth-child(1) .intro span {
   font-family: Noto Sans KR;
   font-weight: 700;
 }
-footer article .top :nth-child(2) {
+footer .footer-pc article .top :nth-child(2) {
   font-family: Noto Sans KR;
   font-size: 1rem;
   font-style: normal;
   line-height: 32px;
 }
-footer article .top :nth-child(2) :nth-child(1) {
+footer .footer-pc article .top :nth-child(2) :nth-child(1) {
   margin: 40px 0 10px;
   height: 32px;
   color: #FFF;
   font-weight: 700;
   letter-spacing: -0.16px;
 }
-footer article .top :nth-child(2) :nth-child(2) {
+footer .footer-pc article .top :nth-child(2) :nth-child(2) {
   color: #EAB838;
   font-family: Noto Sans KR;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.24px;
 }
-footer article .top :nth-child(2) :nth-child(3) {
+footer .footer-pc article .top :nth-child(2) :nth-child(3) {
   margin: 24px 0 32px;
   color: #B2B3B9;
   font-style: normal;
   font-weight: 400;
 }
-footer article .top :nth-child(2) :nth-child(4) {
+footer .footer-pc article .top :nth-child(2) :nth-child(4) {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   vertical-align: top;
 }
-footer article .top :nth-child(2) :nth-child(4) img {
+footer .footer-pc article .top :nth-child(2) :nth-child(4) img {
   background: #000;
   margin: auto;
   display: block;
   width: 48px;
   height: 48px;
 }
-footer article .bottom {
+footer .footer-pc article .bottom {
   background: #3F4150;
   height: 80px;
   padding: 24px 370px;
 }
-footer article .bottom div {
+footer .footer-pc article .bottom div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -227,7 +231,7 @@ footer article .bottom div {
   line-height: 32px;
   letter-spacing: -0.16px;
 }
-footer article .bottom div a {
+footer .footer-pc article .bottom div a {
   color: #B2B3B9;
 }
 
@@ -344,6 +348,39 @@ footer article .bottom div a {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .footer-pc {
+    display: none;
+  }
+  .footer-m {
+    display: block;
+    background: #000;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-m :nth-child(1) {
+    color: #FFF;
+    font-family: Noto Serif KR;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+  }
+  .footer-m :nth-child(2) span {
+    color: #B2B3B9;
+  }
+  .footer-m :nth-child(2) a {
+    color: #B2B3B9;
+    font-family: Inter;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.12px;
   }
 }
 main .wlist {
