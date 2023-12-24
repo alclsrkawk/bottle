@@ -278,6 +278,7 @@ footer {
 }
 
 // PC -- 끝
+@include res($pad) {}
 
 @include res($tablet) {}
 
