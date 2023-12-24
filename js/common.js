@@ -21,7 +21,19 @@ const pageLoad = () => {
     };
 
     includeHtml();
-
 }
 
+const sideMenu = () => {
+    //const elBody = document.querySelector('body');
+    const elNav = document.querySelector('.toggle nav');
+    elNav.classList.toggle('active');
+}
+
+const sideClose = () => {
+    const elNav = document.querySelector('.toggle nav');
+    const elClose = document.querySelector('#p-close');
+    elClose.onclick = function () {
+        elNav.classList.toggle('active');
+    }
+}
 window.onload = pageLoad;

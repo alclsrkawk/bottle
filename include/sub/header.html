@@ -1,21 +1,67 @@
-<!-- header-->
-
-<article>
-    <div class="main-title">
-        <p>
-            <a href="/">Happy Pub</a>
-        </p>
-        <p>
-            <img src="../images/main/user-icon-svg_b.png" alt="">
-        </p>
-    </div>
-    <div class="main-menu">
+<div class="header-pc">
+    <article>
+        <div class="main-title">
+            <p>
+                <a href="/">Happy Pub</a>
+            </p>
+            <p>
+                <img src="../images/main/user-icon-svg_b.png" alt="">
+            </p>
+        </div>
+        <div class="main-menu">
+            <nav>
+                <a href="../pages/list.html?name=wine">분위기 있는 와인</a>
+                <a href="../pages/list.html?name=beer">즐겨 마시는 맥주 </a>
+                <a href="../pages/list.html?name=soju">늘 한결같은 소주</a>
+                <a href="../pages/list.html?name=whisky">홀리데이 위스키</a>
+            </nav>
+        </div>
+    </article>
+</div>
+<div class="header-m">
+    <div class="toggle">
+        <img src="../images/main/menu-icon-svg.png" onclick="sideMenu();">
         <nav>
-            <a href="../pages/list.html?name=wine">분위기 있는 와인</a>
-            <a href="../pages/list.html?name=beer">즐겨 마시는 맥주 </a>
-            <a href="../pages/list.html?name=soju">늘 한결같은 소주</a>
-            <a href="../pages/list.html?name=whisky">홀리데이 위스키</a>
+            <div class="menu">
+                <p>Happy Pub</p>
+                <p id="p-close" onclick="sideClose();">
+                    <img src="../images/main/close-icon-svg.png">
+                </p>
+            </div>
+            <ul>
+                <li>
+                    <a href="../pages/list.html?name=wine">분위기 있는 와인</a>
+                </li>
+                <li>
+                    <a href="../pages/list.html?name=beer">즐겨 마시는 맥주</a>
+                </li>
+                <li>
+                    <a href="../pages/list.html?name=soju">늘 한결같은 소주</a>
+                </li>
+                <li>
+                    <a href="../pages/list.html?name=whisky">홀리데이 위스키</a>
+                </li>
+                <li>
+                    <a href="../pages/review.html">베스트후기</a>
+                </li>
+                <!-- <li>
+                    <a href="#">공지사항</a>
+                </li> -->
+            </ul>
+            <div class="sign">
+                <div>
+                    <p>로그인</p>
+                    <p>장바구니</p>
+                </div>
+
+            </div>
         </nav>
     </div>
-</article>
-<!-- header-->
+    <div>
+        <a href="/" class="home">Happy Pub</a>
+    </div>
+    <div>
+        <img src="../images/main/user-icon-svg.png" alt="">
+        <img src="../images/main/cart-icon-svg.png" alt="">
+    </div>
+</div>

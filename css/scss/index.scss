@@ -269,10 +269,11 @@ main {
                         height: 120px;
                         border: 1px solid #E0E2E7;
 
+                        margin: auto 0;
+                        display: block;
+
                         img {
                             width: 100%;
-                            margin: auto;
-                            display: block;
                         }
 
                     }
@@ -297,7 +298,7 @@ main {
                             overflow: hidden;
                             text-overflow: ellipsis;
 
-                            margin: 14px 0 10px;
+                            margin: 16px 0 14px;
                             font-size: 0.8rem;
                             font-weight: 500;
                             line-height: 24px;
@@ -353,7 +354,7 @@ main {
                     font-weight: 400;
                     letter-spacing: -0.18px;
 
-                    padding: 14px;
+                    padding: 11px;
                     border-bottom: 1px solid #E0E2E7;
 
                     :nth-child(1) {
