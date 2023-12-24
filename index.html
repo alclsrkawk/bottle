@@ -50,66 +50,262 @@
                     <span>+</span>&nbsp;more
                 </div>
                 <div class="swiper">
-                    <div class="swiper-wrapper">
+                    <div id="dv-wine" class="swiper-wrapper">
                         <!-- <figure class="swiper-slide">
                         </figure> -->
                     </div>
                 </div>
             </div>
         </div>
+        <div class="blist">
+            <div class="beer">
+                <div class="cate-name">즐겨 마시는 맥주</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=beer'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-beer" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slist">
+            <div class="soju">
+                <div class="cate-name">늘 한결같은 소주</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=soju'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-soju" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ylist">
+            <div class="whisky">
+                <div class="cate-name">홀리데이 위스키</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=whisky'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-whisky" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="community">
+            <div class="review">
+                <div>
+                    <div class="cate-name">베스트후기</div>
+                    <div class="more" onclick="location.href='./pages/list.html?name=review'">
+                        <span>+</span>&nbsp;more
+                    </div>
+                    <div class="list">
+                        <figure>
+                            <div class="pic">
+                                <img src="./images/beer/beer9.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <p>초야(CHOYA)] 논알콜 유자 탄산음료 요와나이 유즈슈 350ml (정식수입)</p>
+                                <p>
+                                    다른것보다 이름이 독특해서 구매해봤습니다
+                                    맛도 어떨지 궁금하네요.
+                                </p>
+                                <p>
+                                    ★★★★★
+                                </p>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="pic">
+                                <img src="./images/soju/soju_3_01.jpg" alt="">
+                            </div>
+                            <div class="desc">
+                                <p>김연박명인 민속주안동소주 양반탈 45도 400ml 조옥화1대명인</p>
+                                <p>
+                                    배송이 엄청 빠르네요...!! 하루만에...!!
+                                    민속주 안동소주는 믿고 마시죠!
+                                </p>
+                                <p>
+                                    ★★★★★
+                                </p>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="notice">
+                <div>
+                    <div class="cate-name">공지사항</div>
+                    <div class="more">
+                        <span>+</span>&nbsp;more
+                    </div>
+                    <div class="list">
+                        <figcaption>
+                            <div>[할인] 크리스마스 기념 할인 상품-와일드 터키 마스터스 킵 코너스톤 라이</div>
+                            <div>2023.12.24</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[출고] 10년숙성 (주)솔송주 리미티드에디션 솔직 25도 375ml</div>
+                            <div>2023.12.23</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[입점] 왕지케양조장 설홍 20도 375ml 동백증류주 동백꽃 소주</div>
+                            <div>2023.12.20</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[알림] 아사히 드라이제로프리 논알콜 350ml 24캔 판매 중지 되었습니다.</div>
+                            <div>2023.12.19</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[입고] 선운산 복분자주 흥진 샹스프라보아즈 복분자와인13도 750ml</div>
+                            <div>2023.12.18</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[배송] 운송 노조 파업 사태로 인한 배송지연 관련 내용입니다.</div>
+                            <div>2023.12.15</div>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script>
+        const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
+            , '../datas/soju_view.json', '../datas/whisky_view.json'];
 
-        const getData = (name) => {
-            let goods = [], list = '';
-            let ellist = document.querySelector(`.${name} .swiper-wrapper`);
+        let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
+        let elWine = document.querySelector(`#dv-wine`);
+        let elBeer = document.querySelector(`#dv-beer`);
+        let elSoju = document.querySelector(`#dv-soju`);
+        let elWhisky = document.querySelector(`#dv-whisky`);
 
-            const url = `../datas/${name}_view.json`;
-            fetch(url)
+        const getList = (ctrl, name) => {
+            // console.log(wine)
+            ctrl.forEach(function (element, i) {
+                const picture = element.product_img.split(',')[0];
+                if (name === "wine") {
+                    winelist += `
+                    <figure class="swiper-slide wine-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+                else if (name === "beer") {
+                    beerlist += `
+                    <figure class="swiper-slide beer-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+                else if (name === "soju") {
+                    sojulist += `
+                    <figure class="swiper-slide soju-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+                else {
+                    whiskylist += `
+                    <figure class="swiper-slide whisky-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+            });
+
+            switch (name) {
+                case "wine":
+                    elWine.innerHTML = winelist;
+                    pageLink(ctrl, name, document.querySelectorAll(".wine-item"));
+                    break;
+                case "beer":
+                    elBeer.innerHTML = beerlist;
+                    pageLink(ctrl, name, document.querySelectorAll(".beer-item"));
+                    break;
+                case "soju":
+                    elSoju.innerHTML = sojulist;
+                    pageLink(ctrl, name, document.querySelectorAll(".soju-item"));
+                    break;
+                default:
+                    elWhisky.innerHTML = whiskylist;
+                    pageLink(ctrl, name, document.querySelectorAll(".whisky-item"))
+                    break;
+            }
+        }
+        const pageLink = (ctrl, cate, link) => {
+            link.forEach(function (element, i) {
+                element.onclick = function () {
+                    location.href = `./pages/view.html?idx=${ctrl[i].Idx}&name=${cate}`;
+                }
+            })
+        }
+        const fetchData = (data, name) => {
+            fetch(data)
                 .then(type => type.json())
                 .then(result => {
-                    goods = result.data;
-                    console.log(goods)
-                    getList();
-
+                    getList(result.data, name);
                 }).catch(error => {
                     console.log(error);
                 });
-
-            const getList = () => {
-                goods.forEach(function (element, i) {
-                    const picture = element.product_img.split(',')[0];
-                    // console.log(picture)
-                    list += `
-                <figure class="swiper-slide">
-                    <img src="./images/${name}/${picture.trim()}" alt="">
-                    <figcaption>
-                        <p>
-                            ${element.brand}
-                        </p>
-                        <p>
-                            ${element.product_name}
-                        </p>
-                        <p>
-                            <span> ${element.discount}</span>
-                            <span> ${element.price}</span>
-                        </p>
-                    </figcaption>
-                </figure>
-                `
-                });
-                ellist.innerHTML = list;
-
-                list = "";
-                let ellink = document.querySelectorAll('figure');
-                ellink.forEach(function (element, i) {
-                    element.onclick = function () {
-                        location.href = `./pages/view.html?idx=${goods[i].Idx}&name=${name}`;
-                    }
-                })
-            }
         }
-        getData('wine');
+
+        const getData = () => {
+            fetchData(jsondata[0], "wine");
+            fetchData(jsondata[1], "beer");
+            fetchData(jsondata[2], "soju");
+            fetchData(jsondata[3], "whisky");
+        }
+        getData();
     </script>
     <!-- main   -->
     <!-- footer -->
@@ -118,8 +314,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".swiper", {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 5,
+            spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

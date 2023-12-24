@@ -223,14 +223,24 @@ footer article .bottom div a {
   color: #B2B3B9;
 }
 
+main .wlist {
+  background: #FFF;
+  padding-bottom: 60px;
+}
 main .blist {
   background: #F7F8FA;
+  padding-bottom: 60px;
+}
+main .slist {
+  background: #FFF;
+  padding-bottom: 60px;
 }
 main .ylist {
   background: #F7F8FA;
+  padding-bottom: 60px;
 }
 main .wine {
-  margin: 80px 370px 60px;
+  margin: 80px 370px;
   color: #000;
   font-style: normal;
 }
@@ -254,42 +264,116 @@ main .wine .more span {
   font-size: 1rem;
   color: #BF7D2C;
 }
-main .wine .swiper {
+main .beer {
+  margin: 0px 370px;
+  padding-top: 80px;
+  color: #000;
+  font-style: normal;
+}
+main .beer .cate-name {
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -1.4px;
+}
+main .beer .more {
+  margin-bottom: 41px;
+  text-align: right;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+main .beer .more span {
+  font-size: 1rem;
+  color: #BF7D2C;
+}
+main .soju {
+  margin: 80px 370px;
+  color: #000;
+  font-style: normal;
+}
+main .soju .cate-name {
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -1.4px;
+}
+main .soju .more {
+  margin-bottom: 41px;
+  text-align: right;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+main .soju .more span {
+  font-size: 1rem;
+  color: #BF7D2C;
+}
+main .whisky {
+  margin: 0px 370px;
+  padding-top: 80px;
+  color: #000;
+  font-style: normal;
+}
+main .whisky .cate-name {
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -1.4px;
+}
+main .whisky .more {
+  margin-bottom: 41px;
+  text-align: right;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+main .whisky .more span {
+  font-size: 1rem;
+  color: #BF7D2C;
+}
+main .swiper {
   overflow: hidden;
 }
-main .wine .swiper .swiper-wrapper {
+main .swiper .swiper-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-main .wine .swiper .swiper-wrapper .swiper-slide {
+main .swiper .swiper-wrapper .swiper-slide {
   flex-shrink: 0;
   margin: 0;
   cursor: pointer;
   padding: 20px;
-  width: 280px;
-  height: 400px;
   border: 1px solid #E0E2E7;
   font-family: Inter;
   font-style: normal;
   line-height: normal;
 }
-main .wine .swiper .swiper-wrapper .swiper-slide img {
-  width: 240px;
-  height: 240px;
-  -o-object-fit: cover;
-     object-fit: cover;
+main .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  margin: auto;
+  display: block;
   margin-bottom: 16px;
 }
-main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(1) {
+main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(1) {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: -0.7px;
   margin-bottom: 8px;
 }
-main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
+main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
   color: #000;
   font-size: 1rem;
   font-weight: 300;
@@ -299,17 +383,132 @@ main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(1) {
+main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(1) {
   color: #000;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -1px;
   margin-right: 10px;
 }
-main .wine .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
+main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: -0.7px;
   text-decoration-line: line-through;
+}
+main .community {
+  padding: 80px 370px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  color: #000;
+  font-family: Inter;
+  font-style: normal;
+  line-height: normal;
+}
+main .community .review .cate-name {
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -1.4px;
+}
+main .community .review .more {
+  margin-bottom: 41px;
+  text-align: right;
+  font-weight: 400;
+  cursor: pointer;
+}
+main .community .review .more span {
+  font-size: 1rem;
+  color: #BF7D2C;
+}
+main .community .review .list {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .community .review .list figure {
+  display: flex;
+  justify-content: inline-flex;
+  align-items: start;
+  border-bottom: 1px solid #E0E2E7;
+}
+main .community .review .list figure .pic {
+  margin: 20px 0px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #E0E2E7;
+}
+main .community .review .list figure .pic img {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+main .community .review .list figure .desc {
+  margin: 20px;
+}
+main .community .review .list figure .desc :nth-child(1) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.18px;
+}
+main .community .review .list figure .desc :nth-child(2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 14px 0 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+main .community .review .list figure .desc :nth-child(3) {
+  margin-top: 0;
+  color: #EAB838;
+}
+main .community .notice .cate-name {
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -1.4px;
+}
+main .community .notice .more {
+  margin-bottom: 41px;
+  text-align: right;
+  font-weight: 400;
+  cursor: pointer;
+}
+main .community .notice .more span {
+  font-size: 1rem;
+  color: #BF7D2C;
+}
+main .community .notice .list {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .community .notice .list figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-self: start;
+  gap: 10%;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.18px;
+  padding: 14px;
+  border-bottom: 1px solid #E0E2E7;
+}
+main .community .notice .list figcaption :nth-child(1) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .community .notice .list figcaption :nth-child(2) {
+  text-align: right;
 }
