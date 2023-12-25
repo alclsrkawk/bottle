@@ -45,7 +45,7 @@ header .header-pc article .main-menu nav {
   height: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   vertical-align: middle;
-  padding: 0 554px;
+  padding: 0 auto;
   padding-bottom: 8px;
 }
 header .header-pc article .main-menu nav a {
@@ -81,7 +81,7 @@ header .header-pc article .main-menu nav a {
   padding: 0 370px;
   position: absolute;
   top: 48%;
-  left: 5%;
+  left: 0;
   display: flex;
   justify-content: inline-flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ footer .footer-pc article .top {
   padding: 0 370px;
   display: flex;
   justify-content: space-between;
-  gap: 420px;
+  gap: 25%;
 }
 footer .footer-pc article .top :nth-child(1) .company {
   margin: 40px 0 24px;
@@ -180,7 +180,7 @@ footer .footer-pc article .top :nth-child(2) {
   line-height: 32px;
 }
 footer .footer-pc article .top :nth-child(2) :nth-child(1) {
-  margin: 40px 0 10px;
+  margin: 40px 0px 10px;
   height: 32px;
   color: #FFF;
   font-weight: 700;
@@ -558,10 +558,10 @@ main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2
   text-decoration-line: line-through;
 }
 main .community {
-  padding: 80px 370px 60px;
+  margin: 80px 370px 60px;
   display: flex;
   justify-content: center;
-  gap: 10%;
+  gap: 5%;
   color: #000;
   font-family: Inter;
   font-style: normal;
@@ -585,7 +585,6 @@ main .community .review .more span {
   color: #BF7D2C;
 }
 main .community .review .list {
-  width: 100%;
   margin-bottom: 20px;
 }
 main .community .review .list figure {

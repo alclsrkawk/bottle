@@ -60,7 +60,7 @@ header {
                     height: 30px;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                     vertical-align: middle;
-                    padding: 0 554px;
+                    padding: 0 auto;
                     padding-bottom: 8px;
 
                     a {
@@ -100,7 +100,7 @@ footer {
             padding: 0 370px;
 
             @include flex(space-between) {
-                gap: 420px;
+                gap: 25%;
             }
 
             :nth-child(1) {

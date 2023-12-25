@@ -218,10 +218,10 @@ main {
     }
 
     .community {
-        padding: 80px 370px 60px;
+        margin: 80px 370px 60px;
 
         @include flex(center) {
-            gap: 10%;
+            gap: 5%;
         }
 
         color: #000;
@@ -230,7 +230,6 @@ main {
         line-height: normal;
 
         .review {
-            // margin: 80px;
 
             .cate-name {
                 font-family: Noto Sans;
@@ -253,7 +252,7 @@ main {
             }
 
             .list {
-                width: 100%;
+                // width: 100%;
                 margin-bottom: 20px;
 
                 figure {
@@ -312,13 +311,10 @@ main {
                     }
 
                 }
-
             }
         }
 
         .notice {
-
-            // margin: 80px;
             .cate-name {
                 font-family: Noto Sans;
                 font-size: 1.5rem;

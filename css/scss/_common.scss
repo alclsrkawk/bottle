@@ -60,7 +60,7 @@ header {
                     height: 30px;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                     vertical-align: middle;
-                    padding: 0 554px;
+                    padding: 0 auto;
                     padding-bottom: 8px;
 
                     a {
@@ -102,7 +102,7 @@ header {
             padding: 0 370px;
             position: absolute;
             top: 48%;
-            left: 5%;
+            left: 0;
 
             @include flex(inline-flex) {
                 flex-direction: column;
@@ -181,10 +181,11 @@ footer {
                 padding: 0 370px;
 
                 @include flex(space-between) {
-                    gap: 420px;
+                    gap: 25%;
                 }
 
                 :nth-child(1) {
+
                     .company {
                         margin: 40px 0 24px;
                         color: #FFF;
@@ -216,9 +217,10 @@ footer {
                     font-size: 1rem;
                     font-style: normal;
                     line-height: 32px;
+                    // width: 194px;
 
                     :nth-child(1) {
-                        margin: 40px 0 10px;
+                        margin: 40px 0px 10px;
                         height: 32px;
                         color: #FFF;
                         font-weight: 700;

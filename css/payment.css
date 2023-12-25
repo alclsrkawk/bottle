@@ -44,7 +44,7 @@ header .header-pc article .main-menu nav {
   height: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   vertical-align: middle;
-  padding: 0 554px;
+  padding: 0 auto;
   padding-bottom: 8px;
 }
 header .header-pc article .main-menu nav a {
@@ -78,7 +78,7 @@ footer article .top {
   padding: 0 370px;
   display: flex;
   justify-content: space-between;
-  gap: 420px;
+  gap: 25%;
 }
 footer article .top :nth-child(1) .company {
   margin: 40px 0 24px;
