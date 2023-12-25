@@ -330,16 +330,58 @@
     <!-- footer -->
     <footer data-include-file="./include/main/footer.html" class="includeJs"></footer>
     <!-- footer -->
+    <script defer src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".swiper", {
-            slidesPerView: 4,
-            spaceBetween: 10,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+
+        window.addEventListener("load", (event) => {
+            let pageviw = 4;
+            const isMobile = window.matchMedia('(max-width: 390px)');
+            const isPC = window.matchMedia('(min-width: 600px)');
+            console.log("mobile :", isMobile.matches)
+            console.log("pc :", isPC.matches)
+
+            if (isMobile.matches) pageviw = 2;
+            else pageviw = 4;
+
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: pageviw,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
         });
+
+        const changeHandler = (e) => {
+            console.log('390px changed!');
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+        }
+        const changeOtherHandler = (e) => {
+            console.log('600px changed!');
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
+
+        const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
+        const mediaQueryOther = window.matchMedia('(min-width: 600px)');
+        mediaQueryMobile.addEventListener('change', changeHandler);
+        mediaQueryOther.addEventListener('change', changeOtherHandler);
     </script>
 
 </body>

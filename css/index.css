@@ -525,7 +525,7 @@ main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2
   text-decoration-line: line-through;
 }
 main .community {
-  margin: 80px 370px 60px;
+  padding: 80px 370px 60px;
   display: flex;
   justify-content: center;
   gap: 5%;
@@ -533,6 +533,9 @@ main .community {
   font-family: Inter;
   font-style: normal;
   line-height: normal;
+}
+main .community .cate-name {
+  text-align: start;
 }
 main .community .review .list {
   margin-bottom: 20px;

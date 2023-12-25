@@ -128,7 +128,7 @@ main {
     }
 
     .community {
-        margin: 80px 370px 60px;
+        padding: 80px 370px 60px;
 
         @include flex(center) {
             gap: 5%;
@@ -139,7 +139,12 @@ main {
         font-style: normal;
         line-height: normal;
 
+        .cate-name {
+            text-align: start;
+        }
+
         .review {
+
             .list {
                 // width: 100%;
                 margin-bottom: 20px;
