@@ -235,7 +235,7 @@ footer .footer-pc article .bottom div a {
   color: #B2B3B9;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .header-pc {
     display: none;
   }
@@ -277,6 +277,7 @@ footer .footer-pc article .bottom div a {
     transform: translateX(-100%);
     transition: 1s;
     text-align: start;
+    z-index: 999;
   }
   .header-m .toggle .menu {
     padding: 10px;
@@ -348,6 +349,47 @@ footer .footer-pc article .bottom div a {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+  }
+  .banner-m figure figcaption {
+    position: absolute;
+    top: 20%;
+    color: #FFF;
+    font-style: normal;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  .banner-m figure figcaption :nth-child(1) {
+    font-family: ABeeZee;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .banner-m figure figcaption :nth-child(2) {
+    font-family: Noto Sans;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .banner-m figure figcaption :nth-child(3) {
+    width: 335px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .banner-m figure figcaption :nth-child(3) progress {
+    margin-top: 90%;
+    width: 313px;
+    height: 6px;
+    background: rgba(217, 217, 217, 0.5);
+  }
+  .banner-m figure figcaption :nth-child(3) progress::-webkit-progress-value {
+    background: #D9D9D9;
+  }
+  .banner-m figure figcaption :nth-child(3) img {
+    position: absolute;
+    bottom: 2.5%;
+    right: 0;
+    width: 8px;
+    height: 10px;
   }
   .footer-pc {
     display: none;
@@ -383,105 +425,30 @@ footer .footer-pc article .bottom div a {
     letter-spacing: -0.12px;
   }
 }
-main .wlist {
-  background: #FFF;
-  padding-bottom: 60px;
-}
-main .blist {
-  background: #F7F8FA;
-  padding-bottom: 60px;
-}
+main .wlist,
 main .slist {
   background: #FFF;
   padding-bottom: 60px;
 }
+main .blist,
 main .ylist {
   background: #F7F8FA;
   padding-bottom: 60px;
 }
-main .wine {
-  margin: 80px 370px;
-  color: #000;
-  font-style: normal;
-}
-main .wine .cate-name {
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: -1.4px;
-}
-main .wine .more {
-  margin-bottom: 41px;
-  text-align: right;
-  font-family: Inter;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-}
-main .wine .more span {
-  font-size: 1rem;
-  color: #BF7D2C;
-}
-main .beer {
-  margin: 0px 370px;
-  padding-top: 80px;
-  color: #000;
-  font-style: normal;
-}
-main .beer .cate-name {
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: -1.4px;
-}
-main .beer .more {
-  margin-bottom: 41px;
-  text-align: right;
-  font-family: Inter;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-}
-main .beer .more span {
-  font-size: 1rem;
-  color: #BF7D2C;
-}
+main .wine,
 main .soju {
   margin: 80px 370px;
   color: #000;
   font-style: normal;
 }
-main .soju .cate-name {
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: -1.4px;
-}
-main .soju .more {
-  margin-bottom: 41px;
-  text-align: right;
-  font-family: Inter;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-}
-main .soju .more span {
-  font-size: 1rem;
-  color: #BF7D2C;
-}
+main .beer,
 main .whisky {
   margin: 0px 370px;
   padding-top: 80px;
   color: #000;
   font-style: normal;
 }
-main .whisky .cate-name {
+main .cate-name {
   text-align: center;
   font-family: Noto Sans;
   font-size: 1.5rem;
@@ -489,7 +456,7 @@ main .whisky .cate-name {
   line-height: 150%;
   letter-spacing: -1.4px;
 }
-main .whisky .more {
+main .more {
   margin-bottom: 41px;
   text-align: right;
   font-family: Inter;
@@ -497,7 +464,7 @@ main .whisky .more {
   line-height: normal;
   cursor: pointer;
 }
-main .whisky .more span {
+main .more span {
   font-size: 1rem;
   color: #BF7D2C;
 }
@@ -567,23 +534,6 @@ main .community {
   font-style: normal;
   line-height: normal;
 }
-main .community .review .cate-name {
-  font-family: Noto Sans;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: -1.4px;
-}
-main .community .review .more {
-  margin-bottom: 41px;
-  text-align: right;
-  font-weight: 400;
-  cursor: pointer;
-}
-main .community .review .more span {
-  font-size: 1rem;
-  color: #BF7D2C;
-}
 main .community .review .list {
   margin-bottom: 20px;
 }
@@ -631,22 +581,8 @@ main .community .review .list figure .desc :nth-child(3) {
   margin-top: 0;
   color: #EAB838;
 }
-main .community .notice .cate-name {
-  font-family: Noto Sans;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: -1.4px;
-}
-main .community .notice .more {
-  margin-bottom: 41px;
-  text-align: right;
-  font-weight: 400;
-  cursor: pointer;
-}
-main .community .notice .more span {
-  font-size: 1rem;
-  color: #BF7D2C;
+main .community .notice {
+  margin-top: 3px;
 }
 main .community .notice .list {
   width: 100%;
@@ -670,4 +606,94 @@ main .community .notice .list figcaption :nth-child(1) {
 }
 main .community .notice .list figcaption :nth-child(2) {
   text-align: right;
+}
+
+@media screen and (max-width: 390px) {
+  main .wlist,
+  main .slist,
+  main .blist,
+  main .ylist {
+    padding-bottom: 40px;
+  }
+  main .wine,
+  main .soju {
+    margin: 40px 20px 20px;
+  }
+  main .beer,
+  main .whisky {
+    margin: 0px 20px 20px;
+    padding-top: 40px;
+  }
+  main .cate-name {
+    text-align: start;
+    font-size: 1.3rem;
+  }
+  main .more {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+  }
+  main .more span {
+    font-size: 0.8rem;
+  }
+  main .swiper .swiper-wrapper .swiper-slide {
+    padding: 16px 10px 0px 10px;
+  }
+  main .swiper .swiper-wrapper .swiper-slide img {
+    margin-bottom: 12px;
+  }
+  main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(1) {
+    font-size: 0.6rem;
+    letter-spacing: -0.3px;
+    margin-bottom: 5px;
+  }
+  main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
+    font-size: 0.7rem;
+    letter-spacing: -0.4px;
+    margin-bottom: 5px;
+  }
+  main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) {
+    padding-bottom: 16px;
+  }
+  main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(1) {
+    font-size: 0.7rem;
+    letter-spacing: -0.4px;
+    margin-right: 5px;
+  }
+  main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
+    font-size: 0.5rem;
+    letter-spacing: -0.3px;
+  }
+  main .community {
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main .community .review .list figure .pic {
+    margin: 10px 0px;
+  }
+  main .community .review .list figure .pic img {
+    width: 100%;
+  }
+  main .community .review .list figure .desc {
+    margin: 0;
+    padding: 10px;
+    width: 60%;
+  }
+  main .community .review .list figure .desc :nth-child(1) {
+    font-size: 0.7rem;
+    letter-spacing: -0.12px;
+  }
+  main .community .review .list figure .desc :nth-child(2) {
+    margin: 10px 0px 10px;
+    font-size: 0.6rem;
+  }
+  main .community .notice {
+    padding-top: 40px;
+  }
+  main .community .notice .list figcaption {
+    padding: 10px 0px;
+    font-size: 0.7rem;
+  }
 }

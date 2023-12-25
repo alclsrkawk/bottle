@@ -356,6 +356,7 @@ footer {
                 transform: translateX(-100%);
                 transition: 1s;
                 text-align: start;
+                z-index: 999;
             }
 
             .menu {
@@ -445,6 +446,57 @@ footer {
 
             @include flex (center) {
                 align-items: center;
+            }
+
+            text-align: center;
+
+            figcaption {
+                position: absolute;
+                top: 20%;
+
+                color: #FFF;
+                font-style: normal;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+
+                :nth-child(1) {
+                    font-family: ABeeZee;
+                    font-size: 0.7rem;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                }
+
+                :nth-child(2) {
+                    font-family: Noto Sans;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                :nth-child(3) {
+                    width: 335px;
+                    position: relative;
+
+                    @include flex(space-between) {}
+
+                    progress {
+                        margin-top: 90%;
+                        width: 313px;
+                        height: 6px;
+                        background: rgba(217, 217, 217, 50%);
+                    }
+
+                    progress::-webkit-progress-value {
+                        background: #D9D9D9;
+                    }
+
+                    img {
+                        position: absolute;
+                        bottom: 2.5%;
+                        right: 0;
+                        width: 8px;
+                        height: 10px;
+                    }
+
+                }
             }
         }
     }

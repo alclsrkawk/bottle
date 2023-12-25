@@ -273,6 +273,7 @@ footer {
                 transform: translateX(-100%);
                 transition: 1s;
                 text-align: start;
+                z-index: 999;
             }
 
             .menu {

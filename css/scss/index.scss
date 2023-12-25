@@ -3,146 +3,56 @@
 
 // PC --시작
 main {
-    .wlist {
-        background: #FFF;
-        padding-bottom: 60px;
-    }
 
-    .blist {
-        background: #F7F8FA;
-        padding-bottom: 60px;
-    }
-
+    .wlist,
     .slist {
         background: #FFF;
         padding-bottom: 60px;
     }
 
+    .blist,
     .ylist {
         background: #F7F8FA;
         padding-bottom: 60px;
     }
 
-    .wine {
-        margin: 80px 370px;
-        color: #000;
-        font-style: normal;
-
-        .cate-name {
-            text-align: center;
-            font-family: Noto Sans;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 150%;
-            letter-spacing: -1.4px;
-        }
-
-        .more {
-            margin-bottom: 41px;
-            text-align: right;
-            font-family: Inter;
-            font-weight: 400;
-            line-height: normal;
-            cursor: pointer;
-
-            span {
-                font-size: 1rem;
-                color: #BF7D2C;
-            }
-        }
-    }
-
-    .beer {
-        margin: 0px 370px;
-        padding-top: 80px;
-
-        color: #000;
-        font-style: normal;
-
-        .cate-name {
-            text-align: center;
-            font-family: Noto Sans;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 150%;
-            letter-spacing: -1.4px;
-        }
-
-        .more {
-            margin-bottom: 41px;
-            text-align: right;
-            font-family: Inter;
-            font-weight: 400;
-            line-height: normal;
-            cursor: pointer;
-
-            span {
-                font-size: 1rem;
-                color: #BF7D2C;
-            }
-        }
-    }
-
+    .wine,
     .soju {
         margin: 80px 370px;
         color: #000;
         font-style: normal;
-
-        .cate-name {
-            text-align: center;
-            font-family: Noto Sans;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 150%;
-            letter-spacing: -1.4px;
-        }
-
-        .more {
-            margin-bottom: 41px;
-            text-align: right;
-            font-family: Inter;
-            font-weight: 400;
-            line-height: normal;
-            cursor: pointer;
-
-            span {
-                font-size: 1rem;
-                color: #BF7D2C;
-            }
-        }
     }
 
+    .beer,
     .whisky {
         margin: 0px 370px;
         padding-top: 80px;
-
         color: #000;
         font-style: normal;
-
-        .cate-name {
-            text-align: center;
-            font-family: Noto Sans;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 150%;
-            letter-spacing: -1.4px;
-        }
-
-        .more {
-            margin-bottom: 41px;
-            text-align: right;
-            font-family: Inter;
-            font-weight: 400;
-            line-height: normal;
-            cursor: pointer;
-
-            span {
-                font-size: 1rem;
-                color: #BF7D2C;
-            }
-        }
     }
 
+    .cate-name {
+        text-align: center;
+        font-family: Noto Sans;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -1.4px;
+    }
+
+    .more {
+        margin-bottom: 41px;
+        text-align: right;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+
+        span {
+            font-size: 1rem;
+            color: #BF7D2C;
+        }
+    }
 
     .swiper {
         overflow: hidden;
@@ -230,27 +140,6 @@ main {
         line-height: normal;
 
         .review {
-
-            .cate-name {
-                font-family: Noto Sans;
-                font-size: 1.5rem;
-                font-weight: 700;
-                line-height: 150%;
-                letter-spacing: -1.4px;
-            }
-
-            .more {
-                margin-bottom: 41px;
-                text-align: right;
-                font-weight: 400;
-                cursor: pointer;
-
-                span {
-                    font-size: 1rem;
-                    color: #BF7D2C;
-                }
-            }
-
             .list {
                 // width: 100%;
                 margin-bottom: 20px;
@@ -315,25 +204,7 @@ main {
         }
 
         .notice {
-            .cate-name {
-                font-family: Noto Sans;
-                font-size: 1.5rem;
-                font-weight: 700;
-                line-height: 150%;
-                letter-spacing: -1.4px;
-            }
-
-            .more {
-                margin-bottom: 41px;
-                text-align: right;
-                font-weight: 400;
-                cursor: pointer;
-
-                span {
-                    font-size: 1rem;
-                    color: #BF7D2C;
-                }
-            }
+            margin-top: 3px;
 
             .list {
                 width: 100%;
@@ -376,4 +247,135 @@ main {
 
 @include res($tablet) {}
 
-@include res($mobile) {}
+@include res($mobile) {
+    main {
+
+        .wlist,
+        .slist,
+        .blist,
+        .ylist {
+            padding-bottom: 40px;
+        }
+
+        .wine,
+        .soju {
+            margin: 40px 20px 20px;
+        }
+
+        .beer,
+        .whisky {
+            margin: 0px 20px 20px;
+            padding-top: 40px;
+        }
+
+        .cate-name {
+            text-align: start;
+            font-size: 1.3rem;
+        }
+
+        .more {
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+
+            span {
+                font-size: 0.8rem;
+            }
+        }
+
+        .swiper {
+            .swiper-wrapper {
+
+                // pointer-events: none;
+                .swiper-slide {
+                    padding: 16px 10px 0px 10px;
+
+                    img {
+                        margin-bottom: 12px;
+                    }
+
+                    figcaption {
+                        :nth-child(1) {
+                            font-size: 0.6rem;
+                            letter-spacing: -0.3px;
+                            margin-bottom: 5px;
+                        }
+
+                        :nth-child(2) {
+                            font-size: 0.7rem;
+                            letter-spacing: -0.4px;
+                            margin-bottom: 5px;
+                        }
+
+                        :nth-child(3) {
+                            padding-bottom: 16px;
+
+                            :nth-child(1) {
+                                font-size: 0.7rem;
+                                letter-spacing: -0.4px;
+                                margin-right: 5px;
+                            }
+
+                            :nth-child(2) {
+                                font-size: 0.5rem;
+                                letter-spacing: -0.3px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .community {
+            margin: 0 auto;
+            padding: 40px 20px;
+
+            @include flex(center) {
+                flex-direction: column;
+            }
+
+            .review {
+                .list {
+                    figure {
+
+                        .pic {
+                            margin: 10px 0px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .desc {
+                            margin: 0;
+                            padding: 10px;
+                            width: 60%;
+
+                            :nth-child(1) {
+                                font-size: 0.7rem;
+                                letter-spacing: -0.12px;
+                            }
+
+                            :nth-child(2) {
+                                margin: 10px 0px 10px;
+                                font-size: 0.6rem;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .notice {
+                padding-top: 40px;
+
+                .list {
+                    figcaption {
+                        padding: 10px 0px;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

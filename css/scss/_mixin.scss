@@ -6,26 +6,26 @@ $width : 1920px;
     @content
 }
 
-$mobile: 375px;
+$mobile: 390px;
 $pad: 768px;
 $tablet: 1024px;
 $desktop: 1280px;
 
 @mixin res($n) {
     @if($n ==$mobile) {
-        @media screen and (max-width:375px) {
+        @media screen and (max-width:$mobile) {
             @content;
         }
     }
 
     @else if($n ==$pad) {
-        @media (min-width:374px) and (max-width:768px) {
+        @media (min-width:$mobile) and (max-width:$pad) {
             @content;
         }
     }
 
     @else if($n ==$tablet) {
-        @media (min-width:768px) and (max-width:1024px) {
+        @media (min-width:$pad) and (max-width:$tablet) {
             @content;
         }
     }

@@ -16,12 +16,12 @@
     <header data-include-file="./include/main/header.html" class="includeJs"></header>
     <!-- header-->
     <!-- main   -->
-    <div class="banner">
+    <section class="banner">
         <figure>
-            <!-- <img class="active" src="./images/main/main-slide-01.png" alt=""> -->
+            <img class="active" src="./images/main/main-slide-01.png" alt="">
             <!-- <img src="./images/main/main-slide-02.png" alt=""> -->
             <!-- <img src="./images/main/main-slide-03.png" alt=""> -->
-            <img src="./images/main/main-slide-04.png" alt="">
+            <!-- <img src="./images/main/main-slide-04.png" alt=""> -->
             <figcaption>
                 <div>
                     홀리데이 추천 위스키
@@ -35,10 +35,26 @@
                 </div>
             </figcaption>
         </figure>
-    </div>
+    </section>
     <section class="banner-m">
         <figure>
-            <img src="./images/main/main-slide-01.png" alt="">
+            <img class="active" src="./images/main/main-slide-01.png" alt="">
+            <!-- <img src="./images/main/main-slide-02.png" alt=""> -->
+            <!-- <img src="./images/main/main-slide-03.png" alt=""> -->
+            <!-- <img src="./images/main/main-slide-04.png" alt=""> -->
+            <figcaption>
+                <div>
+                    홀리데이 추천 위스키
+                </div>
+                <div>
+                    글렌피딕 12년 <br>
+                    홀리데이 에디션
+                </div>
+                <div>
+                    <progress value="35" max="100"></progress>
+                    <img src="./images/main/pause-btn.png">
+                </div>
+            </figcaption>
         </figure>
     </section>
     <!-- <script>
@@ -317,8 +333,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".swiper", {
-            slidesPerView: 5,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 10,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
