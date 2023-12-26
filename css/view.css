@@ -306,3 +306,48 @@ footer article .bottom div a {
 main {
   height: 100vh;
 }
+
+.menu-tab {
+  font-size: 14px;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.menu-tab p {
+  padding: 10px 0;
+  width: 50%;
+}
+.menu-tab .menu-tab-01 {
+  border-bottom: 1px solid black;
+}
+.menu-tab .menu-tab-02 {
+  border: solid black;
+  border-width: 1px 1px 0 1px;
+  font-weight: 700;
+}
+
+.review-count {
+  margin: 0 auto;
+  padding: 40px 0;
+  border-bottom: 1px solid #E0E2E7;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.review-count .star-count {
+  display: flex;
+  justify-content: center;
+}
+.review-count .star-count .star {
+  color: #E0E2E7;
+}
+.review-count .star-count .count {
+  color: #EAB838;
+}
+.review-count .review-score {
+  margin-left: 10px;
+  font-weight: 700;
+}
