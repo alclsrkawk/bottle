@@ -2,8 +2,85 @@
 
 // PC --시작
 main {
-    height: 100vh;
+    width: 1180px;
+    padding-top: 132px;
+    margin: 0 auto;
+
+    .list_bg {
+        z-index: auto;
+    }
+
+    .list_title {
+        margin: 74px 0;
+        text-align: center;
+    }
+
+    .best5 {
+        background-color: #F7F8FA;
+        height: 724px;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .tab {
+        padding: 10px 0;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #E0E2E7;
+        font-size: 0.7rem;
+        font-weight: 700;
+
+        ul {
+            display: flex;
+
+            li {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .list_items {
+        li {
+            border: 1px solid #E0E2E7;
+            width: 280px;
+            height: 400px;
+            margin: 30px 0;
+
+            img {
+                width: 240px;
+                height: 240px;
+            }
+
+            figcaption {
+                text-align: left;
+                margin: 0 20px;
+
+                small,
+                del {
+                    color: rgba(0, 0, 0, 0.50);
+                    font-size: 0.7rem;
+                }
+
+                p:nth-of-type(1) {
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
+                }
+
+                p:nth-of-type(2) {
+                    font-weight: bold;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
 }
+
+
+
+
 
 // PC -- 끝
 
