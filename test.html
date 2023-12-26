@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 최고 주류 쇼핑몰</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/test_index.min.css">
+    <script defer src="./js/common.js"></script>
+</head>
+
+</head>
+
+<body>
+    <!-- header-->
+    <header data-include-file="./include/main/header.html" class="includeJs"></header>
+    <!-- header-->
+
+    <section>
+        <div class="swiper banner">
+            <figure class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-01.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-02.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-03.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-04.png" alt="">
+                </div>
+            </figure>
+        </div>
+        <!-- <div class="best">
+            <div>
+                홀리데이 추천 위스키
+            </div>
+            <div>
+                글렌피딕 12년 홀리데이 에디션
+            </div>
+            <div>
+                <progress value="25" max="100"></progress>
+                <img src="./images/main/pause-btn.png">
+            </div>
+        </div> -->
+
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </section>
+
+    <main>
+
+    </main>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const progress = document.querySelector('progress');
+        var swiper = new Swiper(".banner", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+
+        });
+        swiper.on('transitionEnd', function () {
+            console.log('now index :::', swiper.realIndex);
+            switch (swiper.realIndex) {
+                case 0: progress.value = 25; break;
+                case 1: progress.value = 50; break;
+                case 2: progress.value = 75; break;
+                case 3: progress.value = 100; break;
+            }
+        });
+
+    </script>
+</body>
+
+</html>

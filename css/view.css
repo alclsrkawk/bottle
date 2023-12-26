@@ -164,6 +164,166 @@ footer article .bottom div a {
   color: #000;
 }
 
+@media (min-width: 390px) and (max-width: 768px) {
+  header .header-pc article .main-title {
+    width: 100%;
+    height: 35px;
+    margin: 12px 0px 28px 0px;
+    line-height: 80%;
+  }
+  header .header-pc article .main-title p {
+    font-size: 1.2rem;
+  }
+  header .header-pc article .main-title p a {
+    color: #EAB838;
+  }
+  header .header-pc article .main-title p img {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    padding: 10px;
+    vertical-align: top;
+  }
+  header .header-pc article .main-menu nav {
+    height: 20px;
+    padding-bottom: 5px;
+  }
+  header .header-pc article .main-menu nav a {
+    margin: 0 20px;
+    font-size: 0.7rem;
+  }
+  footer {
+    height: 300px;
+    width: 100%;
+  }
+  footer .footer-pc article .top {
+    height: 230px;
+    padding: 0 10%;
+    gap: 5%;
+  }
+  footer .footer-pc article .top :nth-child(1) .company {
+    margin: 20px 0 3px;
+    font-size: 0.85rem;
+    line-height: 80%;
+  }
+  footer .footer-pc article .top :nth-child(1) .intro {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(1) {
+    margin: 20px 0px 3px;
+    height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(2) {
+    font-size: 0.7rem;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(3) {
+    margin: 5px 0 10px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) {
+    align-items: center;
+    width: 80px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) img {
+    margin: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  footer .footer-pc article .bottom {
+    height: 40px;
+    padding: 10px 10%;
+  }
+  footer .footer-pc article .bottom div {
+    height: 20px;
+    font-size: 0.6rem;
+    line-height: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .header-pc article .main-title {
+    width: 100%;
+    height: 44px;
+    margin: 14px 0px 32px 0px;
+    line-height: 100%;
+  }
+  header .header-pc article .main-title p {
+    font-size: 1.45rem;
+  }
+  header .header-pc article .main-title p a {
+    color: #EAB838;
+  }
+  header .header-pc article .main-title p img {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    padding: 10px;
+    vertical-align: top;
+  }
+  header .header-pc article .main-menu nav {
+    height: 24px;
+    padding-bottom: 5px;
+  }
+  header .header-pc article .main-menu nav a {
+    margin: 0 25px;
+    font-size: 0.85rem;
+  }
+  footer {
+    height: 300px;
+    width: 100%;
+  }
+  footer .footer-pc article .top {
+    height: 230px;
+    padding: 0 10%;
+    gap: 5%;
+  }
+  footer .footer-pc article .top :nth-child(1) .company {
+    margin: 28px 0 5px;
+    font-size: 0.9rem;
+    line-height: 100%;
+  }
+  footer .footer-pc article .top :nth-child(1) .intro {
+    font-size: 0.7rem;
+    line-height: 22px;
+  }
+  footer .footer-pc article .top :nth-child(2) {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(1) {
+    margin: 28px 0px 5px;
+    height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(2) {
+    font-size: 0.8rem;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(3) {
+    margin: 8px 0 15px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) {
+    align-items: start;
+    width: 120px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) img {
+    margin: auto;
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+  footer .footer-pc article .bottom {
+    height: 40px;
+    padding: 10px 10%;
+  }
+  footer .footer-pc article .bottom div {
+    height: 20px;
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+}
 @media screen and (max-width: 390px) {
   .header-pc {
     display: none;
@@ -304,5 +464,223 @@ footer article .bottom div a {
   }
 }
 main {
-  height: 100vh;
+  width: 1170px;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+main .view_1 {
+  width: 100%;
+  height: 670px;
+  display: flex;
+  justify-content: space-between;
+}
+main .view_1 .view_img_1 {
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+}
+main .view_1 .view_img_1 img {
+  border: 1px solid #E0E2E7;
+  width: 100%;
+}
+main .view_1 .view_img_1 .view_sub_image {
+  width: 70%;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+main .view_1 .view_img_1 .view_sub_image img {
+  border: 1px solid #E0E2E7;
+  width: 30%;
+  margin-right: 20px;
+}
+main .view_1 .view_text {
+  position: relative;
+  width: 50%;
+  color: #8C8D96;
+  font-size: 18px;
+}
+main .view_1 .view_text #goods_name {
+  font-size: 30px;
+  line-height: 150%;
+  font-weight: 400;
+  color: black;
+}
+main .view_1 .view_text #line {
+  border-bottom: 1px solid black;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+main .view_1 .view_text #goods_text {
+  display: flex;
+  justify-content: left;
+  font-size: 18px;
+  line-height: 180%;
+  font-weight: 400;
+}
+main .view_1 .view_text #goods_text #text1 {
+  color: #8C8D96;
+}
+main .view_1 .view_text #goods_text nav {
+  margin-right: 60px;
+  font-weight: 400;
+  color: #000000;
+}
+main .view_1 .view_text #goods_text nav #sale {
+  -webkit-text-decoration: 1px line-through black;
+          text-decoration: 1px line-through black;
+}
+main .view_1 .view_text #text_box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #F7F8FA;
+  margin: 40px 0;
+  color: #8C8D96;
+  font-size: 14px;
+}
+main .view_1 .view_text #text_box #text2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 800;
+}
+main .view_1 .view_text #text_box #text2 input {
+  width: 85px;
+  height: 30px;
+  font-size: 18px;
+}
+main .view_1 .view_text #text3 p {
+  color: #8C8D96;
+  font-size: 18px;
+  text-align: right;
+}
+main .view_1 .view_text #text3 b {
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+}
+main .view_1 .view_text #button1_location {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+main .view_1 .view_text #button1_location .button1 {
+  width: 240px;
+  height: 47px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: black;
+}
+main .goods_line {
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+}
+main .goods_line #goods_ex_line {
+  text-align: center;
+  width: 100%;
+  border-right: 1px solid #8C8D96;
+  border-top: 1px solid #8C8D96;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 14px;
+}
+main .goods_line #goods_review_line {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #8C8D96;
+  font-weight: 400;
+  padding: 10px;
+  font-size: 14px;
+}
+main .img_ex_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+main .img_ex_text .img_ex {
+  overflow: hidden;
+  height: 2051px;
+}
+main .img_ex_text .img_ex img {
+  width: 1179px;
+}
+main .img_ex_text .expand {
+  width: 246px;
+  height: 42px;
+  background-color: black;
+}
+main .img_ex_text .expand p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+main .img_ex_text .fold {
+  display: none;
+  width: 246px;
+  height: 42px;
+  background-color: black;
+}
+main .img_ex_text .fold p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+
+.menu-tab {
+  font-size: 14px;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.menu-tab p {
+  padding: 10px 0;
+  width: 50%;
+}
+.menu-tab .menu-tab-01 {
+  border-bottom: 1px solid black;
+}
+.menu-tab .menu-tab-02 {
+  border: solid black;
+  border-width: 1px 1px 0 1px;
+  font-weight: 700;
+}
+
+.review-count {
+  margin: 0 auto;
+  padding: 40px 0;
+  border-bottom: 1px solid #E0E2E7;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.review-count .star-count {
+  display: flex;
+  justify-content: center;
+}
+.review-count .star-count .star {
+  color: #E0E2E7;
+}
+.review-count .star-count .count {
+  color: #EAB838;
+}
+.review-count .review-score {
+  margin-left: 10px;
+  font-weight: 700;
 }

@@ -16,7 +16,169 @@
     <!-- header-->
     <header data-include-file="../include/sub/header.html" class="includeJs"></header>
     <!-- header-->
-    <main></main>
+    <main>
+        <div class="section-first">
+            <section class="order">
+                <b>주문자 정보</b>
+                <br><br>
+                <input type="box" placeholder="이름을 입력해주세요" class="input_name">
+                <select name="" class="select_num">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="019">019</option>
+                    <option value="018">018</option>
+                    <option value="017">017</option>
+                    <option value="직접입력">직접입력</option>
+                </select>
+                <input type="box" placeholder="전화번로를 입력해주세요" class="input_num"><br>
+                <input type="box" placeholder="이메일을 입력해주세요" class="input_email"> @
+                <select name="" class="select_email">
+                    <option value="naver.com">naver.com</option>
+                    <option value="gamil.com">gmail.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="">직접입력</option>
+                </select>
+            </section>
+
+            <section class="receiver">
+                <div class="receiver_info">
+                    <b>수령자 정보</b>
+                    <p><input type="checkbox">주문자 정보와 같습니다.</p>
+                </div>
+                <br>
+                <input type="box" placeholder="이름을 입력해주세요" class="input_name">
+                <select name="" class="select_num">
+                    <option value="">010</option>
+                    <option value="">011</option>
+                    <option value="">019</option>
+                    <option value="">018</option>
+                    <option value="">017</option>
+                </select>
+                <input type="box" placeholder="전화번로를 입력해주세요" class="input_num"><br>
+                <input type="box" placeholder="이메일을 입력해주세요" class="input_email"> @
+                <select name="" class="select_email">
+                    <option value="">naver.com</option>
+                    <option value="">gmail.com</option>
+                    <option value="">nate.com</option>
+                    <option value="">daum.net</option>
+                </select>
+            </section>
+
+            <section class="address">
+                <p>
+                    <b>주소 입력</b><br><br>
+                    <input type="text" id="zip-code" placeholder="예) 삼성동, 가산동">
+                    <input type="button" onclick="execDaumPostcode()" value="우편번호 검색" id="zip-search">
+                <p>
+                </p>
+                <input type="text" id="address-1" placeholder="도로명주소">
+                <p>
+                </p>
+                <input type="text" id="address-2" placeholder="상세주소">
+                </p>
+                <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                <script>
+                    function execDaumPostcode() {
+                        new daum.Postcode({
+                            oncomplete: function (data) {
+                                document.getElementById('zip-code').value = data.zonecode;
+                                document.getElementById('address-1').value = data.address;
+                            }
+                        }).open();
+                    }
+                </script>
+            </section>
+
+            <section class="requested">
+                <b>주문시 요청사항</b><br><br>
+                <input type="text" placeholder="선택 입력 사항입니다." class="input_requested">
+            </section>
+        </div>
+
+        <div class="section-second">
+            <div class="section-second-one">
+                <b>결제방법</b><br>
+                <p>
+                    <input type="checkbox"><span>신용카드</span><br>
+                    <input type="checkbox"><span>실시간 계좌이체</span><br>
+                    <input type="checkbox"><span>가상계좌</span><br>
+                    <input type="checkbox"><span>휴대폰결제</span><br>
+                </p>
+            </div>
+            <div class="section-second-two">
+                <input type="checkbox"><b>약관/결제 전체동의</b><br>
+                <p>
+                    <input type="checkbox"><span>이용약관 동의(필수)</span><br>
+                    <input type="checkbox"><span>개인정보 수집 이용 동의(필수)</span><br>
+                    <input type="checkbox"><span>개인정보 수집 이용 동의(선택)</span><br>
+                    <input type="checkbox"><span>위 구매조건 확인 및 결제진행 동의</span><br>
+                </p>
+            </div>
+            <div class="section-second-three">
+                <b>주문금액</b>
+                <div class="three-flex">
+                    <p>총 상품금액</p>
+                    <p>+10,000원</p>
+                </div>
+                <div class="three-flex">
+                    <p>ㅡ 기본 배송비</p>
+                    <p>(+) 4,000원</p>
+                </div>
+                <p>(30,000원 이상 무료)</p>
+                <div class="three-flex">
+                    <p>ㅡ 지역 배송비</p>
+                    <p>(+) 0원</p>
+                </div>
+                <div class="three-flex">
+                    <b>최종 주문금액</b>
+                    <b>+14,000원</b>
+                </div>
+            </div>
+            <div class="pay-button">
+                <button>결제하기</button>
+            </div>
+        </div>
+
+        <div class="section-third">
+            <b>주문상품</b>
+            <ul>
+                <div class="third-flex">
+                    <div>
+                        <li><img src="../images/wine/wine1.png" alt=""></li>
+                    </div>
+                    <div>
+                        <p>금용농산</p>
+                        <p>미르아토 레드스위트와인 750ml <span>| 1개</span></p><br>
+                        <p>149,000원 <span>200,000원</span></p>
+                    </div>
+                </div>
+            </ul>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
     <!-- footer -->
     <footer data-include-file="../include/sub/footer.html" class="includeJs"></footer>
     <!-- footer -->
