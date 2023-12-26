@@ -3,6 +3,8 @@ header {
   position: fixed;
   height: 132px;
   width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #D9D9D9;
 }
 header .header-pc article {
   display: flex;
@@ -463,6 +465,146 @@ footer article .bottom div a {
     letter-spacing: -0.12px;
   }
 }
-section {
+main {
   height: 100vh;
+}
+
+.main-section {
+  max-width: 1180px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.menu-tab {
+  font-size: 0.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.menu-tab p {
+  padding: 10px 0;
+  width: 50%;
+}
+.menu-tab .menu-tab-01 {
+  border-bottom: 1px solid black;
+}
+.menu-tab .menu-tab-02 {
+  border: solid black;
+  border-width: 1px 1px 0 1px;
+  font-weight: 700;
+}
+
+.review-count {
+  padding: 40px 0;
+  border-bottom: 1px solid #E0E2E7;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.review-count .star-count {
+  display: flex;
+  justify-content: center;
+}
+.review-count .star-count .star {
+  color: #E0E2E7;
+}
+.review-count .star-count .count {
+  color: #EAB838;
+}
+.review-count .review-score {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.review-container .tab {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.review-container .tab p span {
+  font-weight: 700;
+}
+.review-container .tab .review-tab-right {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.review-container .tab .review-tab-right #select-wrap {
+  font-family: "Noto Sans KR", sans-serif;
+  border: 0;
+  border-bottom: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../images/main/drop-down.png") no-repeat 100% 50%/15px auto;
+  z-index: 1;
+  padding: 10px 40px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.review-container .tab .review-tab-right #select-wrap:focus {
+  outline: 0;
+}
+.review-container .tab .review-tab-right #select-wrap:selected {
+  box-shadow: 0 0 10px 100px #1882A8 inset;
+}
+.review-container .tab .review-tab-right #select-wrap option {
+  padding: 5px 0;
+  text-align: center;
+}
+.review-container .tab .review-tab-right #select-wrap option:hover {
+  box-shadow: 0 0 10px 100px #1882A8 inset;
+}
+.review-container .tab .review-tab-right #select-wrap option:focus {
+  color: #fff;
+  background: #000;
+}
+.review-container .tab .review-tab-right p {
+  padding: 10px 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.review-container .review-list-container {
+  font-size: 1rem;
+  padding: 40px 0;
+}
+.review-container .review-list-container .list-result {
+  padding: 40px 0;
+  border-bottom: 1px solid #E0E2E7;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  justify-content: flex-start;
+}
+.review-container .review-list-container .list-result .left {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.review-container .review-list-container .list-result .left .star-count {
+  display: flex;
+  justify-content: center;
+}
+.review-container .review-list-container .list-result .left .star-count .star {
+  color: #E0E2E7;
+}
+.review-container .review-list-container .list-result .left .star-count .count {
+  color: #EAB838;
+}
+.review-container .review-list-container .list-result .left p {
+  font-size: 0.8rem;
+  color: #8C8D96;
+}
+.review-container .review-list-container .list-result .right p {
+  max-width: 960px;
+  font-size: 0.8rem;
+  line-height: 180%;
 }
