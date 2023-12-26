@@ -49,7 +49,7 @@ main {
     .section-second{
         position: absolute;
         top: 132px;
-        right:100px;
+        right:150px;
         width:400px;
         background-color: #EDEDED;
         padding-left:20px;
@@ -70,12 +70,15 @@ main {
         }
         .section-second-two{
             padding:20px 0;
-            input{
-                
+            b{
+                margin-left:11px;
             }
             p{
                 margin: 5px 0 0 10px;
                 color: #8C8D96;
+                span{
+                    margin-left:11px;
+                }
             }
             border-bottom: 1px solid #E0E2E7;
         }
@@ -88,6 +91,7 @@ main {
             .three-flex{
                 display: flex;
                 justify-content: space-between;
+                padding-top: 20px;
                 padding-right: 20px;
             }
             border-bottom: 1px solid #E0E2E7;
@@ -99,6 +103,38 @@ main {
             height:56px;
             color: white;
             background-color: black;
+            }
+        }
+    }
+    
+    .section-third{
+        li{
+            margin:20px 0;
+            width:100px;
+            height:100px;
+        }
+        img{
+            width:100%;
+        }
+        .third-flex{
+            display: flex;
+            align-items: center;
+            p:nth-of-type(1){
+                font-size: 14px;
+                color: #8A8A8A;
+            }
+            p:nth-of-type(2){
+                span{
+                    color: #8A8A8A;
+                }
+            }
+            p:nth-of-type(3){
+                font-weight: bolder;
+                span{
+                    margin-left:10px;
+                    text-decoration: line-through;
+                    color: #8C8D96;
+                }
             }
         }
     }
