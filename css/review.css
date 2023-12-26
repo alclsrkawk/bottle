@@ -4,19 +4,18 @@ header {
   height: 132px;
   width: 100%;
 }
-header article {
+header .header-pc article {
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: center;
 }
-header article .main-title {
+header .header-pc article .main-title {
   position: relative;
   width: 100%;
   height: 54px;
   margin: 16px 0 32px 0;
   align-items: center;
-  color: #EAB838;
   text-align: center;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   font-family: Noto Serif KR;
@@ -28,24 +27,27 @@ header article .main-title {
   justify-content: center;
   align-items: center;
 }
-header article .main-title p img {
+header .header-pc article .main-title p a {
+  color: #EAB838;
+}
+header .header-pc article .main-title p img {
   position: absolute;
   top: 0;
   right: 20%;
   padding: 13px;
   vertical-align: top;
 }
-header article .main-menu nav {
+header .header-pc article .main-menu nav {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   vertical-align: middle;
-  padding: 0 554px;
+  padding: 0 auto;
   padding-bottom: 8px;
 }
-header article .main-menu nav a {
+header .header-pc article .main-menu nav a {
   margin: 0 60px;
   color: #000;
   text-align: center;
@@ -55,6 +57,14 @@ header article .main-menu nav a {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.9px;
+}
+
+.header-m {
+  display: none;
+}
+
+.footer-m {
+  display: none;
 }
 
 footer {
@@ -68,7 +78,7 @@ footer article .top {
   padding: 0 370px;
   display: flex;
   justify-content: space-between;
-  gap: 420px;
+  gap: 25%;
 }
 footer article .top :nth-child(1) .company {
   margin: 40px 0 24px;
@@ -154,6 +164,305 @@ footer article .bottom div a {
   color: #000;
 }
 
+@media (min-width: 390px) and (max-width: 768px) {
+  header .header-pc article .main-title {
+    width: 100%;
+    height: 35px;
+    margin: 12px 0px 28px 0px;
+    line-height: 80%;
+  }
+  header .header-pc article .main-title p {
+    font-size: 1.2rem;
+  }
+  header .header-pc article .main-title p a {
+    color: #EAB838;
+  }
+  header .header-pc article .main-title p img {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    padding: 10px;
+    vertical-align: top;
+  }
+  header .header-pc article .main-menu nav {
+    height: 20px;
+    padding-bottom: 5px;
+  }
+  header .header-pc article .main-menu nav a {
+    margin: 0 20px;
+    font-size: 0.7rem;
+  }
+  footer {
+    height: 300px;
+    width: 100%;
+  }
+  footer .footer-pc article .top {
+    height: 230px;
+    padding: 0 10%;
+    gap: 5%;
+  }
+  footer .footer-pc article .top :nth-child(1) .company {
+    margin: 20px 0 3px;
+    font-size: 0.85rem;
+    line-height: 80%;
+  }
+  footer .footer-pc article .top :nth-child(1) .intro {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(1) {
+    margin: 20px 0px 3px;
+    height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(2) {
+    font-size: 0.7rem;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(3) {
+    margin: 5px 0 10px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) {
+    align-items: center;
+    width: 80px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) img {
+    margin: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  footer .footer-pc article .bottom {
+    height: 40px;
+    padding: 10px 10%;
+  }
+  footer .footer-pc article .bottom div {
+    height: 20px;
+    font-size: 0.6rem;
+    line-height: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .header-pc article .main-title {
+    width: 100%;
+    height: 44px;
+    margin: 14px 0px 32px 0px;
+    line-height: 100%;
+  }
+  header .header-pc article .main-title p {
+    font-size: 1.45rem;
+  }
+  header .header-pc article .main-title p a {
+    color: #EAB838;
+  }
+  header .header-pc article .main-title p img {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    padding: 10px;
+    vertical-align: top;
+  }
+  header .header-pc article .main-menu nav {
+    height: 24px;
+    padding-bottom: 5px;
+  }
+  header .header-pc article .main-menu nav a {
+    margin: 0 25px;
+    font-size: 0.85rem;
+  }
+  footer {
+    height: 300px;
+    width: 100%;
+  }
+  footer .footer-pc article .top {
+    height: 230px;
+    padding: 0 10%;
+    gap: 5%;
+  }
+  footer .footer-pc article .top :nth-child(1) .company {
+    margin: 28px 0 5px;
+    font-size: 0.9rem;
+    line-height: 100%;
+  }
+  footer .footer-pc article .top :nth-child(1) .intro {
+    font-size: 0.7rem;
+    line-height: 22px;
+  }
+  footer .footer-pc article .top :nth-child(2) {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(1) {
+    margin: 28px 0px 5px;
+    height: 20px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(2) {
+    font-size: 0.8rem;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(3) {
+    margin: 8px 0 15px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) {
+    align-items: start;
+    width: 120px;
+  }
+  footer .footer-pc article .top :nth-child(2) :nth-child(4) img {
+    margin: auto;
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+  footer .footer-pc article .bottom {
+    height: 40px;
+    padding: 10px 10%;
+  }
+  footer .footer-pc article .bottom div {
+    height: 20px;
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .header-pc {
+    display: none;
+  }
+  .header-m {
+    display: block;
+    padding: 16px 20px;
+    position: fixed;
+    height: 47px;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-family: Noto Serif KR;
+    font-style: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .header-m img {
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .header-m :nth-child(1) img {
+    width: 100%;
+  }
+  .header-m :nth-child(2) .home {
+    color: #EAB838;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .header-m .toggle nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 65%;
+    height: 100%;
+    font-weight: normal;
+    background: #FFF;
+    transform: translateX(-100%);
+    transition: 1s;
+    text-align: start;
+    z-index: 999;
+  }
+  .header-m .toggle .menu {
+    padding: 10px;
+    color: #EAB838;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+    height: 47px;
+    border-bottom: 1px solid #E0E2E7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-m .toggle .menu :nth-child(1) {
+    padding-left: 7px;
+  }
+  .header-m .toggle .menu :nth-child(2) img {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  .header-m .toggle .sign {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 84px;
+    background: #000000;
+  }
+  .header-m .toggle .sign div {
+    padding: 14px 20px;
+  }
+  .header-m .toggle .sign div :nth-child(1) {
+    color: #FFF;
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+    margin-bottom: 14px;
+  }
+  .header-m .toggle .sign div :nth-child(2) {
+    color: #FFF;
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+  }
+  .header-m .toggle li {
+    padding: 14px 20px;
+    height: 50px;
+    cursor: pointer;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.16px;
+  }
+  .header-m .toggle nav.active {
+    transform: translateX(0%);
+  }
+  .footer-pc {
+    display: none;
+  }
+  .footer-m {
+    display: block;
+    background: #FFF;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #E0E2E7;
+  }
+  .footer-m :nth-child(1) {
+    color: #EAB838;
+    font-family: Noto Serif KR;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+  }
+  .footer-m :nth-child(2) span {
+    color: #B2B3B9;
+  }
+  .footer-m :nth-child(2) a {
+    color: #B2B3B9;
+    font-family: Inter;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.12px;
+  }
+}
 section {
   height: 100vh;
 }

@@ -5,28 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대한민국 최고 주류 쇼핑몰</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('body').prepend('<header></header>');
-            $('body').append('<footer></footer>');
-            $('header').load("./header.html");
-            $('footer').load("./footer.html");
-        });
-    </script>
+    <script defer src="./js/common.js"></script>
 </head>
 
 <body>
-    <div class="banner">
+    <!-- header-->
+    <header data-include-file="./include/main/header.html" class="includeJs"></header>
+    <!-- header-->
+    <!-- main   -->
+    <section class="banner">
         <figure>
             <img class="active" src="./images/main/main-slide-01.png" alt="">
             <!-- <img src="./images/main/main-slide-02.png" alt=""> -->
+            <!-- <img src="./images/main/main-slide-03.png" alt=""> -->
+            <!-- <img src="./images/main/main-slide-04.png" alt=""> -->
             <figcaption>
                 <div>
                     홀리데이 추천 위스키
@@ -40,12 +35,355 @@
                 </div>
             </figcaption>
         </figure>
-    </div>
+    </section>
+    <section class="banner-m">
+        <figure>
+            <img class="active" src="./images/main/main-slide-01.png" alt="">
+            <!-- <img src="./images/main/main-slide-02.png" alt=""> -->
+            <!-- <img src="./images/main/main-slide-03.png" alt=""> -->
+            <!-- <img src="./images/main/main-slide-04.png" alt=""> -->
+            <figcaption>
+                <div>
+                    홀리데이 추천 위스키
+                </div>
+                <div>
+                    글렌피딕 12년 <br>
+                    홀리데이 에디션
+                </div>
+                <div>
+                    <progress value="35" max="100"></progress>
+                    <img src="./images/main/pause-btn.png">
+                </div>
+            </figcaption>
+        </figure>
+    </section>
     <!-- <script>
-        const progress = document.querySelector('.range');
-        progress.style.cssText = "background: url('./images/main/range.png') repeat-x;  width:40%; "
+        const progress = document.querySelector('progress');
+        progress.value = 25;
     </script> -->
-    <main>Index Page</main>
+    <main>
+        <div class="wlist">
+            <div class="wine">
+                <div class="cate-name">분위기 있는 와인</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=wine'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-wine" class="swiper-wrapper">
+                        <!-- <figure class="swiper-slide">
+                        </figure> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blist">
+            <div class="beer">
+                <div class="cate-name">즐겨 마시는 맥주</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=beer'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-beer" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slist">
+            <div class="soju">
+                <div class="cate-name">늘 한결같은 소주</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=soju'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-soju" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ylist">
+            <div class="whisky">
+                <div class="cate-name">홀리데이 위스키</div>
+                <div class="more" onclick="location.href='./pages/list.html?name=whisky'">
+                    <span>+</span>&nbsp;more
+                </div>
+                <div class="swiper">
+                    <div id="dv-whisky" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="community">
+            <div class="review">
+                <div>
+                    <div class="cate-name">베스트후기</div>
+                    <div class="more" onclick="location.href='./pages/list.html?name=review'">
+                        <span>+</span>&nbsp;more
+                    </div>
+                    <div class="list">
+                        <figure>
+                            <div class="pic">
+                                <img src="./images/beer/beer9.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <p>초야(CHOYA)] 논알콜 유자 탄산음료 요와나이 유즈슈 350ml (정식수입)</p>
+                                <p>
+                                    다른것보다 이름이 독특해서 구매해봤습니다
+                                    맛도 어떨지 궁금하네요.
+                                </p>
+                                <p>
+                                    ★★★★★
+                                </p>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="pic">
+                                <img src="./images/soju/soju_3_01.jpg" alt="">
+                            </div>
+                            <div class="desc">
+                                <p>김연박명인 민속주안동소주 양반탈 45도 400ml 조옥화1대명인</p>
+                                <p>
+                                    배송이 엄청 빠르네요...!! 하루만에...!!
+                                    민속주 안동소주는 믿고 마시죠!
+                                </p>
+                                <p>
+                                    ★★★★★
+                                </p>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="notice">
+                <div>
+                    <div class="cate-name">공지사항</div>
+                    <div class="more">
+                        <span>+</span>&nbsp;more
+                    </div>
+                    <div class="list">
+                        <figcaption>
+                            <div>[할인] 크리스마스 기념 할인 상품-와일드 터키 마스터스 킵 코너스톤 라이</div>
+                            <div>2023.12.24</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[출고] 10년숙성 (주)솔송주 리미티드에디션 솔직 25도 375ml</div>
+                            <div>2023.12.23</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[입점] 왕지케양조장 설홍 20도 375ml 동백증류주 동백꽃 소주</div>
+                            <div>2023.12.20</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[알림] 아사히 드라이제로프리 논알콜 350ml 24캔 판매 중지 되었습니다.</div>
+                            <div>2023.12.19</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[입고] 선운산 복분자주 흥진 샹스프라보아즈 복분자와인13도 750ml</div>
+                            <div>2023.12.18</div>
+                        </figcaption>
+                        <figcaption>
+                            <div>[배송] 운송 노조 파업 사태로 인한 배송지연 관련 내용입니다.</div>
+                            <div>2023.12.15</div>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
+            , '../datas/soju_view.json', '../datas/whisky_view.json'];
+
+        let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
+        let elWine = document.querySelector(`#dv-wine`);
+        let elBeer = document.querySelector(`#dv-beer`);
+        let elSoju = document.querySelector(`#dv-soju`);
+        let elWhisky = document.querySelector(`#dv-whisky`);
+
+        const getList = (ctrl, name) => {
+            // console.log(wine)
+            ctrl.forEach(function (element, i) {
+                const picture = element.product_img.split(',')[0];
+                if (name === "wine") {
+                    winelist += `
+                    <figure class="swiper-slide wine-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+                else if (name === "beer") {
+                    beerlist += `
+                    <figure class="swiper-slide beer-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+                else if (name === "soju") {
+                    sojulist += `
+                    <figure class="swiper-slide soju-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+                else {
+                    whiskylist += `
+                    <figure class="swiper-slide whisky-item">
+                        <img src="./images/${name}/${picture.trim()}" alt="">
+                        <figcaption>
+                            <p>
+                                ${element.brand}
+                            </p>
+                            <p>
+                                ${element.product_name}
+                            </p>
+                            <p>
+                                <span> ${element.discount}</span>
+                                <span> ${element.price}</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                `
+                }
+            });
+
+            switch (name) {
+                case "wine":
+                    elWine.innerHTML = winelist;
+                    pageLink(ctrl, name, document.querySelectorAll(".wine-item"));
+                    break;
+                case "beer":
+                    elBeer.innerHTML = beerlist;
+                    pageLink(ctrl, name, document.querySelectorAll(".beer-item"));
+                    break;
+                case "soju":
+                    elSoju.innerHTML = sojulist;
+                    pageLink(ctrl, name, document.querySelectorAll(".soju-item"));
+                    break;
+                default:
+                    elWhisky.innerHTML = whiskylist;
+                    pageLink(ctrl, name, document.querySelectorAll(".whisky-item"))
+                    break;
+            }
+        }
+        const pageLink = (ctrl, cate, link) => {
+            link.forEach(function (element, i) {
+                element.onclick = function () {
+                    location.href = `./pages/view.html?idx=${ctrl[i].Idx}&name=${cate}`;
+                }
+            })
+        }
+        const fetchData = (data, name) => {
+            fetch(data)
+                .then(type => type.json())
+                .then(result => {
+                    getList(result.data, name);
+                }).catch(error => {
+                    console.log(error);
+                });
+        }
+
+        const getData = () => {
+            fetchData(jsondata[0], "wine");
+            fetchData(jsondata[1], "beer");
+            fetchData(jsondata[2], "soju");
+            fetchData(jsondata[3], "whisky");
+        }
+        getData();
+    </script>
+    <!-- main   -->
+    <!-- footer -->
+    <footer data-include-file="./include/main/footer.html" class="includeJs"></footer>
+    <!-- footer -->
+    <script defer src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+        window.addEventListener("load", (event) => {
+            let pageviw = 4;
+            const isMobile = window.matchMedia('(max-width: 390px)');
+            const isPC = window.matchMedia('(min-width: 600px)');
+            console.log("mobile :", isMobile.matches)
+            console.log("pc :", isPC.matches)
+
+            if (isMobile.matches) pageviw = 2;
+            else pageviw = 4;
+
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: pageviw,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        });
+
+        const changeHandler = (e) => {
+            console.log('390px changed!');
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+        }
+        const changeOtherHandler = (e) => {
+            console.log('600px changed!');
+            var swiper = new Swiper(".swiper", {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
+
+        const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
+        const mediaQueryOther = window.matchMedia('(min-width: 600px)');
+        mediaQueryMobile.addEventListener('change', changeHandler);
+        mediaQueryOther.addEventListener('change', changeOtherHandler);
+    </script>
+
 </body>
 
 </html>

@@ -26,7 +26,7 @@
             "Idx": 3,
             "product_name": "제주양조장 1950 감귤와인 미니어쳐 12도 80ml",
             "price": "7,000원",
-            "discount": "6650",
+            "discount": "6650원",
             "explain": "wine3_ex.png",
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
@@ -130,7 +130,7 @@
             "limit": "옵션당 최소 1개",
             "delivery_fee": "3,000원 / 주문시결제(선결제)",
             "brand": "청도감와인",
-            "product_img": "wine1.png12,wine12_sub2.png"
+            "product_img": "wine12.png,wine12_sub2.png"
         }
     ]
 }
