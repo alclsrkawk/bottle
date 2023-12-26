@@ -1,5 +1,86 @@
 @import "_common";
 
+.banner-m {
+    display: none;
+}
+
+.banner {
+    overflow: hidden;
+
+    figure {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        figcaption {
+            height: 138px;
+            padding: 0 370px;
+            position: absolute;
+            top: 48%;
+            left: 0;
+
+            @include flex(inline-flex) {
+                flex-direction: column;
+            }
+
+            :nth-child(1) {
+                height: 24px;
+                color: #FFF;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+                font-family: ABeeZee;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 24px */
+                letter-spacing: -0.16px;
+            }
+
+            :nth-child(2) {
+                height: 54px;
+                margin: 10px 0 40px;
+                color: #FFF;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+                font-family: Noto Sans;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 150%;
+                /* 54px */
+                letter-spacing: -0.36px;
+            }
+
+            :nth-child(3) {
+                width: 428px;
+                height: 10px;
+                position: relative;
+
+                @include flex(space-between) {}
+
+                progress {
+                    width: 400px;
+                    height: 6px;
+                    background: rgba(217, 217, 217, 50%);
+                }
+
+                progress::-webkit-progress-value {
+                    background: #D9D9D9;
+                }
+
+                img {
+                    position: absolute;
+                    vertical-align: top;
+                    top: -110%;
+                    right: 0;
+                    width: 8px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+
 
 // PC --시작
 main {
@@ -379,6 +460,73 @@ main {
                         padding: 10px 0px;
                         font-size: 0.7rem;
                     }
+                }
+            }
+        }
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .banner-m {
+        display: block;
+
+        figure {
+            overflow: hidden;
+
+            @include flex (center) {
+                align-items: center;
+            }
+
+            text-align: center;
+
+            figcaption {
+                position: absolute;
+                top: 20%;
+
+                color: #FFF;
+                font-style: normal;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+
+                :nth-child(1) {
+                    font-family: ABeeZee;
+                    font-size: 0.7rem;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                }
+
+                :nth-child(2) {
+                    font-family: Noto Sans;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                :nth-child(3) {
+                    width: 335px;
+                    position: relative;
+
+                    @include flex(space-between) {}
+
+                    progress {
+                        margin-top: 90%;
+                        width: 313px;
+                        height: 6px;
+                        background: rgba(217, 217, 217, 50%);
+                    }
+
+                    progress::-webkit-progress-value {
+                        background: #D9D9D9;
+                    }
+
+                    img {
+                        position: absolute;
+                        bottom: 2.5%;
+                        right: 0;
+                        width: 8px;
+                        height: 10px;
+                    }
+
                 }
             }
         }
