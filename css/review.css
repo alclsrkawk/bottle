@@ -3,8 +3,6 @@ header {
   position: fixed;
   height: 132px;
   width: 100%;
-  background-color: white;
-  border-bottom: 1px solid #D9D9D9;
 }
 header .header-pc article {
   display: flex;
@@ -490,7 +488,7 @@ main {
 }
 .menu-tab .menu-tab-02 {
   border: solid black;
-  border-width: 1px 1px 0 1px;
+  border-width: 1px 0 0 1px;
   font-weight: 700;
 }
 
@@ -549,15 +547,9 @@ main {
 .review-container .tab .review-tab-right #select-wrap:focus {
   outline: 0;
 }
-.review-container .tab .review-tab-right #select-wrap:selected {
-  box-shadow: 0 0 10px 100px #1882A8 inset;
-}
 .review-container .tab .review-tab-right #select-wrap option {
   padding: 5px 0;
   text-align: center;
-}
-.review-container .tab .review-tab-right #select-wrap option:hover {
-  box-shadow: 0 0 10px 100px #1882A8 inset;
 }
 .review-container .tab .review-tab-right #select-wrap option:focus {
   color: #fff;
