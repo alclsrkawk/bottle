@@ -70,12 +70,15 @@ main {
         }
         .section-second-two{
             padding:20px 0;
-            input{
-                
+            b{
+                margin-left:11px;
             }
             p{
                 margin: 5px 0 0 10px;
                 color: #8C8D96;
+                span{
+                    margin-left:11px;
+                }
             }
             border-bottom: 1px solid #E0E2E7;
         }
