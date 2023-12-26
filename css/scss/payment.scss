@@ -1,9 +1,134 @@
+
+
+
 @import "_sub";
 
 // PC --시작
 main {
-    height: 100vh;
+    padding-top: 200px;
+    .order , .receiver, .address , .requested{
+        width:700px;
+        margin-bottom: 80px;
+    }
+    margin-left:371px;
+    
+    input , select{
+        height:56px;
+    }
+    .input_name{
+        width:280px;
+    }
+    .select_num{
+        width:80px;
+        text-align: center;
+        margin : 0 20px 10px 20px;
+    }
+    .input_num{
+        width:280px;
+    }
+    .input_email{
+        margin-right: 10px;
+        width:180px;
+    }
+    .select_email{
+        margin-left: 10px;
+        width:464px;
+    }
+
+    .receiver_info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input{
+            height: auto;
+        }
+    }
+    .input_requested{
+        width:480px;
+    }
+    .section-second{
+        position: absolute;
+        top: 132px;
+        right:100px;
+        width:400px;
+        background-color: #EDEDED;
+        padding-left:20px;
+        input{
+            height:auto;
+            margin:15px 0;
+        }
+        .section-second-one{
+            border-bottom: 1px solid #E0E2E7;
+            padding: 20px 0;
+            p{
+                margin-top: 15px;
+                color: #8C8D96;
+                span{
+                    margin-left:11px;
+                }
+            }
+        }
+        .section-second-two{
+            padding:20px 0;
+            input{
+                
+            }
+            p{
+                margin: 5px 0 0 10px;
+                color: #8C8D96;
+            }
+            border-bottom: 1px solid #E0E2E7;
+        }
+        .section-second-three{
+            padding:20px 0;
+            p{
+                color: #8C8D96;
+                margin-left: 20px;
+            }
+            .three-flex{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                padding-right: 20px;
+            }
+            border-bottom: 1px solid #E0E2E7;
+        }
+        .pay-button{
+            padding: 20px 0;
+            button{
+            width:360px;
+            height:56px;
+            color: white;
+            background-color: black;
+            }
+        }
+    }
+
+    //우편번호시작
+    #zip-code{
+        width:480px;
+        margin-bottom: 10px;
+    }
+    #zip-search{
+        width:180px;
+        background-color: white;
+        margin-left: 15px;
+        transform: translateY(2px);
+        
+    }
+    #zip-search:hover{
+        transition: 0.5s;
+        background-color: black;
+        color: white;
+    }
+    #address-1 , #address-2{
+        width:680px;
+        margin-bottom: 10px;
+    }
+    //우편번호 끝
 }
+
+
 
 // PC -- 끝
 
