@@ -462,10 +462,6 @@ footer .footer-pc article .bottom div a {
     letter-spacing: -0.12px;
   }
 }
-.banner-m {
-  display: none;
-}
-
 .banner {
   overflow: hidden;
 }
@@ -474,29 +470,22 @@ footer .footer-pc article .bottom div a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.banner figure figcaption {
-  height: 138px;
-  padding: 0 370px;
+.banner .tit {
   position: absolute;
-  top: 48%;
-  left: 0;
-  display: flex;
-  justify-content: inline-flex;
-  flex-direction: column;
+  top: 65%;
+  left: 18%;
 }
-.banner figure figcaption :nth-child(1) {
+.banner .tit :nth-child(1) {
   height: 24px;
   color: #FFF;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   font-family: ABeeZee;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  /* 24px */
   letter-spacing: -0.16px;
 }
-.banner figure figcaption :nth-child(2) {
+.banner .tit :nth-child(2) {
   height: 54px;
   margin: 10px 0 40px;
   color: #FFF;
@@ -506,28 +495,27 @@ footer .footer-pc article .bottom div a {
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
-  /* 54px */
   letter-spacing: -0.36px;
 }
-.banner figure figcaption :nth-child(3) {
+.banner .tit :nth-child(3) {
   width: 428px;
   height: 10px;
   position: relative;
   display: flex;
   justify-content: space-between;
 }
-.banner figure figcaption :nth-child(3) progress {
+.banner .tit :nth-child(3) progress {
   width: 400px;
   height: 6px;
   background: rgba(217, 217, 217, 0.5);
 }
-.banner figure figcaption :nth-child(3) progress::-webkit-progress-value {
+.banner .tit :nth-child(3) progress::-webkit-progress-value {
   background: #D9D9D9;
 }
-.banner figure figcaption :nth-child(3) img {
+.banner .tit :nth-child(3) img {
   position: absolute;
   vertical-align: top;
-  top: -110%;
+  top: -112%;
   right: 0;
   width: 8px;
   height: 10px;
@@ -576,16 +564,16 @@ main .more span {
   font-size: 1rem;
   color: #BF7D2C;
 }
-main .swiper {
+main .items {
   overflow: hidden;
 }
-main .swiper .swiper-wrapper {
+main .items .swiper-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 2%;
 }
-main .swiper .swiper-wrapper .swiper-slide {
+main .items .swiper-wrapper .swiper-slide {
   flex-shrink: 0;
   margin: 0;
   cursor: pointer;
@@ -595,20 +583,20 @@ main .swiper .swiper-wrapper .swiper-slide {
   font-style: normal;
   line-height: normal;
 }
-main .swiper .swiper-wrapper .swiper-slide img {
+main .items .swiper-wrapper .swiper-slide img {
   width: 100%;
   margin: auto;
   display: block;
   margin-bottom: 16px;
 }
-main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(1) {
+main .items .swiper-wrapper .swiper-slide figcaption :nth-child(1) {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: -0.7px;
   margin-bottom: 8px;
 }
-main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
+main .items .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
   color: #000;
   font-size: 1rem;
   font-weight: 300;
@@ -618,14 +606,14 @@ main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(2) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(1) {
+main .items .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(1) {
   color: #000;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -1px;
   margin-right: 10px;
 }
-main .swiper .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
+main .items .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-weight: 300;
@@ -807,55 +795,60 @@ main .community .notice .list figcaption :nth-child(2) {
     padding: 10px 0px;
     font-size: 0.7rem;
   }
-  .banner {
-    display: none;
-  }
-  .banner-m {
-    display: block;
-  }
-  .banner-m figure {
+  .banner figure {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
-  .banner-m figure figcaption {
+  .banner figure .swiper-slide img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .banner .tit {
     position: absolute;
-    top: 20%;
+    top: 65%;
+    left: 18%;
+  }
+  .banner .tit :nth-child(1) {
+    height: 24px;
     color: #FFF;
-    font-style: normal;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .banner-m figure figcaption :nth-child(1) {
     font-family: ABeeZee;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    font-style: normal;
     font-weight: 400;
-    margin-bottom: 10px;
+    line-height: 150%;
+    letter-spacing: -0.16px;
   }
-  .banner-m figure figcaption :nth-child(2) {
+  .banner .tit :nth-child(2) {
+    height: 54px;
+    margin: 10px 0 40px;
+    color: #FFF;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     font-family: Noto Sans;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-style: normal;
     font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.36px;
   }
-  .banner-m figure figcaption :nth-child(3) {
-    width: 335px;
+  .banner .tit :nth-child(3) {
+    width: 428px;
+    height: 10px;
     position: relative;
     display: flex;
     justify-content: space-between;
   }
-  .banner-m figure figcaption :nth-child(3) progress {
-    margin-top: 90%;
-    width: 313px;
+  .banner .tit :nth-child(3) progress {
+    width: 400px;
     height: 6px;
     background: rgba(217, 217, 217, 0.5);
   }
-  .banner-m figure figcaption :nth-child(3) progress::-webkit-progress-value {
+  .banner .tit :nth-child(3) progress::-webkit-progress-value {
     background: #D9D9D9;
   }
-  .banner-m figure figcaption :nth-child(3) img {
+  .banner .tit :nth-child(3) img {
     position: absolute;
-    bottom: 2.5%;
+    vertical-align: top;
+    top: -112%;
     right: 0;
     width: 8px;
     height: 10px;
