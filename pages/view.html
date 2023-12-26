@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/view.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="../js/common.js"></script>
-    <script src="../js/view.js"></script>
+    <script defer src="../js/view.js"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                         <p>트랜드</p>
                     </nav>
                     <nav>
-                        <p>200,000원</p>
+                        <p id="sale">200,000원</p>
                         <p><b>149,000원</b></p>
                         <p>옵션당 최소 1개</p>
                         <p>3,000원 / 주문시결제(선결제) 택배</p>
@@ -64,11 +64,14 @@
             <p id="goods_ex_line">상품상세</p>
             <p id="goods_review_line">상품후기</p>
         </div>
-        <div class="img_ex">
-            <div class="img_ex_1">
-                <img  src="../images/beer/beer1_ex.png" alt="">
+        <div class="img_ex_text">
+            <div class="img_ex">
+                <img src="../images/beer/beer1_ex.png" alt="">
             </div>
-            <a class="wjqrl" href="#">
+            <a class="expand" href="#">
+                <p>펼쳐보기</p>
+            </a>
+            <a class="fold" href="#">
                 <p>접기</p>
             </a>
         </div>

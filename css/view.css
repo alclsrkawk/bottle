@@ -526,6 +526,10 @@ main .view_1 .view_text #goods_text nav {
   font-weight: 400;
   color: #000000;
 }
+main .view_1 .view_text #goods_text nav #sale {
+  -webkit-text-decoration: 1px line-through black;
+          text-decoration: 1px line-through black;
+}
 main .view_1 .view_text #text_box {
   display: flex;
   flex-direction: column;
@@ -593,25 +597,40 @@ main .goods_line #goods_review_line {
   padding: 10px;
   font-size: 14px;
 }
-main .img_ex {
+main .img_ex_text {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 70px;
 }
-main .img_ex .img_ex_1 {
+main .img_ex_text .img_ex {
   overflow: hidden;
   height: 2051px;
 }
-main .img_ex .img_ex_1 img {
+main .img_ex_text .img_ex img {
   width: 1179px;
 }
-main .img_ex .wjqrl {
+main .img_ex_text .expand {
   width: 246px;
   height: 42px;
   background-color: black;
 }
-main .img_ex .wjqrl p {
+main .img_ex_text .expand p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+main .img_ex_text .fold {
+  display: none;
+  width: 246px;
+  height: 42px;
+  background-color: black;
+}
+main .img_ex_text .fold p {
   width: 100%;
   height: 100%;
   display: flex;
