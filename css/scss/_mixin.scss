@@ -4,7 +4,7 @@ $width : 1920px;
     display: flex;
     justify-content: $n;
     @content
-}
+};
 
 @mixin btn($s) {
     padding : 10px 40px;
@@ -13,7 +13,7 @@ $width : 1920px;
     text-align: center;
     font-size: $s;
     @content
-}
+};
 
 @mixin btn-w($s) {
     padding : 10px 40px;
@@ -22,7 +22,7 @@ $width : 1920px;
     text-align: center;
     font-size: $s;
     @content
-}
+};
 
 $mobile: 390px;
 $pad: 768px;
