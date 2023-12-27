@@ -50,8 +50,9 @@ main {
             width: 50%;
             color: #8C8D96;
             font-size: 18px;
-
-            .view_text_1 {}
+            .view_text_1{
+                
+            }
 
             #goods_name {
                 font-size: 30px;
@@ -66,7 +67,7 @@ main {
                 margin-bottom: 20px;
             }
 
-            #goods_text {
+            .goods_text {
                 display: flex;
                 justify-content: left;
                 font-size: 18px;
