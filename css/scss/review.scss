@@ -1,15 +1,10 @@
 @import "_sub";
 
 // PC --시작
-main {
-    height: 100vh;
-}
-
-
 .main-section {
     max-width: 1180px;
     padding: 0 5px;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
 
     .popbg {
         opacity: 0;
@@ -27,7 +22,7 @@ main {
     }
 
     // 상세정보-상품후기 분할 탭
-    .menu-tab {
+    #review-menu-tab {
         font-size: 0.8rem;
         text-align: center;
 
@@ -159,22 +154,16 @@ main {
                         }
                     }
 
+                    .optionList.active .optionItem:hover {
+                        color: #fff;
+                        background-color: black;
+                    }
+
                     .optionItem {
                         font-size: 14px;
                         text-align: center;
                         width: 100%;
                         padding: 10px 0;
-
-                        &.hover {
-                            color: #fff;
-                            background-color: black;
-                        }
-
-                        &.hover2 {
-                            background-color: #fff !important;
-                            color: #000 !important;
-                            z-index: -1;
-                        }
                     }
                 }
 
@@ -201,22 +190,24 @@ main {
             }
 
             .popup-container {
-                opacity: 0;
+                display: none;
                 padding: 20px;
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 z-index: 1;
-                transform: translate(-50%) translatey(-50%);
+                transform: translatex(-1000%) translatey(-1000%);
                 width: 500px;
                 height: 480px;
                 border-radius: 10px;
                 background: #fff;
                 box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
-                transition: 0.5s;
+                transition: 0.3s;
 
                 &.active {
+                    display: block;
                     opacity: 100%;
+                    transform: translate(-50%) translatey(-50%);
                 }
 
                 #review-popup {
@@ -313,7 +304,7 @@ main {
                     }
 
                     textarea {
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: 'Noto Sans KR', sans-serif;
                         box-sizing: border-box;
                         width: 100%;
                         height: 200px;

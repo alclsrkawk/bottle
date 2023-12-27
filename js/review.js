@@ -4,35 +4,22 @@ const selectBox = document.querySelector('.review-tab-right .selectBox'),
     optionItem = document.querySelectorAll('.selectBox .optionItem');
 
 // 드롭다운 메뉴 시작
-label.addEventListener('click', function () {
-    optionList.classList.toggle('active');
-    selectBox.classList.toggle('active');
-})
+let addDropHover = function () {
+    this.classList.add('hover');
+}
 
-optionItem.forEach(function (el) {
-    el.addEventListener('mouseover', function () {
-        el.classList.add('hover');
-    })
-
-    el.addEventListener('mouseout', function () {
-        el.classList.remove('hover');
+optionItem.forEach(function (el, k, a) {
+    label.addEventListener('click', function () {
+        optionList.classList.toggle('active');
+        selectBox.classList.toggle('active');
+        el.addEventListener('mouseover', addDropHover)
     })
 
     el.onclick = function () {
-        optionItem.forEach(function (el) {
-            el.classList.add('hover2')
-        })
-        el.removeEventListener('mouseover', function () {
-            el.classList.add('hover');
-        })
         let innerText = el.innerText;
         label.innerText = innerText;
         optionList.classList.toggle('active');
         selectBox.classList.toggle('active');
-        let setTime = function () {
-            optionItem.forEach(function (el) { el.classList.remove('hover2') })
-        }
-        setTimeout(setTime, 1000);
     }
 }) // 드롭다운 메뉴 끝
 
@@ -88,8 +75,14 @@ const drawStar = (target) => {
 
     const starGrade = document.querySelector('.star-container .star-grade');
     starGrade.innerText = grade;
-
 }
 const dsf = [];
-
 //후기작성 별점 끝
+
+//후기 뿌리기 시작
+let today = new Date(),
+    year = today.getFullYear(), // 년도
+    month = today.getMonth() + 1,  // 월
+    date = today.getDate();  // 날짜
+
+console.log(year + '/' + month + '/' + date)

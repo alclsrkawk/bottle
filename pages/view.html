@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>늘 한결같은 소주</title>
-        <link rel="stylesheet" href="../css/view.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script defer src="../js/common.js"></script>
-        <script defer src="../js/view.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>늘 한결같은 소주</title>
+    <link rel="stylesheet" href="../css/view.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/view.js"></script>
+</head>
 
-    <body>
-        <!-- header-->
-        <header data-include-file="../include/sub/header.html" class="includeJs"></header>
-        <!-- header-->
-        <main>
-            <div class="view_1">
-                <div class="view_img_1">
-                    <img class="view_main_img" src="../images/beer/beer1.png" alt="">
-                    <div class="view_sub_image">
-                        <img src="../images/beer/beer1.png" alt="">
-                        <img src="../images/beer/beer1_sub2.png" alt="">
-                    </div>
+<body>
+    <!-- header-->
+    <header data-include-file="../include/sub/header.html" class="includeJs"></header>
+    <!-- header-->
+    <main>
+        <div class="view_1">
+            <div class="view_img_1">
+                <img src="../images/beer/beer1.png" alt="">
+                <div class="view_sub_image">
+                    <img src="../images/beer/beer1.png" alt="">
+                    <img src="../images/beer/beer1_sub1.png" alt="">
                 </div>
-                <div class="view_text">
-                    <div class="view_text_1">
+            </div>
+            <div class="view_text">
+                <p>우포의아침</p>
+                <p id="goods_name">술마켓 안동 소주 일품 40도<br> 350ml 증류주</p>
+                <p id="line"></p>
+                <div id="goods_text">
+                    <nav id="text1">
+                        <p>정가</p>
+                        <p>판매가</p>
+                        <p>구매제한</p>
+                        <p>배송비</p>
+                        <p>트랜드</p>
+                    </nav>
+                    <nav>
+                        <p id="sale">200,000원</p>
+                        <p><b>149,000원</b></p>
+                        <p>옵션당 최소 1개</p>
+                        <p>3,000원 / 주문시결제(선결제) 택배</p>
                         <p>우포의아침</p>
+<<<<<<< HEAD
                         <p id="goods_name">술마켓 안동 소주 일품 40도<br> 350ml 증류주</p>
                         <p id="line"></p>
                     </div>
@@ -71,14 +87,26 @@
             <div class="img_ex_text">
                 <div class="img_ex">
                     <img src="../images/beer/beer1_ex.png" alt="">
+=======
+                    </nav>
                 </div>
-                <a class="expand" href="#">
-                    <p>펼쳐보기</p>
-                </a>
-                <a class="fold" href="#">
-                    <p>접기</p>
-                </a>
+                <div id="text_box">
+                    <p>술마켓 안동 소주 일품 40도 350ml 증류주</p><br>
+                    <p></p>
+                    <div id="text2">
+                        <input type="number" min="0" placeholder="0">
+                        <p>149,000원</p>
+                    </div>
+                </div>
+                <nav id="text3">
+                    <p>총 합계 금액 <b>149,000원</b></p>
+                </nav>
+                <div id="button1_location">
+                    <input class="button1" type="button" value="구매하기">
+>>>>>>> 0a827cbb028b15bee1ea35b3e0ad598a503aa3e6
+                </div>
             </div>
+<<<<<<< HEAD
 
 
         </main>
@@ -88,5 +116,31 @@
         <footer data-include-file="../include/sub/footer.html" class="includeJs"></footer>
         <!-- footer -->
     </body>
+=======
+        </div>
+        <div class="goods_line">
+            <p id="goods_ex_line">상품상세</p>
+            <p id="goods_review_line">상품후기</p>
+        </div>
+        <div class="img_ex_text">
+            <div class="img_ex">
+                <img src="../images/beer/beer1_ex.png" alt="">
+            </div>
+            <a class="expand" href="#">
+                <p>펼쳐보기</p>
+            </a>
+            <a class="fold" href="#">
+                <p>접기</p>
+            </a>
+        </div>
+    </main>
+    <!-- rewview-->
+    <section data-include-file="./review.html" class="includeJs"></section>
+    <!-- footer -->
+    <footer data-include-file="../include/sub/footer.html" class="includeJs"></footer>
+    <!-- footer -->
+
+</body>
+>>>>>>> 0a827cbb028b15bee1ea35b3e0ad598a503aa3e6
 
 </html>
