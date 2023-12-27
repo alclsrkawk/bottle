@@ -151,12 +151,12 @@ main {
         }
     }
 
-    .goods_line {
+    #goods_line {
         width: 100%;
         margin-top: 120px;
         display: flex;
 
-        #goods_ex_line {
+        .goods_ex_line {
             text-align: center;
             width: 100%;
             border-right: 1px solid #8C8D96;
@@ -167,7 +167,7 @@ main {
 
         }
 
-        #goods_review_line {
+        .goods_review_line {
             text-align: center;
             width: 100%;
             border-bottom: 1px solid #8C8D96;
