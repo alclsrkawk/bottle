@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/payment.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="../js/common.js"></script>
-    <script src="../js/payment.js"></script>
+    <script defer src="../js/payment.js"></script>
 </head>
 
 <body>
@@ -21,49 +21,55 @@
             <section class="order">
                 <b>주문자 정보</b>
                 <br><br>
-                <input type="box" placeholder="이름을 입력해주세요" class="input_name">
-                <select name="" class="select_num">
+                <input type="box" placeholder="이름을 입력해주세요" class="input_name" id="order_name">
+                <select name="" class="select_num" id="order_tel">
                     <option value="010">010</option>
                     <option value="011">011</option>
                     <option value="019">019</option>
                     <option value="018">018</option>
                     <option value="017">017</option>
-                    <option value="직접입력">직접입력</option>
+                    
                 </select>
-                <input type="box" placeholder="전화번로를 입력해주세요" class="input_num"><br>
-                <input type="box" placeholder="이메일을 입력해주세요" class="input_email"> @
-                <select name="" class="select_email">
+                <input type="box" placeholder="전화번호를 입력해주세요" class="input_num" id="order_num"><br>
+                <input type="box" placeholder="이메일을 입력해주세요" class="input_email" id="order_email"> @
+                <select name="" class="select_email" id="order_email_address">
                     <option value="naver.com">naver.com</option>
                     <option value="gamil.com">gmail.com</option>
                     <option value="nate.com">nate.com</option>
                     <option value="daum.net">daum.net</option>
-                    <option value="">직접입력</option>
+                    <option value="direct">직접입력</option>
                 </select>
+                <input type="text" placeholder="이메일 직접입력" class="input_direct" id="order_direct">
             </section>
 
             <section class="receiver">
                 <div class="receiver_info">
                     <b>수령자 정보</b>
-                    <p><input type="checkbox">주문자 정보와 같습니다.</p>
+                    <p><input type="checkbox" id="same">주문자 정보와 같습니다.</p>
                 </div>
                 <br>
-                <input type="box" placeholder="이름을 입력해주세요" class="input_name">
-                <select name="" class="select_num">
-                    <option value="">010</option>
-                    <option value="">011</option>
-                    <option value="">019</option>
-                    <option value="">018</option>
-                    <option value="">017</option>
+                <input type="box" placeholder="이름을 입력해주세요" class="input_name" id="receiver_name">
+                <select name="" class="select_num" id="receiver_tel">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="019">019</option>
+                    <option value="018">018</option>
+                    <option value="017">017</option>
+                    
+
                 </select>
-                <input type="box" placeholder="전화번로를 입력해주세요" class="input_num"><br>
-                <input type="box" placeholder="이메일을 입력해주세요" class="input_email"> @
-                <select name="" class="select_email">
-                    <option value="">naver.com</option>
-                    <option value="">gmail.com</option>
-                    <option value="">nate.com</option>
-                    <option value="">daum.net</option>
+                <input type="box" placeholder="전화번호를 입력해주세요" class="input_num" id="receiver_num"><br>
+                <input type="box" placeholder="이메일을 입력해주세요" class="input_email" id="receiver_email"> @
+                <select name="" class="select_email" id="receiver_email_address">
+                    <option value="naver.com">naver.com</option>
+                    <option value="gamil.com">gmail.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="direct">직접입력</option>
                 </select>
+                <input type="text" placeholder="이메일 직접입력" class="input_direct" id="receiver_direct">
             </section>
+                
 
             <section class="address">
                 <p>
@@ -100,19 +106,19 @@
             <div class="section-second-one">
                 <b>결제방법</b><br>
                 <p>
-                    <input type="checkbox"><span>신용카드</span><br>
-                    <input type="checkbox"><span>실시간 계좌이체</span><br>
-                    <input type="checkbox"><span>가상계좌</span><br>
-                    <input type="checkbox"><span>휴대폰결제</span><br>
+                    <input type="checkbox" value="신용카드" checked><span>신용카드</span><br>
+                    <input type="checkbox" value="실시간 계좌이체"><span>실시간 계좌이체</span><br>
+                    <input type="checkbox" value="가상계좌"><span>가상계좌</span><br>
+                    <input type="checkbox" value="휴대폰결제"><span>휴대폰결제</span><br>
                 </p>
             </div>
             <div class="section-second-two">
-                <input type="checkbox"><b>약관/결제 전체동의</b><br>
+                <input type="checkbox" id="check_all"><b>약관/결제 전체동의</b><br>
                 <p>
-                    <input type="checkbox"><span>이용약관 동의(필수)</span><br>
-                    <input type="checkbox"><span>개인정보 수집 이용 동의(필수)</span><br>
-                    <input type="checkbox"><span>개인정보 수집 이용 동의(선택)</span><br>
-                    <input type="checkbox"><span>위 구매조건 확인 및 결제진행 동의</span><br>
+                    <input type="checkbox" id="check_1"><span>이용약관 동의(필수)</span><br>
+                    <input type="checkbox" id="check_2"><span>개인정보 수집 이용 동의(필수)</span><br>
+                    <input type="checkbox" id="check_3"><span>개인정보 수집 이용 동의(선택)</span><br>
+                    <input type="checkbox" id="check_4"><span>위 구매조건 확인 및 결제진행 동의</span><br>
                 </p>
             </div>
             <div class="section-second-three">
@@ -123,16 +129,11 @@
                 </div>
                 <div class="three-flex">
                     <p>ㅡ 기본 배송비</p>
-                    <p>(+) 4,000원</p>
-                </div>
-                <p>(30,000원 이상 무료)</p>
-                <div class="three-flex">
-                    <p>ㅡ 지역 배송비</p>
-                    <p>(+) 0원</p>
+                    <p>(+) 3,000원</p>
                 </div>
                 <div class="three-flex">
                     <b>최종 주문금액</b>
-                    <b>+14,000원</b>
+                    <b>+13,000원</b>
                 </div>
             </div>
             <div class="pay-button">
@@ -146,6 +147,46 @@
                 <div class="third-flex">
                     <div>
                         <li><img src="../images/wine/wine1.png" alt=""></li>
+                    </div>
+                    <div>
+                        <p>금용농산</p>
+                        <p>미르아토 레드스위트와인 750ml <span>| 1개</span></p><br>
+                        <p>149,000원 <span>200,000원</span></p>
+                    </div>
+                </div>
+                <div class="third-flex">
+                    <div>
+                        <li><img src="../images/wine/wine2.png" alt=""></li>
+                    </div>
+                    <div>
+                        <p>금용농산</p>
+                        <p>미르아토 레드스위트와인 750ml <span>| 1개</span></p><br>
+                        <p>149,000원 <span>200,000원</span></p>
+                    </div>
+                </div>
+                <div class="third-flex">
+                    <div>
+                        <li><img src="../images/wine/wine3.png" alt=""></li>
+                    </div>
+                    <div>
+                        <p>금용농산</p>
+                        <p>미르아토 레드스위트와인 750ml <span>| 1개</span></p><br>
+                        <p>149,000원 <span>200,000원</span></p>
+                    </div>
+                </div>
+                <div class="third-flex">
+                    <div>
+                        <li><img src="../images/wine/wine4.png" alt=""></li>
+                    </div>
+                    <div>
+                        <p>금용농산</p>
+                        <p>미르아토 레드스위트와인 750ml <span>| 1개</span></p><br>
+                        <p>149,000원 <span>200,000원</span></p>
+                    </div>
+                </div>
+                <div class="third-flex">
+                    <div>
+                        <li><img src="../images/wine/wine5.png" alt=""></li>
                     </div>
                     <div>
                         <p>금용농산</p>

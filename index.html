@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대한민국 최고 주류 쇼핑몰</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -29,7 +32,7 @@
                         </div>
                         <div>
                             <progress value="25" max="100"></progress>
-                            <img src="./images/main/pause-btn.png">
+                            <img class="_pause" src="./images/main/pause-btn.png">
                         </div>
                     </div>
 
@@ -43,7 +46,7 @@
                         </div>
                         <div>
                             <progress value="25" max="100"></progress>
-                            <img src="./images/main/pause-btn.png">
+                            <img class="_pause" src="./images/main/pause-btn.png">
                         </div>
                     </div>
                 </div>
@@ -56,7 +59,7 @@
                         </div>
                         <div>
                             <progress value="25" max="100"></progress>
-                            <img src="./images/main/pause-btn.png">
+                            <img class="_pause" src="./images/main/pause-btn.png">
                         </div>
                     </div>
                 </div>
@@ -69,13 +72,22 @@
                         </div>
                         <div>
                             <progress value="25" max="100"></progress>
-                            <img src="./images/main/pause-btn.png">
+                            <img class="_pause" src="./images/main/pause-btn.png">
                         </div>
                     </div>
                 </div>
             </figure>
         </div>
         <!-- <div class="swiper-scrollbar"></div> -->
+        <div class="banner-m">
+            <img src="./images/main/main-slide-01.png" alt="">
+            <div class="tit">
+                <div>홀리데이 추천 위스키</div>
+                <div class="second">
+                    글렌피딕 12년 <br>홀리데이 에디션
+                </div>
+            </div>
+        </div>
     </section>
 
     <main>
@@ -85,7 +97,7 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=wine'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper items">
+                <div class="swiper wine-l">
                     <div id="dv-wine" class="swiper-wrapper">
                     </div>
                 </div>
@@ -97,7 +109,7 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=beer'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper items">
+                <div class="swiper beer-l">
                     <div id="dv-beer" class="swiper-wrapper">
                     </div>
                 </div>
@@ -109,7 +121,7 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=soju'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper items">
+                <div class="swiper soju-l">
                     <div id="dv-soju" class="swiper-wrapper">
                     </div>
                 </div>
@@ -121,7 +133,7 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=whisky'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper items">
+                <div class="swiper whisky-l">
                     <div id="dv-whisky" class="swiper-wrapper">
                     </div>
                 </div>
@@ -219,7 +231,6 @@
         let elBeer = document.querySelector(`#dv-beer`);
         let elSoju = document.querySelector(`#dv-soju`);
         let elWhisky = document.querySelector(`#dv-whisky`);
-        let sub_title = document.querySelector('.second');
         const progress = document.querySelectorAll('progress');
 
         const getList = (ctrl, name) => {
@@ -352,7 +363,11 @@
                 el: ".swiper-scrollbar",
                 hide: true,
             },
-
+            autoplay: {
+                delay: 5000,
+                // disableOnInteraction: true
+            },
+            loop: true
         });
         swiper1.on('transitionEnd', function () {
             console.log('now index :::', swiper1.realIndex);
@@ -363,9 +378,8 @@
                 case 3: progress[3].value = 100; break;
             }
         });
-
+        let pageviw = 4;
         window.addEventListener("load", (event) => {
-            let pageviw = 4;
             const isMobile = window.matchMedia('(max-width: 390px)');
             const isPC = window.matchMedia('(min-width: 600px)');
             let line = "";
@@ -374,50 +388,72 @@
 
             if (isMobile.matches) pageviw = 2;
             else pageviw = 4;
-
-            line = pageviw == 2 ? "<br>" : "";
-            sub_title.innerHTML = `글렌피딕 12년${line} 홀리데이 에디션`;
-
-            var swiper2 = new Swiper(".items", {
-                slidesPerView: pageviw,
-                spaceBetween: pageviw == 2 ? 10 : 20,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
+            goSwiper(pageviw);
         });
         const changeHandler = (e) => {
             console.log('390px changed!');
-            sub_title.innerHTML = "글렌피딕 12년 <br> 홀리데이 에디션";
-            var swiper2 = new Swiper(".items", {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
+            goSwiper(2);
 
         }
         const changeOtherHandler = (e) => {
             console.log('600px changed!');
-            sub_title.innerHTML = "글렌피딕 12년 홀리데이 에디션";
-            var swiper2 = new Swiper(".items", {
-                slidesPerView: 4,
-                spaceBetween: 20,
+            goSwiper(4);
+        }
+        const goSwiper = (page) => {
+            var swiper_wine = new Swiper(".wine-l", {
+                slidesPerView: page,
+                spaceBetween: page == 2 ? 10 : 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper_beer = new Swiper(".beer-l", {
+                slidesPerView: page,
+                spaceBetween: page == 2 ? 10 : 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper_soju = new Swiper(".soju-l", {
+                slidesPerView: page,
+                spaceBetween: page == 2 ? 10 : 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper_whisky = new Swiper(".whisky-l", {
+                slidesPerView: page,
+                spaceBetween: page == 2 ? 10 : 20,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
             });
         }
+        goSwiper(pageviw);
 
         const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
         const mediaQueryOther = window.matchMedia('(min-width: 600px)');
         mediaQueryMobile.addEventListener('change', changeHandler);
         mediaQueryOther.addEventListener('change', changeOtherHandler);
-
+        var sw = 0;
+        $('._pause').click(function () {
+            if (sw == 0) {
+                $('._pause').addClass('on');
+                swiper1.autoplay.stop();
+                sw = 1;
+            } else {
+                $('._pause').removeClass('on');
+                swiper1.autoplay.start();
+                sw = 0;
+            }
+        });
 
     </script>
 </body>
