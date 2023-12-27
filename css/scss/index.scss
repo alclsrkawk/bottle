@@ -453,68 +453,64 @@ main {
 
             .swiper-slide {
                 img {
-                    width: 100%;
+                    height: 670px;
                     object-fit: cover;
                 }
             }
         }
 
-        .tit {
-            position: absolute;
-            top: 65%;
-            left: 18%;
+        // .tit {
+        //     position: absolute;
+        //     top: 70%;
+        //     left: 10%;
 
-            :nth-child(1) {
-                height: 24px;
-                color: #FFF;
-                font-family: ABeeZee;
-                font-size: 1rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-                letter-spacing: -0.16px;
-            }
+        //     color: #FFF;
+        //     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+        //     font-style: normal;
 
-            :nth-child(2) {
-                height: 54px;
-                margin: 10px 0 40px;
-                color: #FFF;
-                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
-                font-family: Noto Sans;
-                font-size: 2rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 150%;
-                letter-spacing: -0.36px;
+        //     display: flex;
+        //     flex-direction: column;
 
-            }
+        //     :nth-child(1) {
+        //         height: 24px;
+        //         color: #FFF;
+        //         font-family: ABeeZee;
+        //         font-size: 1rem;
+        //     }
 
-            :nth-child(3) {
-                width: 428px;
-                height: 10px;
-                position: relative;
+        //     :nth-child(2) {
+        //         margin: 10px 0 40px;
+        //         font-family: Noto Sans;
+        //         font-size: 2rem;
+        //     }
 
-                @include flex(space-between) {}
+        //     :nth-child(3) {
+        //         display: none;
+        //         width: 428px;
+        //         height: 10px;
+        //         position: relative;
 
-                progress {
-                    width: 400px;
-                    height: 6px;
-                    background: rgba(217, 217, 217, 50%);
-                }
+        //         @include flex(space-between) {}
 
-                progress::-webkit-progress-value {
-                    background: #D9D9D9;
-                }
+        //         progress {
+        //             width: 400px;
+        //             height: 6px;
+        //             background: rgba(217, 217, 217, 50%);
+        //         }
 
-                img {
-                    position: absolute;
-                    vertical-align: top;
-                    top: -112%;
-                    right: 0;
-                    width: 8px;
-                    height: 10px;
-                }
-            }
-        }
+        //         progress::-webkit-progress-value {
+        //             background: #D9D9D9;
+        //         }
+
+        //         img {
+        //             position: absolute;
+        //             vertical-align: top;
+        //             top: -112%;
+        //             right: 0;
+        //             width: 8px;
+        //             height: 10px;
+        //         }
+        //     }
+        // }
     }
 }

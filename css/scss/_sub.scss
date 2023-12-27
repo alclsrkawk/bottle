@@ -5,6 +5,7 @@ header {
     position: fixed;
     height: 132px;
     width: 100%;
+    z-index: 10000;
 
     .header-pc {
         article {
