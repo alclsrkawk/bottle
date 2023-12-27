@@ -154,22 +154,16 @@
                         }
                     }
 
+                    .optionList.active .optionItem:hover {
+                        color: #fff;
+                        background-color: black;
+                    }
+
                     .optionItem {
                         font-size: 14px;
                         text-align: center;
                         width: 100%;
                         padding: 10px 0;
-
-                        &.hover {
-                            color: #fff;
-                            background-color: black;
-                        }
-
-                        &.hover2 {
-                            background-color: #fff !important;
-                            color: #000 !important;
-                            z-index: -1;
-                        }
                     }
                 }
 
