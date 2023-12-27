@@ -2,11 +2,13 @@
 
 // PC --시작
 main {
-    width: 1180px;
+    //max-width: 1180px;
     padding-top: 132px;
     margin: 0 auto;
 
     .list_bg {
+        max-width: 1180px;
+        margin: 0 auto;
         z-index: auto;
     }
 
@@ -16,71 +18,138 @@ main {
     }
 
     .best5 {
-        background-color: #F7F8FA;
-        height: 724px;
+        background-color: #F7F8FA;       
         margin: 70px 0;
-        p {
-            text-align: left;
+        padding:70px 0;
+        .best5_title{
+            width: 1180px;
+            margin: 30px auto;
+            text-align: start;
+            font-size: 1.2rem;
         }
-    }
-
-    .tab {
-        padding: 10px 0;
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #E0E2E7;
-        font-size: 0.7rem;
-        font-weight: bold;
-
-        ul {
+        .best5_slide {
+            max-width: 1180px;
+        margin: 0 auto;
+            
             display: flex;
+            overflow: hidden;
+            position: relative;
+         
+            .swiper-wrapper{
+                span{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    color: #000;
+                    background-color: #EAB838;
+                    font-size: 0.9rem;
+                    padding: 5px 20px;
+                    transform:  translate(-20%,-100%)  rotate(-90deg);
+                    transform-origin: right bottom;
+                }
+                p{
+                    img {
+                        width: 380px;
+                        height: 380px;
+                        background-color: #D9D9D9;
+                    }
+                }
+                figcaption{
+                    small{
+                        color: rgba(0, 0, 0, 0.50);
+                    }
+                    p:nth-of-type(1){
+                        margin-top: 8px;
+                    }
+                    p:nth-of-type(2){
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-top: 15px;
+                    }
+                    del{
+                        color: rgba(0, 0, 0, 0.50);
+                        font-size: 0.9rem;
+                    }
+                }
+            }  
+        }
 
-            li {
-                padding: 0 10px;
+        .slide_btn, .swiper-button-prev, .swiper-button-next{
+            position: absolute;
+            top:45%;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            color: rgba(0, 0, 0, 0.50);  
+        }
+    }
+    .list{
+        max-width: 1180px;
+        margin: 0 auto;
+        .tab {
+            padding: 10px 0;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #E0E2E7;
+            font-size: 0.7rem;
+            font-weight: bold;
+    
+            ul {
+                display: flex;
+    
+                li {
+                    padding: 0 10px;
+    
+                    a:active {
+                        color: #3DA5F5;
+                        text-decoration: underline;
+                        text-decoration-color: #3DA5F5;
+                    }
+                }
+            }
+        }
+    
+        .list_items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 30px 0;
+    
+            figure {
+                width: 280px;
+                height: 400px;
+                border: 1px solid #E0E2E7;
+                margin: 53px 0;
+    
+                img {
+                    width: 240px;
+                    height: 240px;
+                }
+            }
+    
+            figcaption {
+                margin: 0 20px;
+                text-align: left;
+    
+                small,
+                del {
+                    color: rgba(0, 0, 0, 0.50);
+                    font-size: 0.7rem;
+                }
+    
+                p:nth-of-type(1) {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+    
+                p:nth-of-type(2) {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-top: 50px;
+                }
             }
         }
     }
-
-    .list_items {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 30px 0;
-
-        figure {
-            width: 280px;
-            height: 400px;
-            border: 1px solid #E0E2E7;
-            margin: 53px 0;
-
-            img {
-                width: 240px;
-                height: 240px;
-            }
-        }
-
-        figcaption {
-            margin: 0 20px;
-            text-align: left;
-
-            small,
-            del {
-                color: rgba(0, 0, 0, 0.50);
-                font-size: 0.7rem;
-            }
-
-            p:nth-of-type(1) {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            p:nth-of-type(2) {
-                font-size: 1.2rem;
-                font-weight: bold;
-                margin-top: 50px;
-            }
-        }
-    }
+   
 }
 
 
