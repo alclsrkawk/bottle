@@ -259,6 +259,10 @@ main {
                         }
 
                         .goods_info {
+                            @include flex(space-between) {
+                                flex-direction: column;
+                            }
+
                             span {
                                 font-size: 14px;
                                 color: gray;
@@ -269,10 +273,41 @@ main {
                                 font-size: 18px;
                             }
 
-                            .star {
-                                color: goldenrod;
-                                font-size: 48px;
-                                line-height: 1.2;
+                            .star-container {
+                                display: flex;
+
+
+                                .star {
+                                    position: relative;
+                                    font-size: 2rem;
+                                    color: #ddd;
+
+                                    input {
+                                        font-size: 2rem;
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        left: 0;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                    }
+
+                                    span {
+                                        font-size: 2rem;
+                                        position: absolute;
+                                        width: 0;
+                                        left: 0;
+                                        color: #EAB838;
+                                        overflow: hidden;
+                                        pointer-events: none;
+                                    }
+                                }
+
+                                .star-grade {
+                                    font-weight: 700;
+                                    padding-left: 10px;
+                                    font-size: 2rem;
+                                }
                             }
                         }
                     }

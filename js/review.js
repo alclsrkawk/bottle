@@ -74,5 +74,22 @@ writeBtn.addEventListener('click', function (e) {
         reviewNext.classList.remove('active');
         popBg.classList.remove('bg-active');
     }
-})
+}) // 후기작성 팝업 끝
+// 후기작성 별점 시작
+const drawStar = (target) => {
+    document.querySelector(`.star span`).style.width = `${target.value * 10}%`;
+    let grade = target.value / 2;
+    console.log('grade = ' + grade)
 
+    if (Number.isInteger(grade)) {//정수이면
+        console.log('grade는 정수니까 .0을 붙여야해용')
+        grade = grade.toString() + '.0';
+    }
+
+    const starGrade = document.querySelector('.star-container .star-grade');
+    starGrade.innerText = grade;
+
+}
+const dsf = [];
+
+//후기작성 별점 끝
