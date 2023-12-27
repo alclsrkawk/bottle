@@ -64,6 +64,7 @@ writeBtn.addEventListener('click', function (e) {
 
     reviewPopBtn.onclick = function (e) { // 후기쓰고 등록 버튼 누를때!!
         e.preventDefault();
+        // dddd
         reviewPop.classList.add('hidden');
         reviewNext.classList.add('active');
 
