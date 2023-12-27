@@ -592,20 +592,15 @@ footer article .bottom div a {
   background: #fff;
   transform: translateY(1px);
 }
+.main-section .review-container .tab .review-tab-right .selectBox .optionList.active .optionItem:hover {
+  color: #fff;
+  background-color: black;
+}
 .main-section .review-container .tab .review-tab-right .selectBox .optionItem {
   font-size: 14px;
   text-align: center;
   width: 100%;
   padding: 10px 0;
-}
-.main-section .review-container .tab .review-tab-right .selectBox .optionItem.hover {
-  color: #fff;
-  background-color: black;
-}
-.main-section .review-container .tab .review-tab-right .selectBox .optionItem.hover2 {
-  background-color: #fff !important;
-  color: #000 !important;
-  z-index: -1;
 }
 .main-section .review-container .tab .review-tab-right p {
   padding: 10px 40px;
