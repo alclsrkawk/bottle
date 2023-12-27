@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>즐겨 마시는 맥주</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/list.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="../js/common.js"></script>
     <script src="../js/list.js"></script>
 
@@ -30,17 +32,27 @@
 
             <!--best5 슬라이드-->
             <article class="best5">
-                <p>BEST TOP5</p>
-
+                <p class="best5_title">BEST TOP5</p>
+                
                 <div class="best5_slide">
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
+                    <button class="slide_btn swiper-button-prev"></button>
+                    <button class="slide_btn swiper-button-next"></button>
+                  
+                    <div class="swiper-wrapper">
+                        <!-- <figure class="swiper-slide">
+                            <span>TOP</span>
+                            <p><img src="" alt=""></p>
+                            <figcaption>
+                                <small>brand</small>
+                                <p>product_name</p>
+                                <p>price</p>
+                                <del>discount</del>
+                            </figcaption>
+                        </figure> -->
+                    </div>         
                 </div>
+                
+                
             </article>
 
             <div class="list">
@@ -67,7 +79,7 @@
                                     <small></small>
                                     <p></p>
                                     <p>
-                                    <del></del>
+                                        <del></del>
                                     </p>
                                 </figcaption>
                             </figure>
