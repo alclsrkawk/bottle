@@ -1,15 +1,14 @@
 // list에서 클릭한 데이터 값 받아오기
-function getUrlParams() {
-  const params = {};
-  window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-  return params;
-}
-const params = getUrlParams();
-console.log("view :" , params);
+// function getUrlParams() {
+//   const params = {};
+//   window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+//   return params;
+// }
+// const params = getUrlParams();
+// console.log("view :" , params);
 
-// const getMethod = () => {
   let goods = [];
-  const url = `../datas/${params.name}_view.json`;
+  const url = `../datas/beer_view.json`;
   fetch(url)
     .then(type => type.json())
     .then(result => {
@@ -36,13 +35,14 @@ console.log("view :" , params);
     let c = '';
     let d = '';
     let e = '';
+    let z = goods[0];
     const picture = z.product_img.split(',');
     for (j = 0; j < picture.length; j++) {
-      figure += `<img src="../images/${params.name}/${picture[j]}" alt=""></img>`
+      figure += `<img src="../images/beer/${picture[j]}" alt=""></img>`
     }
 
 
-    a += `<img class="view_main_img" src="../images/${params.name}/${picture[0]}" alt="">
+    a += `<img class="view_main_img" src="../images/beer/${picture[0]}" alt="">
     <div class="view_sub_image">
     ${figure}
     </div>`;
@@ -108,7 +108,7 @@ console.log("view :" , params);
 
     elInputText.onclick = function () {
 
-      // console.log(parseInt(z.discount.replaceAll(',', '')));
+      console.log(parseInt(z.discount.replaceAll(',', '')));
       // parseInt 정수만 나오게 replaceAll(',','') ,지우기
       let TransNum = parseInt(z.discount.replaceAll(',', ''));
       let goodsSum = (elInputText.value * TransNum).toString()
@@ -119,21 +119,14 @@ console.log("view :" , params);
       text3.innerHTML = f;
     }
 
-    elButton.onclick = function (e) {
-      e.preventDefault()
+    elButton.onclick = function () {
       console.log(elInputText.value)
       console.log(z.explain)
     }
 
-    // 이름, 이미지, 브랜드
-    // 할인가, 판매가
-
-
-
-
 
   }
-// }
+
 
 
 
