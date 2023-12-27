@@ -790,6 +790,8 @@ footer article .bottom div a {
   font-size: 18px;
 }
 .main-section .review-list-container {
+  display: flex;
+  flex-direction: column-reverse;
   font-size: 1rem;
   padding: 40px 0;
 }
