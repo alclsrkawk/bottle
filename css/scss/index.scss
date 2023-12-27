@@ -53,7 +53,10 @@ main {
         }
     }
 
-    .items {
+    .wine-l,
+    .soju-l,
+    .beer-l,
+    .whisky-l {
         overflow: hidden;
 
         .swiper-wrapper {
@@ -367,7 +370,7 @@ main {
     .banner {
         .tit {
             position: absolute;
-            top: 55%;
+            top: 45%;
             left: 21%;
             color: #FFF;
             font-style: normal;
