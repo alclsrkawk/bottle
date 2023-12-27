@@ -34,8 +34,25 @@ const writeBtn = document.querySelector('.review-tab-right .write-btn'),
     closeBtn = document.querySelector('.close'),
     popBg = document.querySelector('.main-section .popbg');
 
+//후기 뿌리기 시작
+const totalReviewNum = document.querySelector('.review-container .total'),
+    reviewListCont = document.querySelector('.review-list-container'),
+    reviewListContLi = document.querySelectorAll('.review-list-container li');
+
+let today = new Date(),
+    year = today.getFullYear(), // 년도
+    month = today.getMonth() + 1,  // 월
+    date = today.getDate();  // 날짜
+
+// li 갯수 찾기 = 부모.메소드
+console.log('li 갯수는 ' + reviewListCont.childElementCount)
+
+let totalReviewCount = reviewListCont.childElementCount;
+totalReviewNum.innerText = totalReviewCount;
+
 writeBtn.addEventListener('click', function (e) {
     e.preventDefault();
+    reviewPopText.value = ''; // textarea 초기화
     reviewPop.classList.remove('hidden');
     popCont.classList.add('active');
     popBg.classList.add('bg-active');
@@ -45,14 +62,35 @@ writeBtn.addEventListener('click', function (e) {
         popBg.classList.remove('bg-active');
     }
 
-    reviewPopBtn.onclick = function (e) {
+    reviewPopBtn.onclick = function (e) { // 후기쓰고 등록 버튼 누를때!!
         e.preventDefault();
-
-        let userReview = reviewPopText.value;
-        console.log(userReview)
-
         reviewPop.classList.add('hidden');
         reviewNext.classList.add('active');
+
+        //뿌리기
+        console.log(reviewPopText.value)
+        let userReview = `<div class="left">
+                        <div class="star-count">
+                            <span class="star count">★</span>
+                            <span class="star count">★</span>
+                            <span class="star count">★</span>
+                            <span class="star count">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="user-id">비회원</p>
+                        <p class="user-date">${year + '.' + month + '.' + date}</p>
+                    </div>
+                        <div class="right">
+                        <p>${reviewPopText.value}</p>
+                        </div>`;
+        const showReview = document.createElement('li');
+        showReview.classList = `list-result ${totalReviewCount + 1}`;
+        showReview.innerHTML = userReview;
+        reviewListCont.append(showReview);
+
+        // 리뷰 개수 업데이트
+        totalReviewCount = totalReviewCount + 1;
+        totalReviewNum.innerText = totalReviewCount;
     }
 
     reviewNextBtn.onclick = function (e) {
@@ -78,11 +116,3 @@ const drawStar = (target) => {
 }
 const dsf = [];
 //후기작성 별점 끝
-
-//후기 뿌리기 시작
-let today = new Date(),
-    year = today.getFullYear(), // 년도
-    month = today.getMonth() + 1,  // 월
-    date = today.getDate();  // 날짜
-
-console.log(year + '/' + month + '/' + date)

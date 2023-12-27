@@ -180,4 +180,65 @@ main {
 
 @include res($pad) {}
 
-@include res($mobile) {}
+@include res($mobile) {
+    main{
+        padding-top:100px;
+        .order , .receiver, .address , .requested{
+            width:340px;
+            margin-bottom: 80px;
+        }
+        margin:0 20px;
+        input , select{
+            margin:0;
+            height:47px;
+        }
+
+        .input_name{
+            width:335px;
+            margin-bottom: 10px;
+        }
+        .select_num{
+            margin : 0;
+            width:70px;
+        }
+        .input_num{
+            margin-left:20px;
+            width:241px ;
+        }
+        .input_email{
+            margin:10px 0;
+            width:270px;
+        }
+        .select_email{
+            margin:0;
+            width: 335px;
+        }
+        .input_direct{
+            margin:10px 0px;
+            width:335px;
+        }
+        #zip-code{
+            width:195px;
+        }
+        #zip-search{
+            width:117px;
+        }
+        #address-1, #address-2 , .input_requested{
+            width:335px;
+        }
+
+
+
+
+    .section-second{
+        padding:0;
+        position: static ;
+        width:335px;
+        background-color: white;
+        .pay-button{
+            margin-left: -13px;
+            width:360px;
+        }
+    }
+}
+}
