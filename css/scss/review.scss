@@ -103,7 +103,7 @@ main {
                     border: 0;
                     border-bottom: 1px solid #000;
                     appearance: none;
-                    background: url('../images/main/dropdown_down.png') no-repeat 100% 50%/15px auto;
+                    background: url('../images/icons/dropdown_down.png') no-repeat 100% 50%/15px auto;
 
                     position: relative;
                     width: 150px;
@@ -113,7 +113,7 @@ main {
                     cursor: pointer;
 
                     &.active {
-                        background: url('../images/main/dropdown_up.png') no-repeat 100% 50%/15px auto;
+                        background: url('../images/icons/dropdown_up.png') no-repeat 100% 50%/15px auto;
                     }
 
                     .label {
@@ -241,7 +241,7 @@ main {
                         .close {
                             width: 24px;
                             height: 24px;
-                            background: url(../images/main/close-icon-svg-b.png);
+                            background: url(../images/icons/close-icon-svg-b.png);
                         }
                     }
 
@@ -363,7 +363,7 @@ main {
                             margin-bottom: 8px;
                             width: 120px;
                             height: 120px;
-                            background: url(../images/main/review-next-step.png);
+                            background: url(../images/icons/review-next-step.png);
                         }
 
                         strong {

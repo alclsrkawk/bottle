@@ -547,7 +547,7 @@ main {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url("../images/main/dropdown_down.png") no-repeat 100% 50%/15px auto;
+  background: url("../images/icons/dropdown_down.png") no-repeat 100% 50%/15px auto;
   position: relative;
   width: 150px;
   height: 40px;
@@ -556,7 +556,7 @@ main {
   cursor: pointer;
 }
 .main-section .review-container .tab .review-tab-right .selectBox.active {
-  background: url("../images/main/dropdown_up.png") no-repeat 100% 50%/15px auto;
+  background: url("../images/icons/dropdown_up.png") no-repeat 100% 50%/15px auto;
 }
 .main-section .review-container .tab .review-tab-right .selectBox .label {
   font-family: "Noto Sans KR", sans-serif;
@@ -670,7 +670,7 @@ main {
 .main-section .review-container .write-review .popup-container #review-popup .tab .close {
   width: 24px;
   height: 24px;
-  background: url(../images/main/close-icon-svg-b.png);
+  background: url(../images/icons/close-icon-svg-b.png);
 }
 .main-section .review-container .write-review .popup-container #review-popup .goods {
   display: flex;
@@ -773,7 +773,7 @@ main {
   margin-bottom: 8px;
   width: 120px;
   height: 120px;
-  background: url(../images/main/review-next-step.png);
+  background: url(../images/icons/review-next-step.png);
 }
 .main-section .review-container .write-review .popup-container .next-step div strong {
   font-size: 1.5rem;
