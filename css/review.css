@@ -464,10 +464,6 @@ footer article .bottom div a {
     letter-spacing: -0.12px;
   }
 }
-main {
-  height: 100vh;
-}
-
 .main-section {
   max-width: 1180px;
   padding: 0 5px;
