@@ -51,16 +51,18 @@ bestList = () => {
         list += `
                     
                     <figure class="swiper-slide">
-                        <span>TOP</span>
-                        <p><img src='../images/${params.name}/${bestPicture}' alt=''></p>
-                        <figcaption>
-                            <small>${best5[i].brand}</small>
-                            <p>${best5[i].product_name}</p>
-                            <p>
-                            ${best5[i].price}
-                            </p>
-                            <del>${best5[i].discount}</del>
-                        </figcaption>
+                        <a href="./view.html?name=${params.name}&idx=${best5[i].Idx}">
+                            <span>TOP</span>
+                            <p><img src='../images/${params.name}/${bestPicture}' alt=''></p>
+                            <figcaption>
+                                <small>${best5[i].brand}</small>
+                                <p>${best5[i].product_name}</p>
+                                <p>
+                                ${best5[i].discount}
+                                </p>
+                                <del>${best5[i].price}</del>
+                            </figcaption>
+                        </a>
                     </figure>
                    
                     
@@ -82,6 +84,16 @@ bestList = () => {
             prevEl: ".swiper-button-prev",
         },
     });
+
+    list = "";
+                let ellink = document.querySelectorAll('figure');
+                ellink.forEach(function (element, i) {
+                    element.onclick = function () {
+                        console.log(goods[i].Idx)
+                        // selectBox[0].selected = true;
+                        location.href = `./view.html?idx=${goods[i].Idx}&name=${params.name}`;
+                    }
+                })
 
 }
 
@@ -124,14 +136,16 @@ const goodsList = () => {
 
         list += `
                     <figure>
+                        <a href="./view.html?name=${params.name}&idx=${best5[i].Idx}">
                         <p><img src='../images/${params.name}/${picture}' alt=''></p>
                         <figcaption>
                             <small>${element.brand}</small>
                             <p>${element.product_name}</p>
                             <p>
-                            ${element.price} <del>${element.discount}</del>
+                            ${element.discount} <del>${element.price}</del>
                             </p>
                         </figcaption>
+                        </a>
                     </figure>
                `
     });
