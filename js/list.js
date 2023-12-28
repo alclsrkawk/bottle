@@ -7,6 +7,8 @@ const params = getUrlParams();
 console.log('뭐가!! 넘어오니?', params);
 
 
+
+
 //////best5_slide 
 let best5 = [], bestList;
 
@@ -23,7 +25,10 @@ fetch(bestData)
 
  bestList=()=>{
     let elBest = document.querySelector('.best5_slide > div');
-
+    
+    // if(params.name == 'beer'){
+    //     elBest.setAttribute("src=../images/list_bg/list_bg_beer.png", "beer")
+    // }
 
     for(let i=0;i<5;i++){
         const bestPicture = best5[i].product_img.split(',')[0];
@@ -48,6 +53,8 @@ fetch(bestData)
     }
 
     elBest.innerHTML=list;
+
+    
 
     var swiper = new Swiper(".best5_slide", {
         slidesPerView: 3,
