@@ -1,3 +1,9 @@
+// --------------------------------------------------------------
+
+
+
+
+
 const selectBox = document.querySelector('.review-tab-right .selectBox'),
     label = document.querySelector('.selectBox .label'),
     optionList = document.querySelector('.selectBox .optionList'),
@@ -82,7 +88,7 @@ optionItem.forEach(function (el, k, a) {
 
         let arrayReviewFunc = function () {
             if (el.dataset.num == "2") {
-                console.log('후기를 인기순으로 정렬합니다.')
+                reviewListCont.classList.add('dir2');
                 // 추후 구현!!
             } else if (el.dataset.num == "3") {
                 console.log('후기를 별점순으로 정렬합니다.')
@@ -133,6 +139,28 @@ writeBtn.addEventListener('click', function (e) {
         popCont.classList.remove('active');
         popBg.classList.remove('bg-active');
     }
+
+    // --------------------------- 상품 정보 json -----------------------------
+    function getUrlParams() {
+        const params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+        return params;
+    }
+    const params = getUrlParams();
+    console.log("view :", params);
+
+    let goods = [];
+    const url = `../datas/${params.name}_view.json`;
+    fetch(url)
+        .then(type => type.json())
+        .then(result => {
+            goods = result.data;
+            goodsView();
+        }).catch(error => {
+            // console.log(error);
+        });
+
+    // --------------------------------------------------------
 
     // 후기쓰고 등록 버튼 누를때!!
     reviewPopBtn.onclick = function (e) {
