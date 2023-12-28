@@ -5,12 +5,13 @@ const selectBox = document.querySelector('.review-tab-right .selectBox'),
 
 const totalReviewNum = document.querySelector('.review-container .total'),
     reviewListCont = document.querySelector('.review-list-container'),
-    reviewListContLi = document.querySelectorAll('.review-list-container li'),
     reviewScore = document.querySelector('.review-count .review-score'),
     starSpan = document.querySelector('#review-popup .star span'),
     starSpanInput = document.querySelector('#review-popup .star input'),
     starGrade = document.querySelector('.star-container .star-grade'),
     starCount = document.querySelector('.review-count .star-count');
+
+let reviewListContLi;
 
 // ---------------------------------------------------별점 점수 시작
 // ---------------후기작성 별점 시작
@@ -29,26 +30,25 @@ const dsf = [];
 starSpanInput.value = 0; // 초기화
 //---------------후기작성 별점 끝
 
-let starLikeGrade = 0;
-
 // ---------------후기 점수 평균 출력 테스트
 // 2회차가 안됌~!!!
 let likeGradeFunc = function () {
-    let totalReviewCount = reviewListCont.childElementCount;
+    reviewListContLi = document.querySelectorAll('.review-list-container li')
     let total = 0;
 
-    reviewListContLi.forEach((el) => { // string값으로 넘어옴
-        total += parseFloat(el.dataset.grade); // 기존 별점 합계(실수)
+    reviewListContLi.forEach((el) => {
+        let reviewStarCount = el.firstElementChild.firstElementChild;
+        let starNum = Number(el.dataset.grade);
+        let starGradeNum = (starNum / 5) * 100;
+        reviewStarCount.style.background = `linear-gradient(to right, #EAB838, #EAB838 ${starGradeNum}%, #E0E2E7 ${starGradeNum}%`;
+        reviewStarCount.style.backgroundClip = 'text';
+
+        total += starNum; // 기존 별점 합계(실수)
+        console.log(starNum, total)
     })
 
-    total += parseFloat(starSpanInput.value) / 2;
-    starLikeGrade = total;
-
-    console.log('리뷰 갯수는 ' + totalReviewCount)
-    console.log('점수 합계는 ' + starLikeGrade)
-    console.log('전송한 별점은 ' + parseFloat(starSpanInput.value) / 2)
-
-    let goodsTotalGrade = (starLikeGrade / totalReviewCount).toFixed(1); // 소수점 첫째 자리
+    // 별점 총합의 평균 뿌리기
+    let goodsTotalGrade = (total / reviewListContLi.length).toFixed(1); // 소수점 첫째 자리
     reviewScore.innerText = goodsTotalGrade;
 
     // 평균 점수 별점 시각화
@@ -58,6 +58,8 @@ let likeGradeFunc = function () {
 }
 
 likeGradeFunc();
+
+
 // ------------후기 점수 평균 출력 테스트 끝------------
 
 //--------------- 드롭다운 메뉴 시작 ------------------
@@ -112,7 +114,8 @@ let today = new Date(),
     date = today.getDate();  // 날짜
 
 // li 갯수 찾기 = 부모.메소드
-totalReviewCount = reviewListCont.childElementCount;
+reviewListContLi = document.querySelectorAll('.review-list-container li')
+totalReviewCount = reviewListContLi.length;
 totalReviewNum.innerText = totalReviewCount;
 
 // 후기 작성하기 누르면
@@ -134,37 +137,37 @@ writeBtn.addEventListener('click', function (e) {
     // 후기쓰고 등록 버튼 누를때!!
     reviewPopBtn.onclick = function (e) {
         e.preventDefault();
-        reviewPop.classList.add('hidden');
-        reviewNext.classList.add('active');
 
-        // 리뷰 개수 업데이트
-        totalReviewCount = totalReviewCount + 1;
-        totalReviewNum.innerText = totalReviewCount;
-
-        //뿌리기
-        let userReview = `<div class="left">
-                        <div class="star-count">
-                            <span class="star count">★</span>
-                            <span class="star count">★</span>
-                            <span class="star count">★</span>
-                            <span class="star count">★</span>
-                            <span class="star">★</span>
-                        </div>
+        //10자 이상이면 넘어감
+        if (reviewPopText.value.length >= 10) {
+            reviewPop.classList.add('hidden');
+            reviewNext.classList.add('active');
+            reviewListContLi = document.querySelectorAll('.review-list-container li')
+            //뿌리기
+            let userReview = `<div class="left">
+                        <div class="star-count">★★★★★</div>
                         <p class="user-id">비회원</p>
                         <p class="user-date">${year + '.' + month + '.' + date}</p>
                     </div>
                         <div class="right">
                         <p>${reviewPopText.value}</p>
                         </div>`;
-        const showReview = document.createElement('li');
-        showReview.classList = `list-result`;
-        showReview.dataset.num = `${totalReviewCount}`;
-        showReview.dataset.grade = `${parseFloat(starSpanInput.value) / 2}`;
-        showReview.dataset.like = `${0}`;
+            const showReview = document.createElement('li');
+            showReview.classList = `list-result`;
+            totalReviewCount++;
+            showReview.dataset.num = `${totalReviewCount}`;
+            showReview.dataset.grade = `${parseFloat(starSpanInput.value) / 2}`;
+            showReview.dataset.like = `${0}`;
+            showReview.innerHTML = userReview;
+            reviewListCont.append(showReview);
 
-        showReview.innerHTML = userReview;
-        reviewListCont.append(showReview);
-        likeGradeFunc();
+            likeGradeFunc();
+
+            // 리뷰 개수 업데이트
+            totalReviewNum.innerText = totalReviewCount;
+        } else {
+            window.alert('10자 이상 입력해주세요!');
+        }
     }
 
     reviewNextBtn.onclick = function (e) {

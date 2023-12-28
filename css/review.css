@@ -807,14 +807,10 @@ footer article .bottom div a {
   justify-content: flex-start;
 }
 .main-section .review-list-container .list-result .left .star-count {
-  display: flex;
-  justify-content: center;
-}
-.main-section .review-list-container .list-result .left .star-count .star {
-  color: #E0E2E7;
-}
-.main-section .review-list-container .list-result .left .star-count .count {
-  color: #EAB838;
+  background: red;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .main-section .review-list-container .list-result .left p {
   font-size: 0.8rem;
