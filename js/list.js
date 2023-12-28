@@ -1,3 +1,5 @@
+
+
 function getUrlParams() {
     const params = {};
     window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
@@ -152,4 +154,20 @@ const goodsList = () => {
 
     elList.innerHTML = list;
     // console.log(list)
+}
+
+up.onclick = function(){
+    window.scrollTo({
+        top:0,
+        bottom:100000,
+        behavior: "smooth"
+    });
+
+}
+down.onclick = function(){
+    window.scrollTo({
+        top:100000,
+        bottom:0,
+        behavior: "smooth"
+    });
 }

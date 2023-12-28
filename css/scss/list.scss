@@ -2,6 +2,24 @@
 
 // PC --시작
 main {
+    #up{
+        position : fixed;
+        top : 140px;
+        right:50px;
+        width:25px;
+        height:25px;
+        border: 1px solid black;
+        background-color: red;
+    }
+    #down{
+        position : fixed;
+        top : 165px;
+        right:50px;
+        width:25px;
+        height:25px;
+        border: 1px solid black;
+        background-color: blue;
+    }
     //max-width: 1180px;
     padding-top: 132px;
     margin: 0 auto;
@@ -58,7 +76,7 @@ main {
 
                 p {
                     img {
-                        
+
                         width: 380px;
                         height: 380px;
                         background-color: #D9D9D9;
@@ -207,6 +225,7 @@ main {
     }
 
 }
+
 
 // PC -- 끝
 
