@@ -314,4 +314,259 @@ main {
 
 @include res($pad) {}
 
-@include res($mobile) {}
+@include res($mobile) {
+    main {
+        width: 375px;
+        padding-top: 200px;
+        margin: 0 auto;
+
+        .view_1 {
+            width: 100%;
+            height: 670px;
+            display: flex;
+            flex-direction: column;
+            
+
+            .view_img_1 {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+
+
+                .view_main_img {
+                    border: 1px solid #E0E2E7;
+                    width: 100%;
+                }
+
+                .view_main_img:hover {
+                    transform: scale(1.2);
+                }
+
+                .view_sub_image {
+                    width: 70%;
+                    display: none;
+
+                    width: 100%;
+                    margin-top: 20px;
+
+                    img {
+                        border: 1px solid #E0E2E7;
+                        width: 30%;
+                        margin-right: 20px;
+
+                    }
+
+                }
+            }
+
+            .view_text {
+                position: relative;
+                width: 50%;
+                color: #8C8D96;
+                font-size: 18px;
+
+                .view_text_1 {}
+
+                #goods_name {
+                    font-size: 30px;
+                    line-height: 150%;
+                    font-weight: 400;
+                    color: black;
+                }
+
+                #line {
+                    border-bottom: 1px solid black;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                }
+
+                .goods_text {
+                    display: flex;
+                    justify-content: left;
+                    font-size: 18px;
+                    line-height: 180%;
+                    font-weight: 400;
+
+                    #text1 {
+                        color: #8C8D96;
+                    }
+
+                    .view_text_2 {
+                        margin-left: 60px;
+                        font-weight: 400;
+                        color: #000000;
+
+                        #sale {
+                            text-decoration: 1px line-through black;
+                        }
+                    }
+
+
+                }
+
+                .text_box {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    background-color: #F7F8FA;
+                    margin: 40px 0;
+                    color: #8C8D96;
+                    font-size: 14px;
+
+                    #text2 {
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        color: #000000;
+                        font-size: 18px;
+                        font-weight: 800;
+
+                        .input_text {
+                            width: 85px;
+                            height: 30px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .btn_buy {
+
+                    #text3 {
+
+                        p {
+                            color: #8C8D96;
+                            font-size: 18px;
+                            text-align: right;
+                        }
+
+                        b {
+                            color: black;
+                            font-size: 36px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    #button1_location {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+
+                        .location {
+
+                            .button1 {
+                                width: 240px;
+                                height: 47px;
+                                color: white;
+                                font-size: 14px;
+                                font-weight: bold;
+                                background-color: black;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+        #goods_line {
+            width: 100%;
+            margin-top: 120px;
+            display: flex;
+
+            .goods_ex_line {
+                text-align: center;
+                width: 100%;
+                border: 1px solid #8C8D96;
+                border-width: 1px 1px 0 0;
+                font-weight: bold;
+                padding: 10px;
+                font-size: 14px;
+
+                &.active {
+                    text-align: center;
+                    width: 100%;
+                    border-width: 0 0 1px 0;
+                    font-weight: 400;
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+
+            .goods_review_line {
+                text-align: center;
+                width: 100%;
+                border: 1px solid #8C8D96;
+                border-width: 0 0 1px 0;
+                font-weight: 400;
+                padding: 10px;
+                font-size: 14px;
+
+                &.active {
+                    text-align: center;
+                    width: 100%;
+                    border-width: 1px 0 0 1px;
+                    font-weight: bold;
+                    padding: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .img_ex_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 70px;
+            margin-bottom: 40px;
+
+            .img_ex {
+                overflow: hidden;
+                height: 2051px;
+
+                img {
+                    width: 1179px;
+                }
+            }
+
+            .expand {
+                width: 246px;
+                height: 42px;
+                background-color: black;
+
+                p {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 25px;
+                }
+
+            }
+
+            .fold {
+                display: none;
+                width: 246px;
+                height: 42px;
+                background-color: black;
+
+                p {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 25px;
+                }
+
+            }
+
+        }
+
+    }
+}
