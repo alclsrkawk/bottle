@@ -13,6 +13,7 @@ main {
         display: flex;
         justify-content: space-between;
 
+        //메인이미지, 서브이미지 
         .view_img_1 {
             width: 43%;
             display: flex;
@@ -45,6 +46,7 @@ main {
             }
         }
 
+        //제품 스펙
         .view_text {
             position: relative;
             width: 50%;
@@ -89,7 +91,7 @@ main {
 
 
             }
-
+            // 수량설정
             .text_box {
                 display: flex;
                 flex-direction: column;
@@ -114,7 +116,7 @@ main {
                     }
                 }
             }
-
+            //구매하기 버튼
             .btn_buy {
 
                 #text3 {
@@ -154,7 +156,7 @@ main {
         }
     }
 
-
+    //상세, 후기 라인
     #goods_line {
         width: 100%;
         margin-top: 120px;
@@ -198,7 +200,7 @@ main {
             }
         }
     }
-
+    //제품상세
     .img_ex_text {
         display: flex;
         flex-direction: column;
@@ -214,7 +216,7 @@ main {
                 width: 1179px;
             }
         }
-
+        //펼치기
         .expand {
             width: 246px;
             height: 42px;
@@ -231,7 +233,7 @@ main {
             }
 
         }
-
+        //접기
         .fold {
             display: none;
             width: 246px;
@@ -257,6 +259,7 @@ main {
 
 
 .menu-tab {
+
     font-size: 14px;
     max-width: 1180px;
     margin: 0 auto;
@@ -280,39 +283,7 @@ main {
     }
 }
 
-#dsa {
-    display: none;
 
-    .review-count {
-        margin: 0 auto;
-        padding: 40px 0;
-        border-bottom: 1px solid #E0E2E7;
-        font-size: 2.5rem;
-
-        @include flex(center) {
-            flex-wrap: nowrap;
-        }
-
-        ;
-
-        .star-count {
-            @include flex(center);
-
-            .star {
-                color: #E0E2E7;
-            }
-
-            .count {
-                color: #EAB838;
-            }
-        }
-
-        .review-score {
-            margin-left: 10px;
-            font-weight: 700;
-        }
-    }
-}
 
 // PC -- 끝
 
@@ -320,10 +291,9 @@ main {
     main {
         width: 100%;
         padding-top: 200px;
-        margin: 0 auto;
+        margin: 0 5px;
 
         .view_1 {
-            width: 100%;
             height: 670px;
             display: flex;
             flex-direction: column;
@@ -332,16 +302,10 @@ main {
 
 
             .view_img_1 {
-                width: 80%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0 auto;
-
 
                 .view_main_img {
                     border: 1px solid #E0E2E7;
-                    width: 100%;
+                    width: 80%;
                 }
 
                 .view_main_img:hover {
@@ -349,8 +313,8 @@ main {
                 }
 
                 .view_sub_image {
-                    width: 70%;
                     display: none;
+                    width: 70%;
                     width: 100%;
                     margin-top: 20px;
 
@@ -367,7 +331,8 @@ main {
             .view_text {
                 display: flex;
                 flex-direction: column;
-                width: 80%;
+                align-items: center;
+                width: 100%;
                 color: #8C8D96;
                 font-size: 18px;
                 margin: 40px 0;
@@ -388,7 +353,6 @@ main {
                 }
 
                 .goods_text {
-
 
                     font-size: 18px;
                     line-height: 180%;
