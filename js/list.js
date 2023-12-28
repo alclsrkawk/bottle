@@ -8,31 +8,46 @@ console.log('뭐가!! 넘어오니?', params);
 
 
 
-
-//////best5_slide 
 let best5 = [], bestList;
 
-const bestData=`../datas/${params.name}_view.json`
+const bestData = `../datas/${params.name}_view.json`
 fetch(bestData)
-    .then(type=>type.json())
-    .then(result=>{
-        best5=result.data;
+    .then(type => type.json())
+    .then(result => {
+        best5 = result.data;
         console.log(result)
         bestList();
-    }).catch(error=>{
+    }).catch(error => {
         console.log(error);
     });
 
- bestList=()=>{
-    let elBest = document.querySelector('.best5_slide > div');
-    
-    // if(params.name == 'beer'){
-    //     elBest.setAttribute("src=../images/list_bg/list_bg_beer.png", "beer")
-    // }
 
-    for(let i=0;i<5;i++){
+bestList = () => {
+    let elBest = document.querySelector('.best5_slide > div');
+
+    let elListBg = document.querySelector('.list_bg  img');
+    let elListTitle = document.querySelector('.list_title > h2');
+    
+    if (params.name == 'wine') {
+        elListBg.setAttribute("src", "../images/list_bg/list_bg_wine.png");
+        elListTitle.innerHTML=`분위기 있는 와인`
+    } else if (params.name == 'beer') {
+        elListBg.setAttribute("src", "../images/list_bg/list_bg_beer.png");
+        elListTitle.innerHTML=`즐겨 마시는 맥주`
+    } else if (params.name == 'soju') {
+        elListBg.setAttribute("src", "../images/list_bg/list_bg_soju.png");
+        elListTitle.innerHTML=`늘 한결같은 소주`
+    } else {
+        elListBg.setAttribute("src", "../images/list_bg/list_bg_whisky.png");
+        elListTitle.innerHTML=`홀리데이 위스키`
+    }
+
+    
+   
+
+    for (let i = 0; i < 5; i++) {
         const bestPicture = best5[i].product_img.split(',')[0];
-                
+
         list += `
                     
                     <figure class="swiper-slide">
@@ -52,19 +67,21 @@ fetch(bestData)
                 `
     }
 
-    elBest.innerHTML=list;
-
-    
+    elBest.innerHTML = list;
 
     var swiper = new Swiper(".best5_slide", {
         slidesPerView: 3,
         spaceBetween: 30,
-        freeMode: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-          },
-      });
+        },
+    });
 
 }
 
@@ -99,7 +116,7 @@ fetch(data)
 const goodsList = () => {
     console.log("나는 리스트", goods)
     let elList = document.querySelector('.list_items');
-    list='';
+    list = '';
     goods.forEach(function (element, i) {
         const picture = element.product_img.split(',')[0];
         //무조건 한놈만 가져온다
@@ -118,11 +135,7 @@ const goodsList = () => {
                     </figure>
                `
     });
-   
+
     elList.innerHTML = list;
     // console.log(list)
 }
-
-
-
-
