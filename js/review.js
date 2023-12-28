@@ -9,7 +9,8 @@ const totalReviewNum = document.querySelector('.review-container .total'),
     reviewScore = document.querySelector('.review-count .review-score'),
     starSpan = document.querySelector('#review-popup .star span'),
     starSpanInput = document.querySelector('#review-popup .star input'),
-    starGrade = document.querySelector('.star-container .star-grade');
+    starGrade = document.querySelector('.star-container .star-grade'),
+    starCount = document.querySelector('.review-count .star-count');
 
 // ---------------------------------------------------별점 점수 시작
 // ---------------후기작성 별점 시작
@@ -49,6 +50,11 @@ let likeGradeFunc = function () {
 
     let goodsTotalGrade = (starLikeGrade / totalReviewCount).toFixed(1); // 소수점 첫째 자리
     reviewScore.innerText = goodsTotalGrade;
+
+    // 평균 점수 별점 시각화
+    let starGradeNum = (Number(goodsTotalGrade) / 5) * 100;
+    starCount.style.background = `linear-gradient(to right, #EAB838, #EAB838 ${starGradeNum}%, #E0E2E7 ${starGradeNum}%`;
+    starCount.style.backgroundClip = 'text';
 }
 
 likeGradeFunc();

@@ -55,15 +55,9 @@
         }
 
         .star-count {
-            @include flex(center);
-
-            .star {
-                color: #E0E2E7;
-            }
-
-            .count {
-                color: #EAB838;
-            }
+            background: #000;
+            color: transparent;
+            background-clip: text;
         }
 
         .review-score {
@@ -89,7 +83,7 @@
 
             .review-tab-right {
                 @include flex(space-between) {
-                    gap: 20px
+                    gap: 20px;
                 }
 
                 .selectBox {
