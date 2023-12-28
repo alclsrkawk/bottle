@@ -31,16 +31,16 @@ bestList = () => {
     let elListTitle = document.querySelector('.list_title > h2');
     
     if (params.name == 'wine') {
-        elListBg.setAttribute("src", "../images/list_bg/list_bg_wine.png");
+        elListBg.setAttribute("src", "../images/list_bg/1.png");
         elListTitle.innerHTML=`분위기 있는 와인`
     } else if (params.name == 'beer') {
-        elListBg.setAttribute("src", "../images/list_bg/list_bg_beer.png");
+        elListBg.setAttribute("src", "../images/list_bg/2.png");
         elListTitle.innerHTML=`즐겨 마시는 맥주`
     } else if (params.name == 'soju') {
-        elListBg.setAttribute("src", "../images/list_bg/list_bg_soju.png");
+        elListBg.setAttribute("src", "../images/list_bg/3.png");
         elListTitle.innerHTML=`늘 한결같은 소주`
     } else {
-        elListBg.setAttribute("src", "../images/list_bg/list_bg_whisky.png");
+        elListBg.setAttribute("src", "../images/list_bg/4.png");
         elListTitle.innerHTML=`홀리데이 위스키`
     }
 
