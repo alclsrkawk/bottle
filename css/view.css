@@ -683,7 +683,10 @@ main .img_ex_text .fold p {
   font-weight: 700;
 }
 
-.review-count {
+#dsa {
+  display: none;
+}
+#dsa .review-count {
   margin: 0 auto;
   padding: 40px 0;
   border-bottom: 1px solid #E0E2E7;
@@ -692,17 +695,17 @@ main .img_ex_text .fold p {
   justify-content: center;
   flex-wrap: nowrap;
 }
-.review-count .star-count {
+#dsa .review-count .star-count {
   display: flex;
   justify-content: center;
 }
-.review-count .star-count .star {
+#dsa .review-count .star-count .star {
   color: #E0E2E7;
 }
-.review-count .star-count .count {
+#dsa .review-count .star-count .count {
   color: #EAB838;
 }
-.review-count .review-score {
+#dsa .review-count .review-score {
   margin-left: 10px;
   font-weight: 700;
 }
@@ -912,7 +915,7 @@ main .img_ex_text .fold p {
 }
 @media screen and (max-width: 390px) {
   main {
-    width: 375px;
+    width: 100%;
     padding-top: 200px;
     margin: 0 auto;
   }
@@ -921,6 +924,8 @@ main .img_ex_text .fold p {
     height: 670px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   main .view_1 .view_img_1 {
     width: 80%;
@@ -934,7 +939,7 @@ main .img_ex_text .fold p {
     width: 100%;
   }
   main .view_1 .view_img_1 .view_main_img:hover {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   main .view_1 .view_img_1 .view_sub_image {
     width: 70%;
@@ -948,10 +953,12 @@ main .img_ex_text .fold p {
     margin-right: 20px;
   }
   main .view_1 .view_text {
-    position: relative;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     color: #8C8D96;
     font-size: 18px;
+    margin: 40px 0;
   }
   main .view_1 .view_text #goods_name {
     font-size: 30px;
@@ -965,8 +972,6 @@ main .img_ex_text .fold p {
     margin-bottom: 20px;
   }
   main .view_1 .view_text .goods_text {
-    display: flex;
-    justify-content: left;
     font-size: 18px;
     line-height: 180%;
     font-weight: 400;
@@ -1005,6 +1010,9 @@ main .img_ex_text .fold p {
     height: 30px;
     font-size: 18px;
   }
+  main .view_1 .view_text .btn_buy #text3 {
+    margin-bottom: 100px;
+  }
   main .view_1 .view_text .btn_buy #text3 p {
     color: #8C8D96;
     font-size: 18px;
@@ -1015,11 +1023,6 @@ main .img_ex_text .fold p {
     font-size: 36px;
     font-weight: bold;
   }
-  main .view_1 .view_text .btn_buy #button1_location {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
   main .view_1 .view_text .btn_buy #button1_location .location .button1 {
     width: 240px;
     height: 47px;
@@ -1029,9 +1032,10 @@ main .img_ex_text .fold p {
     background-color: black;
   }
   main #goods_line {
-    width: 100%;
-    margin-top: 120px;
+    width: 80%;
     display: flex;
+    justify-content: center;
+    margin: 700px auto 0 auto;
   }
   main #goods_line .goods_ex_line {
     text-align: center;
@@ -1075,13 +1079,14 @@ main .img_ex_text .fold p {
     margin-bottom: 40px;
   }
   main .img_ex_text .img_ex {
-    overflow: hidden;
-    height: 2051px;
+    height: 100%;
   }
   main .img_ex_text .img_ex img {
-    width: 1179px;
+    width: 614px;
+    height: 100%;
   }
   main .img_ex_text .expand {
+    display: none;
     width: 246px;
     height: 42px;
     background-color: black;

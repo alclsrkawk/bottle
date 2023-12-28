@@ -280,33 +280,37 @@ main {
     }
 }
 
-.review-count {
-    margin: 0 auto;
-    padding: 40px 0;
-    border-bottom: 1px solid #E0E2E7;
-    font-size: 2.5rem;
+#dsa {
+    display: none;
 
-    @include flex(center) {
-        flex-wrap: nowrap;
-    }
+    .review-count {
+        margin: 0 auto;
+        padding: 40px 0;
+        border-bottom: 1px solid #E0E2E7;
+        font-size: 2.5rem;
 
-    ;
-
-    .star-count {
-        @include flex(center);
-
-        .star {
-            color: #E0E2E7;
+        @include flex(center) {
+            flex-wrap: nowrap;
         }
 
-        .count {
-            color: #EAB838;
-        }
-    }
+        ;
 
-    .review-score {
-        margin-left: 10px;
-        font-weight: 700;
+        .star-count {
+            @include flex(center);
+
+            .star {
+                color: #E0E2E7;
+            }
+
+            .count {
+                color: #EAB838;
+            }
+        }
+
+        .review-score {
+            margin-left: 10px;
+            font-weight: 700;
+        }
     }
 }
 
@@ -325,7 +329,7 @@ main {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            
+
 
             .view_img_1 {
                 width: 80%;
@@ -339,6 +343,7 @@ main {
                     border: 1px solid #E0E2E7;
                     width: 100%;
                 }
+
                 .view_main_img:hover {
                     transform: scale(1);
                 }
@@ -383,8 +388,8 @@ main {
                 }
 
                 .goods_text {
-                
-                  
+
+
                     font-size: 18px;
                     line-height: 180%;
                     font-weight: 400;
@@ -450,8 +455,8 @@ main {
                     }
 
                     #button1_location {
-                        
-                    
+
+
 
                         .location {
 
@@ -526,6 +531,7 @@ main {
 
             .img_ex {
                 height: 100%;
+
                 img {
                     width: 614px;
                     height: 100%;
@@ -575,8 +581,9 @@ main {
 }
 
 @include res($mobile) {
+
     main {
-        width: 375px;
+        width: 100%;
         padding-top: 200px;
         margin: 0 auto;
 
@@ -585,7 +592,9 @@ main {
             height: 670px;
             display: flex;
             flex-direction: column;
-            
+            justify-content: space-between;
+            align-items: center;
+
 
             .view_img_1 {
                 width: 80%;
@@ -601,13 +610,12 @@ main {
                 }
 
                 .view_main_img:hover {
-                    transform: scale(1.2);
+                    transform: scale(1);
                 }
 
                 .view_sub_image {
                     width: 70%;
                     display: none;
-
                     width: 100%;
                     margin-top: 20px;
 
@@ -622,10 +630,12 @@ main {
             }
 
             .view_text {
-                position: relative;
-                width: 50%;
+                display: flex;
+                flex-direction: column;
+                width: 80%;
                 color: #8C8D96;
                 font-size: 18px;
+                margin: 40px 0;
 
                 .view_text_1 {}
 
@@ -643,8 +653,8 @@ main {
                 }
 
                 .goods_text {
-                    display: flex;
-                    justify-content: left;
+
+
                     font-size: 18px;
                     line-height: 180%;
                     font-weight: 400;
@@ -694,6 +704,7 @@ main {
                 .btn_buy {
 
                     #text3 {
+                        margin-bottom: 100px;
 
                         p {
                             color: #8C8D96;
@@ -709,9 +720,8 @@ main {
                     }
 
                     #button1_location {
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
+
+
 
                         .location {
 
@@ -732,9 +742,11 @@ main {
 
 
         #goods_line {
-            width: 100%;
-            margin-top: 120px;
+            width: 80%;
             display: flex;
+            justify-content: center;
+
+            margin: 700px auto 0 auto;
 
             .goods_ex_line {
                 text-align: center;
@@ -783,15 +795,16 @@ main {
             margin-bottom: 40px;
 
             .img_ex {
-                overflow: hidden;
-                height: 2051px;
+                height: 100%;
 
                 img {
-                    width: 1179px;
+                    width: 614px;
+                    height: 100%;
                 }
             }
 
             .expand {
+                display: none;
                 width: 246px;
                 height: 42px;
                 background-color: black;
@@ -829,4 +842,6 @@ main {
         }
 
     }
+
+
 }
