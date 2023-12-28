@@ -68,11 +68,11 @@ let goodsView = function () {
       e += `
     <img src="../images/${params.name}/${goods[i].explain}" alt="">`
 
-      
+
     }
 
-    
-    
+
+
   }
 
   elImg.innerHTML = a;
@@ -81,9 +81,9 @@ let goodsView = function () {
   elTextBox.innerHTML = d;
   elExImg.innerHTML = e;
 
-  
 
-  
+
+
 
 
   const elMainImg = document.querySelector('.view_main_img'),
@@ -97,9 +97,9 @@ let goodsView = function () {
     elGoodsReviewLine = document.querySelector('.goods_review_line'),
     elGoodsEx = document.querySelector('.img_ex_text'),
     elReview = document.querySelector('section');
-    
 
-    
+
+
 
   elExpand.onclick = function (e) {
     e.preventDefault();
@@ -148,27 +148,29 @@ let goodsView = function () {
     // console.log(parseInt(z.discount.replaceAll(',', '')));
     // parseInt 정수만 나오게 replaceAll(',','') ,지우기
     // console.log('asd')
-    let TransNum = parseInt(goods[params.idx-1].discount.replaceAll(',', ''));
+    let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
     let goodsSum = (elInputText.value * TransNum).toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
     let f = ''
-    f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`
+    f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
     text3.innerHTML = f;
     // console.log(Sum.innerText)
-    elBtnBuy.onclick = function(){
-      elLocation.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}&sum=${Sum.innerHTML}`;
-    }
     
 
   }
 
+  elLocation.onclick = function (e) {
+   
+    e.preventDefault()
+      
+    if (elInputText.value == '' | elInputText.value == 0) {
+      alert('최소 1개는 선택해주세요');
+    }else{
+      location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}&sum=${Sum.innerHTML}`;
+    }
+
+  }
 }
-
-
-
-
-
-
 
 
 
