@@ -154,28 +154,31 @@ fetch(url)
                 const orderProduct = document.querySelector('.third-flex');
                 
                 let addProduct = '';
-                let a = parseInt(goods[i].price.replaceAll(',', ''))*params.ea;
+                let totalPrice = parseInt(goods[i].price.replaceAll(',', ''))*params.ea;
+                let totalDiscount = parseInt(goods[i].discount.replaceAll(',', ''))*params.ea;
+
                 addProduct += `<div>
                         <li><img src="../images/${params.name}/${picture[0]}" alt=""></li>
                         </div>
                         <div>
                             <p>${goods[i].brand}</p>
                             <p>${goods[i].product_name} <span>| ${params.ea}개</span></p><br>
-                            <p>${decodeURI(params.sum)} <span>${a.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span></p>
+                            <p>${decodeURI(params.sum)} <span>${totalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span></p>
                         </div>`;
                 let allPrice = '';
                 allPrice += `
                     <p>총 상품금액</p>
-                    <p>+${goods[i].discount}</p>`;
-                    
-                    
+                    <p>+${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</p>`;
+                    console.log(goods[i].discount)
+                    console.log(params.ea)
+                    console.log(totalDiscount);
 
                 // console.log(parseInt(goods[i].price.discount.replaceAll(',', '')));
                 //parseInt((parseInt(goods[i].price.replaceAll(',', ''))*params.ea).replaceAll(',', ''))+"원".toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
                 let finalPrice = '';
                 finalPrice +=`
                 <b>최종 주문금액</b>  
-                <b>+${decodeURI(params.sum)}</b>`;
+                <b>+${(totalDiscount+3000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</b>`;
 
                 orderProduct.innerHTML = addProduct;
                 all_price.innerHTML = allPrice;
