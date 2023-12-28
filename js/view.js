@@ -33,7 +33,7 @@
     let c = '';
     let d = '';
     let e = '';
-    let z = goods[7];
+    let z = goods[0];
     const picture = z.product_img.split(',');
     for (j = 0; j < picture.length; j++) {
       figure += `<img src="../images/beer/${picture[j]}" alt=""></img>`
@@ -77,7 +77,11 @@
     elExpand = document.querySelector('.expand'),
     elFold = document.querySelector('.fold'),
     elInputText = document.querySelector('.input_text'),
-    elBtnBuy = document.querySelector('.btn_buy');
+    elBtnBuy = document.querySelector('.btn_buy'),
+    elGoodsExLine = document.querySelector('.goods_ex_line'),
+    elGoodsReviewLine = document.querySelector('.goods_review_line'),
+    elGoodsEx = document.querySelector('.img_ex_text'),
+    elReview = document.querySelector('section');
 
     elExpand.onclick = function (e) {
       e.preventDefault();
@@ -114,6 +118,22 @@
       f += `<p>총 합계 금액 <b>${goodsSum}원</b></p>`
       text3.innerHTML = f;
       
+    }
+
+    elGoodsExLine.onclick = function(e){
+      e.preventDefault();
+      elGoodsEx.style.display = 'flex';
+      elReview.style.display = 'none';
+      elGoodsExLine.classList.remove('active');
+      elGoodsReviewLine.classList.remove('active');
+    }
+
+    elGoodsReviewLine.onclick = function(e){
+      e.preventDefault();
+      elGoodsEx.style.display = 'none';
+      elReview.style.display = 'block';
+      elGoodsExLine.classList.add('active');
+      elGoodsReviewLine.classList.add('active');
     }
 
     
