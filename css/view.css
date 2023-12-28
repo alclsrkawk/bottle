@@ -515,22 +515,22 @@ main .view_1 .view_text #line {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-main .view_1 .view_text #goods_text {
+main .view_1 .view_text .goods_text {
   display: flex;
   justify-content: left;
   font-size: 18px;
   line-height: 180%;
   font-weight: 400;
 }
-main .view_1 .view_text #goods_text #text1 {
+main .view_1 .view_text .goods_text #text1 {
   color: #8C8D96;
 }
-main .view_1 .view_text #goods_text .view_text_2 {
+main .view_1 .view_text .goods_text .view_text_2 {
   margin-left: 60px;
   font-weight: 400;
   color: #000000;
 }
-main .view_1 .view_text #goods_text .view_text_2 #sale {
+main .view_1 .view_text .goods_text .view_text_2 #sale {
   -webkit-text-decoration: 1px line-through black;
           text-decoration: 1px line-through black;
 }

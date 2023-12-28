@@ -50,8 +50,9 @@ main {
             width: 50%;
             color: #8C8D96;
             font-size: 18px;
-
-            .view_text_1 {}
+            .view_text_1{
+                
+            }
 
             #goods_name {
                 font-size: 30px;
@@ -66,7 +67,7 @@ main {
                 margin-bottom: 20px;
             }
 
-            #goods_text {
+            .goods_text {
                 display: flex;
                 justify-content: left;
                 font-size: 18px;
@@ -116,7 +117,7 @@ main {
             }
 
             .btn_buy {
-                
+
                 #text3 {
 
                     p {
@@ -150,7 +151,7 @@ main {
 
         }
     }
-    
+
 
     #goods_line {
         width: 100%;
@@ -160,21 +161,39 @@ main {
         .goods_ex_line {
             text-align: center;
             width: 100%;
-            border-right: 1px solid #8C8D96;
-            border-top: 1px solid #8C8D96;
+            border: 1px solid #8C8D96;
+            border-width:1px 1px 0 0;
             font-weight: bold;
             padding: 10px;
             font-size: 14px;
 
+            &.active{
+                text-align: center;
+                width: 100%;
+                border-width: 0 0 1px 0;               
+                font-weight: 400;
+                padding: 10px;
+                font-size: 14px;
+            }
         }
 
         .goods_review_line {
             text-align: center;
             width: 100%;
-            border-bottom: 1px solid #8C8D96;
+            border: 1px solid #8C8D96;
+            border-width:0 0 1px 0;
             font-weight: 400;
             padding: 10px;
             font-size: 14px;
+
+            &.active{
+                text-align: center;
+                width: 100%;
+                border-width:1px 0 0 1px;
+                font-weight: bold;
+                padding: 10px;
+                font-size: 14px;
+            }
         }
     }
 
@@ -183,6 +202,7 @@ main {
         flex-direction: column;
         align-items: center;
         margin-top: 70px;
+        margin-bottom: 40px;
 
         .img_ex {
             overflow: hidden;
@@ -227,10 +247,12 @@ main {
             }
 
         }
+
     }
 
-
+    
 }
+
 
 .menu-tab {
     font-size: 14px;
