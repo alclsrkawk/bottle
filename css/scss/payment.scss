@@ -10,8 +10,11 @@ main {
         width:700px;
         margin-bottom: 80px;
     }
-    margin-left:371px;
-    
+    margin-left:0 auto;
+    .flex{
+        display:flex;
+        justify-content: space-evenly;
+    }
     input , select{
         height:56px;
     }
@@ -25,6 +28,9 @@ main {
     }
     .input_num{
         width:280px;
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
     }
     .input_email{
         margin-right: 10px;
@@ -42,20 +48,20 @@ main {
     }
 
     .receiver_info{
+        width:680px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         input{
             height: auto;
         }
+        
     }
     .input_requested{
         width:480px;
     }
     .section-second{
-        position: absolute;
-        top: 132px;
-        right:150px;
+        height:1000px;
         width:400px;
         background-color: #EDEDED;
         padding-left:20px;
@@ -151,7 +157,7 @@ main {
         display : none;
     }
     //우편번호시작
-    #zip-code{
+    #zip_code{
         width:480px;
         margin-bottom: 10px;
     }
@@ -167,7 +173,7 @@ main {
         background-color: black;
         color: white;
     }
-    #address-1 , #address-2{
+    #address_1 , #address_2{
         width:680px;
         margin-bottom: 10px;
     }
@@ -178,10 +184,33 @@ main {
 
 // PC -- 끝
 
-@include res($pad) {}
+@include res($pad) {
+    main{
+        margin:10px;
+        .flex{
+            display:block;
+        }
+
+        .section-second{
+            margin-top: 50px;
+            width:730px;
+            .pay-button{
+                text-align: center;
+                button{
+                    font-size: 16px;
+                    width:600px;
+                }
+            }
+        }
+    }
+    
+}
 
 @include res($mobile) {
     main{
+        .flex{
+            display:block;
+        }
         padding-top:100px;
         .order , .receiver, .address , .requested{
             width:340px;
@@ -204,6 +233,7 @@ main {
         .input_num{
             margin-left:20px;
             width:241px ;
+            
         }
         .input_email{
             margin:10px 0;
@@ -217,7 +247,7 @@ main {
             margin:10px 0px;
             width:335px;
         }
-        #zip-code{
+        #zip_code{
             width:195px;
         }
         #zip-search{
@@ -231,10 +261,15 @@ main {
 
 
     .section-second{
+        margin-top: 100px;
         padding:0;
-        position: static ;
+        
+            b{font-size: 16px;}
+            p{font-size:14px;}
+        
         width:335px;
         background-color: white;
+
         .pay-button{
             margin-left: -13px;
             width:360px;
