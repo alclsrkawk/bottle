@@ -3,6 +3,7 @@ header {
   position: fixed;
   height: 132px;
   width: 100%;
+  z-index: 10000;
 }
 header .header-pc article {
   display: flex;
@@ -464,5 +465,162 @@ footer article .bottom div a {
   }
 }
 main {
-  height: 100vh;
+  padding-top: 200px;
+  margin-left: 371px;
+}
+main .order, main .receiver, main .address, main .requested {
+  width: 700px;
+  margin-bottom: 80px;
+}
+main input, main select {
+  height: 56px;
+}
+main .input_name {
+  width: 280px;
+}
+main .select_num {
+  width: 80px;
+  text-align: center;
+  margin: 0 20px 10px 20px;
+}
+main .input_num {
+  width: 280px;
+}
+main .input_email {
+  margin-right: 10px;
+  width: 180px;
+}
+main .select_email {
+  margin-left: 10px;
+  width: 464px;
+}
+main .input_direct {
+  margin-top: 10px;
+  margin-left: 225px;
+  width: 464px;
+  display: none;
+}
+main .receiver_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .receiver_info input {
+  height: auto;
+}
+main .input_requested {
+  width: 480px;
+}
+main .section-second {
+  position: absolute;
+  top: 132px;
+  right: 150px;
+  width: 400px;
+  background-color: #EDEDED;
+  padding-left: 20px;
+}
+main .section-second input {
+  height: auto;
+  margin: 15px 0;
+}
+main .section-second .section-second-one {
+  border-bottom: 1px solid #E0E2E7;
+  padding: 20px 0;
+}
+main .section-second .section-second-one p {
+  margin-top: 15px;
+  color: #8C8D96;
+}
+main .section-second .section-second-one p span {
+  margin-left: 11px;
+}
+main .section-second .section-second-two {
+  padding: 20px 0;
+  border-bottom: 1px solid #E0E2E7;
+}
+main .section-second .section-second-two b {
+  margin-left: 11px;
+}
+main .section-second .section-second-two p {
+  margin: 5px 0 0 10px;
+  color: #8C8D96;
+}
+main .section-second .section-second-two p span {
+  margin-left: 11px;
+}
+main .section-second .section-second-three {
+  padding: 20px 0;
+  border-bottom: 1px solid #E0E2E7;
+}
+main .section-second .section-second-three p {
+  color: #8C8D96;
+  margin-left: 20px;
+}
+main .section-second .section-second-three .three-flex {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+main .section-second .pay-button {
+  padding: 20px 0;
+}
+main .section-second .pay-button button {
+  width: 360px;
+  height: 56px;
+  color: white;
+  background-color: black;
+}
+main .section-third {
+  height: 500px;
+  overflow-y: auto;
+}
+main .section-third li {
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
+}
+main .section-third img {
+  width: 100%;
+}
+main .section-third .third-flex {
+  display: flex;
+  align-items: center;
+}
+main .section-third .third-flex p:nth-of-type(1) {
+  font-size: 14px;
+  color: #8A8A8A;
+}
+main .section-third .third-flex p:nth-of-type(2) span {
+  color: #8A8A8A;
+}
+main .section-third .third-flex p:nth-of-type(3) {
+  font-weight: bolder;
+}
+main .section-third .third-flex p:nth-of-type(3) span {
+  margin-left: 10px;
+  text-decoration: line-through;
+  color: #8C8D96;
+}
+main .section-third::-webkit-scrollbar {
+  display: none;
+}
+main #zip-code {
+  width: 480px;
+  margin-bottom: 10px;
+}
+main #zip-search {
+  width: 180px;
+  background-color: white;
+  margin-left: 15px;
+  transform: translateY(2px);
+}
+main #zip-search:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+}
+main #address-1, main #address-2 {
+  width: 680px;
+  margin-bottom: 10px;
 }

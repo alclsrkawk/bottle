@@ -509,14 +509,10 @@ footer article .bottom div a {
   flex-wrap: nowrap;
 }
 .main-section .review-count .star-count {
-  display: flex;
-  justify-content: center;
-}
-.main-section .review-count .star-count .star {
-  color: #E0E2E7;
-}
-.main-section .review-count .star-count .count {
-  color: #EAB838;
+  background: #000;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .main-section .review-count .review-score {
   margin-left: 10px;
