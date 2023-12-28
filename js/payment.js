@@ -40,7 +40,7 @@ sameInfo.onclick = function () {
         receiver_tel.value = "010";  //핸드폰 앞번호
         receiver_email.value = ""; //이메일
         receiver_email_address.value = "naver.com";
-        
+
         if (receiver_email_address.value == "direct") {
             receiver_direct.style.display = "block";
         } else {
@@ -93,26 +93,102 @@ agree.onclick = function (e) {
 
 //결제하기버튼시작
 const payBtn = document.querySelector('.pay-button');
-payBtn.onclick = function(){
-    if(check_1.checked==false||check_2.checked==false||check_4.checked==false){
+payBtn.onclick = function () {
+    if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
         alert('이용약관(필수)에 동의해주세요');
-    } else if(order_name.value==""||order_num.value==""||order_email.value==""){
+    } else if (order_name.value == "" || order_num.value == "" || order_email.value == "") {
         alert('주문자 정보를 확인해주세요')
-    } else if(receiver_name.value==""||receiver_num.value==""||receiver_email.value==""){
+    } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "") {
         alert('수령자 정보를 확인해주세요');
-    } 
-    else if(zip_code.value==""||address_1.value==""||address_2.value==""){
+    }
+    else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
         alert('주소지를 확인해주세요');
-    } else if(order_email_address.value=='direct' && order_direct.value==""){
+    } else if (order_email_address.value == 'direct' && order_direct.value == "") {
         alert("주문자 이메일 주소를 확인해주세요");
-    } else if(receiver_email_address.value=='direct' && receiver_direct.value==""){
+    } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
         alert("수령자 이메일 주소를 확인해주세요");
     }
-    else{
+    else {
         alert('결제가 완료되었습니다.');
-        location.href='./payment.html';
+        location.href = './payment.html';
     }
 
-    
+
 }
 //결제하기버튼끝
+
+
+
+
+
+
+//주문상품 받아오기
+function getUrlParams() {
+    const params = {};
+    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+    return params;
+}
+const params = getUrlParams();
+let goods = [];
+const url = `../datas/${params.name}_view.json`;
+fetch(url)
+    .then(type => type.json())
+    .then(result => {
+        goods = result.data;
+        goodsView();
+    }).catch(error => {
+        // console.log(error);
+    });
+
+    const goodsView = () => {
+        // console.log("goods :", goods)
+        let figure = "";
+        for (let i = 0; i < goods.length; i++) {
+
+            if (goods[i].Idx == params.idx) {
+                const picture = goods[i].product_img.split(',');
+                // console.log("figure :", picture);
+                for (let j = 0; j < picture.length; j++) {
+                    figure += `<img src='./images/${params.name}/${picture[j].trim()}'>`
+                }
+                const orderProduct = document.querySelector('.third-flex');
+                
+                let addProduct = '';
+                let totalPrice = parseInt(goods[i].price.replaceAll(',', ''))*params.ea;
+                let totalDiscount = parseInt(goods[i].discount.replaceAll(',', ''))*params.ea;
+
+                addProduct += `<div>
+                        <li><img src="../images/${params.name}/${picture[0]}" alt=""></li>
+                        </div>
+                        <div>
+                            <p>${goods[i].brand}</p>
+                            <p>${goods[i].product_name} <span>| ${params.ea}개</span></p><br>
+                            <p>${decodeURI(params.sum)} <span>${totalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span></p>
+                        </div>`;
+                let allPrice = '';
+                allPrice += `
+                    <p>총 상품금액</p>
+                    <p>+${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</p>`;
+                    console.log(goods[i].discount)
+                    console.log(params.ea)
+                    console.log(totalDiscount);
+
+                // console.log(parseInt(goods[i].price.discount.replaceAll(',', '')));
+                //parseInt((parseInt(goods[i].price.replaceAll(',', ''))*params.ea).replaceAll(',', ''))+"원".toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+                let finalPrice = '';
+                finalPrice +=`
+                <b>최종 주문금액</b>  
+                <b>+${(totalDiscount+3000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</b>`;
+
+                orderProduct.innerHTML = addProduct;
+                all_price.innerHTML = allPrice;
+                final_price.innerHTML = finalPrice;
+                break;
+            }
+        }
+        
+    }
+
+
+
+
