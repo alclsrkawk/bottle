@@ -48,7 +48,7 @@ main {
     }
 
     .receiver_info{
-        width:340px;
+        width:680px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -190,7 +190,9 @@ main {
         .flex{
             display:block;
         }
-
+        .section-third{
+            height:200px;
+        }
         .section-second{
             margin-top: 50px;
             width:730px;
@@ -221,7 +223,9 @@ main {
             margin:0;
             height:47px;
         }
-
+        .receiver_info{
+            width:320px;
+        }
         .input_name{
             width:335px;
             margin-bottom: 10px;
@@ -233,7 +237,9 @@ main {
         .input_num{
             margin-left:20px;
             width:241px ;
-            
+        }
+        .section-third{
+            height:200px;
         }
         .input_email{
             margin:10px 0;
