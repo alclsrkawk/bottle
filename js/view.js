@@ -135,6 +135,7 @@ let goodsView = function () {
   }
 
   elGoodsReviewLine.onclick = function (e) {
+    console.log('ddsa')
     e.preventDefault();
     elGoodsEx.style.display = 'none';
     elReview.style.display = 'block';
@@ -147,7 +148,7 @@ let goodsView = function () {
     // console.log(parseInt(z.discount.replaceAll(',', '')));
     // parseInt 정수만 나오게 replaceAll(',','') ,지우기
     // console.log('asd')
-    let TransNum = parseInt(goods[params.idx].discount.replaceAll(',', ''));
+    let TransNum = parseInt(goods[params.idx-1].discount.replaceAll(',', ''));
     let goodsSum = (elInputText.value * TransNum).toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
     let f = ''
@@ -157,14 +158,12 @@ let goodsView = function () {
     elBtnBuy.onclick = function(){
       elLocation.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}&sum=${Sum.innerHTML}`;
     }
+    
 
   }
 
-  
-  
-  
-
 }
+
 
 
 
