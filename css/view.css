@@ -571,7 +571,7 @@ main .view_1 .view_text .btn_buy #button1_location {
   bottom: 0;
   right: 0;
 }
-main .view_1 .view_text .btn_buy #button1_location .button1 {
+main .view_1 .view_text .btn_buy #button1_location .location .button1 {
   width: 240px;
   height: 47px;
   color: white;
