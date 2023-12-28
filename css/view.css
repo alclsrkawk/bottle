@@ -732,6 +732,9 @@ main .img_ex_text .fold p {
     border: 1px solid #E0E2E7;
     width: 100%;
   }
+  main .view_1 .view_img_1 .view_main_img:hover {
+    transform: scale(1);
+  }
   main .view_1 .view_img_1 .view_sub_image {
     width: 70%;
     display: none;

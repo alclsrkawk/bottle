@@ -339,11 +339,13 @@ main {
                     border: 1px solid #E0E2E7;
                     width: 100%;
                 }
+                .view_main_img:hover {
+                    transform: scale(1);
+                }
 
                 .view_sub_image {
                     width: 70%;
                     display: none;
-
                     width: 100%;
                     margin-top: 20px;
 
