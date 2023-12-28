@@ -405,15 +405,9 @@
                 }
 
                 .star-count {
-                    @include flex(center);
-
-                    .star {
-                        color: #E0E2E7;
-                    }
-
-                    .count {
-                        color: #EAB838;
-                    }
+                    background: red;
+                    color: transparent;
+                    background-clip: text;
                 }
 
                 p {
