@@ -85,6 +85,20 @@ bestList = () => {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              }
+        }
     });
 
     list = "";
@@ -171,3 +185,14 @@ down.onclick = function(){
         behavior: "smooth"
     });
 }
+const firstTab = document.querySelector('.list');
+
+window.addEventListener("scroll", function(){
+    if(firstTab.getBoundingClientRect().y<=0){
+        up.style="transform: translateY(-50px)";
+        down.style="transform: translateY(-50px)";
+    } else {
+        up.style="transform: translateY(150px)";
+        down.style="transform: translateY(150px)";
+    }
+});
