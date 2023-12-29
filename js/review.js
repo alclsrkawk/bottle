@@ -44,7 +44,7 @@ let likeGradeFunc = function () {
         reviewStarCount.style.backgroundClip = 'text';
 
         total += starNum; // 기존 별점 합계(실수)
-        console.log(starNum, total)
+        // console.log(starNum, total)
     })
 
     // 별점 총합의 평균 뿌리기
@@ -79,24 +79,35 @@ optionItem.forEach(function (el, k, a) {
         label.innerText = innerText;
         optionList.classList.toggle('active');
         selectBox.classList.toggle('active');
-
+        let reviewArr = '';
         let arrayReviewFunc = function () {
-            if (el.dataset.num == "2") {
-                reviewListCont.classList.add('dir2');
-                // 추후 구현!!
-            } else if (el.dataset.num == "3") {
-                console.log('후기를 별점순으로 정렬합니다.')
-                reviewListContLi = document.querySelectorAll('.review-list-container li');
-                let gradeNum;
-                reviewListContLi.forEach((el) => {
-                    gradeNum += el.dataset.grade;
-                })
-                console.log(gradeNum)
+            if (el.dataset.num == "2") { // 인기순
+                reviewListContLi = document.querySelectorAll('.review-list-container li'); // li 업데이트
+                reviewArr = Array.from(reviewListContLi);
+                reviewArr.sort((a, b) => a.dataset.like - b.dataset.like);
 
-                // 1. 모든 li의 data-grade의 배열 생성
-                // 2. 배열을 높은 순서대로 정렬함
-            } else {
-                console.log('후기를 최신순으로 정렬합니다.')
+                reviewListCont.innerHTML = '';
+                for (let i = 0; i < reviewArr.length; i++) {
+                    reviewListCont.append(reviewArr[i])
+                }
+            } else if (el.dataset.num == "3") { // 별점순
+                reviewListContLi = document.querySelectorAll('.review-list-container li'); // li 업데이트
+                reviewArr = Array.from(reviewListContLi);
+                reviewArr.sort((a, b) => a.dataset.grade - b.dataset.grade);
+
+                reviewListCont.innerHTML = '';
+                for (let i = 0; i < reviewArr.length; i++) {
+                    reviewListCont.append(reviewArr[i])
+                }
+            } else { // 최신순
+                reviewListContLi = document.querySelectorAll('.review-list-container li'); // li 업데이트
+                reviewArr = Array.from(reviewListContLi);
+                reviewArr.sort((a, b) => a.dataset.num - b.dataset.num);
+
+                reviewListCont.innerHTML = '';
+                for (let i = 0; i < reviewArr.length; i++) {
+                    reviewListCont.append(reviewArr[i])
+                }
             }
         }
         arrayReviewFunc();
