@@ -26,7 +26,7 @@ const elImg = document.querySelector('.view_img_1'),
   elGoodsImg = document.querySelector('.goods_img'),
   elGoodInfo2 = document.querySelector('.goods_info2');
 
-  console.log(elGoodInfo2);
+// console.log(elGoodInfo2);
 
 
 let goodsView = function () {
@@ -78,10 +78,7 @@ let goodsView = function () {
       h += `<span>${goods[i].brand}</span>
             <p>${goods[i].product_name}</p>`
 
-
     }
-
-
 
   }
 
@@ -94,16 +91,12 @@ let goodsView = function () {
   elGoodInfo2.innerHTML = h;
 
 
-
-
-
   const elMainImg = document.querySelector('.view_main_img'),
     elSubImg = document.querySelectorAll('.view_sub_image img'),
     elExpand = document.querySelector('.expand'),
     elFold = document.querySelector('.fold'),
     elInputText = document.querySelector('.input_text'),
     elLocation = document.querySelector('.location'),
-    elBtnBuy = document.querySelector('.button1'),
     elGoodsExLine = document.querySelector('.goods_ex_line'),
     elGoodsReviewLine = document.querySelector('.goods_review_line'),
     elGoodsEx = document.querySelector('.img_ex_text'),
@@ -166,17 +159,17 @@ let goodsView = function () {
     f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
     text3.innerHTML = f;
     // console.log(Sum.innerText)
-    
+
 
   }
 
   elLocation.onclick = function (e) {
-   
+
     e.preventDefault()
-      
+
     if (elInputText.value == '' | elInputText.value == 0) {
       alert('최소 1개는 선택해주세요');
-    }else{
+    } else {
       location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}&sum=${Sum.innerHTML}`;
     }
 

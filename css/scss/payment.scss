@@ -186,7 +186,7 @@ main {
 
 @include res($pad) {
     main{
-        margin:10px;
+        margin:0px 20px;
         .flex{
             display:block;
         }
@@ -238,7 +238,11 @@ main {
             margin-left:20px;
             width:241px ;
         }
+        .section-second{
+            margin-top: 10px;
+        }
         .section-third{
+
             height:200px;
         }
         .input_email{
