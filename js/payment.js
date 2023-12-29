@@ -169,9 +169,7 @@ fetch(url)
                 allPrice += `
                     <p>총 상품금액</p>
                     <p>+${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</p>`;
-                    console.log(goods[i].discount)
-                    console.log(params.ea)
-                    console.log(totalDiscount);
+
 
                 // console.log(parseInt(goods[i].price.discount.replaceAll(',', '')));
                 //parseInt((parseInt(goods[i].price.replaceAll(',', ''))*params.ea).replaceAll(',', ''))+"원".toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
