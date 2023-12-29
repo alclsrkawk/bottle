@@ -5,7 +5,7 @@ function getUrlParams() {
   return params;
 }
 const params = getUrlParams();
-console.log("view :", params);
+// console.log("view :", params);
 
 let goods = [];
 const url = `../datas/${params.name}_view.json`;
@@ -22,7 +22,11 @@ const elImg = document.querySelector('.view_img_1'),
   elViewText1 = document.querySelector('.view_text_1'),
   elViewText2 = document.querySelector('.view_text_2'),
   elTextBox = document.querySelector('.text_box'),
-  elExImg = document.querySelector('.img_ex');
+  elExImg = document.querySelector('.img_ex'),
+  elGoodsImg = document.querySelector('.goods_img'),
+  elGoodInfo2 = document.querySelector('.goods_info2');
+
+  console.log(elGoodInfo2);
 
 
 let goodsView = function () {
@@ -36,6 +40,8 @@ let goodsView = function () {
   let c = '';
   let d = '';
   let e = '';
+  let g = '';
+  let h = '';
   for (let i = 0; i < goods.length; i++) {
     if (goods[i].Idx == params.idx) {
       const picture = goods[i].product_img.split(',');
@@ -65,8 +71,12 @@ let goodsView = function () {
             <p> ${goods[i].discount}</p>
             </div>`
 
-      e += `
-    <img src="../images/${params.name}/${goods[i].explain}" alt="">`
+      e += `<img src="../images/${params.name}/${goods[i].explain}" alt="">`
+
+      g += `<p class="goods_img"><img src="../images/${params.name}/${picture[0]}" alt=""></p>`
+  
+      h += `<span>${goods[i].brand}</span>
+            <p>${goods[i].product_name}</p>`
 
 
     }
@@ -80,7 +90,8 @@ let goodsView = function () {
   elViewText2.innerHTML = c;
   elTextBox.innerHTML = d;
   elExImg.innerHTML = e;
-
+  elGoodsImg.innerHTML = g;
+  elGoodInfo2.innerHTML = h;
 
 
 
@@ -171,21 +182,3 @@ let goodsView = function () {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
