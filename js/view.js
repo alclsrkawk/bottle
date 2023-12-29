@@ -73,7 +73,7 @@ let goodsView = function () {
 
       e += `<img src="../images/${params.name}/${goods[i].explain}" alt="">`
 
-      g += `<p class="goods_img"><img src="../images/${params.name}/${picture[0]}" alt=""></p>`
+      g += `<img src="../images/${params.name}/${picture[0]}" alt style= "width:100%; height:100%;">`
   
       h += `<span>${goods[i].brand}</span>
             <p>${goods[i].product_name}</p>`
