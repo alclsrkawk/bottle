@@ -107,7 +107,7 @@
 
                     .label {
                         font-family: 'Noto Sans KR', sans-serif;
-                        font-size: 14px;
+                        font-size: 0.9rem;
                         font-weight: 700;
                         padding: 0;
                         display: flex;
@@ -154,7 +154,7 @@
                     }
 
                     .optionItem {
-                        font-size: 14px;
+                        font-size: 0.9rem;
                         text-align: center;
                         width: 100%;
                         padding: 10px 0;
@@ -165,6 +165,10 @@
                     // 후기 작성하기 버튼
                     @include btn(0.8rem);
                     font-weight: 700;
+
+                    @include flex(center) {
+                        align-items: center;
+                    }
                 }
             }
         }
@@ -177,9 +181,9 @@
                 width: 150px;
                 height: 50px;
                 border: none;
-                background-color: black;
+                background-color: #000;
                 color: #fff;
-                font-size: 14px;
+                font-size: 0.9rem;
                 font-weight: 700;
             }
 
@@ -217,16 +221,17 @@
 
                     .tab {
                         line-height: 0;
-                        font-size: 24px;
+                        font-size: 1.5rem;
                         font-weight: 700;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
 
                         .close {
-                            width: 24px;
-                            height: 24px;
+                            width: 1.5rem;
+                            height: 1.5rem;
                             background: url(../images/icons/close-icon-svg-b.png);
+                            background-size: cover;
                         }
                     }
 
@@ -249,13 +254,13 @@
                             }
 
                             span {
-                                font-size: 14px;
+                                font-size: 0.9rem;
                                 color: gray;
                             }
 
                             p {
                                 margin: 0;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                             }
 
                             .star-container {
@@ -303,7 +308,7 @@
                         width: 100%;
                         height: 200px;
                         border: 0;
-                        font-size: 18px;
+                        font-size: 1.1rem;
                         padding: 10px;
                         resize: none;
                     }
@@ -313,7 +318,8 @@
                     }
 
                     button {
-                        font-size: 18px;
+                        font-family: 'Noto Sans KR', sans-serif;
+                        font-size: 1.1rem;
                         width: 100%;
                         border: 1px solid #000;
                         padding: 10px;
@@ -373,7 +379,7 @@
                         box-sizing: border-box;
                         padding: 10px;
                         color: #fff;
-                        font-size: 18px;
+                        font-size: 1.1rem;
                     }
                 }
 
@@ -432,7 +438,54 @@
 }
 
 // PC -- 끝
+// $mobile: 390px;
+// $pad: 768px;
+// $tablet: 1024px;
+// $desktop: 1280px;
+@include res($pad) {
 
-@include res($pad) {}
+    html,
+    body {
+        font-size: 15px;
+    }
 
-@include res($mobile) {}
+    .main-section .review-container .tab .review-tab-right p {
+        padding: 0 15px;
+    }
+
+    .main-section .review-container .write-review .popup-container {
+        width: 360px;
+    }
+}
+
+@include res($mobile) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .main-section .review-container .tab .review-tab-right .selectBox,
+    .main-section .review-container .tab .review-tab-right .selectBox .optionList {
+        width: 100px;
+    }
+
+    .main-section .review-container .tab .review-tab-right p {
+        padding: 0 15px;
+    }
+
+    .main-section .review-list-container {
+        padding: 0;
+    }
+
+    .main-section .review-container .write-review .popup-container {
+        width: 90%;
+    }
+
+    .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star input,
+    .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star span,
+    .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star,
+    .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star-grade {
+        font-size: 1.5rem;
+    }
+}
