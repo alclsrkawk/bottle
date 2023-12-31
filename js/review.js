@@ -42,6 +42,7 @@ let likeGradeFunc = function () {
         let starGradeNum = (starNum / 5) * 100;
         reviewStarCount.style.background = `linear-gradient(to right, #EAB838, #EAB838 ${starGradeNum}%, #E0E2E7 ${starGradeNum}%`;
         reviewStarCount.style.backgroundClip = 'text';
+        reviewStarCount.style.webkitBackgroundClip = 'text';
 
         total += starNum; // 기존 별점 합계(실수)
         // console.log(starNum, total)
@@ -55,6 +56,7 @@ let likeGradeFunc = function () {
     let starGradeNum = (Number(goodsTotalGrade) / 5) * 100;
     starCount.style.background = `linear-gradient(to right, #EAB838, #EAB838 ${starGradeNum}%, #E0E2E7 ${starGradeNum}%`;
     starCount.style.backgroundClip = 'text';
+    starCount.style.webkitBackgroundClip = 'text';
 }
 
 likeGradeFunc();
