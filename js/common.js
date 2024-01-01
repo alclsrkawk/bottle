@@ -42,11 +42,11 @@ window.addEventListener('scroll', function (e) {
     }
     else {
         elHeader.style.cssText = "background: transparent;"
-        elMenu.style.cssText = " border-bottom: 1px solid rgba(255, 255, 255, 0.3);";
-        elTilte.style.cssText = "text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);"
-        elAref.forEach(function (element, i) {
-            element.style.cssText = "color:#FFF;font-weight: 400";
-        })
+        elMenu.style.cssText = "border-bottom:0";
+        // elTilte.style.cssText = "text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);"
+        // elAref.forEach(function (element, i) {
+        //     element.style.cssText = "color:#FFF;font-weight: 400";
+        // })
     }
 });
 
