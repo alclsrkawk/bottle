@@ -14,13 +14,16 @@ const totalReviewNum = document.querySelector('.review-container .total'),
 let reviewListContLi;
 
 //-------- 좋아요 시작 --------
-const likeBtn = document.querySelectorAll('.user-like .heart'),
+let likeBtn = document.querySelectorAll('.user-like .heart'),
     likeNum = document.querySelectorAll('.user-like .like-num')
 
     //1. 버튼 색상 변경
     //2. 숫자 +=1;
     //3. 한번만 가능하다고 alert
-
+let likeFunc = function () {
+    likeBtn = document.querySelectorAll('.user-like .heart');
+    likeNum = document.querySelectorAll('.user-like .like-num');
+    
 likeBtn.forEach((el, i) => {
     el.innerText = "♡";
     let likeResult = Number(el.parentNode.parentNode.parentNode.dataset.like);
@@ -48,6 +51,9 @@ likeBtn.forEach((el, i) => {
         }  
     })
 })
+}
+
+likeFunc();
 
 
 // ---------------------------------------------------별점 점수 시작
@@ -68,7 +74,6 @@ starSpanInput.value = 0; // 초기화
 //---------------후기작성 별점 끝
 
 // ---------------후기 점수 평균 출력 테스트
-// 2회차가 안됌~!!!
 let likeGradeFunc = function () {
     reviewListContLi = document.querySelectorAll('.review-list-container li')
     let total = 0;
@@ -204,7 +209,10 @@ writeBtn.addEventListener('click', function (e) {
             let userReview = `<div class="left">
                         <div class="star-count">★★★★★</div>
                         <p class="user-id">비회원</p>
-                        <p class="user-date">${year + '.' + month + '.' + date}</p>
+                        <p class="user-date">${year + '.' + month + '.' + date}</p><p class="user-like">
+                            <span class="heart"></span>
+                            <span class="like-num"></span>
+                        </p>
                     </div>
                         <div class="right">
                         <p>${reviewPopText.value}</p>
@@ -217,8 +225,8 @@ writeBtn.addEventListener('click', function (e) {
             showReview.dataset.like = `${0}`;
             showReview.innerHTML = userReview;
             reviewListCont.append(showReview);
-
-            likeGradeFunc();
+            likeFunc(); // 좋아요
+            likeGradeFunc(); // 점수 새로 계산해서 뿌림
 
             // 리뷰 개수 업데이트
             totalReviewNum.innerText = totalReviewCount;
