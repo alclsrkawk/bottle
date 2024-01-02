@@ -219,68 +219,120 @@ swiper1.on('transitionEnd', function () {
         case 3: progress[3].value = 100; break;
     }
 });
-let pageviw = 4;
-window.addEventListener("load", (event) => {
-    const isMobile = window.matchMedia('(max-width: 390px)');
-    const isPad = window.matchMedia('(min-width:600px) and (max-width:768px)');
-    const isPC = window.matchMedia('(min-width: 1024px)');
-    // let line = "";
-    console.log("mobile :", isMobile.matches)
-    console.log("pad :", isPad.matches)
-    console.log("pc :", isPC.matches)
+let pageviw = 2;
+// window.addEventListener("load", (event) => {
+//     const isMobile = window.matchMedia('(max-width: 390px)');
+//     const isPad = window.matchMedia('(min-width:600px) and (max-width:768px)');
+//     const isPC = window.matchMedia('(min-width: 1024px)');
+//     // let line = "";
+//     console.log("mobile :", isMobile.matches)
+//     console.log("pad :", isPad.matches)
+//     console.log("pc :", isPC.matches)
 
-    if (isMobile.matches) pageviw = 2;
-    else if (isPad.matches) pageviw = 3;
-    else pageviw = 4;
-    goSwiper(pageviw);
-});
-const changeHandler = (e) => {
-    console.log('390px changed!');
-    goSwiper(2);
+//     if (isMobile.matches) pageviw = 2;
+//     else if (isPad.matches) pageviw = 3;
+//     else pageviw = 4;
+//     goSwiper(pageviw);
+// });
+// const changeHandler = (e) => {
+//     console.log('390px changed!');
+//     goSwiper(2);
 
-}
-const changePadHandler = (e) => {
-    console.log('600px changed!');
-    goSwiper(3);
-}
+// }
+// const changePadHandler = (e) => {
+//     console.log('600px changed!');
+//     goSwiper(3);
+// }
 
-const changeOtherHandler = (e) => {
-    console.log('1024px changed!');
-    goSwiper(4);
-}
+// const changeOtherHandler = (e) => {
+//     console.log('1024px changed!');
+//     goSwiper(4);
+// }
 const goSwiper = (page) => {
     new Swiper(".wine-l", {
         slidesPerView: page,
-        spaceBetween: page == 2 ? 10 : 20,
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     clickable: true,
-        // },
+        spaceBetween: page,
+        breakpoints: {
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        }
     });
 
     new Swiper(".beer-l", {
         slidesPerView: page,
-        spaceBetween: page == 2 ? 10 : 20,
+        spaceBetween: page,// == 2 ? 10 : 20,
+        breakpoints: {
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        }
     });
 
     new Swiper(".soju-l", {
         slidesPerView: page,
-        spaceBetween: page == 2 ? 10 : 20,
+        spaceBetween: page,
+        breakpoints: {
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        }
     });
 
     new Swiper(".whisky-l", {
         slidesPerView: page,
-        spaceBetween: page == 2 ? 10 : 20,
+        spaceBetween: page,
+        breakpoints: {
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        }
     });
 }
 goSwiper(pageviw);
 
-const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
-const mediaQueryPad = window.matchMedia('(min-width:600px) and (max-width:768px)');
-const mediaQueryOther = window.matchMedia('(min-width:1024px)');
-mediaQueryMobile.addEventListener('change', changeHandler);
-mediaQueryPad.addEventListener('change', changePadHandler);
-mediaQueryOther.addEventListener('change', changeOtherHandler);
+// const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
+// const mediaQueryPad = window.matchMedia('(min-width:600px) and (max-width:768px)');
+// const mediaQueryOther = window.matchMedia('(min-width:1024px)');
+// mediaQueryMobile.addEventListener('change', changeHandler);
+// mediaQueryPad.addEventListener('change', changePadHandler);
+// mediaQueryOther.addEventListener('change', changeOtherHandler);
 var sw = 0;
 $('._pause').click(function () {
     if (sw == 0) {
