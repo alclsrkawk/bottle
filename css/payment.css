@@ -52,7 +52,6 @@ header .header-pc article .main-menu nav a {
   margin: 0 60px;
   color: #000;
   text-align: center;
-  font-family: Inter;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -154,7 +153,6 @@ footer article .bottom div {
   align-items: center;
   height: 32px;
   color: #000;
-  font-family: Inter;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -466,11 +464,15 @@ footer article .bottom div a {
 }
 main {
   padding-top: 200px;
-  margin-left: 371px;
+  margin-left: 0 auto;
 }
 main .order, main .receiver, main .address, main .requested {
   width: 700px;
   margin-bottom: 80px;
+}
+main .flex {
+  display: flex;
+  justify-content: space-evenly;
 }
 main input, main select {
   height: 56px;
@@ -485,6 +487,9 @@ main .select_num {
 }
 main .input_num {
   width: 280px;
+}
+main .input_num::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 main .input_email {
   margin-right: 10px;
@@ -501,6 +506,7 @@ main .input_direct {
   display: none;
 }
 main .receiver_info {
+  width: 680px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -512,9 +518,7 @@ main .input_requested {
   width: 480px;
 }
 main .section-second {
-  position: absolute;
-  top: 132px;
-  right: 150px;
+  height: 850px;
   width: 400px;
   background-color: #EDEDED;
   padding-left: 20px;
@@ -605,7 +609,7 @@ main .section-third .third-flex p:nth-of-type(3) span {
 main .section-third::-webkit-scrollbar {
   display: none;
 }
-main #zip-code {
+main #zip_code {
   width: 480px;
   margin-bottom: 10px;
 }
@@ -620,7 +624,176 @@ main #zip-search:hover {
   background-color: black;
   color: white;
 }
-main #address-1, main #address-2 {
+main #address_1, main #address_2 {
   width: 680px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  main .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .flex .section-second {
+    width: 80%;
+    margin-top: 50px;
+    border-top: 1px solid black;
+    background-color: white;
+  }
+  main .flex .section-third {
+    height: auto;
+  }
+  main .flex .pay-button {
+    text-align: center;
+  }
+}
+@media (min-width: 390px) and (max-width: 768px) {
+  main {
+    margin: 0px 20px;
+  }
+  main .input_direct {
+    margin-left: 0;
+    width: 97%;
+  }
+  main #order_name, main #receiver_name {
+    width: 30%;
+  }
+  main #order_num, main #receiver_num {
+    width: 50%;
+  }
+  main #order_email, main #receiver_email {
+    margin: 0;
+    width: 30%;
+  }
+  main #order_email_address, main #receiver_email_address {
+    margin: 0;
+    width: 63%;
+  }
+  main #order_tel, main #receiver_tel {
+    margin: 0 0 2% 5%;
+    width: 11%;
+  }
+  main .receiver, main .order {
+    width: 100%;
+  }
+  main .receiver_info {
+    width: 100%;
+  }
+  main .receiver_info p {
+    transform: translateX(-10px);
+  }
+  main .address {
+    width: 100%;
+  }
+  main .address #zip_code {
+    width: 70%;
+  }
+  main .address #zip-search {
+    margin-left: 2%;
+    width: 24%;
+    font-size: 0.7rem;
+  }
+  main .address #address_1, main .address #address_2 {
+    width: 97%;
+  }
+  main .requested {
+    width: 100%;
+  }
+  main .requested .input_requested {
+    width: 97%;
+  }
+  main .section-third {
+    height: 200px;
+  }
+  main .section-second {
+    margin-top: 50px;
+    border-top: 1px solid black;
+    background-color: white;
+  }
+  main .section-second .pay-button button {
+    font-size: 16px;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 390px) {
+  main {
+    padding-top: 100px;
+    margin: 0 20px;
+  }
+  main .flex {
+    display: block;
+  }
+  main .order, main .receiver, main .address, main .requested {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  main input, main select {
+    margin: 0;
+    height: 47px;
+  }
+  main .receiver_info {
+    width: 320px;
+  }
+  main .input_name {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  main .select_num {
+    margin: 0;
+    width: 25%;
+  }
+  main .input_num {
+    margin-left: 0;
+    width: 73%;
+  }
+  main .section-second {
+    margin-top: 10px;
+    height: auto;
+  }
+  main .section-third {
+    height: 200px;
+  }
+  main .input_email {
+    margin: 10px 0;
+    width: 80%;
+  }
+  main .select_email {
+    margin: 0;
+    width: 100%;
+  }
+  main .input_direct {
+    margin: 10px 0px;
+    width: 100%;
+  }
+  main #zip_code {
+    width: 63%;
+  }
+  main #zip-search {
+    width: 30%;
+    font-size: 0.6rem;
+  }
+  main #address_1, main #address_2, main .input_requested {
+    width: 100%;
+  }
+  main .section-second {
+    width: 100% !important;
+    margin-top: 100px;
+    padding: 0;
+    width: 335px;
+    background-color: white;
+  }
+  main .section-second b {
+    font-size: 16px;
+  }
+  main .section-second p {
+    font-size: 14px;
+  }
+  main .section-second .pay-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  main .section-second .pay-button button {
+    width: 80%;
+  }
 }
