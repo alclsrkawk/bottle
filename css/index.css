@@ -582,6 +582,16 @@ main .whisky-l .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child
   letter-spacing: -0.7px;
   text-decoration-line: line-through;
 }
+main .wine-l .beer-item,
+main .wine-l .whisky-item,
+main .soju-l .beer-item,
+main .soju-l .whisky-item,
+main .beer-l .beer-item,
+main .beer-l .whisky-item,
+main .whisky-l .beer-item,
+main .whisky-l .whisky-item {
+  background: #fff;
+}
 main .community {
   display: flex;
   justify-content: center;
