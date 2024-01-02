@@ -1,21 +1,21 @@
 .swal2-popup {
-    width: 500px;
+    width: 380px;
 }
 
 .swal2-border-radius {
-    -webkit-border-radius: 25px !important;
-    -moz-border-radius: 25px !important;
-    border-radius: 25px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
 }
 
 .swal2-button-radius {
-    -webkit-border-radius: 15px !important;
-    -moz-border-radius: 15px !important;
-    border-radius: 15px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
     box-shadow: none !important;
     margin-bottom: 20px !important;
-    width: 200px;
-    height: 55px;
+    width: 150px;
+    height: 49px;
 }
 
 .swal2-container {
