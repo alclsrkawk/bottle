@@ -78,7 +78,14 @@ const swalMsg = (type, title, text) => {
     Swal.fire({
         title: title,
         text: text,
-        icon: _icon
+        icon: _icon,
+        confirmButtonColor: "#000",
+        confirmButtonText: '<div style="direction:rtl;font-size:18px;font-weight:bold;">확인</div>',
+        customClass: {
+            popup: "swal2-border-radius",
+            confirmButton: "swal2-button-radius" //버튼
+        }
     });
+
 }
 window.onload = pageLoad;

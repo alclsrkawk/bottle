@@ -57,6 +57,7 @@
         .star-count {
             background: #000;
             color: transparent;
+            -webkit-background-clip: text;
             background-clip: text;
         }
 
@@ -285,7 +286,7 @@
                                     span {
                                         font-size: 2rem;
                                         position: absolute;
-                                        width: 0;
+                                        width: 50%;
                                         left: 0;
                                         color: #EAB838;
                                         overflow: hidden;
@@ -389,7 +390,7 @@
 
     .review-list-container {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         font-size: 1rem;
         padding: 40px 0;
@@ -411,8 +412,9 @@
                 }
 
                 .star-count {
-                    background: red;
+                    background: #8C8D96;
                     color: transparent;
+                    -webkit-background-clip: text;
                     background-clip: text;
                 }
 
@@ -423,11 +425,10 @@
             }
 
             .right {
-                p {
-                    max-width: 960px;
-                    font-size: 0.8rem;
-                    line-height: 180%;
-                }
+                max-width: 960px;
+                font-size: 0.8rem;
+                line-height: 1.6;
+                white-space: pre;
             }
         }
     }

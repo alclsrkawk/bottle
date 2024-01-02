@@ -32,7 +32,7 @@ main {
 
     .cate-name {
         text-align: center;
-        font-family: Noto Sans;
+        // font-family: Noto Sans;
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 150%;
@@ -60,14 +60,12 @@ main {
         overflow: hidden;
 
         .swiper-wrapper {
-            @include flex(center) {
-                align-items: center;
-                gap: 2%;
+            @include flex(inline-flex) {
+                // gap: 1%;
             }
 
             .swiper-slide {
-                // width: 10%;
-                flex-shrink: 0;
+                // flex-shrink: 0;
                 margin: 0;
                 cursor: pointer;
 
@@ -81,7 +79,7 @@ main {
                     margin-bottom: 16px;
                 }
 
-                font-family: Inter;
+                // font-family: Inter;
                 font-style: normal;
                 line-height: normal;
 
@@ -126,17 +124,22 @@ main {
                 }
             }
         }
+
+        .beer-item,
+        .whisky-item {
+            background: #fff;
+        }
     }
 
     .community {
         // padding: 80px 19% 60px;
 
         @include flex(center) {
-            gap: 5%;
+            gap: 4%;
         }
 
         color: #000;
-        font-family: Inter;
+        // font-family: Inter;
         font-style: normal;
         line-height: normal;
 
@@ -145,11 +148,11 @@ main {
         }
 
         .review {
-            padding: 80px 0 60px 19%;
+            padding: 80px 0 60px 25%;
 
             .list {
-                margin-bottom: 20px;
 
+                // margin-bottom: 20px;
                 figure {
                     @include flex(inline-flex) {
                         align-items: start;
@@ -158,7 +161,7 @@ main {
                     border-bottom: 1px solid #E0E2E7;
 
                     .pic {
-                        margin: 20px 0px;
+                        margin: 15px 0px;
                         width: 120px;
                         height: 120px;
                         border: 1px solid #E0E2E7;
@@ -173,8 +176,8 @@ main {
                     }
 
                     .desc {
-                        width: 402px;
-                        margin: 20px;
+                        width: 400px;
+                        margin: 15px;
 
                         :nth-child(1) {
                             white-space: nowrap;
@@ -193,7 +196,7 @@ main {
                             overflow: hidden;
                             text-overflow: ellipsis;
 
-                            margin: 16px 0 14px;
+                            margin: 10px 0 8px;
                             font-size: 0.8rem;
                             font-weight: 500;
                             line-height: 24px;
@@ -211,10 +214,10 @@ main {
         }
 
         .notice {
-            padding: 80px 19% 60px 0px;
+            padding: 80px 25% 60px 0px;
 
             .list {
-                width: 560px;
+                width: 540px;
                 margin-bottom: 20px;
 
                 figcaption {
@@ -268,7 +271,7 @@ main {
         :nth-child(1) {
             height: 24px;
             color: #FFF;
-            font-family: ABeeZee;
+            // font-family: ABeeZee;
             font-size: 1rem;
             font-style: normal;
             font-weight: 400;
@@ -281,7 +284,7 @@ main {
             margin: 10px 0 40px;
             color: #FFF;
             text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
-            font-family: Noto Sans;
+            // font-family: Noto Sans;
             font-size: 2rem;
             font-style: normal;
             font-weight: 700;
@@ -850,14 +853,14 @@ main {
             }
 
             :nth-child(1) {
-                font-family: ABeeZee;
+                // font-family: 'Noto Sans KR', sans-serif;
                 font-size: 0.75rem;
             }
 
             :nth-child(2) {
                 margin: 15px auto;
                 text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
-                font-family: Noto Sans;
+                // font-family: 'Noto Sans KR', sans-serif;
                 font-size: 1.5rem;
             }
 
