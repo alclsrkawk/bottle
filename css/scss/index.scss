@@ -445,7 +445,7 @@ main {
         }
 
         .community {
-            gap: 2%;
+            // gap: 2%;
 
             .review {
                 padding: 40px 0 30px 10%;
@@ -469,7 +469,7 @@ main {
                             }
 
                             :nth-child(2) {
-                                margin: 12px 0 8px;
+                                margin: 10px 0 8px;
                                 font-size: 0.65rem;
                                 line-height: 12px;
                             }
@@ -488,7 +488,7 @@ main {
                     figcaption {
                         gap: 4%;
                         font-size: 0.8rem;
-                        padding: 8px;
+                        padding: 7.3px;
 
                     }
                 }
@@ -630,7 +630,7 @@ main {
             gap: 3%;
 
             .review {
-                padding: 40px 0 30px 12%;
+                padding: 40px 0 30px 15%;
 
                 .list {
                     margin-bottom: 10px;
@@ -643,7 +643,7 @@ main {
                         }
 
                         .desc {
-                            width: 300px;
+                            width: 250px;
                             margin: 10px;
 
                             :nth-child(1) {
@@ -651,7 +651,7 @@ main {
                             }
 
                             :nth-child(2) {
-                                margin: 13px 0 10px;
+                                margin: 10px 0 8px;
                                 font-size: 0.75rem;
                                 line-height: 14px;
                             }
@@ -661,18 +661,16 @@ main {
             }
 
             .notice {
-                padding: 40px 12% 30px 0px;
+                padding: 40px 15% 30px 0px;
 
                 .list {
-                    padding-top: 1px;
                     margin-bottom: 20px;
-                    width: 460px;
+                    width: 370px;
 
                     figcaption {
                         gap: 5%;
                         font-size: 0.85rem;
-                        padding: 9px;
-
+                        padding: 8.7px;
                     }
                 }
             }
