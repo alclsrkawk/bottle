@@ -19,239 +19,7 @@ const pageLoad = () => {
             }
         });
     };
-
     includeHtml();
-    const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
-        , '../datas/soju_view.json', '../datas/whisky_view.json'];
-
-    let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
-    let elWine = document.querySelector(`#dv-wine`);
-    let elBeer = document.querySelector(`#dv-beer`);
-    let elSoju = document.querySelector(`#dv-soju`);
-    let elWhisky = document.querySelector(`#dv-whisky`);
-    const progress = document.querySelectorAll('progress');
-
-    const getList = (ctrl, name) => {
-        // console.log(wine)
-        ctrl.forEach(function (element, i) {
-            const picture = element.product_img.split(',')[0];
-            if (name === "wine") {
-                winelist += `
-                    <figure class="swiper-slide wine-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-            }
-            else if (name === "beer") {
-                beerlist += `
-                    <figure class="swiper-slide beer-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-            }
-            else if (name === "soju") {
-                sojulist += `
-                    <figure class="swiper-slide soju-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-            }
-            else {
-                whiskylist += `
-                    <figure class="swiper-slide whisky-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-            }
-        });
-
-        switch (name) {
-            case "wine":
-                elWine.innerHTML = winelist;
-                pageLink(ctrl, name, document.querySelectorAll(".wine-item"));
-                break;
-            case "beer":
-                elBeer.innerHTML = beerlist;
-                pageLink(ctrl, name, document.querySelectorAll(".beer-item"));
-                break;
-            case "soju":
-                elSoju.innerHTML = sojulist;
-                pageLink(ctrl, name, document.querySelectorAll(".soju-item"));
-                break;
-            default:
-                elWhisky.innerHTML = whiskylist;
-                pageLink(ctrl, name, document.querySelectorAll(".whisky-item"))
-                break;
-        }
-    }
-    const pageLink = (ctrl, cate, link) => {
-        link.forEach(function (element, i) {
-            element.onclick = function () {
-                location.href = `./pages/view.html?idx=${ctrl[i].Idx}&name=${cate}`;
-            }
-        })
-    }
-    const fetchData = (data, name) => {
-        fetch(data)
-            .then(type => type.json())
-            .then(result => {
-                getList(result.data, name);
-            }).catch(error => {
-                console.log(error);
-            });
-    }
-
-    const getData = () => {
-        fetchData(jsondata[0], "wine");
-        fetchData(jsondata[1], "beer");
-        fetchData(jsondata[2], "soju");
-        fetchData(jsondata[3], "whisky");
-    }
-    getData();
-    var swiper1 = new Swiper(".banner", {
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: true,
-        },
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-    });
-    swiper1.on('transitionEnd', function () {
-        // console.log('now index :::', swiper1.realIndex);
-        switch (swiper1.realIndex) {
-            case 0: progress[0].value = 25; break;
-            case 1: progress[1].value = 50; break;
-            case 2: progress[2].value = 75; break;
-            case 3: progress[3].value = 100; break;
-        }
-    });
-    let pageviw = 4;
-    window.addEventListener("load", (event) => {
-        const isMobile = window.matchMedia('(max-width: 390px)');
-        const isPC = window.matchMedia('(min-width: 600px)');
-        // let line = "";
-        console.log("mobile :", isMobile.matches)
-        console.log("pc :", isPC.matches)
-
-        if (isMobile.matches) pageviw = 2;
-        else pageviw = 4;
-        goSwiper(pageviw);
-    });
-    const changeHandler = (e) => {
-        console.log('390px changed!');
-        goSwiper(2);
-
-    }
-    const changeOtherHandler = (e) => {
-        console.log('600px changed!');
-        goSwiper(4);
-    }
-    const goSwiper = (page) => {
-        new Swiper(".wine-l", {
-            slidesPerView: page,
-            spaceBetween: page == 2 ? 10 : 20,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-        });
-
-        new Swiper(".beer-l", {
-            slidesPerView: page,
-            spaceBetween: page == 2 ? 10 : 20,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-        });
-
-        new Swiper(".soju-l", {
-            slidesPerView: page,
-            spaceBetween: page == 2 ? 10 : 20,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-        });
-
-        new Swiper(".whisky-l", {
-            slidesPerView: page,
-            spaceBetween: page == 2 ? 10 : 20,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-        });
-    }
-    goSwiper(pageviw);
-
-    const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
-    const mediaQueryOther = window.matchMedia('(min-width: 600px)');
-    mediaQueryMobile.addEventListener('change', changeHandler);
-    mediaQueryOther.addEventListener('change', changeOtherHandler);
-    var sw = 0;
-    $('._pause').click(function () {
-        if (sw == 0) {
-            $('._pause').addClass('on');
-            swiper1.autoplay.stop();
-            sw = 1;
-        } else {
-            $('._pause').removeClass('on');
-            swiper1.autoplay.start();
-            sw = 0;
-        }
-    });
 }
 
 window.onload = pageLoad;
@@ -296,3 +64,232 @@ const sideClose = () => {
     }
 }
 
+const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
+    , '../datas/soju_view.json', '../datas/whisky_view.json'];
+
+let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
+let elWine = document.querySelector(`#dv-wine`);
+let elBeer = document.querySelector(`#dv-beer`);
+let elSoju = document.querySelector(`#dv-soju`);
+let elWhisky = document.querySelector(`#dv-whisky`);
+const progress = document.querySelectorAll('progress');
+
+const getList = (ctrl, name) => {
+    // console.log(wine)
+    ctrl.forEach(function (element, i) {
+        const picture = element.product_img.split(',')[0];
+        if (name === "wine") {
+            winelist += `
+            <figure class="swiper-slide wine-item">
+                <img src="./images/${name}/${picture.trim()}" alt="">
+                <figcaption>
+                    <p>
+                        ${element.brand}
+                    </p>
+                    <p>
+                        ${element.product_name}
+                    </p>
+                    <p>
+                        <span> ${element.discount}</span>
+                        <span> ${element.price}</span>
+                    </p>
+                </figcaption>
+            </figure>
+        `
+        }
+        else if (name === "beer") {
+            beerlist += `
+            <figure class="swiper-slide beer-item">
+                <img src="./images/${name}/${picture.trim()}" alt="">
+                <figcaption>
+                    <p>
+                        ${element.brand}
+                    </p>
+                    <p>
+                        ${element.product_name}
+                    </p>
+                    <p>
+                        <span> ${element.discount}</span>
+                        <span> ${element.price}</span>
+                    </p>
+                </figcaption>
+            </figure>
+        `
+        }
+        else if (name === "soju") {
+            sojulist += `
+            <figure class="swiper-slide soju-item">
+                <img src="./images/${name}/${picture.trim()}" alt="">
+                <figcaption>
+                    <p>
+                        ${element.brand}
+                    </p>
+                    <p>
+                        ${element.product_name}
+                    </p>
+                    <p>
+                        <span> ${element.discount}</span>
+                        <span> ${element.price}</span>
+                    </p>
+                </figcaption>
+            </figure>
+        `
+        }
+        else {
+            whiskylist += `
+            <figure class="swiper-slide whisky-item">
+                <img src="./images/${name}/${picture.trim()}" alt="">
+                <figcaption>
+                    <p>
+                        ${element.brand}
+                    </p>
+                    <p>
+                        ${element.product_name}
+                    </p>
+                    <p>
+                        <span> ${element.discount}</span>
+                        <span> ${element.price}</span>
+                    </p>
+                </figcaption>
+            </figure>
+        `
+        }
+    });
+
+    switch (name) {
+        case "wine":
+            elWine.innerHTML = winelist;
+            pageLink(ctrl, name, document.querySelectorAll(".wine-item"));
+            break;
+        case "beer":
+            elBeer.innerHTML = beerlist;
+            pageLink(ctrl, name, document.querySelectorAll(".beer-item"));
+            break;
+        case "soju":
+            elSoju.innerHTML = sojulist;
+            pageLink(ctrl, name, document.querySelectorAll(".soju-item"));
+            break;
+        default:
+            elWhisky.innerHTML = whiskylist;
+            pageLink(ctrl, name, document.querySelectorAll(".whisky-item"))
+            break;
+    }
+}
+const pageLink = (ctrl, cate, link) => {
+    link.forEach(function (element, i) {
+        element.onclick = function () {
+            location.href = `./pages/view.html?idx=${ctrl[i].Idx}&name=${cate}`;
+        }
+    })
+}
+const fetchData = (data, name) => {
+    fetch(data)
+        .then(type => type.json())
+        .then(result => {
+            getList(result.data, name);
+        }).catch(error => {
+            console.log(error);
+        });
+}
+
+const getData = () => {
+    fetchData(jsondata[0], "wine");
+    fetchData(jsondata[1], "beer");
+    fetchData(jsondata[2], "soju");
+    fetchData(jsondata[3], "whisky");
+}
+getData();
+var swiper1 = new Swiper(".banner", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+    },
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+});
+swiper1.on('transitionEnd', function () {
+    // console.log('now index :::', swiper1.realIndex);
+    switch (swiper1.realIndex) {
+        case 0: progress[0].value = 25; break;
+        case 1: progress[1].value = 50; break;
+        case 2: progress[2].value = 75; break;
+        case 3: progress[3].value = 100; break;
+    }
+});
+let pageviw = 4;
+window.addEventListener("load", (event) => {
+    const isMobile = window.matchMedia('(max-width: 390px)');
+    const isPad = window.matchMedia('(min-width:600px) and (max-width:768px)');
+    const isPC = window.matchMedia('(min-width: 1024px)');
+    // let line = "";
+    console.log("mobile :", isMobile.matches)
+    console.log("pad :", isPad.matches)
+    console.log("pc :", isPC.matches)
+
+    if (isMobile.matches) pageviw = 2;
+    else if (isPad.matches) pageviw = 3;
+    else pageviw = 4;
+    goSwiper(pageviw);
+});
+const changeHandler = (e) => {
+    console.log('390px changed!');
+    goSwiper(2);
+
+}
+const changePadHandler = (e) => {
+    console.log('600px changed!');
+    goSwiper(3);
+}
+
+const changeOtherHandler = (e) => {
+    console.log('1024px changed!');
+    goSwiper(4);
+}
+const goSwiper = (page) => {
+    new Swiper(".wine-l", {
+        slidesPerView: page,
+        spaceBetween: page == 2 ? 10 : 20,
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+    });
+
+    new Swiper(".beer-l", {
+        slidesPerView: page,
+        spaceBetween: page == 2 ? 10 : 20,
+    });
+
+    new Swiper(".soju-l", {
+        slidesPerView: page,
+        spaceBetween: page == 2 ? 10 : 20,
+    });
+
+    new Swiper(".whisky-l", {
+        slidesPerView: page,
+        spaceBetween: page == 2 ? 10 : 20,
+    });
+}
+goSwiper(pageviw);
+
+const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
+const mediaQueryPad = window.matchMedia('(min-width:600px) and (max-width:768px)');
+const mediaQueryOther = window.matchMedia('(min-width:1024px)');
+mediaQueryMobile.addEventListener('change', changeHandler);
+mediaQueryPad.addEventListener('change', changePadHandler);
+mediaQueryOther.addEventListener('change', changeOtherHandler);
+var sw = 0;
+$('._pause').click(function () {
+    if (sw == 0) {
+        $('._pause').addClass('on');
+        swiper1.autoplay.stop();
+        sw = 1;
+    } else {
+        $('._pause').removeClass('on');
+        swiper1.autoplay.start();
+        sw = 0;
+    }
+});
