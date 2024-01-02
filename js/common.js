@@ -78,7 +78,10 @@ const swalMsg = (type, title, text) => {
     Swal.fire({
         title: title,
         text: text,
-        icon: _icon
+        icon: _icon,
+        width: 380,
+        confirmButtonColor: "#000"
     });
+
 }
 window.onload = pageLoad;
