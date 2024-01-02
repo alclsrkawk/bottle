@@ -93,27 +93,138 @@ agree.onclick = function (e) {
 
 //결제하기버튼시작
 const payBtn = document.querySelector('.pay-button');
+
+function valueClear(){
+    order_name.value = "";
+    order_num.value = "";
+    order_email.value = "";
+    order_email_address.value = "naver.com";
+    order_tel.value = "010";
+    order_direct.value = "";
+    order_direct.style.display = "none";
+    receiver_name.value = "";
+    receiver_num.value = "";
+    receiver_email_address.value = "naver.com";
+    receiver_tel.value = "010";
+    receiver_email.value = "";
+    receiver_direct.value = "";
+    receiver_direct.style.display = "none";
+    zip_code.value ="";
+    address_1.value = "";
+    address_2.value = "";
+    check_all.checked=false;
+    check_1.checked=false;
+    check_2.checked=false;
+    check_3.checked=false;
+    check_4.checked=false;
+    pay_check1.checked=true;
+    pay_check2.checked=false;
+    pay_check3.checked=false;
+    pay_check4.checked=false;
+}
+
 payBtn.onclick = function () {
-    if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
-        alert('이용약관(필수)에 동의해주세요');
-    } else if (order_name.value == "" || order_num.value == "" || order_email.value == "") {
-        alert('주문자 정보를 확인해주세요')
-    } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "") {
-        alert('수령자 정보를 확인해주세요');
+    if(pay_check1.checked){
+        if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
+            swalMsg(0,"카드 결제", "이용약관(필수)에 동의해주세요");
+            return;
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "") {
+            swalMsg(0,"카드 결제", "주문자 정보를 확인해주세요");
+            return;
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "") {
+            swalMsg(0,"카드 결제", "수령자 정보를 확인해주세요");
+            return;
+        }
+        else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
+            swalMsg(0,"카드 결제", "주소지를 확인해주세요");
+            return;
+        } else if (order_email_address.value == 'direct' && order_direct.value == "") {
+            swalMsg(0,"카드 결제", "주문자 이메일을 입력하세요");
+            return;
+        } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
+            swalMsg(0,"카드 결제", "수령자 이메일을 입력하세요");
+            return;
+        }
+        else {
+            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            valueClear()
+        }
+    } else if(pay_check2.checked){
+        if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
+            swalMsg(0,"실시간 계좌이체", "이용약관(필수)에 동의해주세요");
+            return;
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "") {
+            swalMsg(0,"실시간 계좌이체", "주문자 정보를 확인해주세요");
+            return;
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "") {
+            swalMsg(0,"실시간 계좌이체", "수령자 정보를 확인해주세요");
+            return;
+        }
+        else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
+            swalMsg(0,"실시간 계좌이체", "주소지를 확인해주세요");
+            return;
+        } else if (order_email_address.value == 'direct' && order_direct.value == "") {
+            swalMsg(0,"실시간 계좌이체", "주문자 이메일을 입력하세요");
+            return;
+        } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
+            swalMsg(0,"실시간 계좌이체", "수령자 이메일을 입력하세요");
+            return;
+        }
+        else {
+            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            valueClear()
+        }
+    } else if(pay_check3.checked){
+        if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
+            swalMsg(0,"가상계좌", "이용약관(필수)에 동의해주세요");
+            return;
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "") {
+            swalMsg(0,"가상계좌", "주문자 정보를 확인해주세요");
+            return;
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "") {
+            swalMsg(0,"가상계좌", "수령자 정보를 확인해주세요");
+            return;
+        }
+        else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
+            swalMsg(0,"가상계좌", "주소지를 확인해주세요");
+            return;
+        } else if (order_email_address.value == 'direct' && order_direct.value == "") {
+            swalMsg(0,"가상계좌", "주문자 이메일을 입력하세요");
+            return;
+        } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
+            swalMsg(0,"가상계좌", "수령자 이메일을 입력하세요");
+            return;
+        }
+        else {
+            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            valueClear()
+        }
+    } else if(pay_check4.checked){
+        if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
+            swalMsg(0,"휴대폰결제", "이용약관(필수)에 동의해주세요");
+            return;
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "") {
+            swalMsg(0,"휴대폰결제", "주문자 정보를 확인해주세요");
+            return;
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "") {
+            swalMsg(0,"휴대폰결제", "수령자 정보를 확인해주세요");
+            return;
+        }
+        else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
+            swalMsg(0,"휴대폰결제", "주소지를 확인해주세요");
+            return;
+        } else if (order_email_address.value == 'direct' && order_direct.value == "") {
+            swalMsg(0,"휴대폰결제", "주문자 이메일을 입력하세요");
+            return;
+        } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
+            swalMsg(0,"휴대폰결제", "수령자 이메일을 입력하세요");
+            return;
+        }
+        else {
+            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            valueClear()
+        }   
     }
-    else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
-        alert('주소지를 확인해주세요');
-    } else if (order_email_address.value == 'direct' && order_direct.value == "") {
-        alert("주문자 이메일 주소를 확인해주세요");
-    } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
-        alert("수령자 이메일 주소를 확인해주세요");
-    }
-    else {
-        alert('결제가 완료되었습니다.');
-        location.href = './payment.html';
-    }
-
-
 }
 //결제하기버튼끝
 
@@ -186,7 +297,3 @@ fetch(url)
         }
         
     }
-
-
-
-
