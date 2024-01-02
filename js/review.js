@@ -17,40 +17,40 @@ let reviewListContLi;
 let likeBtn = document.querySelectorAll('.user-like .heart'),
     likeNum = document.querySelectorAll('.user-like .like-num')
 
-    //1. 버튼 색상 변경
-    //2. 숫자 +=1;
-    //3. 한번만 가능하다고 alert
+//1. 버튼 색상 변경
+//2. 숫자 +=1;
+//3. 한번만 가능하다고 alert
 let likeFunc = function () {
     likeBtn = document.querySelectorAll('.user-like .heart');
     likeNum = document.querySelectorAll('.user-like .like-num');
-    
-likeBtn.forEach((el, i) => {
-    el.innerText = "♡";
-    let likeResult = Number(el.parentNode.parentNode.parentNode.dataset.like);
-    el.nextElementSibling.innerText = likeResult;
-    let likeFun = function () {
-        el.innerText = "♥";
+
+    likeBtn.forEach((el, i) => {
+        el.innerText = "♡";
+        let likeResult = Number(el.parentNode.parentNode.parentNode.dataset.like);
         el.nextElementSibling.innerText = likeResult;
-        setTimeout(() => { el.innerText = "♡"; }, 200);
-    }
-        
-    // 여러번 누를 수 없게, 또 누르면 차감되도록!
-    let count = 0;
-    el.addEventListener("click", function () {
-        if (count === 0) {
-            likeResult++;
-            el.parentNode.parentNode.parentNode.dataset.like = likeResult; //업뎃
-            likeFun();
-            count = 1;
-        } else{
-            likeResult--;
-            el.parentNode.parentNode.parentNode.dataset.like = likeResult; //업뎃
-            likeFun();
-            window.alert("좋아요가 취소됩니다.");
-            count = 0;
-        }  
+        let likeFun = function () {
+            el.innerText = "♥";
+            el.nextElementSibling.innerText = likeResult;
+            setTimeout(() => { el.innerText = "♡"; }, 200);
+        }
+
+        // 여러번 누를 수 없게, 또 누르면 차감되도록!
+        let count = 0;
+        el.addEventListener("click", function () {
+            if (count === 0) {
+                likeResult++;
+                el.parentNode.parentNode.parentNode.dataset.like = likeResult; //업뎃
+                likeFun();
+                count = 1;
+            } else {
+                likeResult--;
+                el.parentNode.parentNode.parentNode.dataset.like = likeResult; //업뎃
+                likeFun();
+                window.alert("좋아요가 취소됩니다.");
+                count = 0;
+            }
+        })
     })
-})
 }
 
 likeFunc();
@@ -231,7 +231,9 @@ writeBtn.addEventListener('click', function (e) {
             // 리뷰 개수 업데이트
             totalReviewNum.innerText = totalReviewCount;
         } else {
-            window.alert('10자 이상 입력해주세요!');
+            // window.alert('10자 이상 입력해주세요!');
+            swalMsg(0, "오류", "10자 이상 입력해주세요!")
+
         }
     }
 
@@ -242,5 +244,3 @@ writeBtn.addEventListener('click', function (e) {
         popBg.classList.remove('bg-active');
     }
 }) // ------------------------------------------------후기작성 팝업 끝
-
-
