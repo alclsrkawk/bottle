@@ -251,25 +251,26 @@ main {
 
 // PC -- 끝
 
-@include res($pad) {}
-header{
-    width: 768px;
- }
-main{
-  .list_bg{
-    img{
-        width: 768px;
-    } 
-  }
+@include res($pad) {
+    header{
+            width: 768px;
+         }
+        main{
+          .list_bg{
+            img{
+                width: 768px;
+            } 
+          }
+        }
+        
+        main .list .list .list_items{
+            justify-content: space-around;
+        }
+        main .list .list .tab ul {
+        margin-left: 40px;
+        }
 }
 
-main .list .list .list_items{
-    justify-content: space-around;
-}
-
-main .list .list .tab ul {
-    justify-content: space-evenly;
-}
 
 @include res($mobile) {
     header{
