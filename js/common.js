@@ -63,4 +63,22 @@ const sideClose = () => {
         elNav.classList.toggle('active');
     }
 }
+
+const swalMsg = (type, title, text) => {
+    //  warning, success, info, question, error
+    let _icon = "";
+    switch (type) {
+        case 0: _icon = "warning"; break;
+        case 1: _icon = "success"; break;
+        case 2: _icon = "info"; break;
+        case 3: _icon = "question"; break;
+        case 4: _icon = "error"; break;
+        default: _icon = "warning"; break;
+    }
+    Swal.fire({
+        title: title,
+        text: text,
+        icon: _icon
+    });
+}
 window.onload = pageLoad;
