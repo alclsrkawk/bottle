@@ -1,5 +1,4 @@
-
-
+//-------------------주소값 가져오기
 function getUrlParams() {
     const params = {};
     window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
@@ -24,6 +23,9 @@ fetch(bestData)
     });
 
 
+
+
+//-------------------리스트 배경 및 타이틀 불러오기
 bestList = () => {
     let elBest = document.querySelector('.best5_slide > div');
 
@@ -47,6 +49,7 @@ bestList = () => {
     
    
 
+   //-------------------베스트5 데이터 불러오기
     for (let i = 0; i < 5; i++) {
         const bestPicture = best5[i].product_img.split(',')[0];
 
@@ -71,6 +74,8 @@ bestList = () => {
                 `
     }
 
+
+    //-------------------베스트5 슬라이드 동작
     elBest.innerHTML = list;
 
     var swiper = new Swiper(".best5_slide", {
@@ -115,10 +120,7 @@ bestList = () => {
 
 
 
-
-
-
-//////////////list 12개 
+//-------------------list 12개 데이터 가져오기
 
 let goods = [], list = '';
 // 어디에 담을꺼니 --> 나는 list_items 담을꺼야
@@ -170,6 +172,10 @@ const goodsList = () => {
     // console.log(list)
 }
 
+
+
+
+//-------------------스크롤(up&down) 버튼 동작
 up.onclick = function(){
     window.scrollTo({
         top:0,
@@ -196,3 +202,36 @@ window.addEventListener("scroll", function(){
         down.style="transform: translateY(150px)";
     }
 });
+
+
+
+
+//-------------------팝업창 닫기 버튼 쿠키 설정
+const elPop=document.querySelector('.pup_up');
+const elClose=document.querySelector('.close');
+const elCheck=document.querySelector('#today_un_see');
+
+elClose.addEventListener('click',()=>{
+    if(elCheck.checked){
+        let date = new Date();
+        date.setDate(      date.getDate() + 1   )
+        date = date.toUTCString();
+        document.cookie = "popup=newyear; expires=" + date;
+        console.log(date);
+    }
+    elPop.style.display='none';
+});
+
+
+if(  document.cookie.match('newyear') ){
+    elPop.style.display='none';
+}else{
+    elPop.style.display='block';
+}
+
+
+
+
+
+
+

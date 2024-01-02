@@ -36,6 +36,42 @@ main {
         background-color: rgba(0, 0, 0, 1);
     }
 
+    .pup_up {
+        position: absolute;
+        width: 400px;
+        height: 450px;
+        border: 1.5px solid #8C8D96;
+        background-color: white;
+        color: #3F4150;
+        .close{
+          color: #8C8D96;
+          margin: 10px 0px 10px 340px;
+          //margin-left: 340px;   
+          border: none;
+          background-color: white;
+          font-size: 1.1rem;  
+          cursor: pointer;
+        }
+        .close:hover{
+            color: #3F4150;
+        }
+        p{
+            
+            img {
+                width: 350px;
+                height: 350px;     
+                margin: 0 20px;     
+            }
+        }
+        label{
+            font-size: 0.7rem;
+            margin-left: 230px;   
+         
+        }
+
+    }
+
+
     padding-top: 132px;
     margin: 0 auto;
 
@@ -252,46 +288,57 @@ main {
 // PC -- 끝
 
 @include res($pad) {
-    header{
-            width: 768px;
-         }
-        main{
-          .list_bg{
-            img{
+    header {
+        width: 768px;
+    }
+
+    main {
+        .list_bg {
+            img {
                 width: 768px;
-            } 
-          }
+            }
         }
-        
-        main .list .list .list_items{
-            justify-content: space-around;
-        }
-        main .list .list .tab ul {
+    }
+
+    main .list .list .list_items {
+        justify-content: space-around;
+    }
+
+    main .list .list .tab ul {
         margin-left: 40px;
-        }
+    }
 }
 
 
 @include res($mobile) {
-    header{
+    header {
         width: 390px;
     }
+
     main {
         max-width: 100%;
-        #up, #down{
+
+        .pup_up{
+            width: 350px;
+            height: 350px;
+           
+        }
+
+        #up,
+        #down {
             right: 20px;
             width: 35px;
             height: 35px;
         }
 
-        #up{
-           bottom: 40px;
+        #up {
+            bottom: 40px;
         }
 
-        #down{
+        #down {
             bottom: 5px;
         }
-       
+
 
         .list_bg {
             img {
@@ -301,6 +348,7 @@ main {
         }
 
         .list {
+            width: 350px;
             margin: 0 15px;
 
             .best5 {
@@ -313,9 +361,10 @@ main {
                     text-align: center;
                     font-size: 1rem;
                 }
-                .swiper-wrapper{
-                    figcaption{
-                        p:nth-of-type(1){
+
+                .swiper-wrapper {
+                    figcaption {
+                        p:nth-of-type(1) {
                             font-size: 0.8rem;
                         }
                     }
@@ -358,16 +407,17 @@ main {
                         figcaption {
                             font-size: 0.7rem;
                             margin: 0 4px;
-                           
+
                             small {
                                 font-size: 0.5rem;
                             }
-                            
+
                             p:nth-of-type(1) {
                                 font-size: 0.7rem;
                                 -webkit-line-clamp: 3;
                             }
-                            p:nth-of-type(2){
+
+                            p:nth-of-type(2) {
                                 font-size: 0.9rem;
                             }
                         }
