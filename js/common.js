@@ -21,34 +21,35 @@ const pageLoad = () => {
     };
 
     includeHtml();
+    window.addEventListener('scroll', function (e) {
+        const elMenu = document.querySelector('.main-menu nav');
+        const elAref = document.querySelectorAll('.main-menu nav a');
+        const elTilte = document.querySelector('.main-title p a');
+        const elHeader = document.querySelector('.header-pc');
+        let diff = (window.scrollY - elMenu.offsetTop)
+
+
+        if (diff >= 180) {
+            elHeader.style.cssText = "background:#FFF;";
+            elMenu.style.cssText = "border-bottom:1px solid #E0E2E7";
+            elTilte.style.cssText = "text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);";
+            elAref.forEach(function (element, i) {
+                element.style.cssText = "color:#000;font-weight: 400";
+            })
+
+        }
+        else {
+            elHeader.style.cssText = "background: transparent;"
+            elMenu.style.cssText = "border-bottom:0";
+            // elTilte.style.cssText = "text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);"
+            // elAref.forEach(function (element, i) {
+            //     element.style.cssText = "color:#FFF;font-weight: 400";
+            // })
+        }
+    });
+
 }
-
-window.addEventListener('scroll', function (e) {
-    const elMenu = document.querySelector('.main-menu nav');
-    const elAref = document.querySelectorAll('.main-menu nav a');
-    const elTilte = document.querySelector('.main-title p a');
-    const elHeader = document.querySelector('.header-pc');
-    let diff = (window.scrollY - elMenu.offsetTop)
-
-
-    if (diff >= 180) {
-        elHeader.style.cssText = "background:#FFF;";
-        elMenu.style.cssText = "border-bottom:1px solid #E0E2E7";
-        elTilte.style.cssText = "text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);";
-        elAref.forEach(function (element, i) {
-            element.style.cssText = "color:#000;font-weight: 400";
-        })
-
-    }
-    else {
-        elHeader.style.cssText = "background: transparent;"
-        elMenu.style.cssText = "border-bottom:0";
-        // elTilte.style.cssText = "text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);"
-        // elAref.forEach(function (element, i) {
-        //     element.style.cssText = "color:#FFF;font-weight: 400";
-        // })
-    }
-});
+window.onload = pageLoad;
 
 const sideMenu = () => {
     //const elBody = document.querySelector('body');
@@ -88,4 +89,4 @@ const swalMsg = (type, title, text) => {
     });
 
 }
-window.onload = pageLoad;
+
