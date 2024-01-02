@@ -512,7 +512,7 @@ footer article .bottom div a {
   background: #000;
   color: transparent;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 .main-section .review-count .review-score {
   margin-left: 10px;
@@ -710,7 +710,7 @@ footer article .bottom div a {
 .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star span {
   font-size: 2rem;
   position: absolute;
-  width: 0;
+  width: 50%;
   left: 0;
   color: #EAB838;
   overflow: hidden;
@@ -792,7 +792,7 @@ footer article .bottom div a {
 }
 .main-section .review-list-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   font-size: 1rem;
   padding: 40px 0;
 }
@@ -812,19 +812,20 @@ footer article .bottom div a {
   justify-content: flex-start;
 }
 .main-section .review-list-container .list-result .left .star-count {
-  background: red;
+  background: #8C8D96;
   color: transparent;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 .main-section .review-list-container .list-result .left p {
   font-size: 0.8rem;
   color: #8C8D96;
 }
-.main-section .review-list-container .list-result .right p {
+.main-section .review-list-container .list-result .right {
   max-width: 960px;
   font-size: 0.8rem;
-  line-height: 180%;
+  line-height: 1.6;
+  white-space: pre;
 }
 .main-section .review-list-container.dir2 {
   flex-direction: column;
