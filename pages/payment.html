@@ -37,7 +37,7 @@
                             <option value="018">018</option>
                             <option value="017">017</option>
                         </select>
-                        <input type="number" placeholder="전화번호를 입력해주세요" class="input_num" id="order_num"><br>
+                        <input type="number" oninput='handleOnInput(this, 8)' placeholder="전화번호를 입력해주세요" class="input_num" id="order_num"><br>
                         <input type="text" placeholder="이메일을 입력해주세요" class="input_email" id="order_email"> @
                         <select name="" class="select_email" id="order_email_address">
                             <option value="naver.com">naver.com</option>
@@ -63,7 +63,7 @@
                             <option value="018">018</option>
                             <option value="017">017</option>
                         </select>
-                        <input type="number" placeholder="전화번호를 입력해주세요" class="input_num" id="receiver_num"><br>
+                        <input type="number" oninput='handleOnInput(this, 8)' placeholder="전화번호를 입력해주세요" class="input_num" id="receiver_num"><br>
                         <input type="text" placeholder="이메일을 입력해주세요" class="input_email" id="receiver_email"> @
                         <select name="" class="select_email" id="receiver_email_address">
                             <option value="naver.com">naver.com</option>
