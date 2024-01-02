@@ -62,7 +62,7 @@ main {
         .swiper-wrapper {
             @include flex(center) {
                 align-items: center;
-                gap: 2%;
+                // gap: 2%;
             }
 
             .swiper-slide {
