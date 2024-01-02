@@ -46,7 +46,7 @@ let likeFunc = function () {
                 likeResult--;
                 el.parentNode.parentNode.parentNode.dataset.like = likeResult; //업뎃
                 likeFun();
-                window.alert("좋아요가 취소됩니다.");
+                swalMsg(4, "중복", "좋아요가 취소됩니다.")
                 count = 0;
             }
         })
@@ -203,7 +203,10 @@ writeBtn.addEventListener('click', function (e) {
         //10자 이상이면 넘어감
         if (reviewPopText.value.length >= 10) {
             reviewPop.classList.add('hidden');
-            reviewNext.classList.add('active');
+            popCont.classList.remove('active');
+            popBg.classList.remove('bg-active');
+
+            swalMsg(1, "성공", "상품 후기가 등록되었습니다!")
             reviewListContLi = document.querySelectorAll('.review-list-container li')
             //뿌리기
             let userReview = `<div class="left">
@@ -231,9 +234,7 @@ writeBtn.addEventListener('click', function (e) {
             // 리뷰 개수 업데이트
             totalReviewNum.innerText = totalReviewCount;
         } else {
-            // window.alert('10자 이상 입력해주세요!');
             swalMsg(0, "오류", "10자 이상 입력해주세요!")
-
         }
     }
 
