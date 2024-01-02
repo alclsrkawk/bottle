@@ -186,21 +186,75 @@ main {
 
 @include res($pad) {
     main{
+        .input_direct{
+            margin-left: 0;
+            width:97%;
+        }
+        #order_name , #receiver_name{
+            width:30%;
+        }
+        #order_num , #receiver_num{
+            width:50%;
+        }
+        #order_email , #receiver_email{
+            margin:0;
+            width:30%;
+        }
+        #order_email_address,#receiver_email_address{
+            margin:0;
+            width: 63%;
+        }
+        #order_tel,#receiver_tel{
+            margin: 0 0 2% 5%;
+            width:11%;
+        }
+
+        .receiver,.order{
+            width:100%;
+        }
+        .receiver_info{
+            width:100%;
+            p{
+                transform: translateX(-10px);
+            }
+        }
         margin:0px 20px;
         .flex{
             display:block;
         }
+        .address{
+            width:100%;
+            #zip_code{
+                width:70%;
+            }
+            #zip-search{
+                margin-left: 2%;
+                width:24%;
+                font-size : 0.7rem;
+            }
+            #address_1 , #address_2{
+                width:97%;
+            }
+        }
+
+        .requested{
+            width:100%;
+            .input_requested{
+                width:60%;
+            }
+        }
+
         .section-third{
             height:200px;
         }
         .section-second{
             margin-top: 50px;
-            width:730px;
+            width:100%;
             .pay-button{
-                text-align: center;
+                
                 button{
                     font-size: 16px;
-                    width:600px;
+                    width:95%;
                 }
             }
         }
@@ -215,10 +269,11 @@ main {
         }
         padding-top:100px;
         .order , .receiver, .address , .requested{
-            width:340px;
+            width:100%;
             margin-bottom: 80px;
         }
         margin:0 20px;
+
         input , select{
             margin:0;
             height:47px;
@@ -227,19 +282,20 @@ main {
             width:320px;
         }
         .input_name{
-            width:335px;
+            width:100%;
             margin-bottom: 10px;
         }
         .select_num{
             margin : 0;
-            width:70px;
+            width:25%;
         }
         .input_num{
-            margin-left:20px;
-            width:241px ;
+            margin-left:0;
+            width:73% ;
         }
         .section-second{
             margin-top: 10px;
+            height:auto;
         }
         .section-third{
 
@@ -247,30 +303,32 @@ main {
         }
         .input_email{
             margin:10px 0;
-            width:270px;
+            width:80%;
         }
         .select_email{
             margin:0;
-            width: 335px;
+            width: 100%;
         }
         .input_direct{
             margin:10px 0px;
-            width:335px;
+            width:100%;
         }
         #zip_code{
-            width:195px;
+            width:63%;
         }
         #zip-search{
-            width:117px;
+            width:30%;
+            font-size:0.6rem;
         }
         #address_1, #address_2 , .input_requested{
-            width:335px;
+            width:100%;
         }
 
 
 
 
     .section-second{
+        width:100% !important;
         margin-top: 100px;
         padding:0;
         
@@ -281,8 +339,14 @@ main {
         background-color: white;
 
         .pay-button{
-            margin-left: -13px;
-            width:360px;
+            display: flex;
+            justify-content: center;
+            
+            width:100%;
+            button{
+                width:80%;
+                
+            }
         }
     }
 }
