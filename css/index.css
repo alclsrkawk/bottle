@@ -516,15 +516,12 @@ main .soju-l .swiper-wrapper,
 main .beer-l .swiper-wrapper,
 main .whisky-l .swiper-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
+  justify-content: inline-flex;
 }
 main .wine-l .swiper-wrapper .swiper-slide,
 main .soju-l .swiper-wrapper .swiper-slide,
 main .beer-l .swiper-wrapper .swiper-slide,
 main .whisky-l .swiper-wrapper .swiper-slide {
-  flex-shrink: 0;
   margin: 0;
   cursor: pointer;
   padding: 20px;
