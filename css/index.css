@@ -593,7 +593,7 @@ main .whisky-l .whisky-item {
 main .community {
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 4%;
   color: #000;
   font-style: normal;
   line-height: normal;
@@ -602,10 +602,7 @@ main .community .cate-name {
   text-align: start;
 }
 main .community .review {
-  padding: 80px 0 60px 19%;
-}
-main .community .review .list {
-  margin-bottom: 20px;
+  padding: 80px 0 60px 25%;
 }
 main .community .review .list figure {
   display: flex;
@@ -614,7 +611,7 @@ main .community .review .list figure {
   border-bottom: 1px solid #E0E2E7;
 }
 main .community .review .list figure .pic {
-  margin: 20px 0px;
+  margin: 15px 0px;
   width: 120px;
   height: 120px;
   border: 1px solid #E0E2E7;
@@ -625,8 +622,8 @@ main .community .review .list figure .pic img {
   width: 100%;
 }
 main .community .review .list figure .desc {
-  width: 402px;
-  margin: 20px;
+  width: 400px;
+  margin: 15px;
 }
 main .community .review .list figure .desc :nth-child(1) {
   white-space: nowrap;
@@ -642,7 +639,7 @@ main .community .review .list figure .desc :nth-child(2) {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 16px 0 14px;
+  margin: 10px 0 8px;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 24px;
@@ -653,10 +650,10 @@ main .community .review .list figure .desc :nth-child(3) {
   color: #EAB838;
 }
 main .community .notice {
-  padding: 80px 19% 60px 0px;
+  padding: 80px 25% 60px 0px;
 }
 main .community .notice .list {
-  width: 560px;
+  width: 540px;
   margin-bottom: 20px;
 }
 main .community .notice .list figcaption {
