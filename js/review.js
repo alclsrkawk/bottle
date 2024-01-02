@@ -51,7 +51,7 @@ let reviewPage = function () {
     let PrintReviewList = function () {
         let resultArr = '';
         reviewList.forEach((el, i) => {
-            console.log(el.id)
+            // console.log(el.id)
             resultArr += `<li class="list-result">
             <div class="left">
                 <span class="star-count">★★★★★</span>
@@ -66,7 +66,7 @@ let reviewPage = function () {
         </li>`
         });
         reviewListCont.innerHTML = resultArr;
-        console.log(resultArr)
+        // console.log(resultArr)
     }
     PrintReviewList();
 
@@ -91,7 +91,7 @@ let reviewPage = function () {
                 } else {
                     reviewList[i].like--;
                     likeFun();
-                    swalMsg(4, "중복", "좋아요가 취소됩니다.")
+                    swalMsg(0, "중복", "좋아요가 취소됩니다.")
                     count = 0;
                 }
             })
@@ -210,7 +210,6 @@ let reviewPage = function () {
             popCont.classList.remove('active');
             popBg.classList.remove('bg-active');
         }
-
         // 후기쓰고 등록 버튼 누를때!!
         reviewPopBtn.onclick = function (e) {
             e.preventDefault();
@@ -240,7 +239,7 @@ let reviewPage = function () {
                 // 리뷰 개수 업데이트
                 totalReviewNum.innerText = reviewList.length;
             } else {
-                swalMsg(0, "오류", "10자 이상 입력해주세요!")
+                swalMsg(4, "오류", "10자 이상 입력해주세요!")
             }
         }
 
