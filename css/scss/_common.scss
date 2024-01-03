@@ -36,666 +36,685 @@ header {
                     align-items: center;
                 }
 
-                :nth-child(1) {
+                <<<<<<< HEAD :nth-child(1) {
                     cursor: pointer;
 
-                    a {
-                        color: #EAB838;
+                    =======p {
+                        >>>>>>>3861b33f4efc73c3b5409a9c9f37c2bdcd58dbbe a {
+                            color: #EAB838;
+                        }
+
+                        :nth-child(2) {
+                            vertical-align: top;
+                            position: absolute;
+                            font-size: 0.8rem;
+                            width: 160px;
+                            top: -35%;
+                            right: 21%;
+                            padding: 10px;
+
+                            input {
+                                position: relative;
+                                font-size: 0.8rem;
+                                color: #fff;
+                                width: 100%;
+                                border: none;
+                                border-bottom: 1px solid #E0E2E7;
+                                padding-bottom: 5px;
+                                padding-left: 5px;
+                                background: none;
+                                z-index: 5;
+                            }
+
+                            input::placeholder {
+                                color: #E0E2E7;
+                            }
+
+                            input:focus {
+                                outline: none;
+                            }
+
+                        }
+
+                        :nth-child(3) {
+                            cursor: pointer;
+
+                            img {
+                                position: absolute;
+                                top: 0;
+                                right: 20%;
+
+                                padding: 13px;
+                                vertical-align: top;
+                            }
+
+                        }
+
+                        <<<<<<< HEAD :nth-child(4) {
+                            cursor: pointer;
+
+                            img {
+                                position: absolute;
+                                top: 0;
+                                right: 18%;
+                                padding: 10px;
+                            }
+                        }
+
+                        =======>>>>>>>3861b33f4efc73c3b5409a9c9f37c2bdcd58dbbe
                     }
-                }
 
-                :nth-child(2) {
-                    vertical-align: top;
-                    position: absolute;
-                    font-size: 0.8rem;
-                    width: 160px;
-                    top: -35%;
-                    right: 21%;
-                    padding: 10px;
+                    .main-menu {
+                        nav {
+                            @include flex(center) {
+                                align-items: center;
+                            }
 
-                    input {
-                        position: relative;
-                        font-size: 0.8rem;
-                        color: #fff;
-                        width: 100%;
-                        border: none;
-                        border-bottom: 1px solid #E0E2E7;
-                        padding-bottom: 5px;
-                        padding-left: 5px;
-                        background: none;
-                        z-index: 5;
-                    }
+                            height: 30px;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                            vertical-align: middle;
+                            padding: 0 auto;
+                            padding-bottom: 8px;
 
-                    input::placeholder {
-                        color: #E0E2E7;
-                    }
-
-                    input:focus {
-                        outline: none;
-                    }
-
-                }
-
-                :nth-child(3) {
-                    cursor: pointer;
-
-                    img {
-                        position: absolute;
-                        top: 0;
-                        right: 20%;
-                        padding: 10px;
-                    }
-                }
-
-                :nth-child(4) {
-                    cursor: pointer;
-
-                    img {
-                        position: absolute;
-                        top: 0;
-                        right: 18%;
-                        padding: 10px;
-                    }
-                }
-            }
-
-            .main-menu {
-                nav {
-                    @include flex(center) {
-                        align-items: center;
-                    }
-
-                    height: 30px;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-                    vertical-align: middle;
-                    padding: 0 auto;
-                    padding-bottom: 8px;
-
-                    a {
-                        margin: 0 60px;
-                        color: #FFF;
-                        text-align: center;
-                        // font-family: Inter;
-                        font-size: 1rem;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                        letter-spacing: -0.9px;
+                            a {
+                                margin: 0 60px;
+                                color: #FFF;
+                                text-align: center;
+                                // font-family: Inter;
+                                font-size: 1rem;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                letter-spacing: -0.9px;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-}
 
-.header-m {
-    display: none;
-}
+        .header-m {
+            display: none;
+        }
 
 
-.footer-m {
-    display: none;
-}
+        .footer-m {
+            display: none;
+        }
 
-footer {
-    height: 434px;
-    width: 100%;
+        footer {
+            height: 434px;
+            width: 100%;
 
-    .footer-pc {
-        article {
-            .top {
-                background: #000;
-                height: 354px;
-                padding: 0 370px;
-
-                @include flex(space-between) {
-                    gap: 25%;
-                }
-
-                :nth-child(1) {
-
-                    .company {
-                        margin: 40px 0 24px;
-                        color: #FFF;
-                        font-family: Noto Serif KR;
-                        font-size: 1.5rem;
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: 150%;
-                        letter-spacing: -0.28px;
-                    }
-
-                    .intro {
-                        color: #B2B3B9;
-                        font-size: 1rem;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 32px;
-                        letter-spacing: -0.16px;
-
-                        span {
-                            font-family: Noto Sans KR;
-                            font-weight: 700;
-                        }
-                    }
-                }
-
-                :nth-child(2) {
-                    font-family: Noto Sans KR;
-                    font-size: 1rem;
-                    font-style: normal;
-                    line-height: 32px;
-                    // width: 194px;
-
-                    :nth-child(1) {
-                        margin: 40px 0px 10px;
-                        height: 32px;
-                        color: #FFF;
-                        font-weight: 700;
-                        letter-spacing: -0.16px;
-                    }
-
-                    :nth-child(2) {
-                        color: #EAB838;
-                        font-family: Noto Sans KR;
-                        font-size: 1.3rem;
-                        font-weight: 700;
-                        letter-spacing: -0.24px;
-                    }
-
-                    :nth-child(3) {
-                        margin: 24px 0 32px;
-                        color: #B2B3B9;
-                        font-style: normal;
-                        font-weight: 400;
-                    }
-
-                    :nth-child(4) {
-                        width: 100%;
+            .footer-pc {
+                article {
+                    .top {
+                        background: #000;
+                        height: 354px;
+                        padding: 0 370px;
 
                         @include flex(space-between) {
-                            align-items: center;
+                            gap: 25%;
                         }
 
-                        vertical-align: top;
+                        :nth-child(1) {
 
-                        img {
-                            background: #000;
-                            margin: auto;
-                            display: block;
-                            width: 48px;
-                            height: 48px;
+                            .company {
+                                margin: 40px 0 24px;
+                                color: #FFF;
+                                font-family: Noto Serif KR;
+                                font-size: 1.5rem;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 150%;
+                                letter-spacing: -0.28px;
+                            }
+
+                            .intro {
+                                color: #B2B3B9;
+                                font-size: 1rem;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 32px;
+                                letter-spacing: -0.16px;
+
+                                span {
+                                    font-family: Noto Sans KR;
+                                    font-weight: 700;
+                                }
+                            }
                         }
 
+                        :nth-child(2) {
+                            font-family: Noto Sans KR;
+                            font-size: 1rem;
+                            font-style: normal;
+                            line-height: 32px;
+                            // width: 194px;
+
+                            :nth-child(1) {
+                                margin: 40px 0px 10px;
+                                height: 32px;
+                                color: #FFF;
+                                font-weight: 700;
+                                letter-spacing: -0.16px;
+                            }
+
+                            :nth-child(2) {
+                                color: #EAB838;
+                                font-family: Noto Sans KR;
+                                font-size: 1.3rem;
+                                font-weight: 700;
+                                letter-spacing: -0.24px;
+                            }
+
+                            :nth-child(3) {
+                                margin: 24px 0 32px;
+                                color: #B2B3B9;
+                                font-style: normal;
+                                font-weight: 400;
+                            }
+
+                            :nth-child(4) {
+                                width: 100%;
+
+                                @include flex(space-between) {
+                                    align-items: center;
+                                }
+
+                                vertical-align: top;
+
+                                img {
+                                    background: #000;
+                                    margin: auto;
+                                    display: block;
+                                    width: 48px;
+                                    height: 48px;
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    .bottom {
+                        background: #3F4150;
+                        height: 80px;
+                        padding: 24px 370px;
+
+                        div {
+
+                            @include flex(space-between) {
+                                align-items: center;
+                            }
+
+                            height: 32px;
+                            color: #B2B3B9;
+                            // font-family: Inter;
+                            font-size: 1rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 32px;
+                            letter-spacing: -0.16px;
+
+                            a {
+                                color: #B2B3B9;
+                            }
+
+                        }
                     }
                 }
 
             }
 
-            .bottom {
-                background: #3F4150;
-                height: 80px;
-                padding: 24px 370px;
-
-                div {
-
-                    @include flex(space-between) {
-                        align-items: center;
-                    }
-
-                    height: 32px;
-                    color: #B2B3B9;
-                    // font-family: Inter;
-                    font-size: 1rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 32px;
-                    letter-spacing: -0.16px;
-
-                    a {
-                        color: #B2B3B9;
-                    }
-
-                }
-            }
         }
 
-    }
-
-}
-
-// PC -- 끝
-@include res($pad) {
-    header {
-        .header-pc {
-            article {
-                .main-title {
-                    width: 100%;
-                    height: 35px;
-                    margin: 12px 0px 28px 0px;
-                    line-height: 80%;
-                    font-size: 1.2rem;
-
-                    :nth-child(2) {
-                        position: absolute;
-                        font-size: 0.7rem;
-                        width: 130px;
-                        top: 3%;
-                        right: 9%;
-
-                        input {
-                            font-size: 0.7rem;
-                        }
-                    }
-
-                    :nth-child(3) {
-                        img {
-                            position: absolute;
-                            top: 0;
-                            right: 5%;
-                            margin-right: 15px;
-                        }
-                    }
-
-                    :nth-child(4) {
-                        img {
-                            position: absolute;
-                            top: 0;
-                            right: 3%;
-                        }
-                    }
-                }
-
-                .main-menu {
-
-                    nav {
-                        height: 20px;
-                        padding-bottom: 5px;
-
-                        a {
-                            margin: 0 20px;
-                            font-size: 0.7rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    footer {
-        height: 300px;
-        width: 100%;
-
-        .footer-pc {
-            article {
-                .top {
-                    height: 230px;
-                    padding: 0 10%;
-                    gap: 5%;
-
-                    :nth-child(1) {
-                        .company {
-                            margin: 20px 0 3px;
-                            font-size: 0.85rem;
+        // PC -- 끝
+        @include res($pad) {
+            header {
+                .header-pc {
+                    article {
+                        .main-title {
+                            width: 100%;
+                            height: 35px;
+                            margin: 12px 0px 28px 0px;
                             line-height: 80%;
+
+                            <<<<<<< HEAD :nth-child(2) {
+                                position: absolute;
+                                font-size: 0.7rem;
+                                width: 130px;
+                                top: 3%;
+                                right: 9%;
+
+                                input {
+                                    font-size: 0.7rem;
+                                }
+                            }
+
+                            :nth-child(3) {
+                                =======p {
+                                    font-size: 1.2rem;
+
+                                    a {
+                                        color: #EAB838;
+                                    }
+
+                                    >>>>>>>3861b33f4efc73c3b5409a9c9f37c2bdcd58dbbe img {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 5%;
+
+                                        <<<<<<< HEAD :nth-child(4) {
+                                            img {
+                                                position: absolute;
+                                                top: 0;
+                                                right: 3%;
+                                                =======padding: 10px;
+                                                vertical-align: top;
+                                                >>>>>>>3861b33f4efc73c3b5409a9c9f37c2bdcd58dbbe
+                                            }
+
+                                        }
+                                    }
+
+                                    .main-menu {
+
+                                        nav {
+                                            height: 20px;
+                                            padding-bottom: 5px;
+
+                                            a {
+                                                margin: 0 20px;
+                                                font-size: 0.7rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
 
-                        .intro {
-                            font-size: 0.7rem;
-                            line-height: 20px;
-                        }
-                    }
+                        footer {
+                            height: 300px;
+                            width: 100%;
 
-                    :nth-child(2) {
-                        font-size: 0.7rem;
-                        line-height: 20px;
+                            .footer-pc {
+                                article {
+                                    .top {
+                                        height: 230px;
+                                        padding: 0 10%;
+                                        gap: 5%;
 
-                        :nth-child(1) {
-                            margin: 20px 0px 3px;
-                            height: 20px;
-                        }
+                                        :nth-child(1) {
+                                            .company {
+                                                margin: 20px 0 3px;
+                                                font-size: 0.85rem;
+                                                line-height: 80%;
+                                            }
 
-                        :nth-child(2) {
-                            font-size: 0.7rem;
-                        }
+                                            .intro {
+                                                font-size: 0.7rem;
+                                                line-height: 20px;
+                                            }
+                                        }
 
-                        :nth-child(3) {
-                            margin: 5px 0 10px;
-                        }
+                                        :nth-child(2) {
+                                            font-size: 0.7rem;
+                                            line-height: 20px;
 
-                        :nth-child(4) {
-                            align-items: center;
-                            width: 80px;
+                                            :nth-child(1) {
+                                                margin: 20px 0px 3px;
+                                                height: 20px;
+                                            }
 
-                            img {
-                                margin: 0;
-                                display: block;
-                                width: 20px;
-                                height: 20px;
+                                            :nth-child(2) {
+                                                font-size: 0.7rem;
+                                            }
+
+                                            :nth-child(3) {
+                                                margin: 5px 0 10px;
+                                            }
+
+                                            :nth-child(4) {
+                                                align-items: center;
+                                                width: 80px;
+
+                                                img {
+                                                    margin: 0;
+                                                    display: block;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .bottom {
+                                        height: 40px;
+                                        padding: 10px 10%;
+
+                                        div {
+                                            height: 20px;
+                                            font-size: 0.6rem;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-                }
 
-                .bottom {
-                    height: 40px;
-                    padding: 10px 10%;
+                    @include res($tablet) {
 
-                    div {
-                        height: 20px;
-                        font-size: 0.6rem;
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-    }
-}
+                        header {
+                            .header-pc {
+                                article {
+                                    .main-title {
+                                        width: 100%;
+                                        height: 44px;
+                                        margin: 14px 0px 32px 0px;
+                                        line-height: 100%;
 
-@include res($tablet) {
+                                        <<<<<<< HEAD :nth-child(2) {
+                                            position: absolute;
+                                            font-size: 0.75rem;
+                                            width: 140px;
+                                            top: -10%;
+                                            right: 13%;
 
-    header {
-        .header-pc {
-            article {
-                .main-title {
-                    width: 100%;
-                    height: 44px;
-                    margin: 14px 0px 32px 0px;
-                    line-height: 100%;
-                    font-size: 1.45rem;
+                                            input {
+                                                font-size: 0.75rem;
+                                            }
+                                        }
 
-                    :nth-child(2) {
-                        position: absolute;
-                        font-size: 0.75rem;
-                        width: 140px;
-                        top: -10%;
-                        right: 13%;
+                                        :nth-child(3) {
+                                            =======p {
+                                                font-size: 1.45rem;
 
-                        input {
-                            font-size: 0.75rem;
-                        }
-                    }
+                                                a {
+                                                    color: #EAB838;
+                                                }
 
-                    :nth-child(3) {
-                        img {
-                            position: absolute;
-                            top: 0;
-                            right: 10%;
-                            margin-right: 15px;
-                        }
-                    }
+                                                >>>>>>>3861b33f4efc73c3b5409a9c9f37c2bdcd58dbbe img {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    right: 10%;
 
-                    :nth-child(4) {
-                        img {
-                            position: absolute;
-                            top: 0;
-                            right: 8%;
-                        }
-                    }
-                }
+                                                    <<<<<<< HEAD :nth-child(4) {
+                                                        img {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            right: 8%;
+                                                            =======padding: 10px;
+                                                            vertical-align: top;
+                                                            >>>>>>>3861b33f4efc73c3b5409a9c9f37c2bdcd58dbbe
+                                                        }
 
-                .main-menu {
+                                                    }
+                                                }
 
-                    nav {
-                        height: 24px;
-                        padding-bottom: 5px;
+                                                .main-menu {
 
-                        a {
-                            margin: 0 25px;
-                            font-size: 0.85rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
+                                                    nav {
+                                                        height: 24px;
+                                                        padding-bottom: 5px;
 
-    footer {
-        height: 300px;
-        width: 100%;
+                                                        a {
+                                                            margin: 0 25px;
+                                                            font-size: 0.85rem;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
 
-        .footer-pc {
-            article {
-                .top {
-                    height: 230px;
-                    padding: 0 10%;
-                    gap: 5%;
+                                    footer {
+                                        height: 300px;
+                                        width: 100%;
 
-                    :nth-child(1) {
-                        .company {
-                            margin: 28px 0 5px;
-                            font-size: 0.9rem;
-                            line-height: 100%;
-                        }
+                                        .footer-pc {
+                                            article {
+                                                .top {
+                                                    height: 230px;
+                                                    padding: 0 10%;
+                                                    gap: 5%;
 
-                        .intro {
-                            font-size: 0.7rem;
-                            line-height: 22px;
-                        }
-                    }
+                                                    :nth-child(1) {
+                                                        .company {
+                                                            margin: 28px 0 5px;
+                                                            font-size: 0.9rem;
+                                                            line-height: 100%;
+                                                        }
 
-                    :nth-child(2) {
-                        font-size: 0.7rem;
-                        line-height: 20px;
+                                                        .intro {
+                                                            font-size: 0.7rem;
+                                                            line-height: 22px;
+                                                        }
+                                                    }
 
-                        :nth-child(1) {
-                            margin: 28px 0px 5px;
-                            height: 20px;
-                        }
+                                                    :nth-child(2) {
+                                                        font-size: 0.7rem;
+                                                        line-height: 20px;
 
-                        :nth-child(2) {
-                            font-size: 0.8rem;
-                        }
+                                                        :nth-child(1) {
+                                                            margin: 28px 0px 5px;
+                                                            height: 20px;
+                                                        }
 
-                        :nth-child(3) {
-                            margin: 8px 0 15px;
-                        }
+                                                        :nth-child(2) {
+                                                            font-size: 0.8rem;
+                                                        }
 
-                        :nth-child(4) {
-                            align-items: start;
-                            width: 120px;
+                                                        :nth-child(3) {
+                                                            margin: 8px 0 15px;
+                                                        }
 
-                            img {
-                                margin: auto;
-                                display: block;
-                                width: 28px;
-                                height: 28px;
-                            }
-                        }
-                    }
-                }
+                                                        :nth-child(4) {
+                                                            align-items: start;
+                                                            width: 120px;
 
-                .bottom {
-                    height: 40px;
-                    padding: 10px 10%;
+                                                            img {
+                                                                margin: auto;
+                                                                display: block;
+                                                                width: 28px;
+                                                                height: 28px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
 
-                    div {
-                        height: 20px;
-                        font-size: 0.7rem;
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-    }
+                                                .bottom {
+                                                    height: 40px;
+                                                    padding: 10px 10%;
 
-}
+                                                    div {
+                                                        height: 20px;
+                                                        font-size: 0.7rem;
+                                                        line-height: 20px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
 
-@include res($mobile) {
-    .header-pc {
-        display: none;
-    }
+                                }
 
-    .header-m {
+                                @include res($mobile) {
+                                    .header-pc {
+                                        display: none;
+                                    }
 
-        display: block;
-        padding: 16px 20px;
-        position: fixed;
+                                    .header-m {
 
-        height: 47px;
-        width: 100%;
+                                        display: block;
+                                        padding: 16px 20px;
+                                        position: fixed;
 
-        @include flex(space-between) {
-            align-items: center;
-        }
+                                        height: 47px;
+                                        width: 100%;
 
-        text-align: center;
-        font-family: Noto Serif KR;
-        font-style: normal;
-        border-bottom: 1px solid rgb(255, 255, 255, 30%);
+                                        @include flex(space-between) {
+                                            align-items: center;
+                                        }
 
-        img {
-            cursor: pointer;
-            padding: 0 3px;
-        }
+                                        text-align: center;
+                                        font-family: Noto Serif KR;
+                                        font-style: normal;
+                                        border-bottom: 1px solid rgb(255, 255, 255, 30%);
 
-        :nth-child(1) {
-            img {
-                width: 100%;
-            }
-        }
+                                        img {
+                                            cursor: pointer;
+                                            padding: 0 3px;
+                                        }
 
-        :nth-child(2) {
-            .home {
-                color: #EAB838;
-                font-size: 1rem;
-                font-weight: 700;
-                line-height: 150%;
-            }
-        }
+                                        :nth-child(1) {
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
 
-        .toggle {
-            nav {
-                position: fixed;
-                left: 0;
-                top: 0;
-                width: 65%;
-                height: 100%;
-                font-weight: normal;
-                background: #FFF;
-                transform: translateX(-100%);
-                transition: 1s;
-                text-align: start;
-                z-index: 999;
-            }
+                                        :nth-child(2) {
+                                            .home {
+                                                color: #EAB838;
+                                                font-size: 1rem;
+                                                font-weight: 700;
+                                                line-height: 150%;
+                                            }
+                                        }
 
-            .menu {
-                padding: 10px;
-                color: #EAB838;
-                font-size: 1rem;
-                font-weight: 700;
-                line-height: 150%;
-                height: 47px;
-                border-bottom: 1px solid #E0E2E7;
+                                        .toggle {
+                                            nav {
+                                                position: fixed;
+                                                left: 0;
+                                                top: 0;
+                                                width: 65%;
+                                                height: 100%;
+                                                font-weight: normal;
+                                                background: #FFF;
+                                                transform: translateX(-100%);
+                                                transition: 1s;
+                                                text-align: start;
+                                                z-index: 999;
+                                            }
 
-                @include flex(space-between) {
-                    align-items: center;
-                }
+                                            .menu {
+                                                padding: 10px;
+                                                color: #EAB838;
+                                                font-size: 1rem;
+                                                font-weight: 700;
+                                                line-height: 150%;
+                                                height: 47px;
+                                                border-bottom: 1px solid #E0E2E7;
 
-                :nth-child(1) {
-                    padding-left: 7px;
-                }
+                                                @include flex(space-between) {
+                                                    align-items: center;
+                                                }
 
-                :nth-child(2) {
-                    img {
-                        width: 100%;
-                        margin: 0;
-                        display: block;
-                    }
-                }
+                                                :nth-child(1) {
+                                                    padding-left: 7px;
+                                                }
 
-            }
+                                                :nth-child(2) {
+                                                    img {
+                                                        width: 100%;
+                                                        margin: 0;
+                                                        display: block;
+                                                    }
+                                                }
 
-            .sign {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 84px;
-                background: #000000;
+                                            }
 
-                div {
-                    padding: 14px 20px;
+                                            .sign {
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 0;
+                                                width: 100%;
+                                                height: 84px;
+                                                background: #000000;
 
-                    :nth-child(1) {
-                        color: #FFF;
-                        font-size: 0.7rem;
-                        font-weight: 400;
-                        line-height: 150%;
-                        letter-spacing: -0.14px;
-                        margin-bottom: 14px;
-                    }
+                                                div {
+                                                    padding: 14px 20px;
 
-                    :nth-child(2) {
-                        color: #FFF;
-                        font-size: 0.7rem;
-                        font-weight: 400;
-                        line-height: 150%;
-                        letter-spacing: -0.14px;
-                    }
-                }
+                                                    :nth-child(1) {
+                                                        color: #FFF;
+                                                        font-size: 0.7rem;
+                                                        font-weight: 400;
+                                                        line-height: 150%;
+                                                        letter-spacing: -0.14px;
+                                                        margin-bottom: 14px;
+                                                    }
 
-            }
+                                                    :nth-child(2) {
+                                                        color: #FFF;
+                                                        font-size: 0.7rem;
+                                                        font-weight: 400;
+                                                        line-height: 150%;
+                                                        letter-spacing: -0.14px;
+                                                    }
+                                                }
 
-            li {
-                padding: 14px 20px;
-                height: 50px;
-                cursor: pointer;
-                color: #000;
-                font-size: 0.8rem;
-                font-weight: 400;
-                line-height: 140%;
-                letter-spacing: -0.16px;
-            }
-        }
+                                            }
 
-        .toggle nav.active {
-            transform: translateX(0%);
-        }
-    }
+                                            li {
+                                                padding: 14px 20px;
+                                                height: 50px;
+                                                cursor: pointer;
+                                                color: #000;
+                                                font-size: 0.8rem;
+                                                font-weight: 400;
+                                                line-height: 140%;
+                                                letter-spacing: -0.16px;
+                                            }
+                                        }
+
+                                        .toggle nav.active {
+                                            transform: translateX(0%);
+                                        }
+                                    }
 
 
 
-    .footer-pc {
-        display: none;
-    }
+                                    .footer-pc {
+                                        display: none;
+                                    }
 
-    .footer-m {
-        display: block;
-        background: #000;
+                                    .footer-m {
+                                        display: block;
+                                        background: #000;
 
-        height: 80px;
+                                        height: 80px;
 
-        @include flex(center) {
-            align-items: center;
-            flex-direction: column;
-        }
+                                        @include flex(center) {
+                                            align-items: center;
+                                            flex-direction: column;
+                                        }
 
-        :nth-child(1) {
-            color: #FFF;
-            font-family: Noto Serif KR;
-            font-size: 0.7rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 150%;
-            letter-spacing: -0.14px;
-        }
+                                        :nth-child(1) {
+                                            color: #FFF;
+                                            font-family: Noto Serif KR;
+                                            font-size: 0.7rem;
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: 150%;
+                                            letter-spacing: -0.14px;
+                                        }
 
-        :nth-child(2) {
+                                        :nth-child(2) {
 
-            span {
-                color: #B2B3B9;
-            }
+                                            span {
+                                                color: #B2B3B9;
+                                            }
 
-            a {
-                color: #B2B3B9;
-                font-family: Inter;
-                font-size: 0.6rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 32px;
-                letter-spacing: -0.12px;
-            }
-        }
-    }
-}
+                                            a {
+                                                color: #B2B3B9;
+                                                font-family: Inter;
+                                                font-size: 0.6rem;
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                line-height: 32px;
+                                                letter-spacing: -0.12px;
+                                            }
+                                        }
+                                    }
+                                }
