@@ -261,12 +261,68 @@ main {
 
     }
 
+    .m_buy_all {
+        display: none;
+        .m_down_up {
+            display: block;
+            width: 20%;
+            background-color: rgb(112, 112, 112);
+            text-align: center;
+            color: black;
+            margin: 0 auto;
+        }
+
+        .m_buy {
+            display: block;
+            background-color: black;
+            color: white;
+
+            #m_line {
+                border-bottom: 1px solid white;
+            }
+
+            .m_textbox {
+                padding: 10px;
+
+                .m_text1 {
+                    p {}
+                }
+
+                #m_text2 {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .m_input_text {
+                        width: 30%;
+
+                    }
+
+                    p {}
+
+                }
+            }
+
+            .m_btn_buy {
+                border-top: 1px solid white;
+
+                .m_button1_location {
+
+                    .m_location {
+
+                        .m_button1 {}
+                    }
+                }
+            }
+
+
+        }
+    }
+
 
 }
-
-// .main-section{
-//     display: block;
-// }
 
 
 .menu-tab {
@@ -295,9 +351,7 @@ main {
 }
 
 
-
 // PC -- 끝
-
 
 
 @include res($pad) {
@@ -565,6 +619,66 @@ main {
 
         }
 
+        .m_buy_all {
+            display: none;
+            .m_down_up {
+                display: block;
+                width: 20%;
+                background-color: rgb(112, 112, 112);
+                text-align: center;
+                color: black;
+                margin: 0 auto;
+            }
+
+            .m_buy {
+                display: block;
+                background-color: black;
+                color: white;
+
+                #m_line {
+                    border-bottom: 1px solid white;
+                }
+
+                .m_textbox {
+                    padding: 10px;
+
+                    .m_text1 {
+                        p {}
+                    }
+
+                    #m_text2 {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .m_input_text {
+                            width: 30%;
+
+                        }
+
+                        p {}
+
+                    }
+                }
+
+                .m_btn_buy {
+                    border-top: 1px solid white;
+
+                    .m_button1_location {
+
+                        .m_location {
+
+                            .m_button1 {}
+                        }
+                    }
+                }
+
+
+            }
+        }
+
     }
 
 }
@@ -740,61 +854,79 @@ main {
 
         }
 
-        .m_down_up {
-            width: 20%;
-            background-color: rgb(112, 112, 112);
-            text-align: center;
-            color: black;
-            margin: 0 auto;
-        }
-
-        .m_buy {
-            background-color: black;
-            color: white;
-
-            #m_line {
-                border-bottom: 1px solid white;
+        .m_buy_all {
+            display: block;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            transition: 1s;
+            // transform: translateY(107px);
+            &.active{
+            transition: 1s;
+            transform: translateY(0%);
+            }
+            .m_down_up {
+                width: 20%;
+                background-color: rgb(112, 112, 112);
+                text-align: center;
+                color: black;
+                margin: 0 auto;
+                
             }
 
-            .m_textbox {
-                padding: 10px;
+            .m_buy {
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                background-color: white;
+                color: black;
 
-                .m_text1 {
-                    p {}
+
+                #m_line {
+                    border-bottom: 1px solid white;
                 }
 
-                #m_text2 {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                .m_textbox {
+                    padding: 10px;
 
-                    .m_input_text {
-                        width: 30%;
-
+                    .m_text1 {
+                        p {}
                     }
 
-                    p {}
+                    #m_text2 {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
 
+                        .m_input_text {
+                            width: 30%;
+
+                        }
+
+                        p {}
+
+                    }
                 }
-            }
 
-            .m_btn_buy {
-                border-top: 1px solid white;
+                .m_btn_buy {
+                    text-align: center;
+                    border-top: 1px solid black;
 
-                .m_button1_location {
-                    
-                    .m_location {
-                         
-                        .m_button1 {
+                    #m_button1_location {
+                        
+                        .m_location {
                             
+                            .m_button1 {
+                               
+                                color: white;
+                            }
                         }
                     }
                 }
+
+
             }
-
-
         }
 
 
@@ -803,449 +935,446 @@ main {
 
 }
 
+// PC --시작
+.main-section {
+    max-width: 1180px;
+    padding: 0 5px;
+    margin: 40px auto 0 auto;
 
-    @import "_sub";
+    .popbg {
+        opacity: 0;
+        transition: 0.3s;
+    }
 
-    // PC --시작
-    .main-section {
-        max-width: 1180px;
-        padding: 0 5px;
-        margin: 40px auto 0 auto;
+    .bg-active {
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
 
-        .popbg {
-            opacity: 0;
-            transition: 0.3s;
+    // 상세정보-상품후기 분할 탭
+    #review-menu-tab {
+        font-size: 0.8rem;
+        text-align: center;
+
+        @include flex(center);
+
+        p {
+            padding: 10px 0;
+            width: 50%;
         }
 
-        .bg-active {
-            opacity: 100%;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.2);
+        .menu-tab-01 {
+            border-bottom: 1px solid black;
         }
 
-        // 상세정보-상품후기 분할 탭
-        #review-menu-tab {
-            font-size: 0.8rem;
-            text-align: center;
+        .menu-tab-02 {
+            border: solid black;
+            border-width: 1px 0 0 1px;
+            font-weight: 700;
+        }
+    }
 
-            @include flex(center);
+    // 별점
+    .review-count {
+        padding: 40px 0;
+        border-bottom: 1px solid #E0E2E7;
+        font-size: 2.5rem;
+
+        @include flex(center) {
+            flex-wrap: nowrap;
+        }
+
+        .star-count {
+            background: #000;
+            color: transparent;
+            background-clip: text;
+        }
+
+        .review-score {
+            margin-left: 10px;
+            font-weight: 700;
+        }
+    }
+
+    // 리뷰 영역
+    .review-container {
+        .tab {
+            padding: 20px 0;
+
+            @include flex(space-between) {
+                align-items: flex-end;
+            }
 
             p {
-                padding: 10px 0;
-                width: 50%;
+                span {
+                    font-weight: 700;
+                }
             }
 
-            .menu-tab-01 {
-                border-bottom: 1px solid black;
-            }
-
-            .menu-tab-02 {
-                border: solid black;
-                border-width: 1px 0 0 1px;
-                font-weight: 700;
-            }
-        }
-
-        // 별점
-        .review-count {
-            padding: 40px 0;
-            border-bottom: 1px solid #E0E2E7;
-            font-size: 2.5rem;
-
-            @include flex(center) {
-                flex-wrap: nowrap;
-            }
-
-            .star-count {
-                background: #000;
-                color: transparent;
-                background-clip: text;
-            }
-
-            .review-score {
-                margin-left: 10px;
-                font-weight: 700;
-            }
-        }
-
-        // 리뷰 영역
-        .review-container {
-            .tab {
-                padding: 20px 0;
-
+            .review-tab-right {
                 @include flex(space-between) {
-                    align-items: flex-end;
+                    gap: 20px;
+                }
+
+                .selectBox {
+                    // 드롭 다운 메뉴
+                    font-family: 'Noto Sans KR', sans-serif;
+                    border: 0;
+                    border-bottom: 1px solid #000;
+                    appearance: none;
+                    background: url('../images/icons/dropdown_down.png') no-repeat 100% 50%/15px auto;
+
+                    position: relative;
+                    width: 150px;
+                    height: 40px;
+                    box-sizing: border-box;
+                    background-size: 15px;
+                    cursor: pointer;
+
+                    &.active {
+                        background: url('../images/icons/dropdown_up.png') no-repeat 100% 50%/15px auto;
+                    }
+
+                    .label {
+                        font-family: 'Noto Sans KR', sans-serif;
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: inherit;
+                        height: inherit;
+                        border: 0 none;
+                        outline: 0 none;
+                        background: transparent;
+                        cursor: pointer;
+                    }
+
+                    .optionList {
+                        max-height: 0;
+                        transition: 0.2s ease-in;
+                        overflow: hidden;
+
+                        position: absolute;
+                        top: 39px;
+
+                        border: solid black;
+                        border-width: 0 1px 1px 1px;
+                        margin: 0;
+                        width: 150px;
+                        padding: 0;
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        &.active {
+                            opacity: 1;
+                            max-height: 122px;
+                            background: #fff;
+                            transform: translateY(1px);
+                        }
+                    }
+
+                    .optionList.active .optionItem:hover {
+                        color: #fff;
+                        background-color: black;
+                    }
+
+                    .optionItem {
+                        font-size: 14px;
+                        text-align: center;
+                        width: 100%;
+                        padding: 10px 0;
+                    }
                 }
 
                 p {
-                    span {
-                        font-weight: 700;
-                    }
-                }
-
-                .review-tab-right {
-                    @include flex(space-between) {
-                        gap: 20px;
-                    }
-
-                    .selectBox {
-                        // 드롭 다운 메뉴
-                        font-family: 'Noto Sans KR', sans-serif;
-                        border: 0;
-                        border-bottom: 1px solid #000;
-                        appearance: none;
-                        background: url('../images/icons/dropdown_down.png') no-repeat 100% 50%/15px auto;
-
-                        position: relative;
-                        width: 150px;
-                        height: 40px;
-                        box-sizing: border-box;
-                        background-size: 15px;
-                        cursor: pointer;
-
-                        &.active {
-                            background: url('../images/icons/dropdown_up.png') no-repeat 100% 50%/15px auto;
-                        }
-
-                        .label {
-                            font-family: 'Noto Sans KR', sans-serif;
-                            font-size: 14px;
-                            font-weight: 700;
-                            padding: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: inherit;
-                            height: inherit;
-                            border: 0 none;
-                            outline: 0 none;
-                            background: transparent;
-                            cursor: pointer;
-                        }
-
-                        .optionList {
-                            max-height: 0;
-                            transition: 0.2s ease-in;
-                            overflow: hidden;
-
-                            position: absolute;
-                            top: 39px;
-
-                            border: solid black;
-                            border-width: 0 1px 1px 1px;
-                            margin: 0;
-                            width: 150px;
-                            padding: 0;
-                            list-style-type: none;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-
-                            &.active {
-                                opacity: 1;
-                                max-height: 122px;
-                                background: #fff;
-                                transform: translateY(1px);
-                            }
-                        }
-
-                        .optionList.active .optionItem:hover {
-                            color: #fff;
-                            background-color: black;
-                        }
-
-                        .optionItem {
-                            font-size: 14px;
-                            text-align: center;
-                            width: 100%;
-                            padding: 10px 0;
-                        }
-                    }
-
-                    p {
-                        // 후기 작성하기 버튼
-                        @include btn(0.8rem);
-                        font-weight: 700;
-                    }
-                }
-            }
-
-            .write-review {
-                .review-btn {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 150px;
-                    height: 50px;
-                    border: none;
-                    background-color: black;
-                    color: #fff;
-                    font-size: 14px;
+                    // 후기 작성하기 버튼
+                    @include btn(0.8rem);
                     font-weight: 700;
-                }
-
-                .popup-container {
-                    display: none;
-                    padding: 20px;
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    z-index: 1;
-                    transform: translatex(-1000%) translatey(-1000%);
-                    width: 500px;
-                    height: 480px;
-                    border-radius: 10px;
-                    background: #fff;
-                    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
-                    transition: 0.3s;
-
-                    &.active {
-                        display: block;
-                        opacity: 100%;
-                        transform: translate(-50%) translatey(-50%);
-                    }
-
-                    #review-popup {
-                        display: flex;
-                        gap: 20px;
-                        flex-direction: column;
-                        height: 100%;
-                        justify-content: space-between;
-
-                        &.hidden {
-                            display: none;
-                        }
-
-                        .tab {
-                            line-height: 0;
-                            font-size: 24px;
-                            font-weight: 700;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-
-                            .close {
-                                width: 24px;
-                                height: 24px;
-                                background: url(../images/icons/close-icon-svg-b.png);
-                            }
-                        }
-
-                        .goods {
-                            display: flex;
-                            padding-bottom: 20px;
-                            gap: 10px;
-                            border-bottom: 1px solid #ddd;
-
-
-
-                            .goods_img {
-                                margin: 0;
-                                background: gray;
-                                width: 100px;
-                                height: 100px;
-
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-
-
-                            .goods_info {
-                                @include flex(space-between) {
-                                    flex-direction: column;
-                                }
-
-                                .goods_info2 {
-
-                                    span {
-                                        font-size: 14px;
-                                        color: gray;
-                                    }
-
-                                    p {
-                                        margin: 0;
-                                        font-size: 18px;
-                                    }
-                                }
-
-                                .star-container {
-                                    display: flex;
-
-
-                                    .star {
-                                        position: relative;
-                                        font-size: 2rem;
-                                        color: #ddd;
-
-                                        input {
-                                            font-size: 2rem;
-                                            width: 100%;
-                                            height: 100%;
-                                            position: absolute;
-                                            left: 0;
-                                            opacity: 0;
-                                            cursor: pointer;
-                                        }
-
-                                        span {
-                                            font-size: 2rem;
-                                            position: absolute;
-                                            width: 0;
-                                            left: 0;
-                                            color: #EAB838;
-                                            overflow: hidden;
-                                            pointer-events: none;
-                                        }
-                                    }
-
-                                    .star-grade {
-                                        font-weight: 700;
-                                        padding-left: 10px;
-                                        font-size: 2rem;
-                                    }
-                                }
-                            }
-                        }
-
-                        textarea {
-                            font-family: 'Noto Sans KR', sans-serif;
-                            box-sizing: border-box;
-                            width: 100%;
-                            height: 200px;
-                            border: 0;
-                            font-size: 18px;
-                            padding: 10px;
-                            resize: none;
-                        }
-
-                        textarea:focus-visible {
-                            outline: 0;
-                        }
-
-                        button {
-                            font-size: 18px;
-                            width: 100%;
-                            border: 1px solid #000;
-                            padding: 10px;
-                            transition: 0.2s;
-                            background-color: #fff;
-
-                            &:hover {
-                                background-color: #000;
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .next-step {
-                        display: none;
-                        transition: 0.5s;
-
-                        &.active {
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-between;
-                        }
-
-                        div {
-                            padding: 40px 0;
-                            text-align: center;
-
-                            .icon {
-                                margin: auto;
-                                margin-bottom: 8px;
-                                width: 120px;
-                                height: 120px;
-                                background: url(../images/icons/review-next-step.png);
-                            }
-
-                            strong {
-                                font-size: 1.5rem;
-                            }
-
-                            p {
-                                margin-top: 40px;
-                                color: gray;
-                                text-align: center;
-                            }
-                        }
-
-                        .close {
-                            margin: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 100%;
-                            border: 1px solid #000;
-                            background-color: #000;
-                            box-sizing: border-box;
-                            padding: 10px;
-                            color: #fff;
-                            font-size: 18px;
-                        }
-                    }
-
                 }
             }
         }
 
-        .review-list-container {
-            display: flex;
-            flex-direction: column-reverse;
+        .write-review {
+            .review-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 50px;
+                border: none;
+                background-color: black;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 700;
+            }
 
-            font-size: 1rem;
-            padding: 40px 0;
+            .popup-container {
+                display: none;
+                padding: 20px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                transform: translatex(-1000%) translatey(-1000%);
+                width: 500px;
+                height: 480px;
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
 
-            .list-result {
-                padding: 40px 0;
-                border-bottom: 1px solid #E0E2E7;
-
-                @include flex(space-between) {
-                    gap: 40px;
-                    justify-content: flex-start;
+                &.active {
+                    display: block;
+                    opacity: 100%;
+                    transform: translate(-50%) translatey(-50%);
                 }
 
-                .left {
-                    @include flex(center) {
-                        gap: 0.5rem;
+                #review-popup {
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: space-between;
+
+                    &.hidden {
+                        display: none;
+                    }
+
+                    .tab {
+                        line-height: 0;
+                        font-size: 24px;
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .close {
+                            width: 24px;
+                            height: 24px;
+                            background: url(../images/icons/close-icon-svg-b.png);
+                        }
+                    }
+
+                    .goods {
+                        display: flex;
+                        padding-bottom: 20px;
+                        gap: 10px;
+                        border-bottom: 1px solid #ddd;
+
+
+
+                        .goods_img {
+                            margin: 0;
+                            background: gray;
+                            width: 100px;
+                            height: 100px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+
+                        .goods_info {
+                            @include flex(space-between) {
+                                flex-direction: column;
+                            }
+
+                            .goods_info2 {
+
+                                span {
+                                    font-size: 14px;
+                                    color: gray;
+                                }
+
+                                p {
+                                    margin: 0;
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .star-container {
+                                display: flex;
+
+
+                                .star {
+                                    position: relative;
+                                    font-size: 2rem;
+                                    color: #ddd;
+
+                                    input {
+                                        font-size: 2rem;
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        left: 0;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                    }
+
+                                    span {
+                                        font-size: 2rem;
+                                        position: absolute;
+                                        width: 0;
+                                        left: 0;
+                                        color: #EAB838;
+                                        overflow: hidden;
+                                        pointer-events: none;
+                                    }
+                                }
+
+                                .star-grade {
+                                    font-weight: 700;
+                                    padding-left: 10px;
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                    }
+
+                    textarea {
+                        font-family: 'Noto Sans KR', sans-serif;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 200px;
+                        border: 0;
+                        font-size: 18px;
+                        padding: 10px;
+                        resize: none;
+                    }
+
+                    textarea:focus-visible {
+                        outline: 0;
+                    }
+
+                    button {
+                        font-size: 18px;
+                        width: 100%;
+                        border: 1px solid #000;
+                        padding: 10px;
+                        transition: 0.2s;
+                        background-color: #fff;
+
+                        &:hover {
+                            background-color: #000;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .next-step {
+                    display: none;
+                    transition: 0.5s;
+
+                    &.active {
+                        height: 100%;
+                        display: flex;
                         flex-direction: column;
-                        justify-content: flex-start;
+                        align-items: center;
+                        justify-content: space-between;
                     }
 
-                    .star-count {
-                        background: red;
-                        color: transparent;
-                        background-clip: text;
+                    div {
+                        padding: 40px 0;
+                        text-align: center;
+
+                        .icon {
+                            margin: auto;
+                            margin-bottom: 8px;
+                            width: 120px;
+                            height: 120px;
+                            background: url(../images/icons/review-next-step.png);
+                        }
+
+                        strong {
+                            font-size: 1.5rem;
+                        }
+
+                        p {
+                            margin-top: 40px;
+                            color: gray;
+                            text-align: center;
+                        }
                     }
 
-                    p {
-                        font-size: 0.8rem;
-                        color: #8C8D96;
+                    .close {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        border: 1px solid #000;
+                        background-color: #000;
+                        box-sizing: border-box;
+                        padding: 10px;
+                        color: #fff;
+                        font-size: 18px;
                     }
                 }
 
-                .right {
-                    p {
-                        max-width: 960px;
-                        font-size: 0.8rem;
-                        line-height: 180%;
-                    }
-                }
             }
         }
     }
 
-    // PC -- 끝
+    .review-list-container {
+        display: flex;
+        flex-direction: column-reverse;
 
-    @include res($pad) {}
+        font-size: 1rem;
+        padding: 40px 0;
 
-    @include res($mobile) {}
+        .list-result {
+            padding: 40px 0;
+            border-bottom: 1px solid #E0E2E7;
+
+            @include flex(space-between) {
+                gap: 40px;
+                justify-content: flex-start;
+            }
+
+            .left {
+                @include flex(center) {
+                    gap: 0.5rem;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+
+                .star-count {
+                    background: red;
+                    color: transparent;
+                    background-clip: text;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    color: #8C8D96;
+                }
+            }
+
+            .right {
+                p {
+                    max-width: 960px;
+                    font-size: 0.8rem;
+                    line-height: 180%;
+                }
+            }
+        }
+    }
+}
+
+// PC -- 끝
+
+@include res($pad) {}
+
+@include res($mobile) {}
