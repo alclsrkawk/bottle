@@ -5,93 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품검색</title>
+    <link rel="stylesheet" href="../css/search.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="../js/common.js"></script>
     <script defer src="../js/search.js"></script>
 </head>
 
 <body>
-
     <div class="search">
         <div>
-            <div class="search-title">검색 결과</div>
             <div class="search-result">
                 <div>
-                    <input class="input" type="text" value="">
+                    <input class="input" type="text" value="" placeholder="검색어를 입력해주세요">
                     <button>검색</button>
+                </div>
+                <div class="search-title">
+                    <span class="search-text"></span>
+                    검색 결과
+                    <span class="search-length"></span>
                 </div>
                 <div class="search-list">
                 </div>
             </div>
         </div>
     </div>
-    <script>
-
-        const elementBtn = document.querySelector('.search-result div button');
-        const elementInput = document.querySelector('.search-result div input');
-        function getUrlParams() {
-            const params = {};
-            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-            return params;
-        }
-        const params = getUrlParams();
-        // console.log(decodeURI(params.stext))
-
-        if (decodeURI(params.stext) != "")
-            elementInput.value = decodeURI(params.stext);
-
-        elementBtn.onclick = () => {
-            console.log("input value:", elementInput.value)
-            fnSearch(elementInput.value)
-        }
-
-        const fnSearch = (text) => {
-            console.log(text);
-            const data = "../datas/goods.json";
-            let data_list = document.querySelector(`.search-list`);
-            let list = "";
-            fetch(data)
-                .then(type => type.json())
-                .then(result => {
-                    let search = [];
-                    for (let i = 0; i < result.data.length; i++) {
-                        if (result.data[i].product_name.includes(text)
-                            || result.data[i].brand.includes(text)) {
-                            console.log(
-                                result.data[i].name,
-                                result.data[i].brand,
-                                result.data[i].product_name,
-                                result.data[i].price,
-                                result.data[i].discount
-                            );
-
-                            const picture = result.data[i].product_img.split(',')[0];
-                            list += `
-                            <figure class="search-item">
-                                <img src="../images/${result.data[i].name}/${picture.trim()}" alt="">
-                                <figcaption>
-                                    <p>
-                                        ${result.data[i].brand}
-                                    </p>
-                                    <p>
-                                        ${result.data[i].product_name}
-                                    </p>
-                                    <p>
-                                        <span> ${result.data[i].discount}</span>
-                                        <span> ${result.data[i].price}</span>
-                                    </p>
-                                </figcaption>
-                            </figure>
-                        `
-                        }
-                        data_list.innerHTML = list;
-                    }
-                }).catch(error => {
-                    console.log(error);
-                });
-        }
-        fnSearch(elementInput.value);
-    </script>
 </body>
 
 </html>
