@@ -210,9 +210,14 @@ main {
 
 @include res($pad) {
     main{
+        margin:0 20px;
+        .flex{
+            align-items: normal;
+            margin:0 auto;
+        }
         .input_direct{
             margin-left: 0;
-            width:97%;
+            width:97.5%;
         }
         #order_name , #receiver_name{
             width:30%;
@@ -226,7 +231,7 @@ main {
         }
         #order_email_address,#receiver_email_address{
             margin:0;
-            width: 63%;
+            width: 62%;
         }
         #order_tel,#receiver_tel{
             margin: 0 0 2% 5%;
@@ -265,7 +270,9 @@ main {
                 width:97%;
             }
         }
-
+        .section-second{
+            margin: 0 auto;
+        }
         .section-third{
             height:200px;
         }
