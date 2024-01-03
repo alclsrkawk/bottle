@@ -28,15 +28,23 @@ header .header-pc article .main-title {
   justify-content: center;
   align-items: center;
 }
-header .header-pc article .main-title p a {
+header .header-pc article .main-title p {
+  cursor: pointer;
+}
+header .header-pc article .main-title :nth-child(1) a {
   color: #EAB838;
 }
-header .header-pc article .main-title p img {
+header .header-pc article .main-title :nth-child(2) img {
   position: absolute;
   top: 0;
   right: 20%;
-  padding: 13px;
-  vertical-align: top;
+  padding: 10px;
+}
+header .header-pc article .main-title :nth-child(3) img {
+  position: absolute;
+  top: 0;
+  right: 18%;
+  padding: 10px;
 }
 header .header-pc article .main-menu nav {
   display: flex;
@@ -169,19 +177,18 @@ footer article .bottom div a {
     height: 35px;
     margin: 12px 0px 28px 0px;
     line-height: 80%;
-  }
-  header .header-pc article .main-title p {
     font-size: 1.2rem;
   }
-  header .header-pc article .main-title p a {
-    color: #EAB838;
-  }
-  header .header-pc article .main-title p img {
+  header .header-pc article .main-title :nth-child(2) img {
     position: absolute;
     top: 0;
     right: 5%;
-    padding: 10px;
-    vertical-align: top;
+    margin-right: 15px;
+  }
+  header .header-pc article .main-title :nth-child(3) img {
+    position: absolute;
+    top: 0;
+    right: 3%;
   }
   header .header-pc article .main-menu nav {
     height: 20px;
@@ -249,19 +256,18 @@ footer article .bottom div a {
     height: 44px;
     margin: 14px 0px 32px 0px;
     line-height: 100%;
-  }
-  header .header-pc article .main-title p {
     font-size: 1.45rem;
   }
-  header .header-pc article .main-title p a {
-    color: #EAB838;
-  }
-  header .header-pc article .main-title p img {
+  header .header-pc article .main-title :nth-child(2) img {
     position: absolute;
     top: 0;
     right: 10%;
-    padding: 10px;
-    vertical-align: top;
+    margin-right: 15px;
+  }
+  header .header-pc article .main-title :nth-child(3) img {
+    position: absolute;
+    top: 0;
+    right: 8%;
   }
   header .header-pc article .main-menu nav {
     height: 24px;

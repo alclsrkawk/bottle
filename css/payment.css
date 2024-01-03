@@ -28,15 +28,23 @@ header .header-pc article .main-title {
   justify-content: center;
   align-items: center;
 }
-header .header-pc article .main-title p a {
+header .header-pc article .main-title p {
+  cursor: pointer;
+}
+header .header-pc article .main-title :nth-child(1) a {
   color: #EAB838;
 }
-header .header-pc article .main-title p img {
+header .header-pc article .main-title :nth-child(2) img {
   position: absolute;
   top: 0;
   right: 20%;
-  padding: 13px;
-  vertical-align: top;
+  padding: 10px;
+}
+header .header-pc article .main-title :nth-child(3) img {
+  position: absolute;
+  top: 0;
+  right: 18%;
+  padding: 10px;
 }
 header .header-pc article .main-menu nav {
   display: flex;
@@ -169,19 +177,18 @@ footer article .bottom div a {
     height: 35px;
     margin: 12px 0px 28px 0px;
     line-height: 80%;
-  }
-  header .header-pc article .main-title p {
     font-size: 1.2rem;
   }
-  header .header-pc article .main-title p a {
-    color: #EAB838;
-  }
-  header .header-pc article .main-title p img {
+  header .header-pc article .main-title :nth-child(2) img {
     position: absolute;
     top: 0;
     right: 5%;
-    padding: 10px;
-    vertical-align: top;
+    margin-right: 15px;
+  }
+  header .header-pc article .main-title :nth-child(3) img {
+    position: absolute;
+    top: 0;
+    right: 3%;
   }
   header .header-pc article .main-menu nav {
     height: 20px;
@@ -249,19 +256,18 @@ footer article .bottom div a {
     height: 44px;
     margin: 14px 0px 32px 0px;
     line-height: 100%;
-  }
-  header .header-pc article .main-title p {
     font-size: 1.45rem;
   }
-  header .header-pc article .main-title p a {
-    color: #EAB838;
-  }
-  header .header-pc article .main-title p img {
+  header .header-pc article .main-title :nth-child(2) img {
     position: absolute;
     top: 0;
     right: 10%;
-    padding: 10px;
-    vertical-align: top;
+    margin-right: 15px;
+  }
+  header .header-pc article .main-title :nth-child(3) img {
+    position: absolute;
+    top: 0;
+    right: 8%;
   }
   header .header-pc article .main-menu nav {
     height: 24px;
@@ -649,11 +655,16 @@ main #address_1, main #address_2 {
 }
 @media (min-width: 390px) and (max-width: 768px) {
   main {
+    margin: 0 20px;
     margin: 0px 20px;
+  }
+  main .flex {
+    align-items: normal;
+    margin: 0 auto;
   }
   main .input_direct {
     margin-left: 0;
-    width: 97%;
+    width: 97.5%;
   }
   main #order_name, main #receiver_name {
     width: 30%;
@@ -667,7 +678,7 @@ main #address_1, main #address_2 {
   }
   main #order_email_address, main #receiver_email_address {
     margin: 0;
-    width: 63%;
+    width: 62%;
   }
   main #order_tel, main #receiver_tel {
     margin: 0 0 2% 5%;
@@ -701,6 +712,9 @@ main #address_1, main #address_2 {
   }
   main .requested .input_requested {
     width: 97%;
+  }
+  main .section-second {
+    margin: 0 auto;
   }
   main .section-third {
     height: 200px;
