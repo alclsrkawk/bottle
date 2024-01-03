@@ -24,7 +24,7 @@ const pageLoad = () => {
     window.addEventListener('scroll', function (e) {
         const elMenu = document.querySelector('.main-menu nav');
         const elAref = document.querySelectorAll('.main-menu nav a');
-        const elTilte = document.querySelector('.main-title p a');
+        const elTilte = document.querySelector('.main-title div a');
         const elHeader = document.querySelector('.header-pc');
 
         if (elMenu != null) {

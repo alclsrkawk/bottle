@@ -36,17 +36,49 @@ header {
                     align-items: center;
                 }
 
-                p {
-                    cursor: pointer;
-                }
-
                 :nth-child(1) {
+                    cursor: pointer;
+
                     a {
                         color: #EAB838;
                     }
                 }
 
                 :nth-child(2) {
+                    vertical-align: top;
+                    position: absolute;
+                    font-size: 0.8rem;
+                    width: 160px;
+                    top: -35%;
+                    right: 21%;
+                    padding: 10px;
+
+                    input {
+                        position: relative;
+                        font-size: 0.8rem;
+                        color: #fff;
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid #E0E2E7;
+                        padding-bottom: 5px;
+                        padding-left: 5px;
+                        background: none;
+                        z-index: 5;
+                    }
+
+                    input::placeholder {
+                        color: #E0E2E7;
+                    }
+
+                    input:focus {
+                        outline: none;
+                    }
+
+                }
+
+                :nth-child(3) {
+                    cursor: pointer;
+
                     img {
                         position: absolute;
                         top: 0;
@@ -55,7 +87,9 @@ header {
                     }
                 }
 
-                :nth-child(3) {
+                :nth-child(4) {
+                    cursor: pointer;
+
                     img {
                         position: absolute;
                         top: 0;
@@ -230,7 +264,6 @@ footer {
 
 }
 
-
 // PC -- 끝
 @include res($pad) {
     header {
@@ -244,6 +277,18 @@ footer {
                     font-size: 1.2rem;
 
                     :nth-child(2) {
+                        position: absolute;
+                        font-size: 0.7rem;
+                        width: 130px;
+                        top: 3%;
+                        right: 9%;
+
+                        input {
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    :nth-child(3) {
                         img {
                             position: absolute;
                             top: 0;
@@ -252,7 +297,7 @@ footer {
                         }
                     }
 
-                    :nth-child(3) {
+                    :nth-child(4) {
                         img {
                             position: absolute;
                             top: 0;
@@ -360,6 +405,18 @@ footer {
                     font-size: 1.45rem;
 
                     :nth-child(2) {
+                        position: absolute;
+                        font-size: 0.75rem;
+                        width: 140px;
+                        top: -10%;
+                        right: 13%;
+
+                        input {
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                    :nth-child(3) {
                         img {
                             position: absolute;
                             top: 0;
@@ -368,7 +425,7 @@ footer {
                         }
                     }
 
-                    :nth-child(3) {
+                    :nth-child(4) {
                         img {
                             position: absolute;
                             top: 0;
