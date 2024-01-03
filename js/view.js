@@ -169,7 +169,7 @@ let goodsView = function () {
     if (elInputText.value == '' | elInputText.value == 0) {
       alert('최소 1개는 선택해주세요');
     } else {
-      location.href = `./payment.html?idx=${params.idx}&name=${params.name}`;
+      location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}`;
     }
 
   }
