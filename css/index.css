@@ -29,19 +29,55 @@ header .header-pc article .main-title {
   justify-content: center;
   align-items: center;
 }
-header .header-pc article .main-title p {
+header .header-pc article .main-title :nth-child(1) {
   cursor: pointer;
 }
 header .header-pc article .main-title :nth-child(1) a {
   color: #EAB838;
 }
-header .header-pc article .main-title :nth-child(2) img {
+header .header-pc article .main-title :nth-child(2) {
+  vertical-align: top;
+  position: absolute;
+  font-size: 0.8rem;
+  width: 160px;
+  top: -35%;
+  right: 21%;
+  padding: 10px;
+}
+header .header-pc article .main-title :nth-child(2) input {
+  position: relative;
+  font-size: 0.8rem;
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #E0E2E7;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background: none;
+  z-index: 5;
+}
+header .header-pc article .main-title :nth-child(2) input::-moz-placeholder {
+  color: #E0E2E7;
+}
+header .header-pc article .main-title :nth-child(2) input::placeholder {
+  color: #E0E2E7;
+}
+header .header-pc article .main-title :nth-child(2) input:focus {
+  outline: none;
+}
+header .header-pc article .main-title :nth-child(3) {
+  cursor: pointer;
+}
+header .header-pc article .main-title :nth-child(3) img {
   position: absolute;
   top: 0;
   right: 20%;
   padding: 10px;
 }
-header .header-pc article .main-title :nth-child(3) img {
+header .header-pc article .main-title :nth-child(4) {
+  cursor: pointer;
+}
+header .header-pc article .main-title :nth-child(4) img {
   position: absolute;
   top: 0;
   right: 18%;
@@ -179,13 +215,23 @@ footer .footer-pc article .bottom div a {
     line-height: 80%;
     font-size: 1.2rem;
   }
-  header .header-pc article .main-title :nth-child(2) img {
+  header .header-pc article .main-title :nth-child(2) {
+    position: absolute;
+    font-size: 0.7rem;
+    width: 130px;
+    top: 3%;
+    right: 9%;
+  }
+  header .header-pc article .main-title :nth-child(2) input {
+    font-size: 0.7rem;
+  }
+  header .header-pc article .main-title :nth-child(3) img {
     position: absolute;
     top: 0;
     right: 5%;
     margin-right: 15px;
   }
-  header .header-pc article .main-title :nth-child(3) img {
+  header .header-pc article .main-title :nth-child(4) img {
     position: absolute;
     top: 0;
     right: 3%;
@@ -258,13 +304,23 @@ footer .footer-pc article .bottom div a {
     line-height: 100%;
     font-size: 1.45rem;
   }
-  header .header-pc article .main-title :nth-child(2) img {
+  header .header-pc article .main-title :nth-child(2) {
+    position: absolute;
+    font-size: 0.75rem;
+    width: 140px;
+    top: -10%;
+    right: 13%;
+  }
+  header .header-pc article .main-title :nth-child(2) input {
+    font-size: 0.75rem;
+  }
+  header .header-pc article .main-title :nth-child(3) img {
     position: absolute;
     top: 0;
     right: 10%;
     margin-right: 15px;
   }
-  header .header-pc article .main-title :nth-child(3) img {
+  header .header-pc article .main-title :nth-child(4) img {
     position: absolute;
     top: 0;
     right: 8%;
