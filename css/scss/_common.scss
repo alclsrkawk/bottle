@@ -37,21 +37,32 @@ header {
                 }
 
                 p {
+                    cursor: pointer;
+                }
+
+                :nth-child(1) {
                     a {
                         color: #EAB838;
                     }
+                }
 
+                :nth-child(2) {
                     img {
                         position: absolute;
                         top: 0;
                         right: 20%;
-
-                        padding: 13px;
-                        vertical-align: top;
+                        padding: 10px;
                     }
-
                 }
 
+                :nth-child(3) {
+                    img {
+                        position: absolute;
+                        top: 0;
+                        right: 18%;
+                        padding: 10px;
+                    }
+                }
             }
 
             .main-menu {
@@ -230,23 +241,23 @@ footer {
                     height: 35px;
                     margin: 12px 0px 28px 0px;
                     line-height: 80%;
+                    font-size: 1.2rem;
 
-                    p {
-                        font-size: 1.2rem;
-
-                        a {
-                            color: #EAB838;
-                        }
-
+                    :nth-child(2) {
                         img {
                             position: absolute;
                             top: 0;
                             right: 5%;
-
-                            padding: 10px;
-                            vertical-align: top;
+                            margin-right: 15px;
                         }
+                    }
 
+                    :nth-child(3) {
+                        img {
+                            position: absolute;
+                            top: 0;
+                            right: 3%;
+                        }
                     }
                 }
 
@@ -346,23 +357,23 @@ footer {
                     height: 44px;
                     margin: 14px 0px 32px 0px;
                     line-height: 100%;
+                    font-size: 1.45rem;
 
-                    p {
-                        font-size: 1.45rem;
-
-                        a {
-                            color: #EAB838;
-                        }
-
+                    :nth-child(2) {
                         img {
                             position: absolute;
                             top: 0;
                             right: 10%;
-
-                            padding: 10px;
-                            vertical-align: top;
+                            margin-right: 15px;
                         }
+                    }
 
+                    :nth-child(3) {
+                        img {
+                            position: absolute;
+                            top: 0;
+                            right: 8%;
+                        }
                     }
                 }
 
