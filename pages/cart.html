@@ -8,53 +8,24 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="../js/common.js"></script>
     <script defer src="../js/cart.js"></script>
+    <link rel="stylesheet" href="../css/cart.min.css">
 </head>
 
 <body>
     <button>장바구니 담기</button>
-    <script>
-        const cartBtn = document.querySelector('button');
-        let item = null;
-        cartBtn.onclick = () => {
-            // item1 =
-            //     [{
-            //         "Idx": 1
-            //         , "name": "wine"
-            //         , "product_name": "블루와인컴퍼니 캔와인 캠벨 스위트 와인"
-            //         , "price": "9,900원"
-            //         , "discount": "9,400원"
-            //         , "brand": "술마켓"
-            //         , "product_img": "wine1.png"
-            //     }]
-
-            item1 =
-                [{
-                    "Idx": 5
-                    , "name": "whisky"
-                    , "product_name": "발렌타인 글렌버기 15년산"
-                    , "price": "200,000원"
-                    , "discount": "149,000원"
-                    , "brand": "발렌타인"
-                    , "product_img": "ballantinesGlenburgie.jpg"
-                }]
-
-            fnCart(item1)
-        }
-        //장바구니 저장 
-        const fnCart = (obj) => {
-            let newItem = JSON.parse(localStorage.getItem('products'));
-            console.log("newItem :", newItem)
-            if (newItem != null) {
-                newItem.push(obj)
-                localStorage.setItem('products', JSON.stringify(newItem));
-            }
-            else {
-                localStorage.setItem('products', JSON.stringify(obj));
-            }
-            console.log(localStorage.getItem('products'))
-        }
-
-    </script>
+    <h1>장바구니</h1>
+    <div class="cart" id="asd">
+        <!-- <div class="cart_1">
+            <li><img src="../images/beer/beer1.png" alt=""></li>
+        </div>
+        <div class="cart_2">
+            <b>홀리워터 첫사랑 25도 375ml 맥주홉증류주 <span>홀리워터</span></b><br>
+            <p>23,650원<span>24,900원</span></p>
+            <div>
+                수량 : <input type="number" value="1" min="1">
+            </div>
+        </div> -->
+    </div>
 </body>
 
 </html>
