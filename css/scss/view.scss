@@ -263,6 +263,7 @@ main {
 
     .m_buy_all {
         display: none;
+
         .m_down_up {
             display: block;
             width: 20%;
@@ -621,6 +622,7 @@ main {
 
         .m_buy_all {
             display: none;
+
             .m_down_up {
                 display: block;
                 width: 20%;
@@ -860,51 +862,92 @@ main {
             position: fixed;
             bottom: 0;
             transition: 1s;
-            // transform: translateY(107px);
-            &.active{
-            transition: 1s;
-            transform: translateY(0%);
+            transform: translateY(164.55px);
+
+            &.active {
+                transition: 1s;
+                transform: translateY(0%);
             }
+
             .m_down_up {
                 width: 20%;
-                background-color: rgb(112, 112, 112);
+                background-color: gray;
                 text-align: center;
-                color: black;
+                color: white;
                 margin: 0 auto;
-                
+
+                &.active {
+                    transform: rotate(180deg);
+
+                }
+
             }
 
             .m_buy {
                 border-top: 1px solid black;
-                border-bottom: 1px solid black;
+
                 background-color: white;
                 color: black;
 
-
                 #m_line {
-                    border-bottom: 1px solid white;
+                    border-bottom: 1px solid black;
                 }
 
                 .m_textbox {
-                    padding: 10px;
+                    padding: 0px;
+                    margin: 10px 0;
+                    text-align: center;
 
                     .m_text1 {
-                        p {}
+
+                        p {
+                            font-weight: bolder;
+                            text-align: left;
+                            margin-bottom: 10px;
+                        }
                     }
 
                     #m_text2 {
                         width: 100%;
-                        height: 100%;
-                        display: flex;
                         justify-content: space-between;
-                        align-items: center;
 
-                        .m_input_text {
-                            width: 30%;
+                        .m_inputbox {
+                            display: flex;
 
+                            .m_valuedown {
+                                width: 13%;
+
+                                border: 1px solid black;
+
+                            }
+
+                            .m_price1 {}
+
+                            .m_input_text {
+                                width: 13%;
+
+                            }
+
+                            .m_valueup {
+                                width: 13%;
+
+                                border: 1px solid black;
+
+
+                            }
                         }
 
-                        p {}
+                        .m_input_text::-webkit-outer-spin-button,
+                        .m_input_text::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+
+
+                        p {
+                            font-weight: bolder;
+                        }
 
                     }
                 }
@@ -913,13 +956,27 @@ main {
                     text-align: center;
                     border-top: 1px solid black;
 
-                    #m_button1_location {
-                        
-                        .m_location {
+                    p {
+                        font-weight: bolder;
+                        margin: 10px 0;
+                        width: 100%;
+                        text-align: end;
+                        .m_goodssum {
                             
+                        }
+                    }
+
+                    #m_button1_location {
+
+                        .m_location {
+
                             .m_button1 {
-                               
+                                width: 50%;
+                                height: 30px;
+                                border: 1px solid white;
+                                background-color: black;
                                 color: white;
+
                             }
                         }
                     }

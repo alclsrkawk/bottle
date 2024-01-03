@@ -24,7 +24,9 @@ const elImg = document.querySelector('.view_img_1'),
   elTextBox = document.querySelector('.text_box'),
   elExImg = document.querySelector('.img_ex'),
   elGoodsImg = document.querySelector('.goods_img'),
-  elGoodInfo2 = document.querySelector('.goods_info2');
+  elGoodInfo2 = document.querySelector('.goods_info2'),
+  elMText1 = document.querySelector('.m_text1'),
+  elMPrice1 = document.querySelector('.m_price1');
 
 // console.log(elGoodInfo2);
 
@@ -42,6 +44,8 @@ let goodsView = function () {
   let e = '';
   let g = '';
   let h = '';
+  let l = '';
+  let m = '';
   for (let i = 0; i < goods.length; i++) {
     if (goods[i].Idx == params.idx) {
       const picture = goods[i].product_img.split(',');
@@ -78,6 +82,10 @@ let goodsView = function () {
       h += `<span>${goods[i].brand}</span>
             <p>${goods[i].product_name}</p>`
 
+      l += `<p>${goods[i].product_name}</p>`
+
+      m += `${goods[i].discount}`
+
     }
 
   }
@@ -89,6 +97,8 @@ let goodsView = function () {
   elExImg.innerHTML = e;
   elGoodsImg.innerHTML = g;
   elGoodInfo2.innerHTML = h;
+  elMText1.innerHTML = l;
+  elMPrice1.innerHTML = m;
 
 
   const elMainImg = document.querySelector('.view_main_img'),
@@ -100,10 +110,14 @@ let goodsView = function () {
     elGoodsExLine = document.querySelector('.goods_ex_line'),
     elGoodsReviewLine = document.querySelector('.goods_review_line'),
     elGoodsEx = document.querySelector('.img_ex_text'),
+    elMDownUp = document.querySelector('.m_down_up'),
+    elMBuy = document.querySelector('.m_buy_all'),
+    elMValueDonw = document.querySelector('.m_valuedown'),
+    elMValueUp = document.querySelector('.m_valueup'),
+    elMInputText = document.querySelector('.m_input_text'),
+    elMLocation = document.querySelector('.m_location'),
+    elMGoodsSum = document.querySelector('.m_goodssum'),
     elReview = document.querySelector('section');
-
-
-
 
   elExpand.onclick = function (e) {
     e.preventDefault();
@@ -129,7 +143,6 @@ let goodsView = function () {
 
   })
 
-
   elGoodsExLine.onclick = function (e) {
     e.preventDefault();
     elGoodsEx.style.display = 'flex';
@@ -147,19 +160,50 @@ let goodsView = function () {
     elGoodsReviewLine.classList.add('active');
   }
 
+  elMDownUp.onclick = function(){
+    console.log('dsadsa')
+    elMBuy.classList.toggle('active');
+    elMDownUp.classList.toggle('active');
+  }
+
   elInputText.onclick = function () {
+    console.log(elInputText.value)
+  let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
+  let goodsSum = (elInputText.value * TransNum).toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
+  let f = ''
+  f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
+  text3.innerHTML = f;
+    
 
-    // console.log(parseInt(z.discount.replaceAll(',', '')));
-    // parseInt 정수만 나오게 replaceAll(',','') ,지우기
-    // console.log('asd')
-    let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
-    let goodsSum = (elInputText.value * TransNum).toString()
+}
+
+elMValueDonw.onclick = function(){
+  if(elMInputText.value == 0){
+
+  }else{
+    elMInputText.value--
+    changeInput();
+  }
+}
+
+elMValueUp.onclick = function(){
+    elMInputText.value++;
+    changeInput();
+}
+
+elMInputText.oninput = function(){
+  
+}
+
+const changeInput =() =>{
+  // console.log(elMInputText.value)
+  let TransNum1 = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
+    let goodsSum1 = (elMInputText.value * TransNum1).toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
-    let f = ''
-    f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
-    text3.innerHTML = f;
-    // console.log(Sum.innerText)
-
+    let k = ''
+    k += ` ${goodsSum1}원`;
+    elMGoodsSum.innerHTML = k;
 }
 
   elLocation.onclick = function (e) {
@@ -170,6 +214,18 @@ let goodsView = function () {
       alert('최소 1개는 선택해주세요');
     } else {
       location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}`;
+    }
+
+  }
+
+  elMLocation.onclick = function (e) {
+
+    e.preventDefault()
+
+    if (elMInputText.value == '' | elMInputText.value == 0) {
+      alert('최소 1개는 선택해주세요');
+    } else {
+      location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elMInputText.value}`;
     }
 
   }
