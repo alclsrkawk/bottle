@@ -78,7 +78,7 @@ let goodsView = function () {
       e += `<img src="../images/${params.name}/${goods[i].explain}" alt="">`
 
       g += `<p class="goods_img"><img src="../images/${params.name}/${picture[0]}" alt=""></p>`
-  
+
       h += `<span>${goods[i].brand}</span>
             <p>${goods[i].product_name}</p>`
 
@@ -107,6 +107,7 @@ let goodsView = function () {
     elFold = document.querySelector('.fold'),
     elInputText = document.querySelector('.input_text'),
     elLocation = document.querySelector('.location'),
+    elCart = document.querySelector('.cart'),
     elGoodsExLine = document.querySelector('.goods_ex_line'),
     elGoodsReviewLine = document.querySelector('.goods_review_line'),
     elGoodsEx = document.querySelector('.img_ex_text'),
@@ -118,6 +119,7 @@ let goodsView = function () {
     elMLocation = document.querySelector('.m_location'),
     elMGoodsSum = document.querySelector('.m_goodssum'),
     elReview = document.querySelector('section');
+
 
   elExpand.onclick = function (e) {
     e.preventDefault();
@@ -160,62 +162,74 @@ let goodsView = function () {
     elGoodsReviewLine.classList.add('active');
   }
 
-  elMDownUp.onclick = function(){
-    console.log('dsadsa')
-    elMBuy.classList.toggle('active');
-    elMDownUp.classList.toggle('active');
-  }
-
   elInputText.onclick = function () {
     console.log(elInputText.value)
-  let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
-  let goodsSum = (elInputText.value * TransNum).toString()
-    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
-  let f = ''
-  f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
-  text3.innerHTML = f;
-    
-
-}
-
-elMValueDonw.onclick = function(){
-  if(elMInputText.value == 0){
-
-  }else{
-    elMInputText.value--
-    changeInput();
-  }
-}
-
-elMValueUp.onclick = function(){
-    elMInputText.value++;
-    changeInput();
-}
-
-elMInputText.oninput = function(){
-  
-}
-
-const changeInput =() =>{
-  // console.log(elMInputText.value)
-  let TransNum1 = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
-    let goodsSum1 = (elMInputText.value * TransNum1).toString()
+    let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
+    let goodsSum = (elInputText.value * TransNum).toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
-    let k = ''
-    k += ` ${goodsSum1}원`;
-    elMGoodsSum.innerHTML = k;
-}
+    let f = ''
+    f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
+    text3.innerHTML = f;
+
+
+  }
 
   elLocation.onclick = function (e) {
 
     e.preventDefault()
 
     if (elInputText.value == '' | elInputText.value == 0) {
-      swalMsg(0,"수량 선택", "최소 1개의 수량을 선택해주세요.");
+      swalMsg(0, "수량 선택", "최소 1개의 수량을 선택해주세요.");
     } else {
       location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}`;
     }
 
+  }
+
+  elLocation.onclick = function (e) {
+
+    e.preventDefault()
+
+    if (elInputText.value == '' | elInputText.value == 0) {
+      swalMsg(0, "수량 선택", "최소 1개의 수량을 선택해주세요.");
+    } else {
+      location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}`;
+    }
+
+  }
+
+  elMDownUp.onclick = function () {
+    console.log('dsadsa')
+    elMBuy.classList.toggle('active');
+    elMDownUp.classList.toggle('active');
+  }
+
+  elMValueDonw.onclick = function () {
+    if (elMInputText.value == 0) {
+
+    } else {
+      elMInputText.value--
+      changeInput();
+    }
+  }
+
+  elMValueUp.onclick = function () {
+    elMInputText.value++;
+    changeInput();
+  }
+
+  elMInputText.oninput = function () {
+
+  }
+
+  const changeInput = () => {
+    // console.log(elMInputText.value)
+    let TransNum1 = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
+    let goodsSum1 = (elMInputText.value * TransNum1).toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
+    let k = ''
+    k += ` ${goodsSum1}원`;
+    elMGoodsSum.innerHTML = k;
   }
 
   elMLocation.onclick = function (e) {
@@ -223,10 +237,41 @@ const changeInput =() =>{
     e.preventDefault()
 
     if (elMInputText.value == '' | elMInputText.value == 0) {
-      swalMsg(0,"수량 선택", "최소 1개의 수량을 선택해주세요.");
+      swalMsg(0, "수량 선택", "최소 1개의 수량을 선택해주세요.");
     } else {
       location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elMInputText.value}`;
     }
 
   }
+
+  let item = null;
+  let AB = params.idx - 1
+  const picture1 = goods[AB].product_img.split(',');
+  elCart.onclick = function () {
+    item1 =
+      [{
+        "Idx": AB
+        , "name": params.name
+        , "product_name": goods[AB].product_name
+        , "price": goods[AB].price
+        , "discount": goods[AB].discount
+        , "product_img": picture1[0]
+        , "brand": goods[AB].brand
+        , "ea": goods[AB].value
+      }]
+    fnCart(item1)
+  }
+  //장바구니 저장 
+  const fnCart = (obj) => {
+    let newItem = JSON.parse(localStorage.getItem('products'));
+    // console.log("newItem :", newItem)
+    if (newItem != null) {
+        newItem.push(obj)
+        localStorage.setItem('products', JSON.stringify(newItem));
+    }
+    else {
+        localStorage.setItem('products', JSON.stringify(obj));
+    }
+    console.log(localStorage.getItem('products'))
+}
 }

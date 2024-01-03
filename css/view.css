@@ -572,9 +572,16 @@ main .view_1 .view_text .btn_buy #text3 b {
   font-weight: bold;
 }
 main .view_1 .view_text .btn_buy #button1_location {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .view_1 .view_text .btn_buy #button1_location .cart {
+  width: 240px;
+  height: 47px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: aqua;
 }
 main .view_1 .view_text .btn_buy #button1_location .location .button1 {
   width: 240px;
