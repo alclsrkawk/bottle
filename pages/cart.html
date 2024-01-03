@@ -5,13 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>장바구니</title>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="../js/common.js"></script>
     <script defer src="../js/cart.js"></script>
 </head>
 
 <body>
+    <button>장바구니 담기</button>
+    <script>
+        const cartBtn = document.querySelector('button');
+        let item = null;
+        cartBtn.onclick = () => {
+            // item1 =
+            //     [{
+            //         "Idx": 1
+            //         , "name": "wine"
+            //         , "product_name": "블루와인컴퍼니 캔와인 캠벨 스위트 와인"
+            //         , "price": "9,900원"
+            //         , "discount": "9,400원"
+            //         , "brand": "술마켓"
+            //         , "product_img": "wine1.png"
+            //     }]
 
+            item1 =
+                [{
+                    "Idx": 5
+                    , "name": "whisky"
+                    , "product_name": "발렌타인 글렌버기 15년산"
+                    , "price": "200,000원"
+                    , "discount": "149,000원"
+                    , "brand": "발렌타인"
+                    , "product_img": "ballantinesGlenburgie.jpg"
+                }]
+
+            fnCart(item1)
+        }
+        //장바구니 저장 
+        const fnCart = (obj) => {
+            let newItem = JSON.parse(localStorage.getItem('products'));
+            console.log("newItem :", newItem)
+            if (newItem != null) {
+                newItem.push(obj)
+                localStorage.setItem('products', JSON.stringify(newItem));
+            }
+            else {
+                localStorage.setItem('products', JSON.stringify(obj));
+            }
+            console.log(localStorage.getItem('products'))
+        }
+
+    </script>
 </body>
 
 </html>
