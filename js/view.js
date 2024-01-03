@@ -211,7 +211,7 @@ const changeInput =() =>{
     e.preventDefault()
 
     if (elInputText.value == '' | elInputText.value == 0) {
-      alert('최소 1개는 선택해주세요');
+      swalMsg(0,"수량 선택", "최소 1개의 수량을 선택해주세요.");
     } else {
       location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elInputText.value}`;
     }
@@ -223,7 +223,7 @@ const changeInput =() =>{
     e.preventDefault()
 
     if (elMInputText.value == '' | elMInputText.value == 0) {
-      alert('최소 1개는 선택해주세요');
+      swalMsg(0,"수량 선택", "최소 1개의 수량을 선택해주세요.");
     } else {
       location.href = `./payment.html?idx=${params.idx}&name=${params.name}&ea=${elMInputText.value}`;
     }
