@@ -286,3 +286,10 @@ const elSel = document.querySelector('.select'),
           }
         }
       });
+
+      elYear.onchange=function(){
+        console.log(year.value)
+      }    
+
+
+    

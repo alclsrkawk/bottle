@@ -9,7 +9,7 @@ main {
         width: 50px;
         height: 50px;
         border: none;
-        background: url(../../images/icons/up.png) no-repeat center;
+        background: url(../images/icons/up.png) no-repeat center;
         background-color: rgba(0, 0, 0, 0.3);
         transform: translateY(150px);
         transition: 1.0s;
@@ -26,7 +26,7 @@ main {
         width: 50px;
         height: 50px;
         border: none;
-        background: url(../../images/icons/down.png) no-repeat center;
+        background: url(../images/icons/down.png) no-repeat center;
         background-color: rgba(0, 0, 0, 0.3);
         transform: translateY(100px);
         transition: 1.0s;
@@ -143,7 +143,7 @@ main {
                         top: 0;
                         color: #000;
                         //background-image: url(../../images/list_bg/top_badge.png);
-                        background: url(../../images/list_bg/top_badge.png) no-repeat;
+                        background: url(../images/list_bg/top_badge.png) no-repeat;
                         background-size: cover;
                         font-size: 0.9rem;
                         padding: 10px 20px 10px 30px;
