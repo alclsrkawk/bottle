@@ -17,6 +17,7 @@ const fnSearch = (text) => {
         .then(type => type.json())
         .then(result => {
             let search = [];
+            data_list.innerHTML = "";
             for (let i = 0; i < result.data.length; i++) {
                 if (result.data[i].product_name.includes(text)
                     || result.data[i].brand.includes(text)) {
