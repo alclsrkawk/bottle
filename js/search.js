@@ -12,6 +12,7 @@ const fnSearch = (text) => {
     const data = "../datas/goods.json";
     let data_list = document.querySelector(`.search-list`);
     let list = "";
+
     fetch(data)
         .then(type => type.json())
         .then(result => {
@@ -23,7 +24,7 @@ const fnSearch = (text) => {
                     // console.log("search", search)
                     const picture = result.data[i].product_img.split(',')[0];
                     list += `
-                            <figure class="search-item">
+                            <figure class="search-item" data-idx="${result.data[i].Idx}" data-name="${result.data[i].name}">
                                 <img src="../images/${result.data[i].name}/${picture.trim()}" alt="">
                                 <figcaption>
                                     <p>
@@ -39,10 +40,10 @@ const fnSearch = (text) => {
                                 </figcaption>
                             </figure>
                         `
+                    data_list.innerHTML = list;
                 }
-                data_list.innerHTML = list;
             }
-
+            fnLocation();
             const searchText = document.querySelector('.search-text'),
                 searchLength = document.querySelector('.search-length');
             searchText.innerText = `'${elementInput.value}'`;
@@ -55,9 +56,10 @@ const fnSearch = (text) => {
 // 클릭시 상세로 이동
 let fnLocation = () => {
     const searchItem = document.querySelectorAll('.search-item');
-    searchItem.forEach(element => {
-        element.onclick = () => {
-            console.log(element)
+    searchItem.forEach(function (element, i) {
+        console.log(element)
+        element.onclick = function () {
+            location.href = `./view.html?idx=${element.dataset.idx}&name=${element.dataset.name}`;
         }
     });
 }
@@ -68,12 +70,11 @@ if (params.stext != "") {
     if (value != "") {
         elementInput.value = value;
         fnSearch(elementInput.value);
-        fnLocation();
+        console.log("params start :", elementInput.value)
     }
 }
 
 //사용자가 직접 검색
 elementBtn.onclick = () => {
     fnSearch(elementInput.value);
-    fnLocation();
 }
