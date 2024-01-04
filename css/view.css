@@ -622,6 +622,7 @@ main .view_1 .view_text .btn_buy #text3 p {
   color: #8C8D96;
   font-size: 18px;
   text-align: right;
+  margin-bottom: 10px;
 }
 main .view_1 .view_text .btn_buy #text3 b {
   color: black;
@@ -631,6 +632,9 @@ main .view_1 .view_text .btn_buy #text3 b {
 main .view_1 .view_text .btn_buy #button1_location {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 main .view_1 .view_text .btn_buy #button1_location .cart {
   width: 240px;
@@ -788,12 +792,11 @@ main .m_buy_all .m_buy .m_btn_buy {
 
 @media (min-width: 390px) and (max-width: 768px) {
   main {
-    width: 100%;
+    width: 768px;
     padding-top: 120px;
     margin: 0 5px;
   }
   main .view_1 {
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -822,10 +825,9 @@ main .m_buy_all .m_buy .m_btn_buy {
     margin-right: 20px;
   }
   main .view_1 .view_text {
+    position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 600px;
     color: #8C8D96;
     font-size: 18px;
     margin: 40px 0;
@@ -903,9 +905,11 @@ main .m_buy_all .m_buy .m_btn_buy {
     font-weight: bold;
   }
   main .view_1 .view_text .btn_buy #button1_location {
-    position: static;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
     width: 100%;
-    text-align: right;
+    bottom: 0;
   }
   main .view_1 .view_text .btn_buy #button1_location .location .button1 {
     width: 240px;
@@ -1251,14 +1255,17 @@ main .m_buy_all .m_buy .m_btn_buy {
     justify-content: space-between;
   }
   main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_cart {
-    width: 30%;
+    width: 40%;
     height: 30px;
-    border: 1px solid white;
-    background-color: black;
-    color: white;
+    border: 1px solid black;
+    background-color: aqua;
+    color: black;
+  }
+  main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_location {
+    width: 40%;
   }
   main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_location .m_button1 {
-    width: 30%;
+    width: 100%;
     height: 30px;
     border: 1px solid white;
     background-color: black;
