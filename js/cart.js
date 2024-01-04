@@ -1,8 +1,8 @@
 const cartBtn = document.querySelector('button');
-let item = null;
 
 if (localStorage.getItem('products') == null) {
-    list.innerHTML = '<p>삼품없음</p>';
+    list.innerHTML = '<p class=list_1>장바구니에 담긴 상품이 없습니다.<br>상품을 장바구니에 담아주세요</p>';
+    all_del.style.display='none';
 } else {
 
     let addList = '';
@@ -20,8 +20,9 @@ if (localStorage.getItem('products') == null) {
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
             <div class="cart_2">
-                <b>${localArr.product_name} <span>${localArr.brand}</span></b><br>
-                <p>${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}<span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span></p>
+                <b>${localArr.product_name}<br><span>${localArr.brand}</span><br><br>
+                ${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"} <span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span>
+                </b>
                 <div>
                     수량 : ${localArr.ea}개
                 </div>
@@ -39,11 +40,24 @@ if (localStorage.getItem('products') == null) {
             newItem.splice(key,1);
             localStorage.setItem("products",JSON.stringify(newItem));
             location.reload()
+            if (localStorage.getItem('products') =='[]') {
+                localStorage.removeItem('products');
+                if (localStorage.getItem('products') == null) {
+                    list.innerHTML = '<p class=list_1>장바구니에 담긴 상품이 없습니다.<br>상품을 장바구니에 담아주세요</p>';
+                    all_del.style.display='none';
+                }
+            }
+            // list.innerHTML = '<p>삼품없음</p>';
+            
         }
     });
     all_del.onclick = function(){
         localStorage.removeItem('products');
         location.reload()
+        if (localStorage.getItem('products') == null) {
+            list.innerHTML = '<p class=list_1>장바구니에 담긴 상품이 없습니다.<br>상품을 장바구니에 담아주세요</p>';
+            all_del.style.display='none';
+        }
     }
 }
 
