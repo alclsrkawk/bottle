@@ -139,9 +139,18 @@ main {
                 }
 
                 #button1_location {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
+                    display: flex;
+                    justify-content: space-between;
+                
+                    .cart{
+                        width: 240px;
+                            height: 47px;
+                            color: black;
+                            font-size: 14px;
+                            font-weight: bold;
+                            background-color: aqua;
+
+                    }
 
                     .location {
 
