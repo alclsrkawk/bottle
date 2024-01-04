@@ -1,3 +1,4 @@
+
 // list에서 클릭한 데이터 값 받아오기
 function getUrlParams() {
   const params = {};
@@ -99,6 +100,33 @@ let goodsView = function () {
   elGoodInfo2.innerHTML = h;
   elMText1.innerHTML = l;
   elMPrice1.innerHTML = m;
+
+  up.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        bottom: 100000,
+        behavior: "smooth"
+    });
+  
+  }
+  down.onclick = function () {
+    window.scrollTo({
+        top: 100000,
+        bottom: 0,
+        behavior: "smooth"
+    });
+  }
+  const firstTab = document.querySelector('.view_1');
+  window.addEventListener("scroll", function () {
+    if (firstTab.getBoundingClientRect().y <= 0) {
+        up.style = "transform: translateY(-50px)";
+        down.style = "transform: translateY(-50px)";
+    } else {
+        up.style = "transform: translateY(150px)";
+        down.style = "transform: translateY(150px)";
+    }
+});
+  
 
 
   const elMainImg = document.querySelector('.view_main_img'),
