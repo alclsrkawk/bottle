@@ -111,4 +111,33 @@ main {
 
         }
     }
+    .btn_buy1{
+        // border: 1px solid #d9d9d9;
+        border-radius: 20px;
+        // padding: 50px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+        width:800px;
+        p{
+            font-size: 24px;
+            b{
+                font-size: 30px;
+            }
+        }
+        #button2_location{
+            a{
+                button{
+                    width:200px;
+                    height:47px;
+                    background-color: black;
+                    color:white;
+                    font-weight: bolder;
+                    font-size: 20px;
+                }
+            }
+        }
+        
+    }
 }
