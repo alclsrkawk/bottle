@@ -56,9 +56,6 @@ header .header-pc article .main-title :nth-child(2) input {
   background: none;
   z-index: 5;
 }
-header .header-pc article .main-title :nth-child(2) input::-moz-placeholder {
-  color: #000;
-}
 header .header-pc article .main-title :nth-child(2) input::placeholder {
   color: #000;
 }
@@ -598,9 +595,7 @@ footer article .bottom div a {
   font-family: "Noto Sans KR", sans-serif;
   border: 0;
   border-bottom: 1px solid #000;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: url("../images/icons/dropdown_down.png") no-repeat 100% 50%/15px auto;
   position: relative;
   width: 150px;
@@ -738,8 +733,7 @@ footer article .bottom div a {
   background: gray;
   width: 100px;
   height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-section .review-container .write-review .popup-container #review-popup .goods .goods_img img {
   width: 100%;
@@ -865,7 +859,7 @@ footer article .bottom div a {
 }
 .main-section .review-list-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   font-size: 1rem;
   padding: 40px 0;
 }

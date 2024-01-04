@@ -41,19 +41,8 @@ fetch("../datas/review.json")
         // console.log(error);
     });
 
-
-
-let reviewPage = function () {
-    // ------------------- review.json data 뿌리기 ----------------------
-    let PrintReviewList = function () {
-        // localstorage에 현재 주소(키)가 있으면 가져오고 없음 말기
-        if (localStorage.getItem(location.href)) {
-            reviewList = [...aaa];
-            // console.log('키값이 있어용')
-            let newArr = localStorage.getItem(location);
-            reviewList.push(...JSON.parse(newArr));
-        }
-        let resultArr = '';
+let fnPrintReview = function () {
+    let resultArr = '';
         reviewList.forEach((el, i) => {
             // console.log(el.id)
             resultArr += `<li class="list-result">
@@ -70,7 +59,19 @@ let reviewPage = function () {
         </li>`
         });
         reviewListCont.innerHTML = resultArr;
-        // console.log(resultArr)
+}
+
+let reviewPage = function () {
+    // ------------------- review.json data 뿌리기 ----------------------
+    let PrintReviewList = function () {
+        // localstorage에 현재 주소(키)가 있으면 가져오고 없음 말기
+        if (localStorage.getItem(location.href)) {
+            reviewList = [...aaa];
+            // console.log('키값이 있어용')
+            let newArr = localStorage.getItem(location);
+            reviewList.push(...JSON.parse(newArr));
+        }
+        fnPrintReview();
     }
     PrintReviewList();
 
@@ -159,18 +160,18 @@ let reviewPage = function () {
             selectBox.classList.toggle('active');
             let arrayReviewFunc = function () {
                 if (el.dataset.num == "2") { // 인기순
-                    reviewList.sort((a, b) => b.like - a.like);
-                    PrintReviewList();
+                    reviewList.sort((a, b) => a.like - b.like);
+                    fnPrintReview();
                     likeGradeFunc();
                     likeBtnEvent();
                 } else if (el.dataset.num == "3") { // 별점순
-                    reviewList.sort((a, b) => b.grade - a.grade);
-                    PrintReviewList();
+                    reviewList.sort((a, b) => a.grade - b.grade);
+                    fnPrintReview();
                     likeGradeFunc();
                     likeBtnEvent();
-                } else { // 최신순
-                    reviewList.sort((a, b) => b.date - a.date);
-                    PrintReviewList();
+                } else if (el.dataset.num == "1") { // 최신순
+                    reviewList.sort((a, b) => a.Idx - b.Idx);
+                    fnPrintReview();
                     likeGradeFunc();
                     likeBtnEvent();
                 }
