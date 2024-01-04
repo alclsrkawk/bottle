@@ -525,10 +525,18 @@ footer article .bottom div a {
     letter-spacing: -0.12px;
   }
 }
+header {
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .search {
   max-width: 1180px;
   padding: 0 5px;
   margin: 80px auto;
+  margin-top: 210px;
 }
 
 .search-result {
@@ -596,6 +604,7 @@ footer article .bottom div a {
 .search-result .search-list .search-item figcaption p:nth-of-type(1) {
   color: #B2B3B9;
   font-size: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 .search-result .search-list .search-item figcaption p:nth-of-type(3) {
   margin-top: 1rem;
