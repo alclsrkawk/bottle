@@ -112,6 +112,7 @@ let goodsView = function () {
     elGoodsReviewLine = document.querySelector('.goods_review_line'),
     elGoodsEx = document.querySelector('.img_ex_text'),
     elMDownUp = document.querySelector('.m_down_up'),
+    elMCart = document.querySelector('.m_cart'),
     elMBuy = document.querySelector('.m_buy_all'),
     elMValueDonw = document.querySelector('.m_valuedown'),
     elMValueUp = document.querySelector('.m_valueup'),
@@ -252,7 +253,32 @@ let goodsView = function () {
         , "ea": elInputText.value
       }
       fnCart(item1)
-      swalMsg(0, "장바구니", "장바구니에 저장되었습니다.");
+      swalMsg(1, "장바구니", "장바구니에 저장되었습니다.");
+    }
+    
+  }
+
+  let item2 = null;
+  let AB2 = params.idx - 1
+  const picture2 = goods[AB].product_img.split(',');
+  elMCart.onclick = function () {
+    // console.log(goods[AB2].value)
+    if (elMInputText.value == 0 || elMInputText.value == '') {
+      swalMsg(0, "수량 선택", "최소 1개의 수량을 선택해주세요.");
+    } else {
+      item2 =
+      {
+        "Idx": AB2
+        , "name": params.name
+        , "product_name": goods[AB2].product_name
+        , "price": goods[AB2].price
+        , "discount": goods[AB2].discount
+        , "product_img": picture1[0]
+        , "brand": goods[AB2].brand
+        , "ea": elMInputText.value
+      }
+      fnCart(item2)
+      swalMsg(1, "장바구니", "장바구니에 저장되었습니다.");
     }
     
   }
@@ -273,5 +299,5 @@ let goodsView = function () {
     // console.log(localStorage.getItem('products'))
   }
   let ABC = JSON.parse(localStorage.getItem('products'));
-console.log(ABC[0])
+// console.log(ABC[0])
 }
