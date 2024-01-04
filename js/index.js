@@ -75,8 +75,8 @@ const sideClose = () => {
     }
 }
 
-const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
-    , '../datas/soju_view.json', '../datas/whisky_view.json'];
+// const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
+//     , '../datas/soju_view.json', '../datas/whisky_view.json'];
 
 let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
 let elWine = document.querySelector(`#dv-wine`);
@@ -209,7 +209,10 @@ const fetchData = (data, name) => {
 }
 
 const getData = () => {
-     fetchData('../datas/wine_view.json', "wine");
+    fetchData('../datas/wine_view.json', "wine");
+    fetchData('../datas/beer_view.json', "beer");
+    fetchData('../datas/soju_view.json', "soju");
+    fetchData('../datas/whisky_view.json', "whisky");
     // fetchData(jsondata[0], "wine");
     // fetchData(jsondata[1], "beer");
     // fetchData(jsondata[2], "soju");
