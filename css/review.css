@@ -746,6 +746,8 @@ footer article .bottom div a {
   height: 100%;
 }
 .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info {
+  width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -755,6 +757,9 @@ footer article .bottom div a {
   color: gray;
 }
 .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin: 0;
   font-size: 1.1rem;
 }
