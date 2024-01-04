@@ -28,21 +28,21 @@ sameInfo.onclick = function () {
         receiver_email.value = order_email.value; //이메일
         receiver_email_address.value = order_email_address.value; //이메일주소
         receiver_tel.onclick = function () {
-            if(receiver_tel.value !== order_tel.value){
+            if (receiver_tel.value !== order_tel.value) {
                 same.checked = false;
-            } else{
+            } else {
                 same.checked = true;
             }
         }
-        receiver_email_address.onclick = function(){
-            if(receiver_email_address.value !== order_email_address.value){
+        receiver_email_address.onclick = function () {
+            if (receiver_email_address.value !== order_email_address.value) {
                 same.checked = false;
                 if (receiver_email_address.value == "direct") {
                     receiver_direct.style.display = "block";
                 } else if (receiver_email_address.value !== "direct") {
                     receiver_direct.style.display = "none";
                 }
-            }else{
+            } else {
                 same.checked = true;
                 if (receiver_email_address.value !== "direct") {
                     receiver_direct.style.display = "none";
@@ -57,13 +57,13 @@ sameInfo.onclick = function () {
         }
 
     }
-    receiver_name.onkeydown = function(){
+    receiver_name.onkeydown = function () {
         same.checked = false;
     }
-    receiver_num.onkeydown = function(){
+    receiver_num.onkeydown = function () {
         same.checked = false;
     }
-    receiver_email.onkeydown = function(){
+    receiver_email.onkeydown = function () {
         same.checked = false;
     }
 
@@ -86,98 +86,98 @@ sameInfo.onclick = function () {
     //     }
     // }
 }
-order_name.onkeyup = function(){
-    if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
-    same.checked = true;
-} else{
-    same.checked = false;
+order_name.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
+        same.checked = true;
+    } else {
+        same.checked = false;
+    }
 }
+order_num.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
+        same.checked = true;
+    } else {
+        same.checked = false;
+    }
 }
-order_num.onkeyup = function(){
-if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
-    same.checked = true;
-} else{
-    same.checked = false;
+order_email.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
+        same.checked = true;
+    } else {
+        same.checked = false;
+    }
 }
+order_tel.onclick = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
+        same.checked = true;
+    } else {
+        same.checked = false;
+    }
 }
-order_email.onkeyup = function(){
-if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
-    same.checked = true;
-} else{
-    same.checked = false;
+order_email_address.onclick = function () {
+    if (order_email_address.value == "direct") {
+        order_direct.style.display = "block";
+    } else if (order_email_address.value !== "direct") {
+        order_direct.style.display = "none";
+    }
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
+        same.checked = true;
+    } else {
+        same.checked = false;
+    }
 }
-}
-order_tel.onclick = function(){
-if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
-    same.checked = true;
-} else{
-    same.checked = false;
-}
-}
-order_email_address.onclick = function(){
-if (order_email_address.value == "direct") {
-    order_direct.style.display = "block";
-} else if (order_email_address.value !== "direct") {
-    order_direct.style.display = "none";
-}
-if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
-    same.checked = true;
-} else{
-    same.checked = false;
-}
-}
-order_direct.onkeyup = function(){
-if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
-    same.checked = true;
-} else{
-    same.checked = false;
-}
+order_direct.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
+        same.checked = true;
+    } else {
+        same.checked = false;
+    }
 }
 /////////////////////////////////////////////////////////////////////////
-receiver_name.onkeyup = function(){
-        if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
+receiver_name.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
         same.checked = true;
-    } else{
+    } else {
         same.checked = false;
     }
 }
-receiver_num.onkeyup = function(){
-    if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
+receiver_num.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
         same.checked = true;
-    } else{
+    } else {
         same.checked = false;
     }
 }
-receiver_email.onkeyup = function(){
-    if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
+receiver_email.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
         same.checked = true;
-    } else{
+    } else {
         same.checked = false;
     }
 }
-receiver_tel.onclick = function(){
-    if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
+receiver_tel.onclick = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
         same.checked = true;
-    } else{
+    } else {
         same.checked = false;
     }
 }
-receiver_email_address.onclick = function(){
+receiver_email_address.onclick = function () {
     if (receiver_email_address.value == "direct") {
         receiver_direct.style.display = "block";
     } else if (receiver_email_address.value !== "direct") {
         receiver_direct.style.display = "none";
     }
-    if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
         same.checked = true;
-    } else{
+    } else {
         same.checked = false;
     }
 }
-receiver_direct.onkeyup = function(){
-    if((order_name.value==receiver_name.value) && (order_tel.value==receiver_tel.value) && (order_num.value==receiver_num.value) &&(order_email.value==receiver_email.value) && (order_email_address.value==receiver_email_address.value) && (order_direct.value==receiver_direct.value)){
+receiver_direct.onkeyup = function () {
+    if ((order_name.value == receiver_name.value) && (order_tel.value == receiver_tel.value) && (order_num.value == receiver_num.value) && (order_email.value == receiver_email.value) && (order_email_address.value == receiver_email_address.value) && (order_direct.value == receiver_direct.value)) {
         same.checked = true;
-    } else{
+    } else {
         same.checked = false;
     }
 }
@@ -227,7 +227,7 @@ agree.onclick = function (e) {
 //결제하기버튼시작
 const payBtn = document.querySelector('.pay-button');
 
-function valueClear(){
+function valueClear() {
     order_name.value = "";
     order_num.value = "";
     order_email.value = "";
@@ -242,122 +242,122 @@ function valueClear(){
     receiver_email.value = "";
     receiver_direct.value = "";
     receiver_direct.style.display = "none";
-    zip_code.value ="";
+    zip_code.value = "";
     address_1.value = "";
     address_2.value = "";
-    check_all.checked=false;
-    check_1.checked=false;
-    check_2.checked=false;
-    check_3.checked=false;
-    check_4.checked=false;
-    pay_check1.checked=true;
-    pay_check2.checked=false;
-    pay_check3.checked=false;
-    pay_check4.checked=false;
-    same.checked=false;
+    check_all.checked = false;
+    check_1.checked = false;
+    check_2.checked = false;
+    check_3.checked = false;
+    check_4.checked = false;
+    pay_check1.checked = true;
+    pay_check2.checked = false;
+    pay_check3.checked = false;
+    pay_check4.checked = false;
+    same.checked = false;
 }
 
 payBtn.onclick = function () {
-    if(pay_check1.checked){
+    if (pay_check1.checked) {
         if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
-            swalMsg(0,"카드 결제", "이용약관(필수)에 동의해주세요");
+            swalMsg(0, "카드 결제", "이용약관(필수)에 동의해주세요");
             return;
-        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length!=8) {
-            swalMsg(0,"카드 결제", "주문자 정보를 확인해주세요");
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length != 8) {
+            swalMsg(0, "카드 결제", "주문자 정보를 확인해주세요");
             return;
-        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length!=8) {
-            swalMsg(0,"카드 결제", "수령자 정보를 확인해주세요");
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length != 8) {
+            swalMsg(0, "카드 결제", "수령자 정보를 확인해주세요");
             return;
         }
         else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
-            swalMsg(0,"카드 결제", "주소지를 확인해주세요");
+            swalMsg(0, "카드 결제", "주소지를 확인해주세요");
             return;
         } else if (order_email_address.value == 'direct' && order_direct.value == "") {
-            swalMsg(0,"카드 결제", "주문자 이메일을 입력하세요");
+            swalMsg(0, "카드 결제", "주문자 이메일을 입력하세요");
             return;
         } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
-            swalMsg(0,"카드 결제", "수령자 이메일을 입력하세요");
+            swalMsg(0, "카드 결제", "수령자 이메일을 입력하세요");
             return;
         }
         else {
-            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            swalMsg(1, "결제가 완료되었습니다.", "감사합니다.");
             valueClear()
         }
-    } else if(pay_check2.checked){
+    } else if (pay_check2.checked) {
         if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
-            swalMsg(0,"실시간 계좌이체", "이용약관(필수)에 동의해주세요");
+            swalMsg(0, "실시간 계좌이체", "이용약관(필수)에 동의해주세요");
             return;
-        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length!=8) {
-            swalMsg(0,"실시간 계좌이체", "주문자 정보를 확인해주세요");
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length != 8) {
+            swalMsg(0, "실시간 계좌이체", "주문자 정보를 확인해주세요");
             return;
-        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length!=8) {
-            swalMsg(0,"실시간 계좌이체", "수령자 정보를 확인해주세요");
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length != 8) {
+            swalMsg(0, "실시간 계좌이체", "수령자 정보를 확인해주세요");
             return;
         }
         else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
-            swalMsg(0,"실시간 계좌이체", "주소지를 확인해주세요");
+            swalMsg(0, "실시간 계좌이체", "주소지를 확인해주세요");
             return;
         } else if (order_email_address.value == 'direct' && order_direct.value == "") {
-            swalMsg(0,"실시간 계좌이체", "주문자 이메일을 입력하세요");
+            swalMsg(0, "실시간 계좌이체", "주문자 이메일을 입력하세요");
             return;
         } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
-            swalMsg(0,"실시간 계좌이체", "수령자 이메일을 입력하세요");
+            swalMsg(0, "실시간 계좌이체", "수령자 이메일을 입력하세요");
             return;
         }
         else {
-            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            swalMsg(1, "결제가 완료되었습니다.", "감사합니다.");
             valueClear()
         }
-    } else if(pay_check3.checked){
+    } else if (pay_check3.checked) {
         if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
-            swalMsg(0,"가상계좌", "이용약관(필수)에 동의해주세요");
+            swalMsg(0, "가상계좌", "이용약관(필수)에 동의해주세요");
             return;
-        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length!=8) {
-            swalMsg(0,"가상계좌", "주문자 정보를 확인해주세요");
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length != 8) {
+            swalMsg(0, "가상계좌", "주문자 정보를 확인해주세요");
             return;
-        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length!=8) {
-            swalMsg(0,"가상계좌", "수령자 정보를 확인해주세요");
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length != 8) {
+            swalMsg(0, "가상계좌", "수령자 정보를 확인해주세요");
             return;
         }
         else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
-            swalMsg(0,"가상계좌", "주소지를 확인해주세요");
+            swalMsg(0, "가상계좌", "주소지를 확인해주세요");
             return;
         } else if (order_email_address.value == 'direct' && order_direct.value == "") {
-            swalMsg(0,"가상계좌", "주문자 이메일을 입력하세요");
+            swalMsg(0, "가상계좌", "주문자 이메일을 입력하세요");
             return;
         } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
-            swalMsg(0,"가상계좌", "수령자 이메일을 입력하세요");
+            swalMsg(0, "가상계좌", "수령자 이메일을 입력하세요");
             return;
         }
         else {
-            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            swalMsg(1, "결제가 완료되었습니다.", "감사합니다.");
             valueClear()
         }
-    } else if(pay_check4.checked){
+    } else if (pay_check4.checked) {
         if (check_1.checked == false || check_2.checked == false || check_4.checked == false) {
-            swalMsg(0,"휴대폰결제", "이용약관(필수)에 동의해주세요");
+            swalMsg(0, "휴대폰결제", "이용약관(필수)에 동의해주세요");
             return;
-        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length!=8) {
-            swalMsg(0,"휴대폰결제", "주문자 정보를 확인해주세요");
+        } else if (order_name.value == "" || order_num.value == "" || order_email.value == "" || order_num.value.length != 8) {
+            swalMsg(0, "휴대폰결제", "주문자 정보를 확인해주세요");
             return;
-        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length!=8) {
-            swalMsg(0,"휴대폰결제", "수령자 정보를 확인해주세요");
+        } else if (receiver_name.value == "" || receiver_num.value == "" || receiver_email.value == "" || receiver_num.value.length != 8) {
+            swalMsg(0, "휴대폰결제", "수령자 정보를 확인해주세요");
             return;
         }
         else if (zip_code.value == "" || address_1.value == "" || address_2.value == "") {
-            swalMsg(0,"휴대폰결제", "주소지를 확인해주세요");
+            swalMsg(0, "휴대폰결제", "주소지를 확인해주세요");
             return;
         } else if (order_email_address.value == 'direct' && order_direct.value == "") {
-            swalMsg(0,"휴대폰결제", "주문자 이메일을 입력하세요");
+            swalMsg(0, "휴대폰결제", "주문자 이메일을 입력하세요");
             return;
         } else if (receiver_email_address.value == 'direct' && receiver_direct.value == "") {
-            swalMsg(0,"휴대폰결제", "수령자 이메일을 입력하세요");
+            swalMsg(0, "휴대폰결제", "수령자 이메일을 입력하세요");
             return;
         }
         else {
-            swalMsg(1,"결제가 완료되었습니다.", "감사합니다.");
+            swalMsg(1, "결제가 완료되었습니다.", "감사합니다.");
             valueClear()
-        }   
+        }
     }
 }
 //결제하기버튼끝
@@ -372,22 +372,24 @@ function handleOnInput(el, maxlength) {
 
 
 //주문상품 받아오기
-function getUrlParams() {
-    const params = {};
-    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-    return params;
-}
-const params = getUrlParams();
-let goods = [];
-const url = `../datas/${params.name}_view.json`;
-fetch(url)
-    .then(type => type.json())
-    .then(result => {
-        goods = result.data;
-        goodsView();
-    }).catch(error => {
-        // console.log(error);
-    });
+// console.log(localStorage.getItem('products'))
+if (localStorage.getItem('products') == null) {
+    function getUrlParams() {
+        const params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+        return params;
+    }
+    const params = getUrlParams();
+    let goods = [];
+    const url = `../datas/${params.name}_view.json`;
+    fetch(url)
+        .then(type => type.json())
+        .then(result => {
+            goods = result.data;
+            goodsView();
+        }).catch(error => {
+            // console.log(error);
+        });
 
     const goodsView = () => {
         // console.log("goods :", goods)
@@ -401,31 +403,35 @@ fetch(url)
                     figure += `<img src='./images/${params.name}/${picture[j].trim()}'>`
                 }
                 const orderProduct = document.querySelector('.third-flex');
-                
-                let addProduct = '';
-                let totalPrice = parseInt(goods[i].price.replaceAll(',', ''))*params.ea;
-                let totalDiscount = parseInt(goods[i].discount.replaceAll(',', ''))*params.ea;
 
-                addProduct += `<div>
+                let addProduct = '';
+                let totalPrice = parseInt(goods[i].price.replaceAll(',', '')) * params.ea;
+                let totalDiscount = parseInt(goods[i].discount.replaceAll(',', '')) * params.ea;
+
+                addProduct += `
+                <div class='third-flex-1'>        
+                <div>
                         <li><img src="../images/${params.name}/${picture[0]}" alt=""></li>
                         </div>
                         <div>
                             <p>${goods[i].brand}</p>
                             <p>${goods[i].product_name} <span>| ${params.ea}개</span></p><br>
-                            <p>${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}<span>${totalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span></p>
-                        </div>`;
+                            <p>${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}<span>${totalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</span></p>
+                        </div>
+                        </div>
+                        `;
                 let allPrice = '';
                 allPrice += `
                     <p>총 상품금액</p>
-                    <p>+${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</p>`;
+                    <p>+${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</p>`;
 
 
                 // console.log(parseInt(goods[i].price.discount.replaceAll(',', '')));
                 //parseInt((parseInt(goods[i].price.replaceAll(',', ''))*params.ea).replaceAll(',', ''))+"원".toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
                 let finalPrice = '';
-                finalPrice +=`
+                finalPrice += `
                 <b>최종 주문금액</b>  
-                <b>+${(totalDiscount+3000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</b>`;
+                <b>+${(totalDiscount + 3000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</b>`;
 
                 orderProduct.innerHTML = addProduct;
                 all_price.innerHTML = allPrice;
@@ -433,5 +439,55 @@ fetch(url)
                 break;
             }
         }
-        
+
     }
+} else if (localStorage.getItem('products') != null) {
+
+    let pay = JSON.parse(localStorage.getItem('products'));
+
+    const orderProduct = document.querySelector('.third-flex');
+    let addProduct = '';
+    let allPrice = '';
+    let finalPrice = '';
+    let allDiscount = 0;
+    let priceAll = 0;
+for(i=0;i<pay.length;i++){
+    let totalPrice = parseInt(pay[i].price.replaceAll(',', '')) * pay[i].ea;
+    let totalDiscount = parseInt(pay[i].discount.replaceAll(',', '')) * pay[i].ea;
+
+
+    allDiscount=allDiscount+totalDiscount
+    priceAll=priceAll+totalPrice;
+
+    addProduct += `
+                        <div class='third-flex-1'>
+                        <div>
+                        <li><img src="../images/${pay[i].name}/${pay[i].product_img}" alt=""></li>
+                        </div>
+                        <div>
+                            <p>${pay[i].brand}</p>
+                            <p>${pay[i].product_name} <span>| ${pay[i].ea}개</span></p><br>
+                            <p>${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}<span>${totalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</span></p>
+                        </div>
+                        </div>`;
+
+    allPrice = `
+                    <p>총 상품금액</p>
+                    <p>+${allDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</p>`;
+
+
+    // console.log(parseInt(goods[i].price.discount.replaceAll(',', '')));
+    //parseInt((parseInt(goods[i].price.replaceAll(',', ''))*params.ea).replaceAll(',', ''))+"원".toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+
+    finalPrice = `
+                <b>최종 주문금액</b>  
+                <b>+${(allDiscount + 3000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</b>`;
+                
+            }
+            
+
+    orderProduct.innerHTML = addProduct;
+    all_price.innerHTML = allPrice;
+    final_price.innerHTML = finalPrice;
+
+}
