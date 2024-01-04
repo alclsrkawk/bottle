@@ -194,7 +194,8 @@ const pageLink = (ctrl, cate, link) => {
     })
 }
 const fetchData = (data, name) => {
-    fetch(data)
+    const header_type = { "content-type": "application/json" }
+    fetch(data, { method: "GET", headers: header_type })
         .then(type => type.json())
         .then(result => {
             getList(result.data, name);
