@@ -1,12 +1,385 @@
+
+
+
 @import "_sub";
 
 // PC --시작
 main {
-    height: 100vh;
+    padding-top: 200px;
+    .order , .receiver, .address , .requested{
+        width:700px;
+        margin-bottom: 80px;
+    }
+    margin-left:0 auto;
+    .flex{
+        
+        display:flex;
+        justify-content: space-evenly;
+    }
+    input , select{
+        height:56px;
+    }
+    .input_name{
+        width:280px;
+    }
+    .select_num{
+        width:80px;
+        text-align: center;
+        margin : 0 20px 10px 20px;
+    }
+    .input_num{
+        width:280px;
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    .input_email{
+        margin-right: 10px;
+        width:180px;
+    }
+    .select_email{
+        margin-left: 10px;
+        width:464px;
+    }
+    .input_direct{
+        margin-top: 10px;
+        margin-left:225px;
+        width:464px;
+        display:none;
+    }
+
+    .receiver_info{
+        width:680px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input{
+            height: auto;
+        }
+        
+    }
+    .input_requested{
+        width:480px;
+    }
+    .section-second{
+        height:850px;
+        width:400px;
+        background-color: #EDEDED;
+        padding-left:20px;
+        input{
+            height:auto;
+            margin:15px 0;
+        }
+        .section-second-one{
+            border-bottom: 1px solid #E0E2E7;
+            padding: 20px 0;
+            p{
+                margin-top: 15px;
+                color: #8C8D96;
+                span{
+                    margin-left:11px;
+                }
+            }
+        }
+        .section-second-two{
+            padding:20px 0;
+            b{
+                margin-left:11px;
+            }
+            p{
+                margin: 5px 0 0 10px;
+                color: #8C8D96;
+                span{
+                    margin-left:11px;
+                }
+            }
+            border-bottom: 1px solid #E0E2E7;
+        }
+        .section-second-three{
+            padding:20px 0;
+            p{
+                color: #8C8D96;
+                margin-left: 20px;
+            }
+            .three-flex{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                padding-right: 20px;
+            }
+            border-bottom: 1px solid #E0E2E7;
+        }
+        .pay-button{
+            padding: 20px 0;
+            button{
+            width:360px;
+            height:56px;
+            color: white;
+            background-color: black;
+            }
+        }
+    }
+    
+    .section-third{
+        height:500px;
+        overflow-y: auto;
+
+        li{
+            margin:20px 0;
+            width:100px;
+            height:100px;
+        }
+        img{
+            width:100%;
+        }
+        .third-flex{
+            display: flex;
+            align-items: center;
+            p:nth-of-type(1){
+                font-size: 14px;
+                color: #8A8A8A;
+            }
+            p:nth-of-type(2){
+                span{
+                    color: #8A8A8A;
+                }
+            }
+            p:nth-of-type(3){
+                font-weight: bolder;
+                span{
+                    margin-left:10px;
+                    text-decoration: line-through;
+                    color: #8C8D96;
+                }
+            }
+        }
+    }
+    .section-third::-webkit-scrollbar{
+        display : none;
+    }
+    //우편번호시작
+    #zip_code{
+        width:480px;
+        margin-bottom: 10px;
+    }
+    #zip-search{
+        width:180px;
+        background-color: white;
+        margin-left: 15px;
+        transform: translateY(2px);
+        
+    }
+    #zip-search:hover{
+        transition: 0.5s;
+        background-color: black;
+        color: white;
+    }
+    #address_1 , #address_2{
+        width:680px;
+        margin-bottom: 10px;
+    }
+    //우편번호 끝
 }
 
+
+
 // PC -- 끝
+@media screen and (max-width: 1100px) {
+    main{
+    .flex{
+        flex-direction: column;
+        align-items: center;
+        .section-second{
+            width:80%;
+            margin-top: 50px;
+            border-top : 1px solid black;
+            background-color: white;
+        }
+        .section-third{
+            height:auto;
+        }
+        .pay-button{
+            text-align: center;
+        }
+        }
 
-@include res($pad) {}
+    }
+    
+}
 
-@include res($mobile) {}
+
+@include res($pad) {
+    main{
+        margin:0 20px;
+        .flex{
+            align-items: normal;
+            margin:0 auto;
+        }
+        .input_direct{
+            margin-left: 0;
+            width:97.5%;
+        }
+        #order_name , #receiver_name{
+            width:30%;
+        }
+        #order_num , #receiver_num{
+            width:50%;
+        }
+        #order_email , #receiver_email{
+            margin:0;
+            width:30%;
+        }
+        #order_email_address,#receiver_email_address{
+            margin:0;
+            width: 62%;
+        }
+        #order_tel,#receiver_tel{
+            margin: 0 0 2% 5%;
+            width:11%;
+        }
+
+        .receiver,.order{
+            width:100%;
+        }
+        .receiver_info{
+            width:100%;
+            p{
+                transform: translateX(-10px);
+            }
+        }
+        margin:0px 20px;
+        
+        .address{
+            width:100%;
+            #zip_code{
+                width:70%;
+            }
+            #zip-search{
+                margin-left: 2%;
+                width:24%;
+                font-size : 0.7rem;
+            }
+            #address_1 , #address_2{
+                width:97%;
+            }
+        }
+
+        .requested{
+            width:100%;
+            .input_requested{
+                width:97%;
+            }
+        }
+        .section-second{
+            margin: 0 auto;
+        }
+        .section-third{
+            height:200px;
+        }
+        .section-second{
+            margin-top: 50px;
+            border-top : 1px solid black;
+            background-color: white;
+            
+            
+            .pay-button{
+                
+                button{
+                    font-size: 16px;
+                    width:95%;
+                }
+            }
+        }
+    }
+    
+}
+
+@include res($mobile) {
+    main{
+        .flex{
+            display:block;
+        }
+        padding-top:100px;
+        .order , .receiver, .address , .requested{
+            width:100%;
+            margin-bottom: 80px;
+        }
+        margin:0 20px;
+
+        input , select{
+            margin:0;
+            height:47px;
+        }
+        .receiver_info{
+            width:320px;
+        }
+        .input_name{
+            width:100%;
+            margin-bottom: 10px;
+        }
+        .select_num{
+            margin : 0;
+            width:25%;
+        }
+        .input_num{
+            margin-left:0;
+            width:73% ;
+        }
+        .section-second{
+            margin-top: 10px;
+            height:auto;
+        }
+        .section-third{
+
+            height:200px;
+        }
+        .input_email{
+            margin:10px 0;
+            width:80%;
+        }
+        .select_email{
+            margin:0;
+            width: 100%;
+        }
+        .input_direct{
+            margin:10px 0px;
+            width:100%;
+        }
+        #zip_code{
+            width:63%;
+        }
+        #zip-search{
+            width:30%;
+            font-size:0.6rem;
+        }
+        #address_1, #address_2 , .input_requested{
+            width:100%;
+        }
+
+
+
+
+    .section-second{
+        width:100% !important;
+        margin-top: 100px;
+        padding:0;
+        
+            b{font-size: 16px;}
+            p{font-size:14px;}
+        
+        width:335px;
+        background-color: white;
+
+        .pay-button{
+            display: flex;
+            justify-content: center;
+            
+            width:100%;
+            button{
+                width:80%;
+                
+            }
+        }
+    }
+}
+}

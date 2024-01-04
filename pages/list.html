@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>즐겨 마시는 맥주</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/list.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="../js/common.js"></script>
-    <script src="../js/list.js"></script>
+    <script defer src="../js/list.js"></script>
 
 
 </head>
@@ -17,7 +19,111 @@
     <!-- header-->
     <header data-include-file="../include/sub/header.html" class="includeJs"></header>
     <!-- header-->
-    <main></main>
+    <main>
+        <div class="popup_bg"></div>
+        <div class="pop_up">
+            <p>만 19세 이상</p>
+            <p>음주 가능한 연령입니까?</p>
+
+<!--출생년도 셀렉트 박스---------------------------------------->
+            <div class="select">
+                <select name="yy" id="year">
+                    <option value="">연도</option>   
+                </select>
+                <select name="mm" id="month">
+                    <option value="">월</option>  
+                </select>
+                <select name="dd" id="day">
+                    <option value="">일</option>       
+                </select>
+            </div>
+
+<!------------------------------------------------------------->
+
+            <div class="pop_btn">
+                <button class="btn_yes">YES</button>
+                <button class="btn_no">NO</button>
+            </div>
+            <div class="warning">
+                <small>경고 : 지나친 음주는 뇌졸중, 기억력 손상이나 치매를 유발합니다.</small><br>
+                <small>임신 중 음주는 기형아 출생 위험을 높입니다.</small>
+            </div>
+        </div>
+
+        <div class="up_down_btn">
+            <div id="up"></div>
+            <div id="down"></div>
+        </div>
+
+        <div class="list_bg">
+            <figure>
+                <img src="../images/list_bg/list_bg_wine.png" alt="">
+            </figure>
+        </div>
+
+
+        <section class="list">
+            <div class="list_title">
+                <h2></h2>
+
+            </div>
+
+            <!--best5 슬라이드-->
+            <article class="best5">
+                <p class="best5_title">BEST TOP5</p>
+
+                <div class="best5_slide">
+                    <button class="slide_btn swiper-button-prev"></button>
+                    <button class="slide_btn swiper-button-next"></button>
+
+                    <div class="swiper-wrapper">
+                        <!-- <figure class="swiper-slide">
+                            <span>TOP</span>
+                            <p><img src="" alt=""></p>
+                            <figcaption>
+                                <small>brand</small>
+                                <p>product_name</p>
+                                <p>price</p>
+                                <del>discount</del>
+                            </figcaption>
+                        </figure> -->
+                    </div>
+                </div>
+
+
+            </article>
+
+            <div class="list">
+                <!--tab-->
+                <div class="tab">
+                    <ul>
+                        <li><a href="#">추천순</a></li>
+                        <li><a href="#">판매인기순</a></li>
+                        <li><a href="#">낮은인기순</a></li>
+                        <li><a href="#">높은가격순</a></li>
+                        <li><a href="#">상품평순</a></li>
+                        <li><a href="#">등록일순</a></li>
+                    </ul>
+                </div>
+
+
+                <!--상품 12개-->
+                <div class="list_items">
+                    <!-- <figure>
+                        <p><img src="" alt=""></p>
+                        <figcaption>
+                            <small></small>
+                            <p></p>
+                            <p>
+                                <del></del>
+                            </p>
+                        </figcaption>
+                    </figure> -->
+                </div>
+            </div>
+        </section>
+
+    </main>
     <!-- footer -->
     <footer data-include-file="../include/sub/footer.html" class="includeJs"></footer>
     <!-- footer -->

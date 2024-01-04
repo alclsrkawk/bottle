@@ -527,344 +527,73 @@ footer article .bottom div a {
 }
 main {
   padding-top: 200px;
-  margin-left: 0 auto;
 }
-main .order, main .receiver, main .address, main .requested {
-  width: 700px;
-  margin-bottom: 80px;
+main .all_del {
+  text-align: right;
+  width: 800px;
+  margin: 0 auto;
 }
-main .flex {
-  display: flex;
-  justify-content: space-evenly;
-}
-main input, main select {
-  height: 56px;
-}
-main .input_name {
-  width: 280px;
-}
-main .select_num {
-  width: 80px;
-  text-align: center;
-  margin: 0 20px 10px 20px;
-}
-main .input_num {
-  width: 280px;
-}
-main .input_num::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-main .input_email {
-  margin-right: 10px;
-  width: 180px;
-}
-main .select_email {
-  margin-left: 10px;
-  width: 464px;
-}
-main .input_direct {
-  margin-top: 10px;
-  margin-left: 225px;
-  width: 464px;
-  display: none;
-}
-main .receiver_info {
-  width: 680px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main .receiver_info input {
-  height: auto;
-}
-main .input_requested {
-  width: 480px;
-}
-main .section-second {
-  height: 850px;
-  width: 400px;
-  background-color: #EDEDED;
-  padding-left: 20px;
-}
-main .section-second input {
-  height: auto;
-  margin: 15px 0;
-}
-main .section-second .section-second-one {
-  border-bottom: 1px solid #E0E2E7;
-  padding: 20px 0;
-}
-main .section-second .section-second-one p {
-  margin-top: 15px;
-  color: #8C8D96;
-}
-main .section-second .section-second-one p span {
-  margin-left: 11px;
-}
-main .section-second .section-second-two {
-  padding: 20px 0;
-  border-bottom: 1px solid #E0E2E7;
-}
-main .section-second .section-second-two b {
-  margin-left: 11px;
-}
-main .section-second .section-second-two p {
-  margin: 5px 0 0 10px;
-  color: #8C8D96;
-}
-main .section-second .section-second-two p span {
-  margin-left: 11px;
-}
-main .section-second .section-second-three {
-  padding: 20px 0;
-  border-bottom: 1px solid #E0E2E7;
-}
-main .section-second .section-second-three p {
-  color: #8C8D96;
-  margin-left: 20px;
-}
-main .section-second .section-second-three .three-flex {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-right: 20px;
-}
-main .section-second .pay-button {
-  padding: 20px 0;
-}
-main .section-second .pay-button button {
-  width: 360px;
-  height: 56px;
-  color: white;
+main #all_del {
+  width: 120px;
+  height: 50px;
   background-color: black;
+  color: white;
+  font-size: 16px;
+  border: 0px solid;
 }
-main .section-third {
-  height: 500px;
-  overflow-y: auto;
+main h1 {
+  text-align: center;
 }
-main .section-third li {
-  margin: 20px 0;
-  width: 100px;
-  height: 100px;
-}
-main .section-third img {
+main .block {
   width: 100%;
 }
-main .section-third .third-flex {
+main .block #list {
+  margin: 0 auto;
+}
+main .block .cart {
+  width: 800px;
+}
+main .block .cart #list2 {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-main .section-third .third-flex p:nth-of-type(1) {
-  font-size: 14px;
-  color: #8A8A8A;
+main .block .cart .cart_1 li {
+  width: 200px;
+  height: 200px;
 }
-main .section-third .third-flex p:nth-of-type(2) span {
-  color: #8A8A8A;
+main .block .cart .cart_1 li img {
+  width: 100%;
 }
-main .section-third .third-flex p:nth-of-type(3) {
-  font-weight: bolder;
+main .block .cart .cart_2 {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-main .section-third .third-flex p:nth-of-type(3) span {
-  margin-left: 10px;
+main .block .cart .cart_2 button {
+  width: 50px;
+}
+main .block .cart .cart_2 b span {
+  font-size: 16px;
+  color: #8C8D96;
+}
+main .block .cart .cart_2 P {
+  text-align: right;
+}
+main .block .cart .cart_2 P span {
   text-decoration: line-through;
   color: #8C8D96;
 }
-main .section-third::-webkit-scrollbar {
-  display: none;
+main .block .cart .cart_2 div {
+  text-align: right;
 }
-main #zip_code {
-  width: 480px;
-  margin-bottom: 10px;
+main .block .cart .cart_2 div input {
+  width: 60px;
+  height: 30px;
+  font-size: 16px;
 }
-main #zip-search {
-  width: 180px;
-  background-color: white;
-  margin-left: 15px;
-  transform: translateY(2px);
-}
-main #zip-search:hover {
-  transition: 0.5s;
+main .block .cart .cart_2 .delete {
   background-color: black;
   color: white;
-}
-main #address_1, main #address_2 {
-  width: 680px;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1100px) {
-  main .flex {
-    flex-direction: column;
-    align-items: center;
-  }
-  main .flex .section-second {
-    width: 80%;
-    margin-top: 50px;
-    border-top: 1px solid black;
-    background-color: white;
-  }
-  main .flex .section-third {
-    height: auto;
-  }
-  main .flex .pay-button {
-    text-align: center;
-  }
-}
-@media (min-width: 390px) and (max-width: 768px) {
-  main {
-    margin: 0 20px;
-    margin: 0px 20px;
-  }
-  main .flex {
-    align-items: normal;
-    margin: 0 auto;
-  }
-  main .input_direct {
-    margin-left: 0;
-    width: 97.5%;
-  }
-  main #order_name, main #receiver_name {
-    width: 30%;
-  }
-  main #order_num, main #receiver_num {
-    width: 50%;
-  }
-  main #order_email, main #receiver_email {
-    margin: 0;
-    width: 30%;
-  }
-  main #order_email_address, main #receiver_email_address {
-    margin: 0;
-    width: 62%;
-  }
-  main #order_tel, main #receiver_tel {
-    margin: 0 0 2% 5%;
-    width: 11%;
-  }
-  main .receiver, main .order {
-    width: 100%;
-  }
-  main .receiver_info {
-    width: 100%;
-  }
-  main .receiver_info p {
-    transform: translateX(-10px);
-  }
-  main .address {
-    width: 100%;
-  }
-  main .address #zip_code {
-    width: 70%;
-  }
-  main .address #zip-search {
-    margin-left: 2%;
-    width: 24%;
-    font-size: 0.7rem;
-  }
-  main .address #address_1, main .address #address_2 {
-    width: 97%;
-  }
-  main .requested {
-    width: 100%;
-  }
-  main .requested .input_requested {
-    width: 97%;
-  }
-  main .section-second {
-    margin: 0 auto;
-  }
-  main .section-third {
-    height: 200px;
-  }
-  main .section-second {
-    margin-top: 50px;
-    border-top: 1px solid black;
-    background-color: white;
-  }
-  main .section-second .pay-button button {
-    font-size: 16px;
-    width: 95%;
-  }
-}
-@media screen and (max-width: 390px) {
-  main {
-    padding-top: 100px;
-    margin: 0 20px;
-  }
-  main .flex {
-    display: block;
-  }
-  main .order, main .receiver, main .address, main .requested {
-    width: 100%;
-    margin-bottom: 80px;
-  }
-  main input, main select {
-    margin: 0;
-    height: 47px;
-  }
-  main .receiver_info {
-    width: 320px;
-  }
-  main .input_name {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  main .select_num {
-    margin: 0;
-    width: 25%;
-  }
-  main .input_num {
-    margin-left: 0;
-    width: 73%;
-  }
-  main .section-second {
-    margin-top: 10px;
-    height: auto;
-  }
-  main .section-third {
-    height: 200px;
-  }
-  main .input_email {
-    margin: 10px 0;
-    width: 80%;
-  }
-  main .select_email {
-    margin: 0;
-    width: 100%;
-  }
-  main .input_direct {
-    margin: 10px 0px;
-    width: 100%;
-  }
-  main #zip_code {
-    width: 63%;
-  }
-  main #zip-search {
-    width: 30%;
-    font-size: 0.6rem;
-  }
-  main #address_1, main #address_2, main .input_requested {
-    width: 100%;
-  }
-  main .section-second {
-    width: 100% !important;
-    margin-top: 100px;
-    padding: 0;
-    width: 335px;
-    background-color: white;
-  }
-  main .section-second b {
-    font-size: 16px;
-  }
-  main .section-second p {
-    font-size: 14px;
-  }
-  main .section-second .pay-button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  main .section-second .pay-button button {
-    width: 80%;
-  }
 }

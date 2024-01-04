@@ -1,3 +1,78 @@
-<section>
-    <h2>내가 상품 후기다.</h2>
+<link rel="stylesheet" href="../css/review.min.css">
+<link rel="stylesheet" href="../css/modal.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer src="../js/common.js"></script>
+<script defer src="../js/review.js"></script>
+
+<section class="main-section">
+    <div class="popbg"></div>
+    <article>
+        <div class="review-count">
+            <div class="star-count">★★★★★</div>
+            <span class="review-score"></span>
+        </div>
+        <div class="review-container">
+            <div class="tab">
+                <p>총 <span class="total">0</span>건</p>
+                <div class="review-tab-right">
+                    <div class="selectBox">
+                        <button class="label">최신순</button>
+                        <ul class="optionList">
+                            <li class="optionItem" data-num="1">최신순</li>
+                            <li class="optionItem" data-num="2">인기순</li>
+                            <li class="optionItem" data-num="3">별점순</li>
+                        </ul>
+                    </div>
+                    <p class="write-btn">후기 작성하기</p>
+                </div>
+            </div>
+            <!-- 후기 작성하기 버튼 클릭 -> 팝업 -->
+            <div class="write-review">
+                <div class="popup-container">
+                    <form id="review-popup">
+                        <div class="tab">
+                            <p>후기 작성</p>
+                            <span class="close"></span>
+                        </div>
+                        <div class="goods">
+                            <p class="goods_img"></p>
+                            <div class="goods_info">
+                                <div>
+                                    <span>금용농산</span>
+                                    <p>미르아토 레드스위트와인 750ml</p>
+                                </div>
+                                <div class="star-container">
+                                    <div class="star">
+                                        ★★★★★
+                                        <span class="draw">★★★★★</span>
+                                        <input type="range" oninput="drawStar(this)" value="1" step="1" min="0"
+                                            max="10">
+                                    </div>
+                                    <span class="star-grade">0.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <textarea placeholder="후기를 작성해주세요.(10자 이상)" name="texta" minlength="10" maxlength="1000"
+                            required></textarea>
+                        <button class="next-btn">등록하기</button>
+                    </form>
+                    <div class="next-step">
+                        <div>
+                            <div class="icon"></div>
+                            <strong>등록 완료</strong>
+                            <p>고객님의 소중한 후기<br>감사드립니다.</p>
+                        </div>
+                        <p class="close">닫기</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="review-list-container">
+            </ul>
+        </div>
+    </article>
 </section>
+
+<script>
+
+</script>

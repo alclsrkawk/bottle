@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품검색</title>
+    <link rel="stylesheet" href="../css/search.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/search.js"></script>
+</head>
+
+<body>
+    <!-- header-->
+    <header data-include-file="../include/sub/header.html" class="includeJs"></header>
+    <!-- header-->
+    <div class="search">
+        <div>
+            <div class="search-result">
+                <div class="input-container">
+                    <input class="input" type="text" value="" placeholder="검색어를 입력해주세요"
+                        onkeyup="if(window.event.keyCode==13){fnSearch(value)}">
+                    <button>검색</button>
+                </div>
+                <div class="search-title">
+                    <span class="search-text"></span>
+                    검색 결과
+                    <span class="search-length"></span>
+                </div>
+                <div class="search-list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer data-include-file="../include/sub/footer.html" class="includeJs"></footer>
+    <!-- footer -->
+</body>
+
+</html>

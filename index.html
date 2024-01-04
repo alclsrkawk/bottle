@@ -5,62 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대한민국 최고 주류 쇼핑몰</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer src="./js/common.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
+
 
 <body>
     <!-- header-->
     <header data-include-file="./include/main/header.html" class="includeJs"></header>
     <!-- header-->
-    <!-- main   -->
-    <section class="banner">
-        <figure>
-            <img class="active" src="./images/main/main-slide-01.png" alt="">
-            <!-- <img src="./images/main/main-slide-02.png" alt=""> -->
-            <!-- <img src="./images/main/main-slide-03.png" alt=""> -->
-            <!-- <img src="./images/main/main-slide-04.png" alt=""> -->
-            <figcaption>
-                <div>
-                    홀리데이 추천 위스키
+
+    <section>
+        <div class="swiper banner">
+            <figure class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-01.png" alt="">
+                    <div class="tit">
+                        <div>홀리데이 추천 위스키</div>
+                        <div class="second">
+                            글렌피딕 12년 홀리데이 에디션
+                        </div>
+                        <div>
+                            <progress value="25" max="100"></progress>
+                            <img class="_pause" src="./images/main/pause-btn.png">
+                        </div>
+                    </div>
+
                 </div>
-                <div>
-                    글렌피딕 12년 홀리데이 에디션
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-02.png" alt="">
+                    <div class="tit">
+                        <div>홀리데이 추천 위스키</div>
+                        <div class="second">
+                            글렌피딕 12년 홀리데이 에디션
+                        </div>
+                        <div>
+                            <progress value="25" max="100"></progress>
+                            <img class="_pause" src="./images/main/pause-btn.png">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <progress value="35" max="100"></progress>
-                    <img src="./images/main/pause-btn.png">
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-03.png" alt="">
+                    <div class="tit">
+                        <div>홀리데이 추천 위스키</div>
+                        <div class="second">
+                            글렌피딕 12년 홀리데이 에디션
+                        </div>
+                        <div>
+                            <progress value="25" max="100"></progress>
+                            <img class="_pause" src="./images/main/pause-btn.png">
+                        </div>
+                    </div>
                 </div>
-            </figcaption>
-        </figure>
+                <div class="swiper-slide">
+                    <img src="./images/main/main-slide-04.png" alt="">
+                    <div class="tit">
+                        <div>홀리데이 추천 위스키</div>
+                        <div class="second">
+                            글렌피딕 12년 홀리데이 에디션
+                        </div>
+                        <div>
+                            <progress value="25" max="100"></progress>
+                            <img class="_pause" src="./images/main/pause-btn.png">
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+        <div class="banner-m">
+            <img src="./images/main/main-slide-01.png" alt="">
+            <div class="tit">
+                <div>홀리데이 추천 위스키</div>
+                <div class="second">
+                    글렌피딕 12년 <br>홀리데이 에디션
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="banner-m">
-        <figure>
-            <img class="active" src="./images/main/main-slide-01.png" alt="">
-            <!-- <img src="./images/main/main-slide-02.png" alt=""> -->
-            <!-- <img src="./images/main/main-slide-03.png" alt=""> -->
-            <!-- <img src="./images/main/main-slide-04.png" alt=""> -->
-            <figcaption>
-                <div>
-                    홀리데이 추천 위스키
-                </div>
-                <div>
-                    글렌피딕 12년 <br>
-                    홀리데이 에디션
-                </div>
-                <div>
-                    <progress value="35" max="100"></progress>
-                    <img src="./images/main/pause-btn.png">
-                </div>
-            </figcaption>
-        </figure>
-    </section>
-    <!-- <script>
-        const progress = document.querySelector('progress');
-        progress.value = 25;
-    </script> -->
+
     <main>
         <div class="wlist">
             <div class="wine">
@@ -68,10 +98,8 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=wine'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper">
+                <div class="wine-l">
                     <div id="dv-wine" class="swiper-wrapper">
-                        <!-- <figure class="swiper-slide">
-                        </figure> -->
                     </div>
                 </div>
             </div>
@@ -82,7 +110,7 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=beer'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper">
+                <div class="beer-l">
                     <div id="dv-beer" class="swiper-wrapper">
                     </div>
                 </div>
@@ -94,7 +122,7 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=soju'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper">
+                <div class="soju-l">
                     <div id="dv-soju" class="swiper-wrapper">
                     </div>
                 </div>
@@ -106,13 +134,12 @@
                 <div class="more" onclick="location.href='./pages/list.html?name=whisky'">
                     <span>+</span>&nbsp;more
                 </div>
-                <div class="swiper">
+                <div class="whisky-l">
                     <div id="dv-whisky" class="swiper-wrapper">
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="community">
             <div class="review">
                 <div>
@@ -190,200 +217,12 @@
             </div>
         </div>
     </main>
-    <script>
-        const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
-            , '../datas/soju_view.json', '../datas/whisky_view.json'];
-
-        let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
-        let elWine = document.querySelector(`#dv-wine`);
-        let elBeer = document.querySelector(`#dv-beer`);
-        let elSoju = document.querySelector(`#dv-soju`);
-        let elWhisky = document.querySelector(`#dv-whisky`);
-
-        const getList = (ctrl, name) => {
-            // console.log(wine)
-            ctrl.forEach(function (element, i) {
-                const picture = element.product_img.split(',')[0];
-                if (name === "wine") {
-                    winelist += `
-                    <figure class="swiper-slide wine-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-                }
-                else if (name === "beer") {
-                    beerlist += `
-                    <figure class="swiper-slide beer-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-                }
-                else if (name === "soju") {
-                    sojulist += `
-                    <figure class="swiper-slide soju-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-                }
-                else {
-                    whiskylist += `
-                    <figure class="swiper-slide whisky-item">
-                        <img src="./images/${name}/${picture.trim()}" alt="">
-                        <figcaption>
-                            <p>
-                                ${element.brand}
-                            </p>
-                            <p>
-                                ${element.product_name}
-                            </p>
-                            <p>
-                                <span> ${element.discount}</span>
-                                <span> ${element.price}</span>
-                            </p>
-                        </figcaption>
-                    </figure>
-                `
-                }
-            });
-
-            switch (name) {
-                case "wine":
-                    elWine.innerHTML = winelist;
-                    pageLink(ctrl, name, document.querySelectorAll(".wine-item"));
-                    break;
-                case "beer":
-                    elBeer.innerHTML = beerlist;
-                    pageLink(ctrl, name, document.querySelectorAll(".beer-item"));
-                    break;
-                case "soju":
-                    elSoju.innerHTML = sojulist;
-                    pageLink(ctrl, name, document.querySelectorAll(".soju-item"));
-                    break;
-                default:
-                    elWhisky.innerHTML = whiskylist;
-                    pageLink(ctrl, name, document.querySelectorAll(".whisky-item"))
-                    break;
-            }
-        }
-        const pageLink = (ctrl, cate, link) => {
-            link.forEach(function (element, i) {
-                element.onclick = function () {
-                    location.href = `./pages/view.html?idx=${ctrl[i].Idx}&name=${cate}`;
-                }
-            })
-        }
-        const fetchData = (data, name) => {
-            fetch(data)
-                .then(type => type.json())
-                .then(result => {
-                    getList(result.data, name);
-                }).catch(error => {
-                    console.log(error);
-                });
-        }
-
-        const getData = () => {
-            fetchData(jsondata[0], "wine");
-            fetchData(jsondata[1], "beer");
-            fetchData(jsondata[2], "soju");
-            fetchData(jsondata[3], "whisky");
-        }
-        getData();
-    </script>
-    <!-- main   -->
     <!-- footer -->
     <footer data-include-file="./include/main/footer.html" class="includeJs"></footer>
     <!-- footer -->
-    <script defer src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
+    <!-- Swiper JS -->
 
-        window.addEventListener("load", (event) => {
-            let pageviw = 4;
-            const isMobile = window.matchMedia('(max-width: 390px)');
-            const isPC = window.matchMedia('(min-width: 600px)');
-            console.log("mobile :", isMobile.matches)
-            console.log("pc :", isPC.matches)
-
-            if (isMobile.matches) pageviw = 2;
-            else pageviw = 4;
-
-            var swiper = new Swiper(".swiper", {
-                slidesPerView: pageviw,
-                spaceBetween: 10,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-        });
-
-        const changeHandler = (e) => {
-            console.log('390px changed!');
-            var swiper = new Swiper(".swiper", {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-
-        }
-        const changeOtherHandler = (e) => {
-            console.log('600px changed!');
-            var swiper = new Swiper(".swiper", {
-                slidesPerView: 4,
-                spaceBetween: 10,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-        }
-
-        const mediaQueryMobile = window.matchMedia('(max-width: 390px)');
-        const mediaQueryOther = window.matchMedia('(min-width: 600px)');
-        mediaQueryMobile.addEventListener('change', changeHandler);
-        mediaQueryOther.addEventListener('change', changeOtherHandler);
-    </script>
-
+    <!-- Initialize Swiper -->
 </body>
 
 </html>

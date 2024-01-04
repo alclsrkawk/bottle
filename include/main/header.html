@@ -1,12 +1,18 @@
 <div class="header-pc">
     <article>
         <div class="main-title">
-            <p>
-                <a href="/">Happy Pub</a>
-            </p>
-            <p>
-                <img src="./images/main/user-icon-svg.png" alt="">
-            </p>
+            <div>
+                <a href="./index.html">Happy Pub</a>
+            </div>
+            <div>
+                <input type="text" value="" onkeyup="if(window.event.keyCode==13){goSearch(value)}">
+            </div>
+            <div>
+                <img onclick="goSearch();" src="./images/main/search-icon-svg.png" alt="">
+            </div>
+            <div>
+                <img onclick="location.href='./pages/cart.html'" src="./images/main/cart-icon-svg.png" alt="">
+            </div>
         </div>
         <div class="main-menu">
             <nav>
@@ -41,27 +47,21 @@
                 <li>
                     <a href="./pages/list.html?name=whisky">홀리데이 위스키</a>
                 </li>
-                <li>
-                    <a href="./pages/review.html">베스트후기</a>
-                </li>
-                <!-- <li>
-                    <a href="#">공지사항</a>
-                </li> -->
             </ul>
             <div class="sign">
                 <div>
                     <p>로그인</p>
-                    <p>장바구니</p>
+                    <p onclick="location.href='./pages/cart.html'">장바구니</p>
                 </div>
 
             </div>
         </nav>
     </div>
     <div>
-        <a href="/" class="home">Happy Pub</a>
+        <a href="./index.html" class="home">Happy Pub</a>
     </div>
     <div>
-        <img src="./images/main/user-icon-svg.png" alt="">
-        <img src="./images/main/cart-icon-svg.png" alt="">
+        <img onclick="location.href='./pages/search.html'" src="./images/main/search-icon-svg.png" alt="">
+        <img onclick="location.href='./pages/cart.html'" src="./images/main/cart-icon-svg.png" alt="">
     </div>
 </div>
