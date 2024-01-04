@@ -209,10 +209,11 @@ const fetchData = (data, name) => {
 }
 
 const getData = () => {
-    fetchData(jsondata[0], "wine");
-    fetchData(jsondata[1], "beer");
-    fetchData(jsondata[2], "soju");
-    fetchData(jsondata[3], "whisky");
+     fetchData('../datas/wine_view.json', "wine");
+    // fetchData(jsondata[0], "wine");
+    // fetchData(jsondata[1], "beer");
+    // fetchData(jsondata[2], "soju");
+    // fetchData(jsondata[3], "whisky");
 }
 getData();
 var swiper1 = new Swiper(".banner", {
