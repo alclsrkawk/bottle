@@ -13,23 +13,22 @@ if (localStorage.getItem('products') == null) {
         let localArr = JSON.parse(localData)[i];
         let disCount =  (parseInt(localArr.discount.replaceAll(',', '')))*localArr.ea;
         let price = (parseInt(localArr.price.replaceAll(',', '')))*localArr.ea;
-        console.log(parseInt(localArr.discount.replaceAll(',', '')))
-        console.log(localArr.ea)
+        // console.log(parseInt(localArr.discount.replaceAll(',', '')))
+        // console.log(localArr.ea)
         addList += `<div id=list2>
             <div class="cart_1">
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
             <div class="cart_2">
-                <b>${localArr.product_name}<br><span>${localArr.brand}</span><br><br>
-                ${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"} <span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span>
-                </b>
-                <div>
+                <b>${localArr.product_name}<br><span>${localArr.brand}</span><br></b>
+                <div id=count>
                     수량 : ${localArr.ea}개
                 </div>
-            <p><button class=delete>삭제</button></p>
+            <p>${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"} <span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span><button class=delete>삭제</button></p>
             </div>
             
-            </div>`
+            </div>
+            `
     }
     list.innerHTML = addList;
 
@@ -59,5 +58,31 @@ if (localStorage.getItem('products') == null) {
             all_del.style.display='none';
         }
     }
+    const elGoodSum1 = document.querySelector('.goodssum1');
+
+{/* <div class="btn_buy1">
+            <p>총 합계 금액<b class="goodssum1"></b></p>
+            <div id="button2_location">
+                <a id="location1" href="#"><input class="button2" type="button" value="구매하기"></a>
+            </div>
+        </div> */}
+
+        let sum = 0;
+        // console.log(JSON.parse(localStorage.getItem('products')))
+        let product = JSON.parse(localStorage.getItem('products'))
+        for(i=0;i<product.length;i++){
+        let disc = parseInt(product[i].discount.replaceAll(',', ''));
+        let ea = (product[i].ea);
+        let total = disc*ea;
+        sum = sum+total;
+        
+        }
+        console.log(sum);
+
+    elGoodSum1.innerHTML = sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원";
+
+    
+    
+    
 }
 
