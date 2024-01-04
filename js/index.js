@@ -25,6 +25,9 @@ const pageLoad = () => {
         const elAref = document.querySelectorAll('.main-menu nav a');
         const elTilte = document.querySelector('.main-title div a');
         const elHeader = document.querySelector('.header-pc');
+
+        const mobileHeader = document.querySelector('.header-m');
+        const mobileMain = document.querySelector('main');
         // console.log("scrollY :", window.scrollY)
 
         if (elMenu != null) {
@@ -48,6 +51,14 @@ const pageLoad = () => {
                     element.style.cssText = "color:#FFF;font-weight: 400";
                 })
             }
+        }
+
+        if (mobileMain.offsetTop <= window.scrollY) {
+            // console.log("scrollY :", window.scrollY, " mobileMain:", mobileMain.offsetTop)
+            mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
+        }
+        else {
+            mobileHeader.style.cssText = "background: transparent;border-bottom: 1px solid rgba(255, 255, 255, 0.3);"
         }
 
     });
