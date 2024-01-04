@@ -38,6 +38,10 @@ const fnCart = (obj) => {
     console.log(localStorage.getItem('products'))
 }
 
+if(localStorage.getItem('products')==null){
+    list.innerHTML = '<p>삼품없음</p>';
+} else {
+
 let addList = '';
 
 let localData = localStorage.getItem('products');
@@ -58,4 +62,5 @@ addList += `<div id="list">
             </div>
             </div>`
 }
-asd.innerHTML = addList;
+list.innerHTML = addList;
+}
