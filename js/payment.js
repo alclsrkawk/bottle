@@ -409,13 +409,15 @@ if (localStorage.getItem('products') == null) {
                 let totalDiscount = parseInt(goods[i].discount.replaceAll(',', '')) * params.ea;
 
                 addProduct += `
-                        <div>
+                <div class='third-flex-1'>        
+                <div>
                         <li><img src="../images/${params.name}/${picture[0]}" alt=""></li>
                         </div>
                         <div>
                             <p>${goods[i].brand}</p>
                             <p>${goods[i].product_name} <span>| ${params.ea}개</span></p><br>
                             <p>${totalDiscount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}<span>${totalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원"}</span></p>
+                        </div>
                         </div>
                         `;
                 let allPrice = '';
