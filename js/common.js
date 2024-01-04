@@ -26,6 +26,7 @@ const pageLoad = () => {
         const elAref = document.querySelectorAll('.main-menu nav a');
         const elTilte = document.querySelector('.main-title div a');
         const elHeader = document.querySelector('.header-pc');
+        const mobileHeader = document.querySelector('.header-m');
 
         if (elMenu != null) {
             let diff = (window.scrollY - elMenu.offsetTop);
@@ -48,6 +49,8 @@ const pageLoad = () => {
                 // })
             }
         }
+
+        mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
     });
 
 }
