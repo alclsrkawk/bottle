@@ -75,8 +75,8 @@ const sideClose = () => {
     }
 }
 
-const jsondata = ['/bottle/datas/wine_view.json', '/bottle/datas/beer_view.json'
-    , '/bottle/datas/soju_view.json', '/bottle/datas/whisky_view.json'];
+const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
+    , '../datas/soju_view.json', '../datas/whisky_view.json'];
 
 let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
 let elWine = document.querySelector(`#dv-wine`);
