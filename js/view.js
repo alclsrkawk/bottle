@@ -252,7 +252,7 @@ let goodsView = function () {
         , "ea": elInputText.value
       }
       fnCart(item1)
-      console.log(pro)
+      swalMsg(0, "장바구니", "장바구니에 저장되었습니다.");
     }
     
   }

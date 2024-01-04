@@ -975,11 +975,21 @@ main {
                     }
 
                     #m_button1_location {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        .m_cart{
+                            width: 30%;
+                                height: 30px;
+                                border: 1px solid white;
+                                background-color: black;
+                                color: white;
+                        }
 
                         .m_location {
 
                             .m_button1 {
-                                width: 50%;
+                                width: 30%;
                                 height: 30px;
                                 border: 1px solid white;
                                 background-color: black;

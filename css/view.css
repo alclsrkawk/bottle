@@ -1245,8 +1245,20 @@ main .m_buy_all .m_buy .m_btn_buy {
     width: 100%;
     text-align: end;
   }
+  main .m_buy_all .m_buy .m_btn_buy #m_button1_location {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_cart {
+    width: 30%;
+    height: 30px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+  }
   main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_location .m_button1 {
-    width: 50%;
+    width: 30%;
     height: 30px;
     border: 1px solid white;
     background-color: black;
