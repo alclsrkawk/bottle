@@ -257,6 +257,9 @@
                         }
 
                         .goods_info {
+                            width: 100%;
+                            overflow: hidden;
+
                             @include flex(space-between) {
                                 flex-direction: column;
                             }
@@ -267,6 +270,9 @@
                             }
 
                             p {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
                                 margin: 0;
                                 font-size: 1.1rem;
                             }

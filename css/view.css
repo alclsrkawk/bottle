@@ -629,9 +629,16 @@ main .view_1 .view_text .btn_buy #text3 b {
   font-weight: bold;
 }
 main .view_1 .view_text .btn_buy #button1_location {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .view_1 .view_text .btn_buy #button1_location .cart {
+  width: 240px;
+  height: 47px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: aqua;
 }
 main .view_1 .view_text .btn_buy #button1_location .location .button1 {
   width: 240px;
@@ -1238,8 +1245,20 @@ main .m_buy_all .m_buy .m_btn_buy {
     width: 100%;
     text-align: end;
   }
+  main .m_buy_all .m_buy .m_btn_buy #m_button1_location {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_cart {
+    width: 30%;
+    height: 30px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+  }
   main .m_buy_all .m_buy .m_btn_buy #m_button1_location .m_location .m_button1 {
-    width: 50%;
+    width: 30%;
     height: 30px;
     border: 1px solid white;
     background-color: black;

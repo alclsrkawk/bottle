@@ -1,61 +1,49 @@
 const cartBtn = document.querySelector('button');
 let item = null;
-//상품 받아오기
-function getUrlParams() {
-    const params = {};
-    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-    return params;
-}
-const params = getUrlParams();
-let goods = [];
 
+if (localStorage.getItem('products') == null) {
+    list.innerHTML = '<p>삼품없음</p>';
+} else {
 
-cartBtn.onclick = () => {
-    item1 =
-        [{
-            "Idx":5
-            , "name": "wine"
-            , "product_name": "시나브로 바야흐로오크 40도 500ml"
-            , "price": "80,000원"
-            , "discount":  "76,000원"
-            , "brand":"시나브로와이너리"
-            , "product_img":"wine5.png"
-        }]
+    let addList = '';
 
-    fnCart(item1)
-}
-const fnCart = (obj) => {
-    let newItem = JSON.parse(localStorage.getItem('products'));
-    console.log("newItem :", newItem)
-    
-    if (newItem != null) {
-        newItem.push(obj)
-        localStorage.setItem('products', JSON.stringify(newItem));
-    }
-    else {
-        localStorage.setItem('products', JSON.stringify(obj));
-    }
-    console.log(localStorage.getItem('products'))
-}
+    let localData = localStorage.getItem('products');
 
-let addList = '';
-
-let localData = localStorage.getItem('products');
-console.log(JSON.parse(localData).length);
-
-for(i=0;i<JSON.parse(localData).length;i++){
-let localArr=JSON.parse(localData)[i];
-addList += `<div id="list">
+    for (i = 0; i < JSON.parse(localData).length; i++) {
+        let localArr = JSON.parse(localData)[i];
+        let disCount =  (parseInt(localArr.discount.replaceAll(',', '')))*localArr.ea;
+        let price = (parseInt(localArr.price.replaceAll(',', '')))*localArr.ea;
+        console.log(parseInt(localArr.discount.replaceAll(',', '')))
+        console.log(localArr.ea)
+        addList += `<div id=list2>
             <div class="cart_1">
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
             <div class="cart_2">
                 <b>${localArr.product_name} <span>${localArr.brand}</span></b><br>
-                <p>${localArr.discount}<span>${localArr.price}</span></p>
+                <p>${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}<span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span></p>
                 <div>
                     수량 : ${localArr.ea}개
                 </div>
+            <p><button class=delete>삭제</button></p>
             </div>
+            
             </div>`
+    }
+    list.innerHTML = addList;
+
+    const delBtn = document.querySelectorAll('.delete');
+    newItem = JSON.parse(localStorage.getItem("products") || "[]");
+    delBtn.forEach(function(btn,key){
+        btn.onclick = function(){
+            newItem.splice(key,1);
+            localStorage.setItem("products",JSON.stringify(newItem));
+            location.reload()
+        }
+    });
+    all_del.onclick = function(){
+        localStorage.removeItem('products');
+        location.reload()
+    }
 }
-asd.innerHTML = addList;
+
