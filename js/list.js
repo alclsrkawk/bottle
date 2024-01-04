@@ -208,16 +208,19 @@ elBtnYes.addEventListener('click', () => {
     document.cookie = "popup=age_check; expires=" + date;
     console.log(date);
 
-    elPopUp.style.display = 'none';
+    elPopUp.style.display = 'none',
     elPopBg.style.display = 'none';
 
 });
 
 if (document.cookie.match('age_check')) {
-    elPopUp.style.display = 'none';
+    elPopUp.style.display = 'none',
+    elPopBg.style.display = 'none';
 } else {
     elPopUp.style.display = 'block';
 }
+
+
 
 
 
