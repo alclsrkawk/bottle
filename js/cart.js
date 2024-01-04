@@ -12,22 +12,22 @@ let goods = [];
 
 cartBtn.onclick = () => {
     item1 =
-        [{
-            "Idx":5
-            , "name": "wine"
-            , "product_name": "시나브로 바야흐로오크 40도 500ml"
+        {
+            "Idx": 6
+            , "name": "soju"
+            , "product_name": "asd"
             , "price": "80,000원"
-            , "discount":  "76,000원"
-            , "brand":"시나브로와이너리"
-            , "product_img":"wine5.png"
-        }]
+            , "discount": "76,000원"
+            , "brand": "시나브로와이너리"
+            , "product_img": "wine5.png"
+        }
 
     fnCart(item1)
 }
 const fnCart = (obj) => {
-    let newItem = JSON.parse(localStorage.getItem('products'));
+    let newItem = JSON.parse(localStorage.getItem('products')) || [];
     console.log("newItem :", newItem)
-    
+
     if (newItem != null) {
         newItem.push(obj)
         localStorage.setItem('products', JSON.stringify(newItem));
@@ -35,21 +35,20 @@ const fnCart = (obj) => {
     else {
         localStorage.setItem('products', JSON.stringify(obj));
     }
-    console.log(localStorage.getItem('products'))
+
 }
 
-if(localStorage.getItem('products')==null){
+if (localStorage.getItem('products') == null) {
     list.innerHTML = '<p>삼품없음</p>';
 } else {
 
-let addList = '';
+    let addList = '';
 
-let localData = localStorage.getItem('products');
-console.log(JSON.parse(localData).length);
+    let localData = localStorage.getItem('products');
 
-for(i=0;i<JSON.parse(localData).length;i++){
-let localArr=JSON.parse(localData)[i];
-addList += `<div id="list">
+    for (i = 0; i < JSON.parse(localData).length; i++) {
+        let localArr = JSON.parse(localData)[i];
+        addList += `<div id="list">
             <div class="cart_1">
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
@@ -59,8 +58,20 @@ addList += `<div id="list">
                 <div>
                     수량 : ${localArr.ea}개
                 </div>
+            <p><button class=delete>삭제</button></p>
             </div>
+            
             </div>`
+    }
+    list.innerHTML = addList;
+
+    const delBtn = document.querySelectorAll('.delete');
+    delBtn.forEach(function(btn,key){
+        btn.onclick = function(){
+            console.log(JSON.parse(localData)[key]);
+            //console.log((localStorage.getItem('products'))[key]);
+            localStorage.removeItem(JSON.parse(localData)[key]);
+        }
+    });
 }
-list.innerHTML = addList;
-}
+
