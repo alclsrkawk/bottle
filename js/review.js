@@ -28,34 +28,31 @@ const drawStar = function (target) {
 const dsf = [];
 starSpanInput.value = 0; // 초기화
 //---------------------- 별점 드래그 끝 -------------------------
-
+// -------------json 가져오기 --------------
 let reviewList = [];
-
+let aaa = [];
 fetch("../datas/review.json")
     .then(type => type.json())
     .then(result => {
         reviewList = result.data;
+        aaa = result.data;
         reviewPage();
     }).catch(error => {
         // console.log(error);
     });
 
-let reviewPage = function () {
-    // print test
-    // console.log(reviewList)
-    // console.log(reviewList[0])
-    // console.log(reviewList[0].id)
-    // console.log(typeof (reviewList[0].like))
 
+
+let reviewPage = function () {
     // ------------------- review.json data 뿌리기 ----------------------
     let PrintReviewList = function () {
         // localstorage에 현재 주소(키)가 있으면 가져오고 없음 말기
         if (localStorage.getItem(location.href)) {
+            reviewList = [...aaa];
             // console.log('키값이 있어용')
             let newArr = localStorage.getItem(location);
             reviewList.push(...JSON.parse(newArr));
         }
-
         let resultArr = '';
         reviewList.forEach((el, i) => {
             // console.log(el.id)
@@ -226,9 +223,8 @@ let reviewPage = function () {
                 reviewPop.classList.add('hidden');
                 popCont.classList.remove('active');
                 popBg.classList.remove('bg-active');
-
                 swalMsg(1, "성공", "상품 후기가 등록되었습니다!")
-                reviewListContLi = document.querySelectorAll('.review-list-container li')
+
                 //뿌리기 // 새 배열 추가
                 let newArr = {
                     "Idx": reviewList.length + 1,
@@ -238,7 +234,6 @@ let reviewPage = function () {
                     "grade": parseFloat(starSpanInput.value) / 2,
                     "review": reviewPopText.value
                 };
-
 
                 // 로컬스토리지에 저장(setItem)
                 // 로컬스토리지 값 가져오기(getItem)
@@ -252,8 +247,6 @@ let reviewPage = function () {
                 else {
                     localStorage.setItem(`${location.href}`, JSON.stringify(newArr));
                 }
-
-                // 로컬스토리지에 저장된 값을 reviewList에 반영해야함
 
                 PrintReviewList(); // list 새로 뿌림
                 likeGradeFunc(); // 좋아요
