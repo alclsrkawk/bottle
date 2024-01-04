@@ -209,10 +209,10 @@ const fetchData = (data, name) => {
 }
 
 const getData = () => {
-    fetchData('../datas/wine_view.json', "wine");
-    fetchData('../datas/beer_view.json', "beer");
-    fetchData('../datas/soju_view.json', "soju");
-    fetchData('../datas/whisky_view.json', "whisky");
+    fetchData(`../datas/wine_view.json`, "wine");
+    fetchData(`../datas/beer_view.json`, "beer");
+    fetchData(`../datas/soju_view.json`, "soju");
+    fetchData(`../datas/whisky_view.json`, "whisky");
     // fetchData(jsondata[0], "wine");
     // fetchData(jsondata[1], "beer");
     // fetchData(jsondata[2], "soju");
