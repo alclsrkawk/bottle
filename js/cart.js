@@ -3,6 +3,7 @@ const cartBtn = document.querySelector('button');
 if (localStorage.getItem('products') == null) {
     list.innerHTML = '<p class=list_1>장바구니에 담긴 상품이 없습니다.<br>상품을 장바구니에 담아주세요</p>';
     all_del.style.display='none';
+    buy_btn.style.display='none';
 } else {
 
     let addList = '';
@@ -44,6 +45,7 @@ if (localStorage.getItem('products') == null) {
                 if (localStorage.getItem('products') == null) {
                     list.innerHTML = '<p class=list_1>장바구니에 담긴 상품이 없습니다.<br>상품을 장바구니에 담아주세요</p>';
                     all_del.style.display='none';
+                    buy_btn.style.display='none';
                 }
             }
             // list.innerHTML = '<p>삼품없음</p>';
@@ -56,16 +58,17 @@ if (localStorage.getItem('products') == null) {
         if (localStorage.getItem('products') == null) {
             list.innerHTML = '<p class=list_1>장바구니에 담긴 상품이 없습니다.<br>상품을 장바구니에 담아주세요</p>';
             all_del.style.display='none';
+            buy_btn.style.display='none';
         }
     }
     const elGoodSum1 = document.querySelector('.goodssum1');
 
-{/* <div class="btn_buy1">
+/* <div class="btn_buy1">
             <p>총 합계 금액<b class="goodssum1"></b></p>
             <div id="button2_location">
                 <a id="location1" href="#"><input class="button2" type="button" value="구매하기"></a>
             </div>
-        </div> */}
+        </div> */
 
         let sum = 0;
         // console.log(JSON.parse(localStorage.getItem('products')))
@@ -77,7 +80,6 @@ if (localStorage.getItem('products') == null) {
         sum = sum+total;
         
         }
-        console.log(sum);
 
     elGoodSum1.innerHTML = sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원";
 
