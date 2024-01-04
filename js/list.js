@@ -231,11 +231,55 @@ elBtnNo.addEventListener('click', () => {
 
 const elSel = document.querySelector('.select'),
       elYear = document.querySelector('#year'),
-      elYearOpt = document.querySelector('.year_opt');
-
-
-elYearOpt='';
-    for(i=1930; i<=2024; i++){
+      elMonth = document.querySelector('#month'),
+      elDay = document.querySelector('#day');
+   
+      isYearOptionExisted = false;
+      elYear.addEventListener('focus', function () {
+       
+        if(!isYearOptionExisted) {
+          isYearOptionExisted = true
+          for(var i = 1930; i <= 2024; i++) {
+           
+            const YearOption = document.createElement('option')
+            YearOption.setAttribute('value', i)
+            YearOption.innerText = i
         
-    }
-    
+            this.appendChild(YearOption);
+          }
+        }
+      });
+
+
+      isMonthOptionExisted = false;
+      elMonth.addEventListener('focus', function () {
+       
+        if(!isMonthOptionExisted) {
+          isMonthOptionExisted = true
+          for(var i = 1; i <= 12; i++) {
+           
+            const MonthOption = document.createElement('option')
+            MonthOption.setAttribute('value', i)
+            MonthOption.innerText = i
+        
+            this.appendChild(MonthOption);
+          }
+        }
+      });
+
+
+      isDayOptionExisted = false;
+      elDay.addEventListener('focus', function () {
+       
+        if(!isDayOptionExisted) {
+          isDayOptionExisted = true
+          for(var i = 1; i <= 31; i++) {
+           
+            const DayOption = document.createElement('option')
+            DayOption.setAttribute('value', i)
+            DayOption.innerText = i
+        
+            this.appendChild(DayOption);
+          }
+        }
+      });
