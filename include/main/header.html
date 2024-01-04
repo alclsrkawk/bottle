@@ -5,13 +5,13 @@
                 <a href="/">Happy Pub</a>
             </div>
             <div>
-                <input type="text" value="">
+                <input type="text" value="" onkeyup="if(window.event.keyCode==13){goSearch(value)}">
             </div>
             <div>
-                <img src="./images/main/search-icon-svg.png" alt="">
+                <img onclick="goSearch();" src="./images/main/search-icon-svg.png" alt="">
             </div>
-            <div onclick="location.href='./pages/cart.html'">
-                <img src="./images/main/cart-icon-svg.png" alt="">
+            <div>
+                <img onclick="location.href='./pages/cart.html'" src="./images/main/cart-icon-svg.png" alt="">
             </div>
         </div>
         <div class="main-menu">
@@ -47,17 +47,11 @@
                 <li>
                     <a href="./pages/list.html?name=whisky">홀리데이 위스키</a>
                 </li>
-                <!-- <li>
-                    <a href="./pages/review.html">베스트후기</a>
-                </li> -->
-                <!-- <li>
-                    <a href="#">공지사항</a>
-                </li> -->
             </ul>
             <div class="sign">
                 <div>
                     <p>로그인</p>
-                    <p>장바구니</p>
+                    <p onclick="location.href='./pages/cart.html'">장바구니</p>
                 </div>
 
             </div>

@@ -52,7 +52,10 @@ const pageLoad = () => {
 
 }
 window.onload = pageLoad;
-
+const goSearch = () => {
+    const searchText = document.querySelector('.main-title input');
+    location.href = `../pages/search.html?stext=${searchText.value}`;
+}
 const sideMenu = () => {
     //const elBody = document.querySelector('body');
     const elNav = document.querySelector('.toggle nav');
