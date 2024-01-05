@@ -914,6 +914,9 @@ footer article .bottom div a {
   .main-section .review-container .write-review .popup-container {
     width: 360px;
   }
+  .main-section .review-list-container .list-result {
+    padding: 20px 0;
+  }
 }
 @media screen and (max-width: 410px) {
   html,
@@ -938,5 +941,8 @@ footer article .bottom div a {
   .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star,
   .main-section .review-container .write-review .popup-container #review-popup .goods .goods_info .star-container .star-grade {
     font-size: 1.5rem;
+  }
+  .main-section .review-list-container .list-result {
+    padding: 20px 0;
   }
 }
