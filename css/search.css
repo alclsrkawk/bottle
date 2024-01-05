@@ -619,7 +619,6 @@ header {
   font-size: 0.8rem;
 }
 
-<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: 1024px) {
   html,
   body {
@@ -633,7 +632,7 @@ header {
     height: 270px;
   }
 }
-@media (min-width: 410px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   html,
   body {
     font-size: 15px;
@@ -656,10 +655,7 @@ header {
     width: 100px;
   }
 }
-@media screen and (max-width: 410px) {
-=======
 @media screen and (max-width: 412px) {
->>>>>>> b2f06d6bd3eaef22d96af5f2c97acc72f761f15e
   html,
   body {
     font-size: 14px;
