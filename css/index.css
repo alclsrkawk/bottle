@@ -399,7 +399,6 @@ footer .footer-pc article .bottom div a {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    font-family: Noto Serif KR;
     font-style: normal;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -412,6 +411,7 @@ footer .footer-pc article .bottom div a {
   }
   .header-m :nth-child(2) .home {
     color: #EAB838;
+    font-family: Noto Serif KR;
     font-size: 1rem;
     font-weight: 700;
     line-height: 150%;

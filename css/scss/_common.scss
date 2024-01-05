@@ -532,7 +532,6 @@ footer {
         display: block;
         padding: 16px 20px;
         position: fixed;
-
         height: 47px;
         width: 100%;
 
@@ -541,7 +540,7 @@ footer {
         }
 
         text-align: center;
-        font-family: Noto Serif KR;
+
         font-style: normal;
         border-bottom: 1px solid rgb(255, 255, 255, 30%);
 
@@ -559,6 +558,7 @@ footer {
         :nth-child(2) {
             .home {
                 color: #EAB838;
+                font-family: Noto Serif KR;
                 font-size: 1rem;
                 font-weight: 700;
                 line-height: 150%;
