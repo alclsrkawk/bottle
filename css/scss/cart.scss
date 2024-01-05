@@ -159,7 +159,13 @@ main {
             #list{
                 width:80%;
                 #list2{
-                    .cart_1{}
+                    .cart_1{
+                        width:50%;
+                        li{
+                            width:100%;
+                            height:auto;
+                        }
+                    }
                     .cart_2{
                         padding-right:20px;
                         display:block;
