@@ -491,3 +491,5 @@ for(i=0;i<pay.length;i++){
     final_price.innerHTML = finalPrice;
 
 }
+
+

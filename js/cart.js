@@ -21,11 +21,11 @@ if (localStorage.getItem('products') == null) {
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
             <div class="cart_2">
-                <b>${localArr.product_name}<br><span>${localArr.brand}</span><br></b>
+                <b>${localArr.product_name}<br><span>${localArr.brand}</span></b>
                 <div id=count>
                     수량 : ${localArr.ea}개
                 </div>
-            <p>${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"} <span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span><button class=delete>삭제</button></p>
+            <p>${disCount.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"} <span>${price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")+"원"}</span><br><button class=delete>삭제</button></p>
             </div>
             
             </div>
@@ -87,4 +87,5 @@ if (localStorage.getItem('products') == null) {
     
     
 }
+
 

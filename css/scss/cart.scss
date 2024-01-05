@@ -65,6 +65,8 @@ main {
 
                 b {
                     width:200px;
+                    text-align: center;
+                    padding-right:50px;
                     span {
                         font-size: 16px;
                         color: #8C8D96;
@@ -85,6 +87,15 @@ main {
                         color: #8C8D96;
                         text-decoration: line-through;
                     }
+                    .delete {
+                        width:100px;
+                        height:30px;
+                        border : 1px solid #d9d9d9;
+                        background-color: white;
+                        color: black;
+                        font-family: Noto Sans KR;
+                    }
+                    
                 }
                 #count{
                     display:flex;
@@ -99,26 +110,20 @@ main {
 
                 
 
-                .delete {
-                    width:100px;
-                    height:30px;
-                    border : 1px solid #d9d9d9;
-                    background-color: white;
-                    color: black;
-                    font-family: Noto Sans KR;
-                }
+                
             }
 
         }
     }
     .btn_buy1{
+        
         // border: 1px solid #d9d9d9;
         border-radius: 20px;
         // padding: 50px;
         display:flex;
         justify-content: space-between;
         align-items: center;
-        margin: 20px auto;
+        margin: 100px auto;
         width:800px;
         p{
             font-size: 24px;
@@ -135,9 +140,153 @@ main {
                     color:white;
                     font-weight: bolder;
                     font-size: 20px;
+                    font-family: Noto Sans KR;
                 }
             }
         }
         
     }
 }
+
+
+
+//패드
+@include res($pad){
+    main{
+        .all_del{
+            width:80%;
+        }
+        .block{
+            #list{
+                width:80%;
+                #list2{
+                    .cart_1{}
+                    .cart_2{
+                        padding-right:20px;
+                        display:block;
+                        width:60%;
+                        text-align: left;
+                        font-size: 0.8rem;
+                        b{
+                            padding:0;
+                            span{
+                                font-size: 0.8rem;
+                                text-decoration: none;
+                            }
+                        }
+                        p{
+                            display:block;
+                            width:auto;
+                            height:auto;
+                            // text-align: center;
+                            .delete{
+
+                            }
+                        }
+                        #count{
+                            display:block;
+                            border:none;
+                            width:auto;
+                            height:auto;
+
+                            // text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+        #buy_btn{
+            width:80%;
+            display:block;
+            margin:0 auto;
+            p{
+                text-align: right;
+                font-size: 0.8rem;
+                .goodssum1{
+                    font-size: 1.3rem;
+                }
+            }
+            #button2_location{
+                .button2{
+                    width:100%;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+//모바일
+@include res($mobile){
+    main{
+        .all_del{
+            width:80%;
+        }
+        .block{
+            #list{
+                width:80%;
+                #list2{
+                    .cart_1{
+                        width:50%;
+                        li{
+                            width:100%;
+                            height:auto;
+                        }
+                    }
+                    .cart_2{
+                        padding-right:20px;
+                        display:block;
+                        width:60%;
+                        text-align: left;
+                        font-size: 0.7rem;
+                        b{
+                            padding:0;
+                            span{
+                                font-size: 0.7rem;
+                                text-decoration: none;
+                            }
+                        }
+                        p{
+                            display:block;
+                            width:auto;
+                            height:auto;
+                            // text-align: center;
+                            .delete{
+
+                            }
+                        }
+                        #count{
+                            display:block;
+                            border:none;
+                            width:auto;
+                            height:auto;
+
+                            // text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+        #buy_btn{
+            text-align: center;
+            width:80%;
+            margin: 0 auto;
+            display:block;
+            p{
+                text-align: right;
+                font-size: 0.7rem;
+                .goodssum1{
+                    font-size: 1.1rem;
+                }
+            }
+            #button2_location{
+                .button2{
+                    width:100%;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+
