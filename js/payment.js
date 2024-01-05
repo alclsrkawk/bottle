@@ -373,7 +373,7 @@ function handleOnInput(el, maxlength) {
 
 //주문상품 받아오기
 // console.log(localStorage.getItem('products'))
-if (localStorage.getItem('products') == null) {
+if (localStorage.getItem('products') == null){ //|| (localStorage.getItem('products') != null) && ) {
     function getUrlParams() {
         const params = {};
         window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });

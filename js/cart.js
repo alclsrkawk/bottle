@@ -21,11 +21,7 @@ if (localStorage.getItem('products') == null) {
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
             <div class="cart_2">
-<<<<<<< HEAD
-                <b>${localArr.product_name}<br><span>${localArr.brand}</span><br></b>
-=======
                 <b><span>${localArr.brand}</span><br>${localArr.product_name}</b>
->>>>>>> a4cfe6683697e55da25768dd4f36443ea3d172f7
                 <div id=count>
                     수량 : ${localArr.ea}개
                 </div>
