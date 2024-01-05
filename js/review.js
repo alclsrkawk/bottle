@@ -30,22 +30,22 @@ starSpanInput.value = 0; // 초기화
 //---------------------- 별점 드래그 끝 -------------------------
 // -------------json 가져오기 --------------
 let reviewList = [];
-let aaa = [];
+let reviewListBackup = [];
 fetch("../datas/review.json")
     .then(type => type.json())
     .then(result => {
         reviewList = result.data;
-        aaa = result.data;
-        reviewPage();
+        reviewListBackup = result.data; //print 초기화용 백업
+        fnReviewPage();
     }).catch(error => {
         // console.log(error);
     });
 
 let fnPrintReview = function () {
     let resultArr = '';
-        reviewList.forEach((el, i) => {
-            // console.log(el.id)
-            resultArr += `<li class="list-result">
+    reviewList.forEach((el, i) => {
+        // console.log(el.id)
+        resultArr += `<li class="list-result">
             <div class="left">
                 <span class="star-count">★★★★★</span>
                 <p class="user-id">${el.id}</p>
@@ -57,23 +57,22 @@ let fnPrintReview = function () {
             </div>
             <div class="right">${el.review}</div>
         </li>`
-        });
-        reviewListCont.innerHTML = resultArr;
+    });
+    reviewListCont.innerHTML = resultArr;
 }
 
-let reviewPage = function () {
+let fnReviewPage = function () {
     // ------------------- review.json data 뿌리기 ----------------------
-    let PrintReviewList = function () {
-        // localstorage에 현재 주소(키)가 있으면 가져오고 없음 말기
+    // localstorage에 현재 주소(키)가 있으면 가져온 다음에 fnPrintReview
+    let fnPrintEveryReviewList = function () {
         if (localStorage.getItem(location.href)) {
-            reviewList = [...aaa];
-            // console.log('키값이 있어용')
+            reviewList = [...reviewListBackup]; //초기화
             let newArr = localStorage.getItem(location);
             reviewList.push(...JSON.parse(newArr));
         }
         fnPrintReview();
     }
-    PrintReviewList();
+    fnPrintEveryReviewList();
 
     //-------- 좋아요 시작 --------
     let likeBtnEvent = function () {
@@ -249,7 +248,7 @@ let reviewPage = function () {
                     localStorage.setItem(`${location.href}`, JSON.stringify(newArr));
                 }
 
-                PrintReviewList(); // list 새로 뿌림
+                fnPrintEveryReviewList(); // list 새로 뿌림
                 likeGradeFunc(); // 좋아요
                 likeBtnEvent(); // 버튼 이벤트
 
