@@ -756,8 +756,9 @@ main {
 @include res($mobile) {
 
     main {
+        width: 100%;
         padding-top: 100px;
-        margin: 0 5px;
+        
 
         .view_1 {
             width: 100%;

@@ -1079,8 +1079,8 @@ main .m_buy_all .m_buy .m_btn_buy {
 }
 @media screen and (max-width: 410px) {
   main {
+    width: 100%;
     padding-top: 100px;
-    margin: 0 5px;
   }
   main .view_1 {
     width: 100%;
