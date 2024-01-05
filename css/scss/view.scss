@@ -3,6 +3,7 @@
 // PC --시작
 
 main {
+    padding-top: 200px;
     #up {
         position: fixed;
         bottom: 100px;
@@ -36,19 +37,21 @@ main {
     #down:hover {
         background-color: rgba(0, 0, 0, 1);
     }
-    width: 1170px;
-    padding-top: 200px;
-    margin: 0 auto;
+
 
     .view_1 {
-        width: 100%;
+        width: 1180px;
         height: 670px;
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 5px;
+
 
         //메인이미지, 서브이미지 
         .view_img_1 {
-            width: 43%;
+            width: 560px;
+            height: 100%;
             display: flex;
             flex-direction: column;
 
@@ -56,6 +59,7 @@ main {
             .view_main_img {
                 border: 1px solid #E0E2E7;
                 width: 100%;
+                height: 70%;
             }
 
             .view_main_img:hover {
@@ -63,10 +67,9 @@ main {
             }
 
             .view_sub_image {
-                width: 70%;
-                display: flex;
-
                 width: 100%;
+                height: 100%;
+                display: flex;
                 margin-top: 20px;
 
                 img {
@@ -81,8 +84,10 @@ main {
 
         //제품 스펙
         .view_text {
-            position: relative;
-            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 560px;
             color: #8C8D96;
             font-size: 18px;
 
@@ -133,7 +138,7 @@ main {
                 flex-direction: column;
                 padding: 20px;
                 background-color: #F7F8FA;
-                margin: 40px 0;
+                margin: 20px 0;
                 color: #8C8D96;
                 font-size: 14px;
 
@@ -162,7 +167,7 @@ main {
                         color: #8C8D96;
                         font-size: 18px;
                         text-align: right;
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                     }
 
                     b {
@@ -175,29 +180,32 @@ main {
                 #button1_location {
                     display: flex;
                     justify-content: space-between;
-                    position: absolute;
                     width: 100%;
                     bottom: 0;
 
+
+
                     .cart {
-                        width: 240px;
-                        height: 47px;
+                        width: 270px;
+                        height: 60px;
                         color: black;
-                        font-size: 14px;
+                        font-size: 18px;
                         font-weight: bold;
                         background-color: aqua;
+                        font-weight: Noto Sans KR;
 
                     }
 
                     .location {
 
                         .button1 {
-                            width: 240px;
-                            height: 47px;
+                            width: 270px;
+                            height: 60px;
                             color: white;
-                            font-size: 14px;
+                            font-size: 18px;
                             font-weight: bold;
                             background-color: black;
+                            font-weight: Noto Sans KR;
                         }
                     }
                 }
@@ -208,9 +216,10 @@ main {
 
     //상세, 후기 라인
     #goods_line {
-        width: 100%;
-        margin-top: 120px;
+        width: 1170px;
         display: flex;
+        margin: 80px auto 0 auto;
+
 
         .goods_ex_line {
             text-align: center;
@@ -256,7 +265,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 80px;
         margin-bottom: 40px;
 
         .img_ex {
@@ -310,64 +319,6 @@ main {
     //모바일 구매하기
     .m_buy_all {
         display: none;
-
-        .m_down_up {
-            display: block;
-            width: 20%;
-            background-color: rgb(112, 112, 112);
-            text-align: center;
-            color: black;
-            margin: 0 auto;
-        }
-
-        .m_buy {
-            display: block;
-            background-color: black;
-            color: white;
-
-            #m_line {
-                border-bottom: 1px solid white;
-            }
-
-            .m_textbox {
-                padding: 10px;
-
-                .m_text1 {
-                    p {}
-                }
-
-                #m_text2 {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .m_input_text {
-                        width: 30%;
-
-                    }
-
-                    p {}
-
-                }
-            }
-
-            .m_btn_buy {
-                border-top: 1px solid white;
-
-                .m_button1_location {
-                    .cart {}
-
-                    .m_location {
-
-                        .m_button1 {}
-                    }
-                }
-            }
-
-
-        }
     }
 
 
@@ -405,17 +356,18 @@ main {
 
 @include res($pad) {
     main {
-        width: 768px;
-        padding-top: 120px;
-        margin: 0 5px;
+
+        padding-top: 150px;
 
         .view_1 {
-
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            margin: 0 auto;
+            padding: 0 5px;
 
 
             .view_img_1 {
@@ -522,8 +474,6 @@ main {
                 }
 
                 .btn_buy {
-
-
                     width: 100%;
 
                     #text3 {
@@ -546,21 +496,33 @@ main {
                     }
 
                     #button1_location {
+                        width: 100%;
+
                         display: flex;
                         justify-content: space-between;
-                        position: absolute;
-                        width: 100%;
-                        bottom: 0;
+
+                        .cart {
+                            width: 45%;
+                            height: 60px;
+                            color: black;
+                            font-size: 18px;
+                            font-weight: bold;
+                            background-color: aqua;
+                            font-weight: Noto Sans KR;
+
+                        }
 
                         .location {
+                            width: 45%;
 
                             .button1 {
-                                width: 240px;
-                                height: 47px;
+                                width: 100%;
+                                height: 60px;
                                 color: white;
-                                font-size: 14px;
+                                font-size: 18px;
                                 font-weight: bold;
                                 background-color: black;
+                                font-weight: Noto Sans KR;
                             }
                         }
                     }
@@ -573,9 +535,6 @@ main {
         #goods_line {
             width: 100%;
             display: flex;
-            justify-content: center;
-
-            margin: 50px auto 0 auto;
 
             .goods_ex_line {
                 text-align: center;
@@ -617,11 +576,12 @@ main {
         }
 
         .img_ex_text {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 70px;
-            margin-bottom: 40px;
+
+
 
             .img_ex {
 
@@ -671,64 +631,8 @@ main {
 
         .m_buy_all {
             display: none;
-
-            .m_down_up {
-                display: block;
-                width: 20%;
-                background-color: rgb(112, 112, 112);
-                text-align: center;
-                color: black;
-                margin: 0 auto;
-            }
-
-            .m_buy {
-                display: block;
-                background-color: black;
-                color: white;
-
-                #m_line {
-                    border-bottom: 1px solid white;
-                }
-
-                .m_textbox {
-                    padding: 10px;
-
-                    .m_text1 {
-                        p {}
-                    }
-
-                    #m_text2 {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        .m_input_text {
-                            width: 30%;
-
+     
                         }
-
-                        p {}
-
-                    }
-                }
-
-                .m_btn_buy {
-                    border-top: 1px solid white;
-
-                    .m_button1_location {
-
-                        .m_location {
-
-                            .m_button1 {}
-                        }
-                    }
-                }
-
-
-            }
-        }
 
     }
 
@@ -737,9 +641,8 @@ main {
 @include res($mobile) {
 
     main {
-        width: 390px;
         padding-top: 100px;
-        margin: 0 5px;
+        
 
         .view_1 {
             width: 100%;
@@ -748,6 +651,7 @@ main {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            padding: 0 5px;
 
 
             .view_img_1 {
@@ -799,7 +703,6 @@ main {
 
                 .goods_text {
 
-
                     font-size: 18px;
                     line-height: 180%;
                     font-weight: 400;
@@ -836,7 +739,7 @@ main {
             width: 100%;
             display: flex;
             justify-content: center;
-            margin: 100px auto 0 auto;
+
 
             .goods_ex_line {
                 text-align: center;
@@ -878,12 +781,11 @@ main {
         }
 
         .img_ex_text {
-            width: 385px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 40px;
-            margin-bottom: 40px;
+
 
             .img_ex {
                 width: 385px;
@@ -906,8 +808,8 @@ main {
         }
 
         .m_buy_all {
+            width: 100%;
             display: block;
-            width: 390px;
             position: fixed;
             bottom: 0;
             transition: 1s;
@@ -920,7 +822,8 @@ main {
 
             .m_down_up {
                 width: 20%;
-                background-color: gray;
+                background-color: rgba($color: gray, $alpha: 0.7);
+                border-radius: 4px;
                 text-align: center;
                 color: white;
                 margin: 0 auto;
@@ -933,23 +836,27 @@ main {
             }
 
             .m_buy {
+                width: 385px;
                 border-top: 1px solid black;
                 background-color: white;
                 color: black;
+                margin: 0 auto;
+                
 
                 #m_line {
-                    border-bottom: 1px solid black;
+                    
                 }
 
                 .m_textbox {
-                    padding: 0px;
+                    
                     margin: 10px 0;
                     text-align: center;
+                    
 
                     .m_text1 {
 
                         p {
-                            font-weight: bolder;
+                            font-weight: 800;
                             text-align: left;
                             margin-bottom: 10px;
                         }
@@ -957,36 +864,40 @@ main {
 
                     #m_text2 {
                         width: 100%;
+                        display: flex;
                         justify-content: space-between;
 
                         .m_inputbox {
                             display: flex;
-
+                            padding: 0;
                             .m_valuedown {
-                                width: 13%;
-
+                                width: 15%;
                                 border: 1px solid black;
 
                             }
 
-                            .m_price1 {}
-
                             .m_input_text {
-                                width: 13%;
+                                width: 15%;
+                                text-align: center;
+                                transform: translateX(-1px);
 
                             }
 
                             .m_valueup {
-                                width: 13%;
-
+                                width: 15%;
                                 border: 1px solid black;
-
-
+                                transform: translateX(-2px);
                             }
                         }
 
+                        .m_price1 {
+                            width: 50%;
+                            text-align: right;
+                        }
+                        
                         .m_input_text::-webkit-outer-spin-button,
                         .m_input_text::-webkit-inner-spin-button {
+                            
                             -webkit-appearance: none;
                             -moz-appearance: none;
                             appearance: none;
@@ -1002,7 +913,7 @@ main {
 
                 .m_btn_buy {
                     text-align: center;
-                    border-top: 1px solid black;
+                    border-top: 1px solid rgb(207, 202, 202);
 
                     p {
                         font-weight: bolder;
@@ -1015,25 +926,21 @@ main {
 
                     #m_button1_location {
                         width: 100%;
+                        height: 35px;
                         display: flex;
                         justify-content: space-between;
                         
-
-
                         .m_cart {
-                            width: 40%;
-                            height: 30px;
-                            border: 1px solid black;
-                            background-color: aqua;
-                            color: black;
+                            border: 0px;
+                            background-color: white;
                         }
 
                         .m_location {
-                            width: 40%;
-
+                            width: 90%;
+                           height: 100%;
                             .m_button1 {
                                 width: 100%;
-                                height: 30px;
+                                height: 100%;
                                 border: 1px solid white;
                                 background-color: black;
                                 color: white;
