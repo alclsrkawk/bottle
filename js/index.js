@@ -31,10 +31,9 @@ const pageLoad = () => {
         // console.log("scrollY :", window.scrollY)
 
         if (elMenu != null) {
-            // console.log(" offsetTop :", elMenu.offsetTop)
-            let diff = (window.scrollY - elMenu.offsetTop)
+            let diff = (window.scrollY - elMenu.offsetTop) >= 150
 
-            if (diff >= 400) {
+            if (diff) {
                 elHeader.style.cssText = "background:#FFF;";
                 elMenu.style.cssText = "border-bottom:1px solid #E0E2E7";
                 elTilte.style.cssText = "text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);";
@@ -53,14 +52,14 @@ const pageLoad = () => {
             }
         }
 
-        if (mobileMain.offsetTop <= window.scrollY) {
-            // console.log("scrollY :", window.scrollY, " mobileMain:", mobileMain.offsetTop)
-            mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
+        if (mobileMain != null) {
+            if (mobileMain.offsetTop <= window.scrollY) {
+                mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
+            }
+            else {
+                mobileHeader.style.cssText = "background: transparent;border-bottom: 1px solid rgba(255, 255, 255, 0.3);"
+            }
         }
-        else {
-            mobileHeader.style.cssText = "background: transparent;border-bottom: 1px solid rgba(255, 255, 255, 0.3);"
-        }
-
     });
 
 }
