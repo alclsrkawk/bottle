@@ -135,7 +135,7 @@ main {
         // padding: 80px 19% 60px;
 
         @include flex(center) {
-            gap: 4%;
+            gap: 3%;
         }
 
         color: #000;
@@ -143,16 +143,19 @@ main {
         font-style: normal;
         line-height: normal;
 
-        .cate-name {
-            text-align: start;
-        }
 
         .review {
-            padding: 80px 0 60px 25%;
+
+            padding: 80px 0 60px;
+
+            .cate-name {
+                text-align: start;
+                padding-left: 15%;
+            }
 
             .list {
+                padding-left: 15%;
 
-                // margin-bottom: 20px;
                 figure {
                     @include flex(inline-flex) {
                         align-items: start;
@@ -162,21 +165,19 @@ main {
 
                     .pic {
                         margin: 15px 0px;
-                        width: 120px;
-                        height: 120px;
+
+                        width: 30%;
                         border: 1px solid #E0E2E7;
 
-                        margin: auto 0;
-                        display: block;
-
                         img {
-                            width: 100%;
+                            width: 120px;
+                            height: 120px;
                         }
 
                     }
 
                     .desc {
-                        width: 400px;
+                        width: 70%;
                         margin: 15px;
 
                         :nth-child(1) {
@@ -214,24 +215,33 @@ main {
         }
 
         .notice {
-            padding: 80px 25% 60px 0px;
+            padding: 80px 0 60px;
+
+            .cate-name {
+                text-align: start;
+            }
+
+            .more {
+                padding-right: 15%;
+            }
 
             .list {
-                width: 540px;
+                padding-right: 15%;
+                width: 100%;
                 margin-bottom: 20px;
 
                 figcaption {
 
                     @include flex(space-between) {
                         align-self: start;
-                        gap: 10%;
+                        gap: 5%;
                     }
 
                     font-size: 1rem;
                     font-weight: 400;
                     letter-spacing: -0.18px;
 
-                    padding: 11px;
+                    padding: 12px;
                     border-bottom: 1px solid #E0E2E7;
 
                     :nth-child(1) {
@@ -445,34 +455,45 @@ main {
         }
 
         .community {
-            // gap: 2%;
-            // padding: 0 20%;
+            @include flex(inline-flex) {
+                flex-direction: column;
+            }
 
             .review {
-                // padding: 40px 0 30px 10%;
+                padding: 40px 0;
+
+                .cate-name {
+                    padding-left: 10%;
+                }
+
+                .more {
+                    padding-right: 12%;
+                }
 
                 .list {
+                    padding: 0 10%;
                     margin-bottom: 10px;
 
                     figure {
                         .pic {
                             margin: 10px 0px;
-                            width: 80px;
-                            height: 80px;
+                            width: 20%;
+
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                            }
                         }
 
                         .desc {
-                            width: 120px;
-                            margin: 10px;
 
                             :nth-child(1) {
-                                font-size: 0.8rem;
+                                font-size: 0.85rem;
                             }
 
                             :nth-child(2) {
                                 margin: 10px 0 8px;
-                                font-size: 0.65rem;
-                                line-height: 12px;
+                                font-size: 0.7rem;
                             }
                         }
                     }
@@ -480,14 +501,22 @@ main {
             }
 
             .notice {
-                // padding: 40px 10% 30px 0px;
+
+                padding: 0 0 30px 0;
+
+                .cate-name {
+                    padding-left: 10%;
+                }
+
+                .more {
+                    padding-right: 12%;
+                }
 
                 .list {
-                    margin-bottom: 20px;
-                    width: 200px;
+                    padding: 0 10%;
 
                     figcaption {
-                        gap: 4%;
+                        // gap: 4%;
                         font-size: 0.8rem;
                         padding: 7.3px;
 
@@ -631,20 +660,26 @@ main {
             gap: 3%;
 
             .review {
-                padding: 40px 0 30px 15%;
+                .cate-name {
+                    padding-left: 37%;
+                }
 
                 .list {
                     margin-bottom: 10px;
+                    padding-left: 37%;
 
                     figure {
                         .pic {
                             margin: 10px 0px;
-                            width: 100px;
-                            height: 100px;
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                object-fit: cover;
+                            }
                         }
 
                         .desc {
-                            width: 250px;
                             margin: 10px;
 
                             :nth-child(1) {
@@ -654,7 +689,7 @@ main {
                             :nth-child(2) {
                                 margin: 10px 0 8px;
                                 font-size: 0.75rem;
-                                line-height: 14px;
+                                line-height: 15px;
                             }
                         }
                     }
@@ -662,16 +697,20 @@ main {
             }
 
             .notice {
-                padding: 40px 15% 30px 0px;
+
+                .more {
+                    padding-right: 39%;
+                }
 
                 .list {
-                    margin-bottom: 20px;
-                    width: 370px;
+                    margin-bottom: 10px;
+                    padding-right: 37%;
+                    width: 100%;
 
                     figcaption {
-                        gap: 5%;
+                        // gap: 5%;
                         font-size: 0.85rem;
-                        padding: 8.7px;
+                        padding: 9px 8px;
                     }
                 }
             }
@@ -776,17 +815,28 @@ main {
             }
 
             .review {
-                padding: 20px 5%;
+                padding: 30px 0;
+
+                .cate-name {
+                    padding-left: 5%;
+                }
+
+                .more {
+                    padding-right: 7%;
+                }
 
                 .list {
+                    padding: 0 5%;
                     margin-bottom: 8px;
 
                     figure {
                         .pic {
                             margin: 8px 0px;
+                            width: 30%;
 
                             img {
                                 width: 100%;
+                                object-fit: cover;
                             }
                         }
 
@@ -811,10 +861,18 @@ main {
             }
 
             .notice {
-                padding: 30px 5%;
+                padding: 0 0 20px 0;
+
+                .cate-name {
+                    padding-left: 5%;
+                }
+
+                .more {
+                    padding-right: 7%;
+                }
 
                 .list {
-                    width: 100%;
+                    padding: 0 5%;
 
                     figcaption {
                         padding: 8px 5px;

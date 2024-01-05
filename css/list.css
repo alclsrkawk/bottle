@@ -297,7 +297,7 @@ footer article .bottom div a {
     line-height: 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 44px;
@@ -621,6 +621,9 @@ main .list_bg {
   margin: 0 auto;
   z-index: auto;
 }
+main .list_bg img {
+  width: 100%;
+}
 main .list .list_title h2 {
   margin: 74px 0;
   text-align: center;
@@ -629,6 +632,7 @@ main .list .best5 {
   background-color: #F7F8FA;
   margin: 70px 0;
   padding: 70px 0;
+  overflow: hidden;
 }
 main .list .best5 .best5_title {
   width: 1180px;
@@ -823,7 +827,7 @@ main .list .list .list_items figcaption p:nth-of-type(2) {
     font-size: 1.5rem;
   }
   main .pop_up p:nth-of-type(1) {
-    margin-top: 45px;
+    margin-top: 4px;
   }
   main .pop_up .warning {
     margin: 0 30px;

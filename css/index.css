@@ -296,7 +296,7 @@ footer .footer-pc article .bottom div a {
     line-height: 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 44px;
@@ -656,16 +656,20 @@ main .whisky-l .whisky-item {
 main .community {
   display: flex;
   justify-content: center;
-  gap: 4%;
+  gap: 3%;
   color: #000;
   font-style: normal;
   line-height: normal;
 }
-main .community .cate-name {
-  text-align: start;
-}
 main .community .review {
-  padding: 80px 0 60px 25%;
+  padding: 80px 0 60px;
+}
+main .community .review .cate-name {
+  text-align: start;
+  padding-left: 15%;
+}
+main .community .review .list {
+  padding-left: 15%;
 }
 main .community .review .list figure {
   display: flex;
@@ -675,17 +679,15 @@ main .community .review .list figure {
 }
 main .community .review .list figure .pic {
   margin: 15px 0px;
-  width: 120px;
-  height: 120px;
+  width: 30%;
   border: 1px solid #E0E2E7;
-  margin: auto 0;
-  display: block;
 }
 main .community .review .list figure .pic img {
-  width: 100%;
+  width: 120px;
+  height: 120px;
 }
 main .community .review .list figure .desc {
-  width: 400px;
+  width: 70%;
   margin: 15px;
 }
 main .community .review .list figure .desc :nth-child(1) {
@@ -713,21 +715,28 @@ main .community .review .list figure .desc :nth-child(3) {
   color: #EAB838;
 }
 main .community .notice {
-  padding: 80px 25% 60px 0px;
+  padding: 80px 0 60px;
+}
+main .community .notice .cate-name {
+  text-align: start;
+}
+main .community .notice .more {
+  padding-right: 15%;
 }
 main .community .notice .list {
-  width: 540px;
+  padding-right: 15%;
+  width: 100%;
   margin-bottom: 20px;
 }
 main .community .notice .list figcaption {
   display: flex;
   justify-content: space-between;
   align-self: start;
-  gap: 10%;
+  gap: 5%;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: -0.18px;
-  padding: 11px;
+  padding: 12px;
   border-bottom: 1px solid #E0E2E7;
 }
 main .community .notice .list figcaption :nth-child(1) {
@@ -906,37 +915,58 @@ main .community .notice .list figcaption :nth-child(2) {
   main .whisky-l .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
     font-size: 0.6rem;
   }
+  main .community {
+    display: flex;
+    justify-content: inline-flex;
+    flex-direction: column;
+  }
+  main .community .review {
+    padding: 40px 0;
+  }
+  main .community .review .cate-name {
+    padding-left: 10%;
+  }
+  main .community .review .more {
+    padding-right: 12%;
+  }
   main .community .review .list {
+    padding: 0 10%;
     margin-bottom: 10px;
   }
   main .community .review .list figure .pic {
     margin: 10px 0px;
-    width: 80px;
-    height: 80px;
+    width: 20%;
   }
-  main .community .review .list figure .desc {
-    width: 120px;
-    margin: 10px;
+  main .community .review .list figure .pic img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .community .review .list figure .desc :nth-child(1) {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   main .community .review .list figure .desc :nth-child(2) {
     margin: 10px 0 8px;
-    font-size: 0.65rem;
-    line-height: 12px;
+    font-size: 0.7rem;
+  }
+  main .community .notice {
+    padding: 0 0 30px 0;
+  }
+  main .community .notice .cate-name {
+    padding-left: 10%;
+  }
+  main .community .notice .more {
+    padding-right: 12%;
   }
   main .community .notice .list {
-    margin-bottom: 20px;
-    width: 200px;
+    padding: 0 10%;
   }
   main .community .notice .list figcaption {
-    gap: 4%;
     font-size: 0.8rem;
     padding: 7.3px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .banner .tit {
     position: absolute;
     top: 50%;
@@ -1052,19 +1082,23 @@ main .community .notice .list figcaption :nth-child(2) {
   main .community {
     gap: 3%;
   }
-  main .community .review {
-    padding: 40px 0 30px 15%;
+  main .community .review .cate-name {
+    padding-left: 37%;
   }
   main .community .review .list {
     margin-bottom: 10px;
+    padding-left: 37%;
   }
   main .community .review .list figure .pic {
     margin: 10px 0px;
+  }
+  main .community .review .list figure .pic img {
     width: 100px;
     height: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .community .review .list figure .desc {
-    width: 250px;
     margin: 10px;
   }
   main .community .review .list figure .desc :nth-child(1) {
@@ -1073,19 +1107,19 @@ main .community .notice .list figcaption :nth-child(2) {
   main .community .review .list figure .desc :nth-child(2) {
     margin: 10px 0 8px;
     font-size: 0.75rem;
-    line-height: 14px;
+    line-height: 15px;
   }
-  main .community .notice {
-    padding: 40px 15% 30px 0px;
+  main .community .notice .more {
+    padding-right: 39%;
   }
   main .community .notice .list {
-    margin-bottom: 20px;
-    width: 370px;
+    margin-bottom: 10px;
+    padding-right: 37%;
+    width: 100%;
   }
   main .community .notice .list figcaption {
-    gap: 5%;
     font-size: 0.85rem;
-    padding: 8.7px;
+    padding: 9px 8px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1177,16 +1211,26 @@ main .community .notice .list figcaption :nth-child(2) {
     flex-direction: column;
   }
   main .community .review {
-    padding: 20px 5%;
+    padding: 30px 0;
+  }
+  main .community .review .cate-name {
+    padding-left: 5%;
+  }
+  main .community .review .more {
+    padding-right: 7%;
   }
   main .community .review .list {
+    padding: 0 5%;
     margin-bottom: 8px;
   }
   main .community .review .list figure .pic {
     margin: 8px 0px;
+    width: 30%;
   }
   main .community .review .list figure .pic img {
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .community .review .list figure .desc {
     margin: 0;
@@ -1202,10 +1246,16 @@ main .community .notice .list figcaption :nth-child(2) {
     font-size: 0.6rem;
   }
   main .community .notice {
-    padding: 30px 5%;
+    padding: 0 0 20px 0;
+  }
+  main .community .notice .cate-name {
+    padding-left: 5%;
+  }
+  main .community .notice .more {
+    padding-right: 7%;
   }
   main .community .notice .list {
-    width: 100%;
+    padding: 0 5%;
   }
   main .community .notice .list figcaption {
     padding: 8px 5px;
