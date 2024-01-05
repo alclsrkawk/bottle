@@ -1234,7 +1234,7 @@ main .community .notice .list figcaption :nth-child(2) {
     text-align: center;
     position: absolute;
     top: 15%;
-    left: 20%;
+    left: 28%;
     color: #FFF;
     display: flex;
     justify-content: center;
