@@ -5,11 +5,8 @@ main {
         text-align: right;
         width:800px;
         margin: 0 auto;
-        
-
     }
     #all_del{
-        margin-top : 50px;
         width:100px;
         height:30px;
         background-color: white;
@@ -18,9 +15,8 @@ main {
         border: 1px solid #d9d9d9;
         font-family: Noto Sans KR;
         font-size: 14px;
-        border-radius: 5px;
     }
-    padding-top: 160px;
+    padding-top: 200px;
     h1{
         text-align: center;
     }
@@ -30,9 +26,9 @@ main {
         
         .cart {
             width:800px;
-            margin : 5px auto;
+            margin : 50px auto;
             border : 1px solid #d9d9d9;
-            border-radius: 5px;
+            border-radius: 30px;
             .list_1{
                 margin:60px 0;
                 text-align: center;
@@ -69,9 +65,11 @@ main {
 
                 b {
                     width:200px;
+                    padding-right:50px;
                     span {
                         font-size: 16px;
                         color: #8C8D96;
+                        text-decoration: line-through;
                     }
                     
                     
@@ -88,6 +86,15 @@ main {
                         color: #8C8D96;
                         text-decoration: line-through;
                     }
+                    .delete {
+                        width:100px;
+                        height:30px;
+                        border : 1px solid #d9d9d9;
+                        background-color: white;
+                        color: black;
+                        font-family: Noto Sans KR;
+                    }
+                    
                 }
                 #count{
                     display:flex;
@@ -102,26 +109,20 @@ main {
 
                 
 
-                .delete {
-                    width:100px;
-                    height:30px;
-                    border : 1px solid #d9d9d9;
-                    background-color: white;
-                    color: black;
-                    font-family: Noto Sans KR;
-                }
+                
             }
 
         }
     }
     .btn_buy1{
+        
         // border: 1px solid #d9d9d9;
         border-radius: 20px;
         // padding: 50px;
         display:flex;
         justify-content: space-between;
         align-items: center;
-        margin: 20px auto;
+        margin: 100px auto;
         width:800px;
         p{
             font-size: 24px;
@@ -138,14 +139,12 @@ main {
                     color:white;
                     font-weight: bolder;
                     font-size: 20px;
+                    font-family: Noto Sans KR;
                 }
             }
         }
         
     }
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -153,7 +152,6 @@ main {
 //패드
 @include res($pad){
     main{
-        padding-top:120px;
         .all_del{
             width:80%;
         }
@@ -162,13 +160,10 @@ main {
                 width:80%;
                 #list2{
                     .cart_1{
-                        width:30%;
+                        width:50%;
                         li{
                             width:100%;
                             height:auto;
-                            img{
-
-                            }
                         }
                     }
                     .cart_2{
@@ -181,7 +176,7 @@ main {
                             padding:0;
                             span{
                                 font-size: 0.8rem;
-                                
+                                text-decoration: none;
                             }
                         }
                         p{
@@ -208,7 +203,7 @@ main {
         #buy_btn{
             width:80%;
             display:block;
-            margin:50px auto;
+            margin:0 auto;
             p{
                 text-align: right;
                 font-size: 0.8rem;
@@ -219,7 +214,6 @@ main {
             #button2_location{
                 .button2{
                     width:100%;
-                    height:60px;
                     font-size: 1.1rem;
                 }
             }
@@ -230,7 +224,6 @@ main {
 //모바일
 @include res($mobile){
     main{
-        padding-top:80px;
         .all_del{
             width:80%;
         }
@@ -255,7 +248,7 @@ main {
                             padding:0;
                             span{
                                 font-size: 0.7rem;
-                            
+                                text-decoration: none;
                             }
                         }
                         p{
@@ -280,10 +273,9 @@ main {
             }
         }
         #buy_btn{
-
             text-align: center;
             width:80%;
-            margin: 50px auto;
+            margin: 0 auto;
             display:block;
             p{
                 text-align: right;
@@ -302,5 +294,3 @@ main {
     }
 }
 
-
->>>>>>> a4cfe6683697e55da25768dd4f36443ea3d172f7

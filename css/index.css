@@ -207,7 +207,7 @@ footer .footer-pc article .bottom div a {
   color: #B2B3B9;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 35px;
@@ -385,7 +385,7 @@ footer .footer-pc article .bottom div a {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   .header-pc {
     display: none;
   }
@@ -487,6 +487,9 @@ footer .footer-pc article .bottom div a {
   }
   .header-m .toggle nav.active {
     transform: translateX(0%);
+  }
+  footer {
+    height: 80px;
   }
   .footer-pc {
     display: none;
@@ -798,7 +801,7 @@ main .community .notice .list figcaption :nth-child(2) {
   cursor: pointer;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   .banner .tit {
     position: absolute;
     top: 53%;
@@ -1091,7 +1094,7 @@ main .community .notice .list figcaption :nth-child(2) {
     padding: 8.7px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   main .wlist,
   main .slist {
     padding-bottom: 20px;

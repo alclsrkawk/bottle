@@ -6,6 +6,9 @@
 // PC --시작
 main {
     padding-top: 200px;
+    input{
+        padding-left : 5px;
+    }
     .order , .receiver, .address , .requested{
         width:700px;
         margin-bottom: 80px;

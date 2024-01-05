@@ -208,7 +208,7 @@ footer article .bottom div a {
   color: #000;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 35px;
@@ -386,7 +386,7 @@ footer article .bottom div a {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   .header-pc {
     display: none;
   }
@@ -490,6 +490,9 @@ footer article .bottom div a {
   .header-m .toggle nav.active {
     transform: translateX(0%);
   }
+  footer {
+    height: 80px;
+  }
   .footer-pc {
     display: none;
   }
@@ -534,12 +537,14 @@ main .all_del {
   margin: 0 auto;
 }
 main #all_del {
-  width: 120px;
-  height: 50px;
-  background-color: black;
-  color: white;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  color: black;
   font-size: 16px;
-  border: 0px solid;
+  border: 1px solid #d9d9d9;
+  font-family: Noto Sans KR;
+  font-size: 14px;
 }
 main h1 {
   text-align: center;
@@ -547,15 +552,21 @@ main h1 {
 main .block {
   width: 100%;
 }
-main .block #list {
-  margin: 0 auto;
-}
 main .block .cart {
   width: 800px;
+  margin: 50px auto;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+}
+main .block .cart .list_1 {
+  margin: 60px 0;
+  text-align: center;
+  font-weight: bolder;
 }
 main .block .cart #list2 {
+  margin: 100px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
 }
 main .block .cart .cart_1 li {
@@ -568,32 +579,185 @@ main .block .cart .cart_1 li img {
 main .block .cart .cart_2 {
   width: auto;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 main .block .cart .cart_2 button {
   width: 50px;
 }
+main .block .cart .cart_2 b {
+  width: 200px;
+  padding-right: 50px;
+}
 main .block .cart .cart_2 b span {
   font-size: 16px;
   color: #8C8D96;
-}
-main .block .cart .cart_2 P {
-  text-align: right;
-}
-main .block .cart .cart_2 P span {
   text-decoration: line-through;
-  color: #8C8D96;
 }
-main .block .cart .cart_2 div {
-  text-align: right;
+main .block .cart .cart_2 p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 156px;
 }
-main .block .cart .cart_2 div input {
-  width: 60px;
-  height: 30px;
+main .block .cart .cart_2 p span {
   font-size: 16px;
+  color: #8C8D96;
+  text-decoration: line-through;
 }
-main .block .cart .cart_2 .delete {
+main .block .cart .cart_2 p .delete {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+  color: black;
+  font-family: Noto Sans KR;
+}
+main .block .cart .cart_2 #count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 156px;
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+}
+main .btn_buy1 {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px auto;
+  width: 800px;
+}
+main .btn_buy1 p {
+  font-size: 24px;
+}
+main .btn_buy1 p b {
+  font-size: 30px;
+}
+main .btn_buy1 #button2_location a button {
+  width: 200px;
+  height: 47px;
   background-color: black;
   color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: Noto Sans KR;
+}
+
+@media (min-width: 412px) and (max-width: 768px) {
+  main .all_del {
+    width: 80%;
+  }
+  main .block #list {
+    width: 80%;
+  }
+  main .block #list #list2 .cart_1 {
+    width: 50%;
+  }
+  main .block #list #list2 .cart_1 li {
+    width: 100%;
+    height: auto;
+  }
+  main .block #list #list2 .cart_2 {
+    padding-right: 20px;
+    display: block;
+    width: 60%;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+  main .block #list #list2 .cart_2 b {
+    padding: 0;
+  }
+  main .block #list #list2 .cart_2 b span {
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+  main .block #list #list2 .cart_2 p {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  main .block #list #list2 .cart_2 #count {
+    display: block;
+    border: none;
+    width: auto;
+    height: auto;
+  }
+  main #buy_btn {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  main #buy_btn p {
+    text-align: right;
+    font-size: 0.8rem;
+  }
+  main #buy_btn p .goodssum1 {
+    font-size: 1.3rem;
+  }
+  main #buy_btn #button2_location .button2 {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 412px) {
+  main .all_del {
+    width: 80%;
+  }
+  main .block #list {
+    width: 80%;
+  }
+  main .block #list #list2 .cart_1 {
+    width: 50%;
+  }
+  main .block #list #list2 .cart_1 li {
+    width: 100%;
+    height: auto;
+  }
+  main .block #list #list2 .cart_2 {
+    padding-right: 20px;
+    display: block;
+    width: 60%;
+    text-align: left;
+    font-size: 0.7rem;
+  }
+  main .block #list #list2 .cart_2 b {
+    padding: 0;
+  }
+  main .block #list #list2 .cart_2 b span {
+    font-size: 0.7rem;
+    text-decoration: none;
+  }
+  main .block #list #list2 .cart_2 p {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  main .block #list #list2 .cart_2 #count {
+    display: block;
+    border: none;
+    width: auto;
+    height: auto;
+  }
+  main #buy_btn {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  main #buy_btn p {
+    text-align: right;
+    font-size: 0.7rem;
+  }
+  main #buy_btn p .goodssum1 {
+    font-size: 1.1rem;
+  }
+  main #buy_btn #button2_location .button2 {
+    width: 100%;
+    font-size: 0.8rem;
+  }
 }

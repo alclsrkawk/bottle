@@ -26,12 +26,24 @@ const pageLoad = () => {
         const elAref = document.querySelectorAll('.main-menu nav a');
         const elTilte = document.querySelector('.main-title div a');
         const elHeader = document.querySelector('.header-pc');
+        const elListPage = document.querySelector('.list_bg');
+        const elPaymentPage = document.querySelector('.section_div');
         const mobileHeader = document.querySelector('.header-m');
 
-        if (elMenu != null) {
-            let diff = (window.scrollY - elMenu.offsetTop);
 
-            if (diff >= 180) {
+        if (elMenu != null) {
+            let diff = null;
+            if (elPaymentPage != null) {
+                diff = elPaymentPage.offsetTop <= window.scrollY;
+            }
+            else if (elListPage != null) {
+                diff = elListPage.offsetTop <= window.scrollY;
+            }
+            else {
+                diff = (window.scrollY - elMenu.offsetTop) >= 50;
+            }
+
+            if (diff) {
                 elHeader.style.cssText = "background:#FFF;";
                 elMenu.style.cssText = "border-bottom:1px solid #E0E2E7";
                 elTilte.style.cssText = "text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);";
@@ -43,14 +55,11 @@ const pageLoad = () => {
             else {
                 elHeader.style.cssText = "background: transparent;"
                 elMenu.style.cssText = "border-bottom:0";
-                // elTilte.style.cssText = "text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);"
-                // elAref.forEach(function (element, i) {
-                //     element.style.cssText = "color:#FFF;font-weight: 400";
-                // })
             }
         }
 
-        mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
+        if (mobileHeader != null)
+            mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
     });
 
 }
