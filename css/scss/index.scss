@@ -446,9 +446,10 @@ main {
 
         .community {
             // gap: 2%;
+            padding: 0 50%;
 
             .review {
-                padding: 40px 0 30px 10%;
+                // padding: 40px 0 30px 10%;
 
                 .list {
                     margin-bottom: 10px;
@@ -461,7 +462,7 @@ main {
                         }
 
                         .desc {
-                            width: 180px;
+                            width: 120px;
                             margin: 10px;
 
                             :nth-child(1) {
@@ -479,11 +480,11 @@ main {
             }
 
             .notice {
-                padding: 40px 10% 30px 0px;
+                // padding: 40px 10% 30px 0px;
 
                 .list {
                     margin-bottom: 20px;
-                    width: 290px;
+                    width: 200px;
 
                     figcaption {
                         gap: 4%;

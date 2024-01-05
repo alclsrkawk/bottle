@@ -906,8 +906,8 @@ main .community .notice .list figcaption :nth-child(2) {
   main .whisky-l .swiper-wrapper .swiper-slide figcaption :nth-child(3) :nth-child(2) {
     font-size: 0.6rem;
   }
-  main .community .review {
-    padding: 40px 0 30px 10%;
+  main .community {
+    padding: 0 50%;
   }
   main .community .review .list {
     margin-bottom: 10px;
@@ -918,7 +918,7 @@ main .community .notice .list figcaption :nth-child(2) {
     height: 80px;
   }
   main .community .review .list figure .desc {
-    width: 180px;
+    width: 120px;
     margin: 10px;
   }
   main .community .review .list figure .desc :nth-child(1) {
@@ -929,12 +929,9 @@ main .community .notice .list figcaption :nth-child(2) {
     font-size: 0.65rem;
     line-height: 12px;
   }
-  main .community .notice {
-    padding: 40px 10% 30px 0px;
-  }
   main .community .notice .list {
     margin-bottom: 20px;
-    width: 290px;
+    width: 200px;
   }
   main .community .notice .list figcaption {
     gap: 4%;
