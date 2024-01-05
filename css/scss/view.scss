@@ -36,6 +36,7 @@ main {
     #down:hover {
         background-color: rgba(0, 0, 0, 1);
     }
+
     width: 1170px;
     padding-top: 200px;
     margin: 0 auto;
@@ -179,25 +180,29 @@ main {
                     width: 100%;
                     bottom: 0;
 
+
+
                     .cart {
-                        width: 240px;
-                        height: 47px;
+                        width: 280px;
+                        height: 60px;
                         color: black;
-                        font-size: 14px;
+                        font-size: 18px;
                         font-weight: bold;
                         background-color: aqua;
+                        font-weight: Noto Sans KR;
 
                     }
 
                     .location {
 
                         .button1 {
-                            width: 240px;
-                            height: 47px;
+                            width: 280px;
+                            height: 60px;
                             color: white;
-                            font-size: 14px;
+                            font-size: 18px;
                             font-weight: bold;
                             background-color: black;
+                            font-weight: Noto Sans KR;
                         }
                     }
                 }
@@ -405,12 +410,12 @@ main {
 
 @include res($pad) {
     main {
-        width: 768px;
+        width: 100%;
         padding-top: 120px;
         margin: 0 5px;
 
         .view_1 {
-
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -552,15 +557,29 @@ main {
                         width: 100%;
                         bottom: 0;
 
+
+
+                        .cart {
+                            width: 280px;
+                            height: 60px;
+                            color: black;
+                            font-size: 18px;
+                            font-weight: bold;
+                            background-color: aqua;
+                            font-weight: Noto Sans KR;
+
+                        }
+
                         .location {
 
                             .button1 {
-                                width: 240px;
-                                height: 47px;
+                                width: 280px;
+                                height: 60px;
                                 color: white;
-                                font-size: 14px;
+                                font-size: 18px;
                                 font-weight: bold;
                                 background-color: black;
+                                font-weight: Noto Sans KR;
                             }
                         }
                     }
@@ -737,7 +756,6 @@ main {
 @include res($mobile) {
 
     main {
-        width: 390px;
         padding-top: 100px;
         margin: 0 5px;
 
@@ -1017,7 +1035,7 @@ main {
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
-                        
+
 
 
                         .m_cart {
