@@ -72,7 +72,7 @@ let goodsView = function () {
       d += `<p>${goods[i].product_name}</p><br>
             <p></p>
             <div id="text2">
-            <input class= "input_text" type="number" min="0" placeholder="0">
+            <input class= "input_text" type="number" min="1" value="1">
             <p> ${goods[i].discount}</p>
             </div>`
 
@@ -103,30 +103,30 @@ let goodsView = function () {
 
   up.onclick = function () {
     window.scrollTo({
-        top: 0,
-        bottom: 100000,
-        behavior: "smooth"
+      top: 0,
+      bottom: 100000,
+      behavior: "smooth"
     });
-  
+
   }
   down.onclick = function () {
     window.scrollTo({
-        top: 100000,
-        bottom: 0,
-        behavior: "smooth"
+      top: 100000,
+      bottom: 0,
+      behavior: "smooth"
     });
   }
   const firstTab = document.querySelector('.view_1');
   window.addEventListener("scroll", function () {
     if (firstTab.getBoundingClientRect().y <= 0) {
-        up.style = "transform: translateY(-50px)";
-        down.style = "transform: translateY(-50px)";
+      up.style = "transform: translateY(-50px)";
+      down.style = "transform: translateY(-50px)";
     } else {
-        up.style = "transform: translateY(150px)";
-        down.style = "transform: translateY(150px)";
+      up.style = "transform: translateY(150px)";
+      down.style = "transform: translateY(150px)";
     }
-});
-  
+  });
+
 
 
   const elMainImg = document.querySelector('.view_main_img'),
@@ -197,22 +197,26 @@ let goodsView = function () {
     elMDownUp.classList.toggle('active');
   }
 
-  elInputText.onclick = function () {
+  function inputText() {
     // console.log(elInputText.value)
     let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
     let goodsSum = (elInputText.value * TransNum).toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
+
     let f = ''
     f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
     text3.innerHTML = f;
 
 
   }
+  elInputText.oninput = inputText;
+
+  inputText();
 
   elMValueDonw.onclick = function () {
-    if (elMInputText.value == 0) {
-
-    } else {
+    if(elMInputText.value == 1){
+      swalMsg(0, "수량 오류", "최소 수량은 1개입니다.");
+    }else{
       elMInputText.value--
       changeInput();
     }
@@ -223,9 +227,6 @@ let goodsView = function () {
     changeInput();
   }
 
-  elMInputText.oninput = function () {
-
-  }
 
   const changeInput = () => {
     // console.log(elMInputText.value)
@@ -236,6 +237,9 @@ let goodsView = function () {
     k += ` ${goodsSum1}원`;
     elMGoodsSum.innerHTML = k;
   }
+
+  elMInputText.oninput = changeInput;
+  changeInput()
 
   elLocation.onclick = function (e) {
 
@@ -283,7 +287,7 @@ let goodsView = function () {
       fnCart(item1)
       swalMsg(1, "장바구니", "장바구니에 저장되었습니다.");
     }
-    
+
   }
 
   let item2 = null;
@@ -308,7 +312,7 @@ let goodsView = function () {
       fnCart(item2)
       swalMsg(1, "장바구니", "장바구니에 저장되었습니다.");
     }
-    
+
   }
 
   //장바구니 저장 
@@ -327,5 +331,5 @@ let goodsView = function () {
     // console.log(localStorage.getItem('products'))
   }
   let ABC = JSON.parse(localStorage.getItem('products'));
-// console.log(ABC[0])
+  // console.log(ABC[0])
 }
