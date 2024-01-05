@@ -119,7 +119,7 @@ footer {
 footer .footer-pc article .top {
   background: #000;
   height: 354px;
-  padding: 0 370px;
+  padding: 0 19%;
   display: flex;
   justify-content: space-between;
   gap: 25%;
