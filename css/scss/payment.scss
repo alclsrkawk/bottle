@@ -5,6 +5,9 @@
 
 // PC --시작
 main {
+    input{
+        padding-left: 10px;
+    }
     padding-top: 200px;
     .order , .receiver, .address , .requested{
         width:700px;
@@ -385,3 +388,6 @@ main {
     }
 }
 }
+
+
+
