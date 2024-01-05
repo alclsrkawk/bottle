@@ -619,10 +619,56 @@ header {
   font-size: 0.8rem;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  header {
+    border-bottom: 0;
+    height: 0;
+  }
+  footer {
+    height: 270px;
+  }
+}
+@media (min-width: 410px) and (max-width: 768px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+  header {
+    border-bottom: 0;
+    height: 0;
+  }
+  footer {
+    height: 270px;
+  }
+  .search-result {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .search-result .input-container .input {
+    width: 100%;
+  }
+  .search-result .search-list .search-item img {
+    width: 100px;
+  }
+}
 @media screen and (max-width: 410px) {
   html,
   body {
     font-size: 14px;
+  }
+  header {
+    height: 47px;
+  }
+  footer {
+    height: 0;
+  }
+  .search {
+    margin-top: 100px;
+    width: 80vw;
   }
   .search-result .search-title {
     margin: 2rem 0;

@@ -113,11 +113,71 @@ header {
     }
 }
 
+@include res($tablet) {
+
+    html,
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        border-bottom: 0;
+        height: 0;
+    }
+
+    footer {
+        height: 270px;
+    }
+}
+
+@include res($pad) {
+
+    html,
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        border-bottom: 0;
+        height: 0;
+    }
+
+    footer {
+        height: 270px;
+    }
+
+    .search-result {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .search-result .input-container .input {
+        width: 100%;
+    }
+
+    .search-result .search-list .search-item img {
+        width: 100px;
+    }
+}
+
 @include res($mobile) {
 
     html,
     body {
         font-size: 14px;
+    }
+
+    header {
+        height: 47px;
+    }
+
+    footer {
+        height: 0;
+    }
+
+    .search {
+        margin-top: 100px;
+        width: 80vw;
     }
 
     .search-result .search-title {
