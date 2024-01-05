@@ -208,7 +208,7 @@ footer article .bottom div a {
   color: #000;
 }
 
-@media (min-width: 410px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 35px;
@@ -386,7 +386,7 @@ footer article .bottom div a {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 412px) {
   .header-pc {
     display: none;
   }
@@ -903,7 +903,7 @@ footer article .bottom div a {
   flex-direction: column;
 }
 
-@media (min-width: 410px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   html,
   body {
     font-size: 15px;
@@ -918,7 +918,7 @@ footer article .bottom div a {
     padding: 20px 0;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 412px) {
   html,
   body {
     font-size: 14px;
