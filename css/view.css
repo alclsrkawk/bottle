@@ -208,7 +208,7 @@ footer article .bottom div a {
   color: #000;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 35px;
@@ -386,7 +386,7 @@ footer article .bottom div a {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   .header-pc {
     display: none;
   }
@@ -794,7 +794,7 @@ main .m_buy_all {
   font-weight: 700;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   main {
     padding-top: 150px;
   }
@@ -1015,7 +1015,7 @@ main .m_buy_all {
     display: none;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   main {
     padding-top: 100px;
   }

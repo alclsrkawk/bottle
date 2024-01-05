@@ -208,7 +208,7 @@ footer article .bottom div a {
   color: #000;
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 35px;
@@ -386,7 +386,7 @@ footer article .bottom div a {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   .header-pc {
     display: none;
   }
@@ -529,6 +529,9 @@ main {
   padding-top: 200px;
   margin-left: 0 auto;
 }
+main input {
+  padding-left: 5px;
+}
 main .order, main .receiver, main .address, main .requested {
   width: 700px;
   margin-bottom: 80px;
@@ -651,8 +654,7 @@ main .section-third img {
   width: 100%;
 }
 main .section-third .third-flex {
-  display: flex;
-  align-items: center;
+  display: block;
 }
 main .section-third .third-flex p:nth-of-type(1) {
   font-size: 14px;
@@ -668,6 +670,9 @@ main .section-third .third-flex p:nth-of-type(3) span {
   margin-left: 10px;
   text-decoration: line-through;
   color: #8C8D96;
+}
+main .section-third .third-flex .third-flex-1 {
+  display: flex;
 }
 main .section-third::-webkit-scrollbar {
   display: none;
@@ -710,7 +715,7 @@ main #address_1, main #address_2 {
     text-align: center;
   }
 }
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 412px) and (max-width: 768px) {
   main {
     margin: 0 20px;
     margin: 0px 20px;
@@ -786,7 +791,7 @@ main #address_1, main #address_2 {
     width: 95%;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 412px) {
   main {
     padding-top: 100px;
     margin: 0 20px;

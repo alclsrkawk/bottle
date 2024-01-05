@@ -4,27 +4,33 @@ $width : 1920px;
     display: flex;
     justify-content: $n;
     @content
-};
+}
+
+;
 
 @mixin btn($s) {
-    padding : 10px 40px;
+    padding: 10px 40px;
     background-color: #000;
     color: #fff;
     text-align: center;
     font-size: $s;
     @content
-};
+}
+
+;
 
 @mixin btn-w($s) {
-    padding : 10px 40px;
+    padding: 10px 40px;
     background-color: #fff;
     color: #000;
     text-align: center;
     font-size: $s;
     @content
-};
+}
 
-$mobile: 390px;
+;
+
+$mobile: 412px;
 $pad: 768px;
 $tablet: 1024px;
 $desktop: 1280px;
