@@ -654,6 +654,7 @@ main .view_1 .view_text .text_box #text2 .input_text {
   width: 85px;
   height: 30px;
   font-size: 18px;
+  border: 1px solid black;
 }
 main .view_1 .view_text .btn_buy #text3 p {
   color: #8C8D96;
@@ -678,8 +679,9 @@ main .view_1 .view_text .btn_buy #button1_location .cart {
   color: black;
   font-size: 18px;
   font-weight: bold;
-  background-color: aqua;
-  font-weight: Noto Sans KR;
+  background-color: white;
+  font-family: Noto Sans KR;
+  border: 1px solid black;
 }
 main .view_1 .view_text .btn_buy #button1_location .location .button1 {
   width: 270px;
@@ -688,7 +690,8 @@ main .view_1 .view_text .btn_buy #button1_location .location .button1 {
   font-size: 18px;
   font-weight: bold;
   background-color: black;
-  font-weight: Noto Sans KR;
+  font-family: Noto Sans KR;
+  border: 1px solid black;
 }
 main #goods_line {
   width: 1170px;

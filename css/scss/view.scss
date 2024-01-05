@@ -154,6 +154,7 @@ main {
                         width: 85px;
                         height: 30px;
                         font-size: 18px;
+                        border: 1px solid black;
                     }
                 }
             }
@@ -191,8 +192,9 @@ main {
                         color: black;
                         font-size: 18px;
                         font-weight: bold;
-                        background-color: aqua;
-                        font-weight: Noto Sans KR;
+                        background-color: white;
+                        font-family: Noto Sans KR;
+                        border: 1px solid black;
 
                     }
 
@@ -205,7 +207,8 @@ main {
                             font-size: 18px;
                             font-weight: bold;
                             background-color: black;
-                            font-weight: Noto Sans KR;
+                            font-family: Noto Sans KR;
+                            border: 1px solid black;
                         }
                     }
                 }
