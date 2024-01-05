@@ -7,8 +7,6 @@ function getUrlParams() {
 const params = getUrlParams();
 
 
-
-
 let best5 = [], bestList;
 
 const bestData = `../datas/${params.name}_view.json`
@@ -20,6 +18,7 @@ fetch(bestData)
     }).catch(error => {
         console.log(error);
     });
+
 
 
 
@@ -67,11 +66,10 @@ bestList = () => {
                                 <del>${best5[i].price}</del>
                             </figcaption>
                         </a>
-                    </figure>
-                   
-                    
+                    </figure> 
                 `
     }
+
 
 
     //-------------------베스트5 슬라이드 동작
@@ -105,6 +103,8 @@ bestList = () => {
         }
     });
 
+
+    //-------------------베스트5 각 아이템 클릭시 뷰 페이지로 이동
     list = "";
     let ellink = document.querySelectorAll('figure');
     ellink.forEach(function (element, i) {
@@ -120,7 +120,6 @@ bestList = () => {
 
 
 //-------------------list 12개 데이터 가져오기
-
 let goods = [], list = '';
 
 const data = `../datas/${params.name}_view.json`;
@@ -201,95 +200,155 @@ const elPopBg = document.querySelector('.popup_bg'),
     elBtnYes = document.querySelector('.btn_yes'),
     elBtnNo = document.querySelector('.btn_no');
 
-elBtnYes.addEventListener('click', () => {
-    let date = new Date();
-    date.setDate(date.getDate() + 1)
-    date = date.toUTCString();
-    document.cookie = "popup=age_check; expires=" + date;
-    console.log(date);
+    
 
-    elPopUp.style.display = 'none',
-    elPopBg.style.display = 'none';
 
+const elSel = document.querySelector('.select'),
+    elYear = document.querySelector('#year'),
+    elMonth = document.querySelector('#month'),
+    elDay = document.querySelector('#day');
+
+isYearOptionExisted = false;
+elYear.addEventListener('focus', function () {
+
+    if (!isYearOptionExisted) {
+        isYearOptionExisted = true
+        for (var i = 1930; i <= 2024; i++) {
+
+            const YearOption = document.createElement('option')
+            YearOption.setAttribute('value', i)
+            YearOption.innerText = i
+
+            this.appendChild(YearOption);
+        }
+    }
 });
+
+isMonthOptionExisted = false;
+elMonth.addEventListener('focus', function () {
+
+    if (!isMonthOptionExisted) {
+        isMonthOptionExisted = true
+        for (var i = 1; i <= 12; i++) {
+
+            const MonthOption = document.createElement('option')
+            MonthOption.setAttribute('value', i)
+            MonthOption.innerText = i
+
+            this.appendChild(MonthOption);
+        }
+    }
+});
+
+isDayOptionExisted = false;
+elDay.addEventListener('focus', function () {
+
+    if (!isDayOptionExisted) {
+        isDayOptionExisted = true
+        for (var i = 1; i <= 31; i++) {
+
+            const DayOption = document.createElement('option')
+            DayOption.setAttribute('value', i)
+            DayOption.innerText = i
+
+            this.appendChild(DayOption);
+        }
+    }
+});
+
+
+elYear.onchange = function () {
+    console.log(year.value)
+}
+
+elMonth.onchange = function () {
+    console.log(month.value)
+}
+
+elDay.onchange = function () {
+    console.log(day.value)
+}
+
+elBtnYes.onclick = () => {
+    // 빈스트링 체크
+    if(year.value !="" &&  month.value !="" && day.value!="" ){
+        var ischeck = checkAge(year.value, month.value, day.value);
+        if(ischeck){
+            let date = new Date();
+                date.setDate(date.getDate() + 1)
+                date = date.toUTCString();
+                document.cookie = "popup=age_check; expires=" + date;
+                console.log(date);
+        
+                elPopUp.style.display = 'none',
+                elPopBg.style.display = 'none';
+        }
+        else{
+            swalMsg(4, "19세 미만", "사이트 이용이 불가능 합니다.")
+        }
+    }
+    else{
+        swalMsg(3, "선택", "생년월일을 선택해주세요.")
+    }
+    //나이 체크
+
+
+    // var ischeck = checkAge(year.value, month.value, day.value);
+    // console.log("ischeck :", ischeck)
+    // console.log((year.value=="") ||(month.value=="")||(day.value==""))
+    // if ((year.value!="") &&(month.value!="")&&(day.value!="")) {
+    //     //다음 단계 실행(팝업 닫힘)
+    //     let date = new Date();
+    //     date.setDate(date.getDate() + 1)
+    //     date = date.toUTCString();
+    //     document.cookie = "popup=age_check; expires=" + date;
+    //     console.log(date);
+
+    //     elPopUp.style.display = 'none',
+    //     elPopBg.style.display = 'none';
+    // } else if((year.value=="") ||(month.value=="")||(day.value=="")){
+    //     swalMsg(4, "19세 미만", "a.")
+    // }
+    // else {
+    //     //경고 팝업
+    //     swalMsg(4, "19세 미만", "사이트 이용이 불가능 합니다.")
+    // }
+}
+
+elBtnNo.onclick= () =>{
+    swalMsg(4, "19세 미만", "사이트 이용이 불가능 합니다.")
+}
 
 if (document.cookie.match('age_check')) {
     elPopUp.style.display = 'none',
-    elPopBg.style.display = 'none';
+        elPopBg.style.display = 'none';
 } else {
     elPopUp.style.display = 'block';
 }
 
-
-
-
-
-elBtnNo.addEventListener('click', () => {
-    swalMsg(4, "19세 미만", "사이트 이용이 불가능 합니다.")
-})
-
-
-
-//-------------------출생년도 셀렉트 박스 
-
-const elSel = document.querySelector('.select'),
-      elYear = document.querySelector('#year'),
-      elMonth = document.querySelector('#month'),
-      elDay = document.querySelector('#day');
-   
-      isYearOptionExisted = false;
-      elYear.addEventListener('focus', function () {
-       
-        if(!isYearOptionExisted) {
-          isYearOptionExisted = true
-          for(var i = 1930; i <= 2024; i++) {
-           
-            const YearOption = document.createElement('option')
-            YearOption.setAttribute('value', i)
-            YearOption.innerText = i
-        
-            this.appendChild(YearOption);
-          }
+const checkAge = (uYear, uMonth, uDay) => {
+    let toDate = new Date()
+    let cYear = Number(toDate.getFullYear());
+    let cMonth = Number(toDate.getMonth()) + 1;
+    let cDay = Number(toDate.getDate());
+    let age = cYear - uYear;
+    if (age >= 19) {
+        if (age > 19) {
+            return true;
         }
-      });
-
-
-      isMonthOptionExisted = false;
-      elMonth.addEventListener('focus', function () {
-       
-        if(!isMonthOptionExisted) {
-          isMonthOptionExisted = true
-          for(var i = 1; i <= 12; i++) {
-           
-            const MonthOption = document.createElement('option')
-            MonthOption.setAttribute('value', i)
-            MonthOption.innerText = i
-        
-            this.appendChild(MonthOption);
-          }
+        else {
+            if (uMonth >= cMonth && uDay >= cDay) {
+                console.log("성인 ", age);
+                return true;
+            }
+            else {
+                console.log("구매 하실수 없습니다.")
+                return false;
+            }
         }
-      });
-
-
-      isDayOptionExisted = false;
-      elDay.addEventListener('focus', function () {
-       
-        if(!isDayOptionExisted) {
-          isDayOptionExisted = true
-          for(var i = 1; i <= 31; i++) {
-           
-            const DayOption = document.createElement('option')
-            DayOption.setAttribute('value', i)
-            DayOption.innerText = i
-        
-            this.appendChild(DayOption);
-          }
-        }
-      });
-
-      elYear.onchange=function(){
-        console.log(year.value)
-      }    
-
-
-    
+    }
+    else {
+        console.log("구매 하실수 없습니다.")
+        return false;
+    }
+}
