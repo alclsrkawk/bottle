@@ -214,8 +214,8 @@ let goodsView = function () {
   inputText();
 
   elMValueDonw.onclick = function () {
-    if (elMInputText.value == 0) {
-
+    if (elMInputText.value == 1) {
+      swalMsg(0, "수량 오류", "최소 수량은 1개입니다.");
     } else {
       elMInputText.value--
       changeInput();
@@ -227,9 +227,6 @@ let goodsView = function () {
     changeInput();
   }
 
-  elMInputText.oninput = function () {
-
-  }
 
   const changeInput = () => {
     // console.log(elMInputText.value)
@@ -240,6 +237,9 @@ let goodsView = function () {
     k += ` ${goodsSum1}원`;
     elMGoodsSum.innerHTML = k;
   }
+
+  elMInputText.oninput = changeInput;
+  changeInput()
 
   elLocation.onclick = function (e) {
 

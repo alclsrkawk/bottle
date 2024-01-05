@@ -3,6 +3,7 @@
 // PC --시작
 
 main {
+
     #up {
         position: fixed;
         bottom: 100px;
@@ -37,19 +38,22 @@ main {
         background-color: rgba(0, 0, 0, 1);
     }
 
-    width: 1170px;
     padding-top: 200px;
-    margin: 0 auto;
+
 
     .view_1 {
-        width: 100%;
+        width: 1180px;
         height: 670px;
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 5px;
+
 
         //메인이미지, 서브이미지 
         .view_img_1 {
-            width: 43%;
+            width: 560px;
+            height: 100%;
             display: flex;
             flex-direction: column;
 
@@ -57,6 +61,7 @@ main {
             .view_main_img {
                 border: 1px solid #E0E2E7;
                 width: 100%;
+                height: 70%;
             }
 
             .view_main_img:hover {
@@ -64,10 +69,9 @@ main {
             }
 
             .view_sub_image {
-                width: 70%;
-                display: flex;
-
                 width: 100%;
+                height: 100%;
+                display: flex;
                 margin-top: 20px;
 
                 img {
@@ -82,8 +86,10 @@ main {
 
         //제품 스펙
         .view_text {
-            position: relative;
-            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 560px;
             color: #8C8D96;
             font-size: 18px;
 
@@ -134,7 +140,7 @@ main {
                 flex-direction: column;
                 padding: 20px;
                 background-color: #F7F8FA;
-                margin: 40px 0;
+                margin: 20px 0;
                 color: #8C8D96;
                 font-size: 14px;
 
@@ -163,7 +169,7 @@ main {
                         color: #8C8D96;
                         font-size: 18px;
                         text-align: right;
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                     }
 
                     b {
@@ -176,14 +182,13 @@ main {
                 #button1_location {
                     display: flex;
                     justify-content: space-between;
-                    position: absolute;
                     width: 100%;
                     bottom: 0;
 
 
 
                     .cart {
-                        width: 280px;
+                        width: 270px;
                         height: 60px;
                         color: black;
                         font-size: 18px;
@@ -196,7 +201,7 @@ main {
                     .location {
 
                         .button1 {
-                            width: 280px;
+                            width: 270px;
                             height: 60px;
                             color: white;
                             font-size: 18px;
@@ -213,9 +218,10 @@ main {
 
     //상세, 후기 라인
     #goods_line {
-        width: 100%;
-        margin-top: 120px;
+        width: 1170px;
         display: flex;
+        margin: 80px auto 0 auto;
+
 
         .goods_ex_line {
             text-align: center;
@@ -261,7 +267,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 80px;
         margin-bottom: 40px;
 
         .img_ex {
@@ -410,9 +416,8 @@ main {
 
 @include res($pad) {
     main {
-        width: 100%;
-        padding-top: 120px;
-        margin: 0 5px;
+
+        padding: 0 5px;
 
         .view_1 {
             width: 100%;
@@ -421,6 +426,8 @@ main {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            margin: 0 auto;
+            padding: 0;
 
 
             .view_img_1 {
@@ -527,8 +534,6 @@ main {
                 }
 
                 .btn_buy {
-
-
                     width: 100%;
 
                     #text3 {
@@ -551,16 +556,13 @@ main {
                     }
 
                     #button1_location {
+                        width: 100%;
+
                         display: flex;
                         justify-content: space-between;
-                        position: absolute;
-                        width: 100%;
-                        bottom: 0;
-
-
 
                         .cart {
-                            width: 280px;
+                            width: 45%;
                             height: 60px;
                             color: black;
                             font-size: 18px;
@@ -571,9 +573,10 @@ main {
                         }
 
                         .location {
+                            width: 45%;
 
                             .button1 {
-                                width: 280px;
+                                width: 100%;
                                 height: 60px;
                                 color: white;
                                 font-size: 18px;
@@ -592,9 +595,6 @@ main {
         #goods_line {
             width: 100%;
             display: flex;
-            justify-content: center;
-
-            margin: 50px auto 0 auto;
 
             .goods_ex_line {
                 text-align: center;
@@ -636,11 +636,12 @@ main {
         }
 
         .img_ex_text {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 70px;
-            margin-bottom: 40px;
+
+
 
             .img_ex {
 
@@ -756,8 +757,7 @@ main {
 @include res($mobile) {
 
     main {
-        padding-top: 100px;
-        margin: 0 5px;
+        padding: 0 5px;
 
         .view_1 {
             width: 100%;
@@ -817,7 +817,6 @@ main {
 
                 .goods_text {
 
-
                     font-size: 18px;
                     line-height: 180%;
                     font-weight: 400;
@@ -854,7 +853,7 @@ main {
             width: 100%;
             display: flex;
             justify-content: center;
-            margin: 100px auto 0 auto;
+
 
             .goods_ex_line {
                 text-align: center;
@@ -896,12 +895,11 @@ main {
         }
 
         .img_ex_text {
-            width: 385px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 40px;
-            margin-bottom: 40px;
+
 
             .img_ex {
                 width: 385px;

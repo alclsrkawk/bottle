@@ -526,9 +526,7 @@ footer article .bottom div a {
   }
 }
 main {
-  width: 1170px;
   padding-top: 200px;
-  margin: 0 auto;
 }
 main #up {
   position: fixed;
@@ -561,27 +559,31 @@ main #down:hover {
   background-color: rgb(0, 0, 0);
 }
 main .view_1 {
-  width: 100%;
+  width: 1180px;
   height: 670px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 5px;
 }
 main .view_1 .view_img_1 {
-  width: 43%;
+  width: 560px;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 main .view_1 .view_img_1 .view_main_img {
   border: 1px solid #E0E2E7;
   width: 100%;
+  height: 70%;
 }
 main .view_1 .view_img_1 .view_main_img:hover {
   transform: scale(1.2);
 }
 main .view_1 .view_img_1 .view_sub_image {
-  width: 70%;
-  display: flex;
   width: 100%;
+  height: 100%;
+  display: flex;
   margin-top: 20px;
 }
 main .view_1 .view_img_1 .view_sub_image img {
@@ -590,8 +592,10 @@ main .view_1 .view_img_1 .view_sub_image img {
   margin-right: 20px;
 }
 main .view_1 .view_text {
-  position: relative;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
   color: #8C8D96;
   font-size: 18px;
 }
@@ -631,7 +635,7 @@ main .view_1 .view_text .text_box {
   flex-direction: column;
   padding: 20px;
   background-color: #F7F8FA;
-  margin: 40px 0;
+  margin: 20px 0;
   color: #8C8D96;
   font-size: 14px;
 }
@@ -652,7 +656,7 @@ main .view_1 .view_text .btn_buy #text3 p {
   color: #8C8D96;
   font-size: 18px;
   text-align: right;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 main .view_1 .view_text .btn_buy #text3 b {
   color: black;
@@ -662,12 +666,11 @@ main .view_1 .view_text .btn_buy #text3 b {
 main .view_1 .view_text .btn_buy #button1_location {
   display: flex;
   justify-content: space-between;
-  position: absolute;
   width: 100%;
   bottom: 0;
 }
 main .view_1 .view_text .btn_buy #button1_location .cart {
-  width: 280px;
+  width: 270px;
   height: 60px;
   color: black;
   font-size: 18px;
@@ -676,7 +679,7 @@ main .view_1 .view_text .btn_buy #button1_location .cart {
   font-weight: Noto Sans KR;
 }
 main .view_1 .view_text .btn_buy #button1_location .location .button1 {
-  width: 280px;
+  width: 270px;
   height: 60px;
   color: white;
   font-size: 18px;
@@ -685,9 +688,9 @@ main .view_1 .view_text .btn_buy #button1_location .location .button1 {
   font-weight: Noto Sans KR;
 }
 main #goods_line {
-  width: 100%;
-  margin-top: 120px;
+  width: 1170px;
   display: flex;
+  margin: 80px auto 0 auto;
 }
 main #goods_line .goods_ex_line {
   text-align: center;
@@ -727,7 +730,7 @@ main .img_ex_text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 80px;
   margin-bottom: 40px;
 }
 main .img_ex_text .img_ex {
@@ -824,9 +827,7 @@ main .m_buy_all .m_buy .m_btn_buy {
 
 @media (min-width: 412px) and (max-width: 768px) {
   main {
-    width: 100%;
-    padding-top: 120px;
-    margin: 0 5px;
+    padding: 0 5px;
   }
   main .view_1 {
     width: 100%;
@@ -835,6 +836,8 @@ main .m_buy_all .m_buy .m_btn_buy {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    padding: 0;
   }
   main .view_1 .view_img_1 {
     width: 100%;
@@ -938,14 +941,12 @@ main .m_buy_all .m_buy .m_btn_buy {
     font-weight: bold;
   }
   main .view_1 .view_text .btn_buy #button1_location {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
   }
   main .view_1 .view_text .btn_buy #button1_location .cart {
-    width: 280px;
+    width: 45%;
     height: 60px;
     color: black;
     font-size: 18px;
@@ -953,8 +954,11 @@ main .m_buy_all .m_buy .m_btn_buy {
     background-color: aqua;
     font-weight: Noto Sans KR;
   }
+  main .view_1 .view_text .btn_buy #button1_location .location {
+    width: 45%;
+  }
   main .view_1 .view_text .btn_buy #button1_location .location .button1 {
-    width: 280px;
+    width: 100%;
     height: 60px;
     color: white;
     font-size: 18px;
@@ -965,8 +969,6 @@ main .m_buy_all .m_buy .m_btn_buy {
   main #goods_line {
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin: 50px auto 0 auto;
   }
   main #goods_line .goods_ex_line {
     text-align: center;
@@ -1003,11 +1005,10 @@ main .m_buy_all .m_buy .m_btn_buy {
     font-size: 14px;
   }
   main .img_ex_text {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
-    margin-bottom: 40px;
   }
   main .img_ex_text .img_ex img {
     width: 100%;
@@ -1079,8 +1080,7 @@ main .m_buy_all .m_buy .m_btn_buy {
 }
 @media screen and (max-width: 412px) {
   main {
-    padding-top: 100px;
-    margin: 0 5px;
+    padding: 0 5px;
   }
   main .view_1 {
     width: 100%;
@@ -1156,7 +1156,6 @@ main .m_buy_all .m_buy .m_btn_buy {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 100px auto 0 auto;
   }
   main #goods_line .goods_ex_line {
     text-align: center;
@@ -1193,12 +1192,10 @@ main .m_buy_all .m_buy .m_btn_buy {
     font-size: 14px;
   }
   main .img_ex_text {
-    width: 385px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
   }
   main .img_ex_text .img_ex {
     width: 385px;
