@@ -46,53 +46,61 @@ main {
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 2;
     }
-        .pop_up{
-            position: absolute;
-            left: 50%;
-            top:30%;
-            transform: translateX(-280px);
-            width: 560px;
-            height: 370px;
-            background-color: #EAB838;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            z-index: 3;
-            p{  
-                font-size: 1.9rem;
+
+    .pop_up {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translateX(-280px);
+        width: 560px;
+        height: 370px;
+        background-color: #EAB838;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 3;
+
+        p {
+            font-size: 1.9rem;
+            font-weight: bold;
+        }
+
+        p:nth-of-type(1) {
+            margin-top: 40px;
+        }
+
+        .pop_btn {
+            margin: 20px 0;
+
+            button {
+                border: none;
+                cursor: pointer;
+                padding: 10px 40px;
+                color: #EAB838;
+                font-size: 1.2rem;
                 font-weight: bold;
             }
-            p:nth-of-type(1){
-                margin-top: 40px;
+
+            button:hover {
+                background-color: #3F4150;
+                transition: .5s;
             }
-            .pop_btn{
-                margin: 20px 0;
-                button{
-                    border: none;
-                    cursor: pointer;
-                    padding: 10px 40px;
-                    color:#EAB838;
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                }
-                button:hover{
-                    background-color:#3F4150;
-                    transition: .5s;
-                }
-            }
-            .select{
-                margin: 20px 0;
-                select{
-                    width: 100px;
-                    height: 30px;
-                    border: none;
-                    color: #3F4150;
-                }
-            }
-            
         }
-    
-    
+
+        .select {
+            margin: 20px 0;
+
+            select {
+                width: 100px;
+                height: 30px;
+                border: none;
+                color: #3F4150;
+            }
+        }
+
+    }
+
+
 
 
     padding-top: 132px;
@@ -102,6 +110,10 @@ main {
         max-width: 1180px;
         margin: 0 auto;
         z-index: auto;
+
+        img {
+            width: 100%;
+        }
     }
 
     .list {
@@ -119,6 +131,7 @@ main {
             background-color: #F7F8FA;
             margin: 70px 0;
             padding: 70px 0;
+            overflow: hidden;
 
             .best5_title {
                 width: 1180px;
@@ -316,13 +329,15 @@ main {
     }
 
     main {
-        .pop_up{
+        .pop_up {
             width: 500px;
             height: 360px;
-            p:nth-of-type(1){
+
+            p:nth-of-type(1) {
                 margin-top: 40px;
             }
         }
+
         .list_bg {
             img {
                 width: 768px;
@@ -348,6 +363,7 @@ main {
     main {
         max-width: 100%;
         padding-top: 47px;
+
         #up,
         #down {
             right: 20px;
@@ -362,24 +378,26 @@ main {
         #down {
             bottom: 5px;
         }
-       
-        .pop_up{
-          width: 320px;
-          height: 370px;
-          left: 6%;
-          top: 30%;
-          transform: translate(0);
-          p{
-            font-size: 1.5rem;
-          }
-          p:nth-of-type(1){
-            margin-top: 45px;
-        }
-         
-          .warning{
-            margin: 0 30px;
-            font-size: 0.9rem;
-          }
+
+        .pop_up {
+            width: 320px;
+            height: 370px;
+            left: 6%;
+            top: 30%;
+            transform: translate(0);
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            p:nth-of-type(1) {
+                margin-top: 4px;
+            }
+
+            .warning {
+                margin: 0 30px;
+                font-size: 0.9rem;
+            }
         }
 
         .list_bg {
