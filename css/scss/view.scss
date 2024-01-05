@@ -3,7 +3,7 @@
 // PC --시작
 
 main {
-
+    padding-top: 200px;
     #up {
         position: fixed;
         bottom: 100px;
@@ -37,8 +37,6 @@ main {
     #down:hover {
         background-color: rgba(0, 0, 0, 1);
     }
-
-    padding-top: 200px;
 
 
     .view_1 {
@@ -321,64 +319,6 @@ main {
     //모바일 구매하기
     .m_buy_all {
         display: none;
-
-        .m_down_up {
-            display: block;
-            width: 20%;
-            background-color: rgb(112, 112, 112);
-            text-align: center;
-            color: black;
-            margin: 0 auto;
-        }
-
-        .m_buy {
-            display: block;
-            background-color: black;
-            color: white;
-
-            #m_line {
-                border-bottom: 1px solid white;
-            }
-
-            .m_textbox {
-                padding: 10px;
-
-                .m_text1 {
-                    p {}
-                }
-
-                #m_text2 {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .m_input_text {
-                        width: 30%;
-
-                    }
-
-                    p {}
-
-                }
-            }
-
-            .m_btn_buy {
-                border-top: 1px solid white;
-
-                .m_button1_location {
-                    .cart {}
-
-                    .m_location {
-
-                        .m_button1 {}
-                    }
-                }
-            }
-
-
-        }
     }
 
 
@@ -417,7 +357,7 @@ main {
 @include res($pad) {
     main {
 
-        padding: 0 5px;
+        padding-top: 150px;
 
         .view_1 {
             width: 100%;
@@ -427,7 +367,7 @@ main {
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
-            padding: 0;
+            padding: 0 5px;
 
 
             .view_img_1 {
@@ -691,64 +631,8 @@ main {
 
         .m_buy_all {
             display: none;
-
-            .m_down_up {
-                display: block;
-                width: 20%;
-                background-color: rgb(112, 112, 112);
-                text-align: center;
-                color: black;
-                margin: 0 auto;
-            }
-
-            .m_buy {
-                display: block;
-                background-color: black;
-                color: white;
-
-                #m_line {
-                    border-bottom: 1px solid white;
-                }
-
-                .m_textbox {
-                    padding: 10px;
-
-                    .m_text1 {
-                        p {}
-                    }
-
-                    #m_text2 {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        .m_input_text {
-                            width: 30%;
-
+     
                         }
-
-                        p {}
-
-                    }
-                }
-
-                .m_btn_buy {
-                    border-top: 1px solid white;
-
-                    .m_button1_location {
-
-                        .m_location {
-
-                            .m_button1 {}
-                        }
-                    }
-                }
-
-
-            }
-        }
 
     }
 
@@ -757,7 +641,8 @@ main {
 @include res($mobile) {
 
     main {
-        padding: 0 5px;
+        padding-top: 100px;
+        
 
         .view_1 {
             width: 100%;
@@ -766,6 +651,7 @@ main {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            padding: 0 5px;
 
 
             .view_img_1 {
@@ -922,12 +808,13 @@ main {
         }
 
         .m_buy_all {
+            width: 100%;
             display: block;
-            width: 390px;
             position: fixed;
             bottom: 0;
             transition: 1s;
             transform: translateY(164.55px);
+            padding: 0 5px;
 
             &.active {
                 transition: 1s;
@@ -936,7 +823,8 @@ main {
 
             .m_down_up {
                 width: 20%;
-                background-color: gray;
+                background-color: rgba($color: gray, $alpha: 0.7);
+                border-radius: 4px;
                 text-align: center;
                 color: white;
                 margin: 0 auto;
@@ -949,23 +837,26 @@ main {
             }
 
             .m_buy {
+                width: 100%;
                 border-top: 1px solid black;
                 background-color: white;
                 color: black;
+                
 
                 #m_line {
-                    border-bottom: 1px solid black;
+                    
                 }
 
                 .m_textbox {
-                    padding: 0px;
+                    
                     margin: 10px 0;
                     text-align: center;
+                    
 
                     .m_text1 {
 
                         p {
-                            font-weight: bolder;
+                            font-weight: 800;
                             text-align: left;
                             margin-bottom: 10px;
                         }
@@ -973,36 +864,38 @@ main {
 
                     #m_text2 {
                         width: 100%;
+                        display: flex;
                         justify-content: space-between;
 
                         .m_inputbox {
                             display: flex;
-
+                            padding: 0;
                             .m_valuedown {
-                                width: 13%;
-
+                                width: 15%;
                                 border: 1px solid black;
 
                             }
 
-                            .m_price1 {}
-
                             .m_input_text {
-                                width: 13%;
+                                width: 15%;
+                                text-align: center;
 
                             }
 
                             .m_valueup {
-                                width: 13%;
-
+                                width: 15%;
                                 border: 1px solid black;
-
-
                             }
                         }
 
+                        .m_price1 {
+                            width: 50%;
+                            text-align: right;
+                        }
+                        
                         .m_input_text::-webkit-outer-spin-button,
                         .m_input_text::-webkit-inner-spin-button {
+                            
                             -webkit-appearance: none;
                             -moz-appearance: none;
                             appearance: none;
@@ -1018,7 +911,7 @@ main {
 
                 .m_btn_buy {
                     text-align: center;
-                    border-top: 1px solid black;
+                    border-top: 1px solid rgb(207, 202, 202);
 
                     p {
                         font-weight: bolder;
