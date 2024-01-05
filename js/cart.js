@@ -21,7 +21,7 @@ if (localStorage.getItem('products') == null) {
                 <li><img src="../images/${localArr.name}/${localArr.product_img}"></li>
             </div>
             <div class="cart_2">
-                <b>${localArr.product_name}<br><span>${localArr.brand}</span></b>
+                <b><span>${localArr.brand}</span><br>${localArr.product_name}</b>
                 <div id=count>
                     수량 : ${localArr.ea}개
                 </div>
