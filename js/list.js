@@ -7,6 +7,7 @@ function getUrlParams() {
 const params = getUrlParams();
 
 
+//-------------------json 데이터 가져오기
 let best5 = [], bestList;
 
 const bestData = `../datas/${params.name}_view.json`
@@ -104,7 +105,7 @@ bestList = () => {
     });
 
 
-    //-------------------베스트5 각 아이템 클릭시 뷰 페이지로 이동
+    //-------------------각 아이템 클릭시 뷰 페이지로 이동
     list = "";
     let ellink = document.querySelectorAll('figure');
     ellink.forEach(function (element, i) {
