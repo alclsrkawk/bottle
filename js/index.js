@@ -52,7 +52,7 @@ const pageLoad = () => {
             }
         }
 
-        if (mobileMain != null) {
+        if (mobileMain != null && mobileHeader != null) {
             if (mobileMain.offsetTop <= window.scrollY) {
                 mobileHeader.style.cssText = "background:#FFF;border-bottom:1px solid #E0E2E7;";
             }
