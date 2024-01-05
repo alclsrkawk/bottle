@@ -208,7 +208,7 @@ footer article .bottom div a {
   color: #000;
 }
 
-@media (min-width: 412px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   header .header-pc article .main-title {
     width: 100%;
     height: 35px;
@@ -386,7 +386,7 @@ footer article .bottom div a {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 480px) {
   .header-pc {
     display: none;
   }
@@ -648,7 +648,7 @@ main .btn_buy1 #button2_location a button {
   font-family: Noto Sans KR;
 }
 
-@media (min-width: 412px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   main .all_del {
     width: 80%;
   }
@@ -704,7 +704,7 @@ main .btn_buy1 #button2_location a button {
     font-size: 1.1rem;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 480px) {
   main .all_del {
     width: 80%;
   }
