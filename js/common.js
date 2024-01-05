@@ -97,6 +97,7 @@ const swalMsg = (type, title, text) => {
         title: title,
         text: text,
         icon: _icon,
+        width: "360px",
         confirmButtonColor: "#000",
         confirmButtonText: '<div style="direction:rtl;font-size:18px;font-weight:bold;">확인</div>',
         customClass: {
