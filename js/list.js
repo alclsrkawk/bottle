@@ -25,30 +25,33 @@ fetch(bestData)
 
 
 //-------------------리스트 배경 및 타이틀 불러오기
+
+let elListBg = document.querySelector('.list_bg  img');
+let elListTitle = document.querySelector('.list_title > h2');
+
+if (params.name == 'wine') {
+    elListBg.setAttribute("src", "../images/list_bg/1.png");
+    elListTitle.innerHTML = `분위기 있는 와인`
+} else if (params.name == 'beer') {
+    elListBg.setAttribute("src", "../images/list_bg/2.png");
+    elListTitle.innerHTML = `즐겨 마시는 맥주`
+} else if (params.name == 'soju') {
+    elListBg.setAttribute("src", "../images/list_bg/3.png");
+    elListTitle.innerHTML = `늘 한결같은 소주`
+} else {
+    elListBg.setAttribute("src", "../images/list_bg/4.png");
+    elListTitle.innerHTML = `홀리데이 위스키`
+}
+
+elListBg.onclick = function (e) {
+    e.stopPropagation()
+}
+
+
+
 bestList = () => {
-    let elBest = document.querySelector('.best5_slide > div');
-
-    let elListBg = document.querySelector('.list_bg  img');
-    let elListTitle = document.querySelector('.list_title > h2');
-
-    if (params.name == 'wine') {
-        elListBg.setAttribute("src", "../images/list_bg/1.png");
-        elListTitle.innerHTML = `분위기 있는 와인`
-    } else if (params.name == 'beer') {
-        elListBg.setAttribute("src", "../images/list_bg/2.png");
-        elListTitle.innerHTML = `즐겨 마시는 맥주`
-    } else if (params.name == 'soju') {
-        elListBg.setAttribute("src", "../images/list_bg/3.png");
-        elListTitle.innerHTML = `늘 한결같은 소주`
-    } else {
-        elListBg.setAttribute("src", "../images/list_bg/4.png");
-        elListTitle.innerHTML = `홀리데이 위스키`
-    }
-
-
-
-
     //-------------------베스트5 데이터 불러오기
+    let elBest = document.querySelector('.best5_slide > div');
     for (let i = 0; i < 5; i++) {
         const bestPicture = best5[i].product_img.split(',')[0];
 
@@ -201,7 +204,7 @@ const elPopBg = document.querySelector('.popup_bg'),
     elBtnYes = document.querySelector('.btn_yes'),
     elBtnNo = document.querySelector('.btn_no');
 
-    
+
 
 
 const elSel = document.querySelector('.select'),
@@ -272,23 +275,23 @@ elDay.onchange = function () {
 
 elBtnYes.onclick = () => {
     // 빈스트링 체크
-    if(year.value !="" &&  month.value !="" && day.value!="" ){
+    if (year.value != "" && month.value != "" && day.value != "") {
         var ischeck = checkAge(year.value, month.value, day.value);
-        if(ischeck){
+        if (ischeck) {
             let date = new Date();
-                date.setDate(date.getDate() + 1)
-                date = date.toUTCString();
-                document.cookie = "popup=age_check; expires=" + date;
-                console.log(date);
-        
-                elPopUp.style.display = 'none',
+            date.setDate(date.getDate() + 1)
+            date = date.toUTCString();
+            document.cookie = "popup=age_check; expires=" + date;
+            console.log(date);
+
+            elPopUp.style.display = 'none',
                 elPopBg.style.display = 'none';
         }
-        else{
+        else {
             swalMsg(4, "19세 미만", "사이트 이용이 불가능 합니다.")
         }
     }
-    else{
+    else {
         swalMsg(3, "선택", "생년월일을 선택해주세요.")
     }
     //나이 체크
@@ -316,7 +319,7 @@ elBtnYes.onclick = () => {
     // }
 }
 
-elBtnNo.onclick= () =>{
+elBtnNo.onclick = () => {
     swalMsg(4, "19세 미만", "사이트 이용이 불가능 합니다.")
 }
 
