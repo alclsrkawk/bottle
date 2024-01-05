@@ -898,7 +898,6 @@ footer article .bottom div a {
   max-width: 960px;
   font-size: 0.8rem;
   line-height: 1.6;
-  white-space: pre;
 }
 .main-section .review-list-container.dir2 {
   flex-direction: column;
