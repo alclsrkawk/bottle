@@ -9,7 +9,8 @@ function getUrlParams() {
 const params = getUrlParams();
 
 const fnSearch = (text) => {
-    const data = "../datas/goods.json";
+    if (text.length > 0) {
+        const data = "../datas/goods.json";
     let data_list = document.querySelector(`.search-list`);
     let list = "";
 
@@ -52,13 +53,15 @@ const fnSearch = (text) => {
         }).catch(error => {
             console.log(error);
         });
+    } else {
+        swalMsg(4, "오류", "검색어를 입력해주세요!")
+    }
 }
 
 // 클릭시 상세로 이동
 let fnLocation = () => {
     const searchItem = document.querySelectorAll('.search-item');
     searchItem.forEach(function (element, i) {
-        console.log(element)
         element.onclick = function () {
             location.href = `./view.html?idx=${element.dataset.idx}&name=${element.dataset.name}`;
         }
@@ -71,11 +74,16 @@ if (params.stext != "") {
     if (value != "") {
         elementInput.value = value;
         fnSearch(elementInput.value);
-        console.log("params start :", elementInput.value)
-    }
+        // console.log("params start :", elementInput.value)
+    } 
 }
 
 //사용자가 직접 검색
 elementBtn.onclick = () => {
-    fnSearch(elementInput.value);
+    if (elementInput.value.length > 0) {
+        fnSearch(elementInput.value);
+        console.log("value is ", elementInput.value)
+    } else {
+        swalMsg(4, "오류", "검색어를 입력해주세요!")
+    }
 }
