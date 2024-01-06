@@ -66,6 +66,7 @@ main {
 
             .swiper-slide {
                 // flex-shrink: 0;
+
                 margin: 0;
                 cursor: pointer;
 
@@ -123,12 +124,37 @@ main {
                     }
                 }
             }
+
+            figure:hover {
+                transition: .5s ease-out;
+                transform: translateY(-5%);
+            }
+
+            figure:not(:hover) {
+                transition: .5s ease-out;
+            }
+
         }
 
         .beer-item,
         .whisky-item {
             background: #fff;
         }
+    }
+
+    .wine-l,
+    .soju-l,
+    .beer-l,
+    .whisky-l:hover {
+        transition: .5s ease-out;
+        padding-top: 2%;
+    }
+
+    .wine-l,
+    .soju-l,
+    .beer-l,
+    .whisky-l:not(:hover) {
+        transition: .5s ease-out;
     }
 
     .community {
