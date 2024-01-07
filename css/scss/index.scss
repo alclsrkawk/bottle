@@ -793,8 +793,8 @@ main {
         .whisky-l {
             .swiper-wrapper {
                 margin-bottom: 11%;
-
                 // pointer-events: none;
+
                 .swiper-slide {
                     padding: 10px;
 
@@ -832,6 +832,10 @@ main {
 
                     }
                 }
+            }
+
+            .swiper-pagination {
+                display: none;
             }
         }
 

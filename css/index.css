@@ -1242,6 +1242,12 @@ main .community .notice .list figcaption :nth-child(2) {
     font-size: 0.5rem;
     letter-spacing: -0.3px;
   }
+  main .wine-l .swiper-pagination,
+  main .soju-l .swiper-pagination,
+  main .beer-l .swiper-pagination,
+  main .whisky-l .swiper-pagination {
+    display: none;
+  }
   main .community {
     display: flex;
     justify-content: center;
