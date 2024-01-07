@@ -556,7 +556,7 @@ main .cate-name {
   letter-spacing: -1.4px;
 }
 main .more {
-  margin-bottom: 41px;
+  margin-bottom: 20px;
   text-align: right;
   font-family: Inter;
   font-weight: 400;
@@ -571,6 +571,7 @@ main .wine-l,
 main .soju-l,
 main .beer-l,
 main .whisky-l {
+  padding-top: 20px;
   overflow: hidden;
 }
 main .wine-l .swiper-wrapper,
@@ -650,10 +651,23 @@ main .whisky-l .swiper-wrapper figure:hover {
   transition: 0.5s ease-out;
   transform: translateY(-5%);
 }
+main .wine-l .swiper-wrapper figure:hover img,
+main .soju-l .swiper-wrapper figure:hover img,
+main .beer-l .swiper-wrapper figure:hover img,
+main .whisky-l .swiper-wrapper figure:hover img {
+  transition: 0.5s ease-out;
+  transform: scale(1.1);
+}
 main .wine-l .swiper-wrapper figure:not(:hover),
 main .soju-l .swiper-wrapper figure:not(:hover),
 main .beer-l .swiper-wrapper figure:not(:hover),
 main .whisky-l .swiper-wrapper figure:not(:hover) {
+  transition: 0.5s ease-out;
+}
+main .wine-l .swiper-wrapper figure:not(:hover) img,
+main .soju-l .swiper-wrapper figure:not(:hover) img,
+main .beer-l .swiper-wrapper figure:not(:hover) img,
+main .whisky-l .swiper-wrapper figure:not(:hover) img {
   transition: 0.5s ease-out;
 }
 main .wine-l .beer-item,
@@ -665,19 +679,6 @@ main .beer-l .whisky-item,
 main .whisky-l .beer-item,
 main .whisky-l .whisky-item {
   background: #fff;
-}
-main .wine-l,
-main .soju-l,
-main .beer-l,
-main .whisky-l:hover {
-  transition: 0.5s ease-out;
-  padding-top: 2%;
-}
-main .wine-l,
-main .soju-l,
-main .beer-l,
-main .whisky-l:not(:hover) {
-  transition: 0.5s ease-out;
 }
 main .community {
   display: flex;
@@ -898,7 +899,7 @@ main .community .notice .list figcaption :nth-child(2) {
     font-size: 1.35rem;
   }
   main .more {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     font-size: 0.85rem;
     padding: 0 10px 0;
   }
@@ -1062,7 +1063,7 @@ main .community .notice .list figcaption :nth-child(2) {
     font-size: 1.45rem;
   }
   main .more {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-size: 0.85rem;
     padding: 0 10px 0;
   }
@@ -1175,7 +1176,7 @@ main .community .notice .list figcaption :nth-child(2) {
     font-size: 1.25rem;
   }
   main .more {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-size: 0.75rem;
     padding: 0 3px 0;
   }

@@ -40,7 +40,7 @@ main {
     }
 
     .more {
-        margin-bottom: 41px;
+        margin-bottom: 20px;
         text-align: right;
         font-family: Inter;
         font-weight: 400;
@@ -57,6 +57,7 @@ main {
     .soju-l,
     .beer-l,
     .whisky-l {
+        padding-top: 20px;
         overflow: hidden;
 
         .swiper-wrapper {
@@ -128,10 +129,19 @@ main {
             figure:hover {
                 transition: .5s ease-out;
                 transform: translateY(-5%);
+
+                img {
+                    transition: .5s ease-out;
+                    transform: scale(1.1);
+                }
             }
 
             figure:not(:hover) {
                 transition: .5s ease-out;
+
+                img {
+                    transition: .5s ease-out;
+                }
             }
 
         }
@@ -140,21 +150,6 @@ main {
         .whisky-item {
             background: #fff;
         }
-    }
-
-    .wine-l,
-    .soju-l,
-    .beer-l,
-    .whisky-l:hover {
-        transition: .5s ease-out;
-        padding-top: 2%;
-    }
-
-    .wine-l,
-    .soju-l,
-    .beer-l,
-    .whisky-l:not(:hover) {
-        transition: .5s ease-out;
     }
 
     .community {
@@ -438,7 +433,7 @@ main {
         }
 
         .more {
-            margin-bottom: 15px;
+            margin-bottom: 0px;
             font-size: 0.85rem;
             padding: 0 10px 0;
 
@@ -639,7 +634,7 @@ main {
         }
 
         .more {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             font-size: 0.85rem;
             padding: 0 10px 0;
 
@@ -778,7 +773,7 @@ main {
         }
 
         .more {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             font-size: 0.75rem;
             padding: 0 3px 0;
 
