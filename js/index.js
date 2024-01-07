@@ -86,9 +86,6 @@ const sideClose = () => {
     }
 }
 
-// const jsondata = ['../datas/wine_view.json', '../datas/beer_view.json'
-//     , '../datas/soju_view.json', '../datas/whisky_view.json'];
-
 let winelist = "", beerlist = "", sojulist = "", whiskylist = "";
 let elWine = document.querySelector(`#dv-wine`);
 let elBeer = document.querySelector(`#dv-beer`);
@@ -224,10 +221,6 @@ const getData = () => {
     fetchData(`./datas/beer_view.json`, "beer");
     fetchData(`./datas/soju_view.json`, "soju");
     fetchData(`./datas/whisky_view.json`, "whisky");
-    // fetchData(jsondata[0], "wine");
-    // fetchData(jsondata[1], "beer");
-    // fetchData(jsondata[2], "soju");
-    // fetchData(jsondata[3], "whisky");
 }
 getData();
 var swiper1 = new Swiper(".banner", {
@@ -283,6 +276,10 @@ const goSwiper = (page) => {
     new Swiper(".wine-l", {
         slidesPerView: page,
         spaceBetween: page,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             360: {
                 slidesPerView: 2,
@@ -302,6 +299,10 @@ const goSwiper = (page) => {
     new Swiper(".beer-l", {
         slidesPerView: page,
         spaceBetween: page,// == 2 ? 10 : 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             360: {
                 slidesPerView: 2,
@@ -321,6 +322,10 @@ const goSwiper = (page) => {
     new Swiper(".soju-l", {
         slidesPerView: page,
         spaceBetween: page,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             360: {
                 slidesPerView: 2,
@@ -340,6 +345,10 @@ const goSwiper = (page) => {
     new Swiper(".whisky-l", {
         slidesPerView: page,
         spaceBetween: page,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             360: {
                 slidesPerView: 2,

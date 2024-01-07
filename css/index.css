@@ -571,6 +571,7 @@ main .wine-l,
 main .soju-l,
 main .beer-l,
 main .whisky-l {
+  position: relative;
   padding-top: 20px;
   overflow: hidden;
 }
@@ -578,6 +579,7 @@ main .wine-l .swiper-wrapper,
 main .soju-l .swiper-wrapper,
 main .beer-l .swiper-wrapper,
 main .whisky-l .swiper-wrapper {
+  margin-bottom: 5%;
   display: flex;
   justify-content: inline-flex;
 }
@@ -911,6 +913,7 @@ main .community .notice .list figcaption :nth-child(2) {
   main .beer-l .swiper-wrapper,
   main .whisky-l .swiper-wrapper {
     gap: 0%;
+    margin-bottom: 9%;
   }
   main .wine-l .swiper-wrapper .swiper-slide,
   main .soju-l .swiper-wrapper .swiper-slide,
@@ -1075,6 +1078,7 @@ main .community .notice .list figcaption :nth-child(2) {
   main .beer-l .swiper-wrapper,
   main .whisky-l .swiper-wrapper {
     gap: 0%;
+    margin-bottom: 7%;
   }
   main .wine-l .swiper-wrapper .swiper-slide,
   main .soju-l .swiper-wrapper .swiper-slide,
@@ -1182,6 +1186,12 @@ main .community .notice .list figcaption :nth-child(2) {
   }
   main .more span {
     font-size: 0.75rem;
+  }
+  main .wine-l .swiper-wrapper,
+  main .soju-l .swiper-wrapper,
+  main .beer-l .swiper-wrapper,
+  main .whisky-l .swiper-wrapper {
+    margin-bottom: 11%;
   }
   main .wine-l .swiper-wrapper .swiper-slide,
   main .soju-l .swiper-wrapper .swiper-slide,

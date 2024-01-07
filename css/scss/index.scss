@@ -57,10 +57,13 @@ main {
     .soju-l,
     .beer-l,
     .whisky-l {
+        position: relative;
         padding-top: 20px;
         overflow: hidden;
 
         .swiper-wrapper {
+            margin-bottom: 5%;
+
             @include flex(inline-flex) {
                 // gap: 1%;
             }
@@ -448,6 +451,7 @@ main {
         .whisky-l {
             .swiper-wrapper {
                 gap: 0%;
+                margin-bottom: 9%;
 
                 .swiper-slide {
                     padding: 10px;
@@ -649,6 +653,7 @@ main {
         .whisky-l {
             .swiper-wrapper {
                 gap: 0%;
+                margin-bottom: 7%;
 
                 .swiper-slide {
 
@@ -787,6 +792,7 @@ main {
         .beer-l,
         .whisky-l {
             .swiper-wrapper {
+                margin-bottom: 11%;
 
                 // pointer-events: none;
                 .swiper-slide {
