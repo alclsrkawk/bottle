@@ -578,7 +578,7 @@ main .beer-l .swiper-wrapper,
 main .whisky-l .swiper-wrapper {
   margin-bottom: 5%;
   display: flex;
-  justify-content: inline-flex;
+  justify-content: start;
 }
 main .wine-l .swiper-wrapper .swiper-slide,
 main .soju-l .swiper-wrapper .swiper-slide,
@@ -699,7 +699,7 @@ main .community .review .list {
 }
 main .community .review .list figure {
   display: flex;
-  justify-content: inline-flex;
+  justify-content: start;
   align-items: start;
   border-bottom: 1px solid #E0E2E7;
 }
@@ -944,7 +944,7 @@ main .community .notice .list figcaption :nth-child(2) {
   }
   main .community {
     display: flex;
-    justify-content: inline-flex;
+    justify-content: start;
     flex-direction: column;
   }
   main .community .review {

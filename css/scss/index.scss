@@ -64,7 +64,7 @@ main {
         .swiper-wrapper {
             margin-bottom: 5%;
 
-            @include flex(inline-flex) {
+            @include flex(start) {
                 // gap: 1%;
             }
 
@@ -181,7 +181,7 @@ main {
                 padding-left: 15%;
 
                 figure {
-                    @include flex(inline-flex) {
+                    @include flex(start) {
                         align-items: start;
                     }
 
@@ -480,7 +480,7 @@ main {
         }
 
         .community {
-            @include flex(inline-flex) {
+            @include flex(start) {
                 flex-direction: column;
             }
 
