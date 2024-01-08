@@ -90,7 +90,7 @@ header .header-pc article .main-menu nav {
   height: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   vertical-align: middle;
-  padding: 0 auto;
+  padding: 0;
   padding-bottom: 8px;
 }
 header .header-pc article .main-menu nav a {
