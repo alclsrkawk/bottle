@@ -25,10 +25,9 @@ const pageLoad = () => {
         const elAref = document.querySelectorAll('.main-menu nav a');
         const elTilte = document.querySelector('.main-title div a');
         const elHeader = document.querySelector('.header-pc');
-
+        const elSearchInput = document.querySelector('.main-title input');
         const mobileHeader = document.querySelector('.header-m');
         const mobileMain = document.querySelector('main');
-        // console.log("scrollY :", window.scrollY)
 
         if (elMenu != null) {
             let diff = (window.scrollY - elMenu.offsetTop) >= 150
@@ -37,6 +36,7 @@ const pageLoad = () => {
                 elHeader.style.cssText = "background:#FFF;";
                 elMenu.style.cssText = "border-bottom:1px solid #E0E2E7";
                 elTilte.style.cssText = "text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);";
+                elSearchInput.style.cssText = "color:#000;font-weight: 400";
                 elAref.forEach(function (element, i) {
                     element.style.cssText = "color:#000;font-weight: 400";
                 })
@@ -46,6 +46,7 @@ const pageLoad = () => {
                 elHeader.style.cssText = "background: transparent;"
                 elMenu.style.cssText = " border-bottom: 1px solid rgba(255, 255, 255, 0.3);";
                 elTilte.style.cssText = "text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);"
+                elSearchInput.style.cssText = "color:#FFF;font-weight: 400";
                 elAref.forEach(function (element, i) {
                     element.style.cssText = "color:#FFF;font-weight: 400";
                 })

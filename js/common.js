@@ -26,23 +26,24 @@ const pageLoad = () => {
         const elAref = document.querySelectorAll('.main-menu nav a');
         const elTilte = document.querySelector('.main-title div a');
         const elHeader = document.querySelector('.header-pc');
-        const elListPage = document.querySelector('.list_bg');
-        const elPaymentPage = document.querySelector('.section_div');
+        // const elListPage = document.querySelector('.list_bg');
+        // const elPaymentPage = document.querySelector('.section_div');
         const mobileHeader = document.querySelector('.header-m');
 
 
         if (elMenu != null) {
             let diff = null;
-            if (elPaymentPage != null) {
-                diff = elPaymentPage.offsetTop <= window.scrollY;
-            }
-            else if (elListPage != null) {
-                diff = elListPage.offsetTop <= window.scrollY;
-            }
-            else {
-                diff = (window.scrollY - elMenu.offsetTop) >= 50;
-            }
+            // if (elPaymentPage != null) {
+            //     diff = elPaymentPage.offsetTop <= window.scrollY;
+            // }
+            // else if (elListPage != null) {
+            //     diff = elListPage.offsetTop <= window.scrollY;
+            // }
+            // else {
+            //     diff = (window.scrollY - elMenu.offsetTop) >= -100;
+            // }
 
+            diff = (window.scrollY - elMenu.offsetTop) >= -100;
             if (diff) {
                 elHeader.style.cssText = "background:#FFF;";
                 elMenu.style.cssText = "border-bottom:1px solid #E0E2E7";
