@@ -58,6 +58,32 @@ const fnSearch = (text) => {
     }
 }
 
+up.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      bottom: 100000,
+      behavior: "smooth"
+    });
+
+  }
+  down.onclick = function () {
+    window.scrollTo({
+      top: 100000,
+      bottom: 0,
+      behavior: "smooth"
+    });
+  }
+  const firstTab = document.querySelector('.search');
+  window.addEventListener("scroll", function () {
+    if (firstTab.getBoundingClientRect().y <= 0) {
+      up.style = "transform: translateY(-50px)";
+      down.style = "transform: translateY(-50px)";
+    } else {
+      up.style = "transform: translateY(150px)";
+      down.style = "transform: translateY(150px)";
+    }
+  });
+
 // 클릭시 상세로 이동
 let fnLocation = () => {
     const searchItem = document.querySelectorAll('.search-item');
