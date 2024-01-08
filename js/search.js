@@ -9,23 +9,23 @@ function getUrlParams() {
 const params = getUrlParams();
 
 const fnSearch = (text) => {
-    if (text.length > 0) {
+    if (text.length > 1) {
         const data = "../datas/goods.json";
-    let data_list = document.querySelector(`.search-list`);
-    let list = "";
+        let data_list = document.querySelector(`.search-list`);
+        let list = "";
 
-    fetch(data)
-        .then(type => type.json())
-        .then(result => {
-            let search = [];
-            data_list.innerHTML = "";
-            for (let i = 0; i < result.data.length; i++) {
-                if (result.data[i].product_name.includes(text)
-                    || result.data[i].brand.includes(text)) {
-                    search.push(result.data)
-                    // console.log("search", search)
-                    const picture = result.data[i].product_img.split(',')[0];
-                    list += `
+        fetch(data)
+            .then(type => type.json())
+            .then(result => {
+                let search = [];
+                data_list.innerHTML = "";
+                for (let i = 0; i < result.data.length; i++) {
+                    if (result.data[i].product_name.includes(text)
+                        || result.data[i].brand.includes(text)) {
+                        search.push(result.data)
+                        // console.log("search", search)
+                        const picture = result.data[i].product_img.split(',')[0];
+                        list += `
                             <figure class="search-item" data-idx="${result.data[i].Idx}" data-name="${result.data[i].name}">
                                 <img src="../images/${result.data[i].name}/${picture.trim()}" alt="">
                                 <figcaption>
@@ -42,19 +42,19 @@ const fnSearch = (text) => {
                                 </figcaption>
                             </figure>
                         `
-                    data_list.innerHTML = list;
+                        data_list.innerHTML = list;
+                    }
                 }
-            }
-            fnLocation();
-            const searchText = document.querySelector('.search-text'),
-                searchLength = document.querySelector('.search-length');
-            searchText.innerText = `'${elementInput.value}'`;
-            searchLength.innerText = `(${search.length})`;
-        }).catch(error => {
-            console.log(error);
-        });
+                fnLocation();
+                const searchText = document.querySelector('.search-text'),
+                    searchLength = document.querySelector('.search-length');
+                searchText.innerText = `'${elementInput.value}'`;
+                searchLength.innerText = `(${search.length})`;
+            }).catch(error => {
+                console.log(error);
+            });
     } else {
-        swalMsg(4, "오류", "검색어를 입력해주세요!")
+        swalMsg(4, "오류", "검색어를 2글자 이상 입력해주세요.")
     }
 }
 
@@ -75,15 +75,15 @@ if (params.stext != "") {
         elementInput.value = value;
         fnSearch(elementInput.value);
         // console.log("params start :", elementInput.value)
-    } 
+    }
 }
 
 //사용자가 직접 검색
 elementBtn.onclick = () => {
-    if (elementInput.value.length > 0) {
+    if (elementInput.value.length > 1) {
         fnSearch(elementInput.value);
         console.log("value is ", elementInput.value)
     } else {
-        swalMsg(4, "오류", "검색어를 입력해주세요!")
+        swalMsg(4, "오류", "검색어를 2글자 이상 입력해주세요.")
     }
 }
