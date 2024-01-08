@@ -72,7 +72,7 @@ let goodsView = function () {
       d += `<p>${goods[i].product_name}</p><br>
             <p></p>
             <div id="text2">
-            <input class= "input_text" type="number" min="1" value="1">
+            <input class= "input_text" type="number" min="0" value="1">
             <p> ${goods[i].discount}</p>
             </div>`
 
@@ -202,10 +202,14 @@ let goodsView = function () {
     let TransNum = parseInt(goods[params.idx - 1].discount.replaceAll(',', ''));
     let goodsSum = (elInputText.value * TransNum).toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
-
-    let f = ''
-    f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
-    text3.innerHTML = f;
+      if(elInputText.value == 0){
+        swalMsg(0, "수량 오류", "최소 수량은 1개입니다.");
+        elInputText.value++
+      }else{
+        let f = ''
+        f += `<p>총 합계 금액 <b id ='Sum'>${goodsSum}원</b></p>`;
+        text3.innerHTML = f;
+      }
 
 
   }
