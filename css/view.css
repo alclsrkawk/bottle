@@ -821,12 +821,8 @@ main .m_buy_all {
     width: 100%;
   }
   main .view_1 .view_img_1 .view_main_img {
-    border: 1px solid #E0E2E7;
     width: 100%;
     height: 100%;
-  }
-  main .view_1 .view_img_1 .view_main_img:hover {
-    transform: scale(1);
   }
   main .view_1 .view_img_1 .view_sub_image {
     display: none;
@@ -1045,7 +1041,6 @@ main .m_buy_all {
     margin: 0 auto;
   }
   main .view_1 .view_img_1 .view_main_img {
-    border: 1px solid #E0E2E7;
     width: 100%;
   }
   main .view_1 .view_img_1 .view_main_img:hover {
