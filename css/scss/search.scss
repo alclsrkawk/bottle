@@ -108,10 +108,15 @@ header {
             padding: 20px;
             margin-bottom: 10px;
             border: 1px solid #E0E2E7;
+            transition: 0.1s;
 
             @include flex(flex-start) {
                 align-items: center;
                 gap: 20px;
+            }
+
+            &:hover {
+                border-color: #eab838;
             }
 
             img {

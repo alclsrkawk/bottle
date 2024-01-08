@@ -624,10 +624,14 @@ header {
   padding: 20px;
   margin-bottom: 10px;
   border: 1px solid #E0E2E7;
+  transition: 0.1s;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+}
+.search-result .search-list .search-item:hover {
+  border-color: #eab838;
 }
 .search-result .search-list .search-item img {
   width: 160px;
