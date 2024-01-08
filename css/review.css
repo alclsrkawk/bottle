@@ -29,9 +29,6 @@ header .header-pc article .main-title {
   justify-content: center;
   align-items: center;
 }
-header .header-pc article .main-title :nth-child(1) {
-  cursor: pointer;
-}
 header .header-pc article .main-title :nth-child(1) a {
   color: #EAB838;
 }
