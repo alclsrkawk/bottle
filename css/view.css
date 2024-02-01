@@ -922,7 +922,7 @@ main .m_buy_all {
     color: black;
     font-size: 18px;
     font-weight: bold;
-    background-color: aqua;
+    background-color: white;
     font-weight: Noto Sans KR;
   }
   main .view_1 .view_text .btn_buy #button1_location .location {
@@ -1176,7 +1176,7 @@ main .m_buy_all {
     transform: rotate(180deg);
   }
   main .m_buy_all .m_buy {
-    width: 385px;
+    width: 449px;
     border-top: 1px solid black;
     background-color: white;
     color: black;
